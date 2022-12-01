@@ -1,0 +1,1 @@
+python3 ../../graphdiff.py --gold_file log1.json --log_file log1_1.json

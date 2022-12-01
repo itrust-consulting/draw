@@ -1,0 +1,96 @@
+{
+	"nodes": {
+		"U0.5": {
+			"data": {
+				"name": "Smartmeter",
+				"disabled": false,
+				"id": "U0.5",
+				"type": "HW",
+				"trickId": 669
+			},
+			"position": {
+				"x": -773.5714058559588,
+				"y": -151.91003628084493
+			}
+		},
+		"U0.4": {
+			"data": {
+				"name": "Airconditioner",
+				"disabled": false,
+				"id": "U0.4",
+				"type": "HW",
+				"trickId": 668
+			},
+			"position": {
+				"x": -697.5448824271139,
+				"y": -285.22194603844906
+			}
+		},
+		"U0.3": {
+			"data": {
+				"name": "Website",
+				"disabled": false,
+				"id": "U0.3",
+				"type": "Serv",
+				"trickId": 666
+			},
+			"position": {
+				"x": -441.63767385837133,
+				"y": -216.1627169916206
+			}
+		},
+		"U0.2": {
+			"data": {
+				"name": "Backup server",
+				"disabled": false,
+				"id": "U0.2",
+				"type": "HW",
+				"trickId": 665
+			},
+			"position": {
+				"x": -556.0998492134399,
+				"y": -91.89255283196586
+			}
+		},
+		"U0.1": {
+			"data": {
+				"name": "SolA",
+				"disabled": false,
+				"id": "U0.1",
+				"type": "Out",
+				"trickId": 667
+			},
+			"position": {
+				"x": -528.0373061867435,
+				"y": -403.7707221916995
+			}
+		}
+	},
+	"edges": [
+		{
+			"source": "U0.1",
+			"target": "U0.4",
+			"p": 1
+		},
+		{
+			"source": "U0.2",
+			"target": "U0.3",
+			"p": 1
+		},
+		{
+			"source": "U0.3",
+			"target": "U0.2",
+			"p": 1
+		},
+		{
+			"source": "U0.4",
+			"target": "U0.2",
+			"p": 1
+		},
+		{
+			"source": "U0.5",
+			"target": "U0.2",
+			"p": 1
+		}
+	]
+}

@@ -1,0 +1,179 @@
+{
+	"nodes": {
+		"U0.12354254533807563": {
+			"data": {
+				"id": "U0.12354254533807563",
+				"name": "Balancing offer and demand - electricity",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 18470
+			},
+			"position": {
+				"x": 0,
+				"y": 0
+			}
+		},
+		"U0.09012256974604438": {
+			"data": {
+				"id": "U0.09012256974604438",
+				"name": "Customer Management - electricity",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 18484
+			},
+			"position": {
+				"x": -72,
+				"y": -26
+			}
+		},
+		"U0.6818260728580099": {
+			"data": {
+				"id": "U0.6818260728580099",
+				"name": "Grid Development & Services - electricity",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 18482
+			},
+			"position": {
+				"x": -122,
+				"y": -52
+			}
+		},
+		"U0.31789516331569456": {
+			"data": {
+				"id": "U0.31789516331569456",
+				"name": "Supply of natural gas",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 18471
+			},
+			"position": {
+				"x": -197.5,
+				"y": -78
+			}
+		},
+		"U0.8340658146928288": {
+			"data": {
+				"id": "U0.8340658146928288",
+				"name": "ILR_GAS_Air conditioning",
+				"type": "Site",
+				"disabled": false,
+				"trickId": 18553
+			},
+			"position": {
+				"x": -273.5,
+				"y": -104
+			}
+		},
+		"U0.00203591789234836": {
+			"data": {
+				"id": "U0.00203591789234836",
+				"name": "Allocation management - gas",
+				"type": "SW",
+				"disabled": false,
+				"trickId": 18543
+			},
+			"position": {
+				"x": -331,
+				"y": -130
+			}
+		},
+		"U0.5956266287151752": {
+			"data": {
+				"id": "U0.5956266287151752",
+				"name": "Bad data detection system - electricity",
+				"type": "SW",
+				"disabled": false,
+				"trickId": 18548
+			},
+			"position": {
+				"x": -381,
+				"y": -156
+			}
+		},
+		"U0.04092354444977464": {
+			"data": {
+				"id": "U0.04092354444977464",
+				"name": "Connection Point - gas",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 18506
+			},
+			"position": {
+				"x": -451,
+				"y": -182
+			}
+		},
+		"U0.9488423321819714": {
+			"data": {
+				"id": "U0.9488423321819714",
+				"name": "Connection facilities Transport - gas",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 18505
+			},
+			"position": {
+				"x": -513,
+				"y": -208
+			}
+		}
+	},
+	"edges": [
+		{
+			"source": "U0.12354254533807563",
+			"target": "U0.31789516331569456"
+		},
+		{
+			"source": "U0.31789516331569456",
+			"target": "U0.6818260728580099"
+		},
+		{
+			"source": "U0.8340658146928288",
+			"target": "U0.12354254533807563"
+		},
+		{
+			"source": "U0.8340658146928288",
+			"target": "U0.09012256974604438"
+		},
+		{
+			"source": "U0.00203591789234836",
+			"target": "U0.09012256974604438"
+		},
+		{
+			"source": "U0.00203591789234836",
+			"target": "U0.31789516331569456"
+		},
+		{
+			"source": "U0.5956266287151752",
+			"target": "U0.09012256974604438"
+		},
+		{
+			"source": "U0.5956266287151752",
+			"target": "U0.6818260728580099"
+		},
+		{
+			"source": "U0.5956266287151752",
+			"target": "U0.31789516331569456"
+		},
+		{
+			"source": "U0.04092354444977464",
+			"target": "U0.12354254533807563"
+		},
+		{
+			"source": "U0.04092354444977464",
+			"target": "U0.6818260728580099"
+		},
+		{
+			"source": "U0.04092354444977464",
+			"target": "U0.31789516331569456"
+		},
+		{
+			"source": "U0.9488423321819714",
+			"target": "U0.09012256974604438"
+		},
+		{
+			"source": "U0.9488423321819714",
+			"target": "U0.31789516331569456"
+		}
+	]
+}

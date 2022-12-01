@@ -1,0 +1,58 @@
+{
+	"nodes": {
+		"U0.8107271161200971": {
+			"data": {
+				"id": "U0.8107271161200971",
+				"name": "Asset1",
+				"type": "Compl",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": 0,
+				"y": 0
+			}
+		},
+		"U0.4860995797459715": {
+			"data": {
+				"id": "U0.4860995797459715",
+				"name": "asset3",
+				"type": "Fin",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -26,
+				"y": -26
+			}
+		},
+		"U0.8371266600288256": {
+			"data": {
+				"id": "U0.8371266600288256",
+				"name": "asset4",
+				"type": "Fin",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -52,
+				"y": -52
+			}
+		}
+	},
+	"edges": [
+		{
+			"source": "U0.8107271161200971",
+			"target": "U0.8371266600288256",
+			"p": 0.5
+		},
+		{
+			"source": "U0.4860995797459715",
+			"target": "U0.8107271161200971"
+		},
+		{
+			"source": "U0.8371266600288256",
+			"target": "U0.4860995797459715"
+		}
+	]
+}

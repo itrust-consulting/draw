@@ -1,0 +1,9 @@
+python3 ../../graphdiff.py --gold_file ../../graph12.json --log_file log12.json
+python3 ../../graphdiff.py --gold_file ../../graph13.json --log_file log13.json
+python3 ../../graphdiff.py --gold_file ../../graph14.json --log_file log14.json
+python3 ../../graphdiff.py --gold_file ../../graph17.json --log_file log17.json
+python3 ../../graphdiff.py --gold_file ../../graph18.json --log_file log18.json
+python3 ../../graphdiff.py --gold_file ../../graph19.json --log_file log19.json
+python3 ../../graphdiff.py --gold_file ../../graph20.json --log_file log20.json
+python3 ../../graphdiff.py --gold_file ../../graph22.json --log_file log22_xls.json
+python3 ../../graphdiff.py --gold_file ../../graph22.json --log_file log22_xlsm.json
