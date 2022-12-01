@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>TRICK Service - DRAW 2.0.5 User Guide</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<link rel="stylesheet" href="css/bootstrap-4.0.0.min.css?v30112022" />
+	<link rel="stylesheet" href="css/main.css?v30112022" type="text/css" />
+	<script type="text/javascript" src="js/main.js?v30112022"></script>
+</head>
+
+<body class="container-fluid">
+<div class="row">
+
+<nav class="col-4 col-lg-3" id="toc"></nav>
+<main class="col-8 col-lg-9" id="main">
+	<h1 id="draw-general-overview">Trick Service DRAW – General overview</h1>
+	<p>The Trick Service DRAW (<u>D</u>ependencies for a <u>R</u>isk <u>A</u>nalysis on a <u>W</u>hiteBoard) user guide introduces the user to all functionalities of the application.
+		<p>
+		The DRAW tool is open source by itrust consulting and is used to represent assets and their corresponding dependencies in a graphical manner. 
+		The assets are represented as nodes in the graph and the dependency is represented using an edge from one asset to another. The asset carries information of the name
+		 of the asset and its type example the asset may be a Financial, Business process etc. The edge carries the dependency information and also the probability information. 
+		 Probability implies the chances that an asset impacts the other asset.
+		 </p>
+		<p>As an example if there is an edge between Server to Server Data it implies that a problem at Server might cause a problem with Server Data. 
+		Furthermore this tool can also be synchronised with Risk Analysis Tool (TrickService) tool to synchronize asset names, asset types etc.	</p>
+	</p>
+	<p>After connecting to the TRICK Service DRAW URL (https://draw.trickservice.com), the user sees the home screen with the interface that looks as:</p>
+	<figure id="_FIG_1" class="figure">
+		<img alt="main_interface" src="img/draw/main_interface.png" class="figure-img img-fluid" />
+		<figcaption class="figure-caption">TRICK Service DRAW inteface.</figcaption>
+	</figure>	
+	<p>Given the Home screen the user has the possibility to carry out a set of operations.</p>
+	<ul>Each of these operations are explained in sub-sections.
+		<li>Create a dependency graph (see <a href="#create_graph">[Section]</a>)</li>
+		<li>Edit the dependency graph (see <a href="#edit_graph">[Section]</a>)</li>
+		<li>Save the existing dependency graph (see <a href="#save_graph">[Section]</a>)</li>
+		<li>Open an existing dependency graph (see <a href="#open_graph">[Section]</a>)</h2>		
+		<li>Align the dependency graph (see <a href="#align_graph">[Section]</a>)</li>
+		<li>Import dependency graph (see <a href="#import_graph">[Section]</a>)</li>
+		<li>Coordinate with Trick service (see <a href="#trick_service">[Section]</a>)</li>
+	</ul>
+
+	<h2 id="create_graph"> Create a dependency graph</h2>
+	<p> In order to create a dependency graph the user needs to add assets by specifying the name and the type of asset. Further 
+		the user needs to add edges between the nodes of the graph. 	
+	</p>
+	<h3>Add Assets</h3>
+	<p> In order to add an asset click on the Add asset icon in the main menu. Specify the Name and Type information <a href="#_add_asset">[Figure]</a>.		
+	</p>
+	<figure id="_add_asset" class="figure">
+		<img alt="add_asset" src="img/draw/add_asset.png" class="figure-img img-fluid" />
+		<figcaption class="figure-caption">TRICK Service DRAW Add Asset inteface.</figcaption>
+	</figure>
+
+	<h3>Set Dependency Between Two assets</h3>
+	<p>In order to set dependency between two assets, select the source asset, hold the mouse when an edge appears and then drop it on to the dependent asset.
+		This creates an edge from source asset to the dependent asset.
+	  Edges are typically directed from <strong>Right</strong> to <strong>Left</strong>. ie. from supporting assets to the primary assets.
+	  The default impact Probability is assumed to be 1 between two assets which are connected by an edge.
+	  However this probability can be modified by clicking on the edge and specifying probability other than 1 (acceptable values between 0-1).
+	</p>
+	<figure id="_dependency" class="figure">
+		<img alt="dependency" src="img/draw/dependency.png" class="figure-img img-fluid" />
+		<figcaption class="figure-caption">TRICK Service DRAW Dependency between Assets.</figcaption>
+	</figure>
+
+	<h2 id="edit_graph"><a id="edit_graph_section"></a> Edit the dependency graph</h2>
+	<p>Once the dependency graph is created it can be modified in following ways:</p>
+	<ul>
+		<li><strong>Modify the name and type of asset:</strong> Double click on the asset node to open the edit interface.</li>
+		<li><strong>Modify the probability of the edge:</strong> Double click on the edge to modify the probability.</li>
+		<li><strong>Add or delete a new asset:</strong> Select the asset(s) and use DEL key.</li>
+		<li><strong>Add or delete an existing edge:</strong> Select the edge(s) and press DEL key.</li>
+	</ul>
+
+	<h2 id="save_graph">Save the existing dependency graph</h2>
+	<p>Once the dependency graph is created it can be saved using the <strong>Save</strong> main menu option.
+		The graph can be saved in three formats. (see <a href="#_supported_formats">[Section]</a> for more details)
+	</p>
+	<ul>
+		<li><strong>JSON format:</strong>By default the graph is saved in a json format. The default file name of the file is <strong>graph.json</strong>This can be achieved by clicking on Save main menu option</li>
+		<li><strong>PNG format:</strong>The graph can be saved/exported in PNG format by selecting <strong>Export as picture(PNG)</strong> from the drop down menu on right of Save main menu option.</li>
+		<li><strong>EXCEL format:</strong>The graph can be saved/exported in EXCEL format by selecting <strong>Export as excel(XSLS)</strong> from the drop down menu on right of Save main menu option. The saved excel file shall contain a sheet called <strong>Dependency</strong>. The matrix in this sheet represents an edge between source and target assets. If the matrix with edge contains a number this number shall represent probability of impact.</li>		
+	</ul>			
+		
+	<figure id="_save_graph" class="figure">
+		<img alt="save_graph" src="img/draw/save_graph.png" class="figure-img img-fluid" />
+		<figcaption class="figure-caption">TRICK Service DRAW Saving a Graph</figcaption>
+	</figure>
+
+
+	<h2 id="open_graph"><a id="open_graph_section"></a> Open an existing dependency graph</h2>
+	<p>A dependency graph once saved as json/excel file can be opened using the <strong>Open</strong> main menu option for viewing or further editing. The supported filename extensions are <small>.json,.xlsx,.xls,.xlsm</small>. </p>
+
+	<h2 id="align_graph"><a id="align_graph_section"></a> Align the dependency graph</h2>
+	<p>The dependency graph can be aligned using the alignment tools represented in <a href="#_align_graph">[Figure]</a>. </p>
+	<figure id="_align_graph" class="figure">
+		<img alt="alignment_tools" src="img/draw/alignment_tools.png" class="figure-img img-fluid" />
+		<figcaption class="figure-caption">TRICK Service DRAW Undo/Redo and Alignment tools</figcaption>
+	</figure>
+
+	<h2 id="import_graph"><a id="import_graph_section"></a> Import an existing dependency graph</h2>
+	<p> A dependency graph can also be imported from an excel sheet into the DRAW Whiteboard.
+		During the import the existing DRAW graph on the whiteboard is not cleared but updated with the additional assets
+		and dependencies from the imported dependency sheet. 
+		The specification of such an excel sheet representing the asset dependency is as below:
+		<ul>
+			<li>The excel sheet shall have a worksheet named <strong>Dependency</strong></li>
+			<li>The <strong>Dependency</strong> sheet shall represent the Dependency Matrix of all the assets.</li>
+			<li>There shall be two mandatory column headers <strong>AssetList, AssetType</strong>.
+				The <strong>AssetList</strong> header shall be in any cell in the first column of the sheet.
+				The <strong>AssetType</strong> column shall be on the immediate right of <strong>AssetList</strong> and shall represent the assetType of the asset on its left.</li>
+			<li>The <strong>AssetType</strong> shall be a valid supported assetType. Refer <a href="#_asset_types">[Figure]</a> below.</li>
+			<figure id="_asset_types" class="figure">
+				<img alt="AssetTypes" src="img/draw/AssetTypes.png" class="figure-img img-fluid" />
+				<figcaption class="figure-caption">TRICK Service Valid DRAW assetTypes</figcaption>
+			</figure>
+			<li>Any row(s) above the column names <strong>AssetList</strong> shall be ignored.</li>
+			<li><strong>AssetList</strong> shall be present in the first column in any row.</li>
+			<li>The column <strong>AssetList</strong> shall contain all the valid assets (representing <strong>Source Assets</strong>)</li>
+			<li>The column headers to the right of AssetType shall contain a subset of valid assets (representing <strong>Target Assets</strong>)</li>
+			
+			<li> An intersection of row <strong>Source Asset</strong> -> column <strong>Target Asset</strong> shall be a real number (between 0 and 1 both inclusive) representing
+				the dependency from Source Asset to Target Asset. This number shall represent probability of impact.
+			</li>
+			<li> If the intersection contains 0 or no value it shall imply that Source Asset is not dependent on the corresponding Target Asset.</li>	
+			<li> In order to map graph assets with Source assets in Dependency sheet both asset names and their corresponding asset types shall be considered.</li>
+			<li> In case the graph already contains an edge between a source asset and a target asset then following rules shall apply:
+				<ul>
+					<li>If the intersection of source asset with target asset in the matrix contains a value 0 or unspecified then the edge in the graph between the
+						source and target asset shall be removed</li>
+					<li>If the intersection of source asset with target asset in the Dependency sheet contains a value which is different from the existing probability 
+						of edge between source and target then the probability shall be updated with the new probability from the Dependency sheet</li>
+	
+				</ul>
+			</li>
+			<li> Refer Example below: <br>
+				<ul>
+				<li> The DRAW graph shall be created using 3 assets 
+					<ul>
+				 	<li>Asset1 with Type as Business process</li>
+					 <li>Asset2 with Type as Compliance</li>
+						<li>Asset3 with Type as Financial</li>
+					</ul>
+				</li>
+				<li>
+				    The column (AssetNE) shall be ignored for asset mapping since it is not present in the AssetList Column</li>
+				 <li> The rows 1, 2, 3 shall be ignored. </li>
+				 <li>   There shall be two dependencies in the Graph.</li>
+				 <ul>
+					<li>Asset2 depends on Asset3 with probability (0.5)</li>
+						<li>Asset3 depends on Asset1 with probability (1)</li>
+				</ul>		
+				</ul>		
+			</li>
+			<li> In case of any error an error dialog box is opened redirecting the user of appropriate corrective measure.</li>
+			<figure id="_dependency_example" class="figure">
+				<img alt="dependency_example" src="img/draw/dependency_example.png" class="figure-img img-fluid" />
+				<figcaption class="figure-caption">TRICK Service DRAW Import excel Example</figcaption>
+			</figure>
+			<figure id="_dependency_example_graph" class="figure">
+				<img alt="dependency_example_graph" src="img/draw/dependency_example_graph.png" class="figure-img img-fluid" />
+				<figcaption class="figure-caption">TRICK Service DRAW Import excel Example Graph</figcaption>
+			</figure>
+
+		</ul>
+		<p>
+			<strong>NOTE: Template of a sample excel file can be downloaded <a href = "../template/R172_STA_DRAW-DependencyXlsTempl_v1.0.xlsm" >here.</a></strong>
+		</p>
+		</p>
+
+
+	<h1 id="_supported_formats">Supported formats of exported file</h1>
+	<p> DRAW supports three file formats JSON, PNG and EXCEL to represent and save the asset dependency.</p>
+	<figure id="_supported_formats_fig" class="figure">
+		<img alt="supported_formats" src="img/draw/supported_formats.png" class="figure-img img-fluid" />
+		<figcaption class="figure-caption">TRICK Service Saving in JSON/PNG/EXCEL format</figcaption>
+	</figure>
+	<h2>JSON:</h2> 
+	<p>The default supported format for loading and saving DRAW graph is JSON. The graph can be saved in JSON format by clicking <strong>Save</strong> option from main menu. Refer <a href="#_supported_formats">[Figure]</a>
+		The JSON file contains nodes and edges. The nodes contains the list of nodes in the graph. 
+		Each node carries following information:
+		<ul>
+			<li><strong>id:</strong> Representing graph identifier</li>
+			<li><strong>name:</strong> Representing asset name</li>
+			<li><strong>type:</strong> Representing the asset type <br>Following is the list of supported asset types:
+				<ul id="businessType">	
+					<li>Business process</li>
+					<li>Compliance</li>
+					<li>Financial</li>
+					<li>Information</li>
+					<li>Immaterial Value</li>   
+					<li>Outsourced service</li>
+					<li>Site</li>
+					<li>Software</li>            
+					<li>Hardware</li>          
+					<li>Network</li>
+					<li>Service</li>
+					<li>Personnel</li>
+					<li>System</li>
+				</ul>
+				<li><strong>disabled:</strong> True if asset is inactive/disabled</li>
+				<li><strong>trickId:</strong> Representing trickId of the asset. The trickId is a risk assessment identifier in Trick Service application</li>
+				<li><strong>position: </strong>Representing asset position in whiteboard. Position specifies x, y coordinates of the model position of center of asset node. This position remains same with zoom and pan of the asset node.</li>
+			</li>
+		</ul>
+		Each edge carries following information:
+		<ul>
+			<li><strong>source:</strong> The id of the source asset</li>
+			<li><strong>target:</strong> The id of the target asset</li>
+			<li><strong>p:</strong> The probability of impact of source on target. This is a value between 0 and 1.
+				Default probability between connected source and target asset is 1.
+			</li>
+		</ul>
+		The structure of JSON file can be understood using following example where there are two assets and a single edge between the two assets with probability 1:</p>
+	<p>
+	<pre id="myText" ></pre>
+		<script>
+			var data = { 
+					"nodes": {
+		"U0.8887745586500557": {
+			"data": {
+				"id": "U0.8887745586500557",
+				"name": "Smartmeter",
+				"type": "Sys",
+				"disabled": false,
+				"trickId": 18402
+			},
+			"position": {
+				"x": -4589.4390249194685,
+				"y": 1563.9158357439626
+			}
+		},
+		"U0.6237821756718539": {
+			"data": {
+				"id": "U0.6237821756718539",
+				"name": "Electricity Distribution",
+				"type": "Business process",
+				"disabled": false,
+				"trickId": 18404
+			},
+			"position": {
+				"x": -4581.475943438963,
+				"y": 1435.2487424141427
+			}
+		}
+	},
+	"edges": [
+		{
+			"source": "U0.8887745586500557",
+			"target": "U0.6237821756718539",
+			"p": 0.1
+		}
+	]			 };
+		
+			document.getElementById("myText").innerHTML = JSON.stringify(data, null, 4);	
+		  </script>
+	</p>
+	
+	<h2>PNG:</h2>
+	<p> The DRAW graph can also be saved in PNG format. This can be done by clicking on <strong> Export as picture(PNG)</strong> option from dropdown menu right of save menu.</p>
+
+	<h2>Excel:</h2>
+	<p> The DRAW graph can also be saved in Excel format. This can be done by clicking on <strong> Export as excel(XSLS)</strong> option from dropdown menu right of save menu.</p>
+	<p> The exported excel contains the following features: </p>
+	<ul>
+		<li>
+			The name of exported file is "AssetDSInExcel.xsls".			
+		</li>
+		<li>
+			The exported excel file has two sheets:
+			<ul>
+			<li><strong>Dependency</strong> which contains the asset dependencies. The Dependencies sheet represents the DRAW graph in the same
+			   format as that used during the Import from Excel (see <a href="#import_graph"> [Section]</a>);</li>
+			</li>
+			<li><strong>Parameters</strong> which contains the list of valid supported assets (see <a href="#_asset_types">[Figure]</a>); </li>
+			</ul>
+		</li>
+	</ul>
+
+	<h1 id="trick_service">Coordinate with Trick service</h1>
+	
+	<h2 id="sync_graph">Sync with TRICK service</h2>
+	<p>The dependency graph can be synchronised with Trick Service Risk Analysis tool proprietary to itrust consulting. The <strong>Synchronize with Trick Service</strong> main menu option provides
+	this synchronization capability.
+	Upon clicking this option the user needs to choose the TrickService platform, customer , risk analysis and version number present in Risk analysis portfolio in Trick Service.
+	If there is any inconsistency between the current dependency graph assets and the Trick Service Assets in the selected Risk Analysis profile then the Synchronise dialog box appears and provides user options to synchronize the
+	the assets. There are three possibilities:
+	</p>
+	<ul>
+		<li><strong>Asset exists in TS and not in DRAW: </strong>
+			<ul>User can carry out the following actions:
+			    <li>Delete the asset from Trick Service <a href="#_synchronise_graph">[Figure]</a></li>
+				<li>Add the asset to DRAW <a href="#_synchronise_graph">[Figure]</a></li>
+				<li>Merge the TS asset to asset in DRAW <a href="#_synchronise_graph">[Figure]</a></li>
+			</ul>
+		</li>
+		<li><strong>Asset exists in DRAW and not in TS:</strong>			
+			<ul>User can carry out the following actions:
+			 <li>Add the asset to Trick Service <a href="#_synchonize_add_delete">[Figure]</a></li>
+			 <li>Delete the asset from the graph <a href="#_synchonize_add_delete">[Figure]</a></li>
+			 </ul>
+		</li>
+		<li><strong>Asset exists in both DRAW and TS but the asset Types or active/inactive values are not same:</strong>
+			<ul>User can update the values in either Trick Service or in dependency graph. <a href="#_synchronize_asset_type_diff">[Figure]</a>
+			</ul>
+		</li>
+	</ul>
+	<figure id="_synchronise_graph" class="figure">
+		<img alt="synchronise_merge" src="img/draw/synchronize_merge.png" class="figure-img img-fluid" />
+		<figcaption class="figure-caption">TRICK Service DRAW Synchronisation</figcaption>
+	</figure>
+	<figure id="_synchonize_add_delete" class="figure">
+		<img alt="synchonize_add_delete" src="img/draw/synchonize_add_delete.png" class="figure-img img-fluid" />
+		<figcaption class="figure-caption">TRICK Service DRAW Synchronisation  Add/Delete</figcaption>
+	</figure>
+	<figure id="_synchronize_asset_type_diff" class="figure">
+		<img alt="synchronize_asset_type_diff" src="img/draw/synchronize_asset_type_diff.png" class="figure-img img-fluid" />
+		<figcaption class="figure-caption">TRICK Service DRAW Synchronisation  Asset Values Different</figcaption>
+	</figure>
+
+	<h2 id="compare_estimations">Compare estimations with Trick Service [Beta Version]</h2>	
+	<p>The compare estimation feature allows the user to model and simultaneously compare the propagation of risk as defined by Trick Service.
+		In Trick Service the different risk scenarios are applied to all assets, and for each Scenario-Asset combination there is a likelihood 
+		(expected value of occurence per year, called probability per year) and an impact (k€). 
+		However each risk scenario tends to impact several assets, and it is often difficult to consider when assessing the scenario on an asset, 
+		whether or not the cumulative or indirect impact on the given asset has been considered or not. 
+		Hence in Trick Service risks are considered independent. However in DRAW we can model the propagation of risk using the asset dependency relationship
+		where each edge between two assets carries the information of propagation rate called as probability.	
+	</p>
+	<figure id="_compare_estimations" class="figure">
+		<img alt="compare_estimations" src="img/draw/compare_estimations.png" class="figure-img img-fluid" />
+		<figcaption class="figure-caption">TRICK Service DRAW compare estimations</figcaption>
+	</figure>
+
+	<p> The Compare estimations compares the Impact/Likelihood based on DRAW propagation rates and generates a report.csv and report.html file at the end of comparison.
+		The user may use the generated report to revise the estimates/impacts in Trick Service to add more precision based on asset dependency.		
+		The estimation report(s) contains tabulated report for each asset/scenario combination. The columns of these reports are described below:
+		<ul>
+			<li><strong>Asset:</strong> This field represents the asset name.</li>
+			<li><strong>Scenario:</strong> This field represents the corresponding scenario for the given asset.</li>
+			<li><strong>Old Likelihood:</strong> This field represents the Likelihood for asset/scenario combination as fetched from Trick Service assessment.</li>
+			<li><strong>New Likelihood:</strong> This field represents the Likelihood for asset/scenario combination as computed by DRAW.
+				This takes into account the probability of the edge from one asset to another (propagation probability) along with impact values fetched from Trick Service for
+				the asset/sceanrio combination. The new Likelihood is the sum total of likelihood of damage starting somewhere else and propagating at the given asset 
+				and contributing to damage done to the given asset. 
+				The algorithm to determine new Likelihood is a complex algorithm which determines the new Likelihood as a function of old likelihood and the probability of propagation.
+				This can be visualized in the Figure (see <a href="#_compare_estimations_prob">[Figure]</a>);				
+				Note that however a dependency graph might be large and full of cycles, so that a deterministic calculation takes enormous time.
+				That is why DRAW implements a probabilistic algorithm (which simulates about 1 million situations, in which propagation decisions are randomly taken,
+				and averages the overall result. This also explains rounding errors which in any case are less important than the uncertainty of the estimated parameters.										
+			</li>
+			<figure id="_compare_estimations_prob" class="figure">
+				<img alt="compare_estimations_prob" src="img/draw/probability_computation.png" class="figure-img img-fluid" />
+				<figcaption class="figure-caption">TRICK Service DRAW compare estimations (Likelihood computation)</figcaption>
+			</figure>
+			<li><strong>Old IMPACT:</strong> This field represents the Impact for asset/scenario combination as fetched from Trick Service assessment. </li>
+			<li><strong>New Impact:</strong> This field represents the computed impact for asset/scenario combination as computed by DRAW.
+				The new impact is computed based on the impacts on all assets that might be damaged as a consequence of damage starting at the given asset.
+				The algorithm to determine new impact is a complex algorithm which determines the new impact as a function of old impact and the probability 
+				of propagation of impacted assets.
+				This can be visualized in the Figure (see <a href="#_compare_estimations_impact">[Figure]</a>);
+				 Note that however a dependency graph might be large and full of cycles, so that a deterministic calculation takes enormous time.
+				 That is why DRAW implements a probabilistic algorithm (which simulates about 1 million situations, in which propagation decisions are randomly taken,
+				 and averages the overall result. This also explains rounding errors which in any case are less important than the uncertainty of the estimated parameters.	
+				</li> 	
+			<figure id="_compare_estimations_impact" class="figure">
+				<img alt="compare_estimations_impact" src="img/draw/impact_computation.png" class="figure-img img-fluid" />
+				<figcaption class="figure-caption">TRICK Service DRAW compare estimations (Impact computation)</figcaption>
+			</figure>
+			<li><strong>Impact on scales(s):</strong> This field represents the impact on various scales such as Financial/Privacy/Operational/Moral/Physical/Legal/Reputational/Affected Deliveries/Peronnel. 
+				The impact scales which are included in Trick Service assessment settings are included as different columns in the report.</li>
+			<li><strong>New Impact assessment(s): </strong> This field represents the computed Impact on corresponding scale as specified in Trick Service.</strong></li>
+		</ul>
+
+		<h3 id="compare_estimations_example">Compare estimations with Trick Service [Example]</h3>	
+		<ol>
+		Illustrating below using a small example of comparing estimations using DRAW:
+		<p>
+			<li>Create an asset dependency graph in DRAW and assign propagation probability to the edges</li>
+			<li>In Trick Service estimate the direct impact on assets and direct likelihood of the scenarios</li>
+			<li>Sync asset dependency graph in DRAW with Trick Service assessment</li>
+			<li>Compare estimations of Trick Service with DRAW</li>
+			<li>Revise the estimations in Trick Service using the report generated by DRAW</li>
+		</p>
+		</ol>
+
+		<ul> The section below describes in detail each step summarised above:
+			<li><strong>Create an asset dependency graph in DRAW and assign propagation probability to the edges</strong>
+				<p>Consider an asset dependency graph created in DRAW (see <a href="#_compare_estimations_example">[Figure]</a>) as below.
+					This graph can be understood as follows. The asset Chief Cybersecurity Officer (CCO), if he is attacked has 50% probability to destroy the integrity of the
+					Security monitoring service, and this has 50% chance to destroy the integrity of ATENA monitoring. 
+					Similarly a manipulated RTU has 20% chance to manipulate electricity provision (creating an outage).
+
+					Note that the propagation probability is currently present only in JSON export file. These are hence 
+					added manually to edges of the graph in figure below.
+					<figure id="_compare_estimations_example" class="figure">
+						<img alt="compare_estimations_example" src="img/draw/compare_estimation_eg1_asset_dep.png" class="figure-img img-fluid" />
+						<figcaption class="figure-caption">TRICK Service DRAW compare estimations (Asset Dependency)</figcaption>
+					</figure>
+				</p>
+			</li>
+
+			<li><strong>In Trick Service estimate the direct impact on assets and direct likelihood of the scenarios</strong>
+				Provide estimate of assets and likelihood of impact as in table below. Note that only a single scenario is provided here for brevity, however the same may be provided for multiple 
+				asset/scenario combinations:		
+				<figure id="_compare_estimations_example_ra" class="figure">
+					<img alt="compare_estimations_example_ra" src="img/draw/risk_assessment_eg.png" class="figure-img img-fluid" />
+					<figcaption class="figure-caption">TRICK Service DRAW compare estimations (Risk Estimation in Trick Service - truncated for conciseness)</figcaption>
+				</figure>
+			</li>
+			<li><strong>Sync asset dependency graph in DRAW with Trick Service assessment</strong>
+				Synchronize the asset dependency graph with Trick Service assessment (see <a href="#sync_graph">[Section]</a>)
+			</li>
+			<li><strong>Compare estimations of Trick Service with DRAW</strong>
+				Click on Compare Estimations from <strong>Sync with Trick Service</strong> menu. This will analyse the data and prepare to generate report. Once this is done click on <strong>Export</strong> button to export report.html and report.csv files.
+				Note you might have to provide permissions in browser to download multiple files at once.
+			</li>
+			<li><strong>Revise the estimations in Trick Service using the report generated by DRAW</strong>
+			The generated report(s) contains the old and revised estimates of likelihood, impact, financial corresponding to all combinations of assets and scenarios.
+			These new estimations can further be revised on Trick Service. 			
+			<figure id="_compare_estimations_example_rg" class="figure">
+				<img alt="compare_estimations_example_rg" src="img/draw/report_generated_eg.png" class="figure-img img-fluid" />
+				<figcaption class="figure-caption">TRICK Service DRAW compare estimations (Generated CSV report - truncated for conciseness)</figcaption>
+			</figure>
+			</li>
+		</ul>
+	
+	<h2 id="save_to_ts">Export to TRICK service</h2>
+	<p> The user has an option to save the dependency graph to TrickService. This can be done in three ways:
+		<ul>
+			<li><strong>Export as picture on TS:</strong> The user can export the current dependency graph in PNG format to TrickService Risk Analysis.
+				This picture can be used in TS Word Report generated using a template which has a bookmark called <strong>TS_DependencyGraph</strong>.
+				Before using this option the user must ensure that the graph fits in the current DRAW WhiteBoard else the picture may appear truncated.				
+			</li>
+			<li><strong>Export as snapshot on TS:</strong> The dependency graph can also be exported to Trick Service as a snapshot. 
+				This snapshot can be later loaded from Trick Service risk analysis profile.
+				Trick Service will save this data but will not interact with it.
+			</li>
+			<li><strong>Update dependency graph on TS:</strong> The dependency graph on Trick Service can be saved using this option.
+				This option will update the asset dependency graph on Trick Service.
+			</li>
+		</ul>
+
+		<figure id="_export_ts" class="figure">
+			<img alt="export_ts" src="img/draw/export_to_ts.png" class="figure-img img-fluid" />
+			<figcaption class="figure-caption">TRICK Service DRAW Synchronisation Export to TS</figcaption>
+		</figure>
+
+	</p>
+	<h2 id="load_from_ts">Load from TRICK service</h2>
+	<p> 
+		The user has an option to load the dependency graph from TrickService. This can be done in two ways:
+		<ul>
+			<li><strong>Load snapshot from TS:</strong> Using this option the user can also load the snapshot from Trick Service which was 
+				saved using <strong>Export as snapshot on TS </strong> option.				
+			</li>
+			<li><strong>Load dependency graph from TS:</strong> Using this option the user can load the dependency graph from Trick Service which was 
+				earlier saved using <strong>Update dependency graph on TS</strong> option. </li>
+		</ul>
+		<figure id="_load_ts" class="figure">
+			<img alt="load_ts" src="img/draw/load_from_ts.png" class="figure-img img-fluid" />
+			<figcaption class="figure-caption">TRICK Service DRAW Synchronisation Load from TS</figcaption>
+		</figure>
+	</p>
+	
+</main>
+
+</div>
+</body>
+
+</html>

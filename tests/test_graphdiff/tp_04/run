@@ -1,0 +1,2 @@
+python3 ../../graphdiff.py --gold_file ../../graph20.json --log_file log20.json
+python3 ../../graphdiff.py --gold_file ../../graph20_sync.json --log_file log20_sync.json

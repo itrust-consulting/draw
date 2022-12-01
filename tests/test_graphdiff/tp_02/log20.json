@@ -1,0 +1,179 @@
+{
+	"nodes": {
+		"U0.8690304333143475": {
+			"data": {
+				"id": "U0.8690304333143475",
+				"name": "Balancing offer and demand",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": 0,
+				"y": 0
+			}
+		},
+		"U0.8288942360222058": {
+			"data": {
+				"id": "U0.8288942360222058",
+				"name": "Customer Management",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -72,
+				"y": -26
+			}
+		},
+		"U0.33266489179218617": {
+			"data": {
+				"id": "U0.33266489179218617",
+				"name": "Grid Development & Services",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -122,
+				"y": -52
+			}
+		},
+		"U0.908533503094143": {
+			"data": {
+				"id": "U0.908533503094143",
+				"name": "Supply of natural gas",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -197.5,
+				"y": -78
+			}
+		},
+		"U0.6431472418356827": {
+			"data": {
+				"id": "U0.6431472418356827",
+				"name": "Air Conditioning",
+				"type": "Site",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -273.5,
+				"y": -104
+			}
+		},
+		"U0.1155916832643018": {
+			"data": {
+				"id": "U0.1155916832643018",
+				"name": "Allocation management",
+				"type": "SW",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -331,
+				"y": -130
+			}
+		},
+		"U0.5791740629187694": {
+			"data": {
+				"id": "U0.5791740629187694",
+				"name": "Bad data detection system",
+				"type": "SW",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -381,
+				"y": -156
+			}
+		},
+		"U0.17648549610346342": {
+			"data": {
+				"id": "U0.17648549610346342",
+				"name": "Connection Point",
+				"type": "HW",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -451,
+				"y": -182
+			}
+		},
+		"U0.1869186864703103": {
+			"data": {
+				"id": "U0.1869186864703103",
+				"name": "Connection facilities Transport",
+				"type": "HW",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -513,
+				"y": -208
+			}
+		}
+	},
+	"edges": [
+		{
+			"source": "U0.8690304333143475",
+			"target": "U0.908533503094143"
+		},
+		{
+			"source": "U0.908533503094143",
+			"target": "U0.33266489179218617"
+		},
+		{
+			"source": "U0.6431472418356827",
+			"target": "U0.8690304333143475"
+		},
+		{
+			"source": "U0.6431472418356827",
+			"target": "U0.8288942360222058"
+		},
+		{
+			"source": "U0.1155916832643018",
+			"target": "U0.8288942360222058"
+		},
+		{
+			"source": "U0.1155916832643018",
+			"target": "U0.908533503094143"
+		},
+		{
+			"source": "U0.5791740629187694",
+			"target": "U0.8288942360222058"
+		},
+		{
+			"source": "U0.5791740629187694",
+			"target": "U0.33266489179218617"
+		},
+		{
+			"source": "U0.5791740629187694",
+			"target": "U0.908533503094143"
+		},
+		{
+			"source": "U0.17648549610346342",
+			"target": "U0.8690304333143475"
+		},
+		{
+			"source": "U0.17648549610346342",
+			"target": "U0.33266489179218617"
+		},
+		{
+			"source": "U0.17648549610346342",
+			"target": "U0.908533503094143"
+		},
+		{
+			"source": "U0.1869186864703103",
+			"target": "U0.8288942360222058"
+		},
+		{
+			"source": "U0.1869186864703103",
+			"target": "U0.908533503094143"
+		}
+	]
+}

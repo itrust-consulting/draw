@@ -1,0 +1,58 @@
+{
+	"nodes": {
+		"U0.3229070935882088": {
+			"data": {
+				"id": "U0.3229070935882088",
+				"name": "Operation of electricity distribution system",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": 0,
+				"y": 0
+			}
+		},
+		"U0.23668355402741414": {
+			"data": {
+				"id": "U0.23668355402741414",
+				"name": "Operation of electricity transmission system",
+				"type": "Compl",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -69.5,
+				"y": -26
+			}
+		},
+		"U0.4847475374792518": {
+			"data": {
+				"id": "U0.4847475374792518",
+				"name": "Balancing offer and demand",
+				"type": "Fin",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -145,
+				"y": -52
+			}
+		}
+	},
+	"edges": [
+		{
+			"source": "U0.3229070935882088",
+			"target": "U0.23668355402741414"
+		},
+		{
+			"source": "U0.23668355402741414",
+			"target": "U0.4847475374792518",
+			"p": 0.5
+		},
+		{
+			"source": "U0.4847475374792518",
+			"target": "U0.3229070935882088"
+		}
+	]
+}
