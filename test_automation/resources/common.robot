@@ -10,6 +10,8 @@ Library             Process
 Library             Telnet
 Library             OperatingSystem
 Library             Collections
+Library            RPA.Salesforce
+Library            RPA.Tables
 #Library    RPA.Desktop
 
 *** Variables ***
@@ -22,7 +24,7 @@ ${TESTLOGGING_DIR}=    /home/ritika/testing
 ${default_json_file}=   graph.json 
 ${import_directory}=    import
 ${ILRTESTCASES_PATH}=    /home/ritika/workspaces/draw_again/draw_github/draw/ILRDependency
-${draw_url}=             http://172.28.28.121:8080
+${draw_url}=             http://172.17.213.14:8080
 ${draw_title}=           DRAW v2.0.5 – Dependencies for a Risk Analysis on a Whiteboard
 # Note modify it for a generic user name and password
 ${ts_link_with_pass}=    'https://rpande:Noida@1234@trickservice.itrust.lu/Api/data/customers'
@@ -48,6 +50,12 @@ save the graph generated
     Click Button                     Save
     Wait For Download To Complete    graph.json
 
+save the graph generated with filename
+    [Arguments]                      ${filename}
+    Set Download Directory           ${DOWNLOAD_DIR}
+    Click Button                     Save
+    Wait For Download To Complete    ${filename}
+    
 move log file
     [Arguments]    ${arg1}    ${arg2}
     RPA.FileSystem.Move File      ${arg1}    ${arg2}
@@ -86,3 +94,36 @@ Create assets
     Sleep    2s
     Click Button    //form[@aria-label="Add asset"]//button[@type='submit']
     Wait Until Element Is Not Visible    //form[@aria-label="Add asset"]
+
+
+create dict from csv 
+    [Arguments]    ${file}
+    &{ts_graph_merging_asset_dict} =    Create Dictionary
+    Set Suite Variable    ${ts_graph_merging_asset_dict}
+
+    ${table}=    Read table from CSV    ${file}
+    ${rows}  ${columns}=    Get table dimensions    ${table}
+
+    FOR    ${index}    IN RANGE    ${rows}
+        ${row}=    Get table row    ${table}    ${index}    as_list=True
+        Set To Dictionary    ${ts_graph_merging_asset_dict}    ${row}[0]    ${row}[1]  
+        Log    ${row}
+    END
+
+
+check if ts asset in dict 
+    [Arguments]    ${ts_asset_name}
+    ${dict_cont}=	Run Keyword And Ignore Error    Get From Dictionary	${ts_graph_merging_asset_dict}    ${ts_asset_name}	       
+    ${status_value}=    Convert To List    ${dict_cont}
+    Log    ${status_value}
+
+    IF    '${status_value}[0]' == 'PASS'
+        Return From Keyword    True
+    ELSE
+        Return From Keyword    False
+    END
+
+get graph asset from ts asset    
+    [Arguments]    ${ts_asset_name}
+    ${dict_cont}=    Get From Dictionary	${ts_graph_merging_asset_dict}    ${ts_asset_name}	
+    Return From Keyword     ${dict_cont}

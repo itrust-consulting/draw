@@ -9,6 +9,8 @@ tasks:
     #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" testSuit1/taskImportExcelCreateAssetImport.robot
     #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" testSuit1/taskMergeTSAndGraphAssets.robot
     shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" testSuit1/taskMergeTSAndGraphAssets.robot
+    #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" testSuit1/taskOpenSave.robot
+    #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" testSuit1/taskTestCollections.robot
     
 condaConfigFile: conda.yaml
 
@@ -22,8 +24,9 @@ artifactsDir: output
 
 PATH:
   - .
+
 PYTHONPATH:
-  - 
+  - .
 
 ignoreFiles:
   - .gitignore

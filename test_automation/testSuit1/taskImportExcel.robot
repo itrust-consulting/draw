@@ -9,7 +9,6 @@ Library    Collections
 Test Setup        Open draw browser
 Test Template        Validate Import and Save EXCEL file
 Test Teardown        Close Browser
-Resource            resources/common.robot    
 Resource        ../resources/common.robot
 
 *** Test Cases ***    load_file    save_file
