@@ -1,0 +1,91 @@
+{
+	"nodes": {
+		"U0.23403574133189098": {
+			"data": {
+				"id": "U0.23403574133189098",
+				"name": "asset1",
+				"type": "Fin",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": 0,
+				"y": 0
+			}
+		},
+		"U0.9297801350153472": {
+			"data": {
+				"id": "U0.9297801350153472",
+				"name": "asset2",
+				"type": "Compl",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -26,
+				"y": -26
+			}
+		},
+		"U0.8951419819054156": {
+			"data": {
+				"id": "U0.8951419819054156",
+				"name": "asset3",
+				"type": "Info",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -52,
+				"y": -52
+			}
+		},
+		"U0.901089898084608": {
+			"data": {
+				"id": "U0.901089898084608",
+				"name": "asset4",
+				"type": "Site",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -78,
+				"y": -78
+			}
+		},
+		"U0.42538874567903373": {
+			"data": {
+				"id": "U0.42538874567903373",
+				"name": "asset5",
+				"type": "SW",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -104,
+				"y": -104
+			}
+		}
+	},
+	"edges": [
+		{
+			"source": "U0.23403574133189098",
+			"target": "U0.9297801350153472"
+		},
+		{
+			"source": "U0.9297801350153472",
+			"target": "U0.901089898084608"
+		},
+		{
+			"source": "U0.8951419819054156",
+			"target": "U0.9297801350153472"
+		},
+		{
+			"source": "U0.901089898084608",
+			"target": "U0.8951419819054156"
+		},
+		{
+			"source": "U0.42538874567903373",
+			"target": "U0.23403574133189098"
+		}
+	]
+}
