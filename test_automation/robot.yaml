@@ -8,10 +8,14 @@ tasks:
     #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" testSuit1/taskOpenExportSave.robot 
     #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" testSuit1/taskImportExcelCreateAssetImport.robot
     #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" testSuit1/taskMergeTSAndGraphAssets.robot
-    shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" testSuit1/taskMergeTSAndGraphAssets.robot
-    #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" testSuit1/taskOpenSave.robot
+    #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" testSuit1/taskMergeTSAndGraphAssets.robot
+    shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" testSuit1/taskOpenSave.robot
     #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" testSuit1/taskTestCollections.robot
-    
+    #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" testSuit1/taskCompareEstimations.robot
+    #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" testSuit1/taskExportToTS1.robot
+    #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" testSuit1/taskExportToTS2.robot
+    #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" testSuit1
+
 condaConfigFile: conda.yaml
 
 environmentConfigs:

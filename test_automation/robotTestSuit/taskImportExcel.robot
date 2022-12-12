@@ -1,15 +1,15 @@
 *** Settings *** 
-Documentation   To Validate the Import excel feature
+Documentation       To Validate the Import excel feature
 Library             RPA.Browser.Selenium
 Library             RPA.FileSystem
-Library    Telnet
-Library    OperatingSystem
-Library    Process
-Library    Collections
-Test Setup        Open draw browser
-Test Template        Validate Import and Save EXCEL file
-Test Teardown        Close Browser
-Resource        ../resources/common.robot
+Library             Telnet
+Library             OperatingSystem
+Library             Process
+Library             Collections
+Test Setup          Open draw browser
+Test Template       Validate Import and Save EXCEL file
+Test Teardown       Close Browser
+Resource            ../resources/common.robot
 
 *** Test Cases ***    load_file    save_file
 Test1                  tc1.xlsx         graph1.json

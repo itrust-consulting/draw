@@ -1,5 +1,5 @@
 *** Settings *** 
-Documentation       To Validate the coloring of edges based on probability 
+Documentation       Validate the coloring of edges based on probability 
 Library             RPA.Browser.Selenium
 Library             RPA.FileSystem
 Library             Telnet

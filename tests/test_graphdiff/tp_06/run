@@ -1,2 +1,0 @@
-python3 ../../graphdiff.py --gold_file ../../../ILRDependency/ILR-Gas-Dependencies.json --log_file log26_gas.json
-python3 ../../graphdiff.py --gold_file ../../../ILRDependency/ILR-Elec-Dependencies.json --log_file log26_elec.json

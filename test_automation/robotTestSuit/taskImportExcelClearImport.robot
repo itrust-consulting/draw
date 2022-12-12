@@ -16,7 +16,7 @@ Resource         ../resources/common.robot
 Test13                  tc13.xlsx     graph13.xlsx      graph13_1.json
 
 *** Variables *** 
-${import_directory}=    import
+
 
 *** Keywords *** 
 Validate Import Excel Clear Import and Save EXCEL file

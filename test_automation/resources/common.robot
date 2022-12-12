@@ -1,7 +1,4 @@
 Documentation    A resource file with reusable keywords and variables.
-...
-...               The system specific keywords created here form our own
-...               domain specific language.
 
 *** Settings ***
 Library             RPA.Browser.Selenium
@@ -10,31 +7,40 @@ Library             Process
 Library             Telnet
 Library             OperatingSystem
 Library             Collections
-Library            RPA.Salesforce
-Library            RPA.Tables
-#Library    RPA.Desktop
+Library             RPA.Salesforce
+Library             RPA.Tables
+
 
 *** Variables ***
-${OPEN_MENU}           css:.fa-folder-open
-${DOWNLOAD_DIR}=       /home/ritika/Downloads/
-${result}=             The gold and Log files match
-${script_file}=        /home/ritika/scripts/graphdiff.py    
-${TESTCASES_PATH}=     /home/ritika/workspaces/draw_again/draw_github/draw/tests/       
-${TESTLOGGING_DIR}=    /home/ritika/testing
-${default_json_file}=   graph.json 
-${import_directory}=    import
-${ILRTESTCASES_PATH}=    /home/ritika/workspaces/draw_again/draw_github/draw/ILRDependency
-${draw_url}=             http://172.17.213.14:8080
-${draw_title}=           DRAW v2.0.5 – Dependencies for a Risk Analysis on a Whiteboard
+${OPEN_MENU}             css:.fa-folder-open
+${DOWNLOAD_DIR}=         ${EXECDIR}/downloads
+${result}=               The gold and Log files match
+${script_file}=          ${EXECDIR}/tests/graphdiff.py    
+${TESTCASES_PATH}=       ${EXECDIR}/tests      
+${TESTLOGGING_DIR}=      ${EXECDIR}/testlogging
+${default_json_file}=    graph.json 
+${import_directory}=     import
+${ILRTESTCASES_PATH}=    ${EXECDIR}/ILRDependency
+${draw_url}=              http://172.17.221.169:8080
+${draw_title}=            DRAW v2.0.5 – Dependencies for a Risk Analysis on a Whiteboard
+${import_directory}=      import
+
 # Note modify it for a generic user name and password
-${ts_link_with_pass}=    'https://rpande:Noida@1234@trickservice.itrust.lu/Api/data/customers'
+${ts_link_with_pass}=         'https://rpande:Noida@1234@trickservice.itrust.lu/Api/data/customers'
+${ts_demo_link_with_pass}=    'https://rpande:Noida@123456@demo.trickservice.com/Api/data/customers'
+
 *** Keywords ***
-Open draw browser    
-    open the draw home page
-    load the previous history graph
+Open draw browser       
+    open the draw home page    
+    load the previous history graph    
 
 open the draw home page
-    Open Available Browser     ${draw_url}    alias=DrawBrowser
+    Set Download Directory           ${DOWNLOAD_DIR}
+    Open Available Browser           ${draw_url}    alias=DrawBrowser
+    setup the log directory
+
+setup the log directory
+    OperatingSystem.Create Directory    ${TESTLOGGING_DIR}/${import_directory} 
      
 load the previous history graph
     Handle Alert     ACCEPT
@@ -45,21 +51,19 @@ open an excel file
     Wait Until Element Is Visible    id:open_file
     Choose File   accept_file        ${load_file}
 
-save the graph generated
-    Set Download Directory           ${DOWNLOAD_DIR}
+save the graph generated    
     Click Button                     Save
     Wait For Download To Complete    graph.json
 
 save the graph generated with filename
     [Arguments]                      ${filename}
-    Set Download Directory           ${DOWNLOAD_DIR}
     Click Button                     Save
     Wait For Download To Complete    ${filename}
-    
+
 move log file
     [Arguments]    ${arg1}    ${arg2}
-    RPA.FileSystem.Move File      ${arg1}    ${arg2}
-    Sleep          5s
+    RPA.FileSystem.Move File          ${arg1}    ${arg2}
+    Sleep          1s
     
 Wait For Download To Complete
     [Arguments]    ${file}
@@ -67,7 +71,7 @@ Wait For Download To Complete
 
 compare files
     [arguments]    ${log_file}    ${gold_file}
-    ${result}=    Run Process    python3    ${script_file}    --log_file    ${log_file}    --gold_file    ${gold_file}
+    ${result}=     Run Process    python3    ${script_file}    --log_file    ${log_file}    --gold_file    ${gold_file}
     Should Be Equal    ${result.stdout}   The gold and Log files match
 
 export the excel file    
@@ -75,15 +79,42 @@ export the excel file
     Click Element    //button[normalize-space()='Export as excel (XSLS)']
     Wait For Download To Complete    AssetDsinExcel.xlsx
 
+export as picture on TS
+    Click Element    dropdown-save
+    Click Element    //button[normalize-space()='Export as picture on TS']
+    Sleep    2s
+     
+export as snapshot on TS
+    Click Element    dropdown-save
+    Click Element    //button[normalize-space()='Export as snapshot on TS']
+    Sleep    2s
+
 clear the whiteboard
     Click Element    dropdown-open
     Click Element    //button[normalize-space()='Clear working area']
+    Handle clear alert
+
+load dependency graph from TS
+    Click Button        dropdown-open
+    Click Element       //button[normalize-space()="Load dependency graph from TS"]
+
+update dependency graph on TS
+    Click Element    dropdown-save
+    Click Element    //button[normalize-space()='Update dependency graph on TS']
+    Sleep    2s
+
+Handle clear alert
+    Handle Alert     ACCEPT
+
+load snapshot from TS
+    Click Button        dropdown-open
+    Click Element       //button[normalize-space()="Load snapshot from TS"]
     
 import an excel file
     [Arguments]        ${load_file}
     Click Button        dropdown-open
     Click Element        //label[@class="dropdown-item"]
-    Choose File   accept_import_file        ${load_file}
+    Choose File           accept_import_file        ${load_file}
 
 Create assets
     [Arguments]    ${name}    ${type}
@@ -95,7 +126,7 @@ Create assets
     Click Button    //form[@aria-label="Add asset"]//button[@type='submit']
     Wait Until Element Is Not Visible    //form[@aria-label="Add asset"]
 
-
+# Creates a dcitionary from CSV file used for merging assets
 create dict from csv 
     [Arguments]    ${file}
     &{ts_graph_merging_asset_dict} =    Create Dictionary
@@ -127,3 +158,8 @@ get graph asset from ts asset
     [Arguments]    ${ts_asset_name}
     ${dict_cont}=    Get From Dictionary	${ts_graph_merging_asset_dict}    ${ts_asset_name}	
     Return From Keyword     ${dict_cont}
+
+# Provide sleep between loading trickservice app and appearing of customer form,
+# Risk Analysis, version
+sleep between ts forms 
+    Sleep     10s
