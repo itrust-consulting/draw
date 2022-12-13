@@ -21,13 +21,13 @@ ${TESTLOGGING_DIR}=      ${EXECDIR}/testlogging
 ${default_json_file}=    graph.json 
 ${import_directory}=     import
 ${ILRTESTCASES_PATH}=    ${EXECDIR}/ILRDependency
-${draw_url}=              http://172.17.221.169:8080
+${draw_url}=              http://172.17.223.103:8080
 ${draw_title}=            DRAW v2.0.5 – Dependencies for a Risk Analysis on a Whiteboard
 ${import_directory}=      import
-
-# Note modify it for a generic user name and password
-${ts_link_with_pass}=         'https://rpande:Noida@1234@trickservice.itrust.lu/Api/data/customers'
-${ts_demo_link_with_pass}=    'https://rpande:Noida@123456@demo.trickservice.com/Api/data/customers'
+${ts_platform_quoted}=     'demo.trickservice.com'
+${ts_platform}=             demo.trickservice.com
+# Link to demo with password needed for authentication
+${ts_demo_link_with_pass}=    'https://drawtesting:DrawTesting123@demo.trickservice.com/Api/data/customers'
 
 *** Keywords ***
 Open draw browser       
@@ -163,3 +163,40 @@ get graph asset from ts asset
 # Risk Analysis, version
 sleep between ts forms 
     Sleep     10s
+
+sync with TS
+    [Arguments]    ${customer}    ${riskAnalysis}    ${version}
+    Wait Until Element Is Visible       //div[@data-role='apipicker'] 
+    Click Button    //div[@data-role='apipicker']//button[normalize-space()=${ts_platform_quoted}]
+    authenticate platform        ${ts_platform}    
+    Switch Window    ${draw_title}     
+    sleep between ts forms
+    enter customer details    ${customer}
+    sleep between ts forms
+    enter risk details    ${riskAnalysis}
+    sleep between ts forms
+    enter version details    ${version}
+    sleep between ts forms
+
+authenticate platform
+    [Arguments]    ${api_name}
+    Execute Javascript    window.open(${ts_demo_link_with_pass}, '_blank')
+    Capture Page Screenshot
+
+enter customer details   
+    [Arguments]    ${customer}
+    Wait Until Element Is Visible    //form[@aria-label="Customer"]
+    Select From List By Label    //form[@aria-label="Customer"]//select[@name="customerId"]    ${customer}
+    Click Button    //form[@aria-label="Customer"]//button[@type="submit"]
+    
+enter risk details  
+    [Arguments]    ${riskAnalysis}
+    Wait Until Element Is Visible    //form[@aria-label="Analysis"]
+    Select From List By Label    //form[@aria-label="Analysis"]//select[@name="analysisId"]    ${riskAnalysis}
+    Click Button    //form[@aria-label="Analysis"]//button[@type="submit"]
+
+enter version details   
+    [Arguments]     ${version}
+     Wait Until Element Is Visible    //form[@aria-label="Version"]
+    Select From List By Label    //form[@aria-label="Version"]//select[@name="versionId"]    ${version}
+    Click Button    //form[@aria-label="Version"]//button[@type="submit"]

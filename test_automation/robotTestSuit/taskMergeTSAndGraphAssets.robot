@@ -16,12 +16,10 @@ Resource            ../resources/common.robot
 ${load_file}=        tc20.xlsx
 ${save_file}=        graph20_merge.json
 ${compare_file}=     graph20.json
-${customer}=         ILR
+${customer}=         Demo UG
 ${riskAnalysis}=     TestingILR
 ${version}=          0.1
-${ts_platform_quoted}=     'trickservice.itrust.lu'
-${ts_platform}=             trickservice.itrust.lu
-${filename}=                ILR_TestingILR_0.1.json
+${filename}=                Demo UG_TestingILR_0.1.json
 ${save_file_sync}=          graph20_sync.json
 ${graph_merge_csv}=         tc20.csv
 
@@ -31,24 +29,15 @@ Validate merge TS and Graph assets
     save the graph generated       
     move log file                  ${DOWNLOAD_DIR}/graph.json      ${TESTLOGGING_DIR}/${save_file}
     compare files                  ${TESTLOGGING_DIR}/${save_file}    ${TESTCASES_PATH}/${compare_file} 
-    sync with TS 
+    sync with TS after selecting api    ${customer}    ${riskAnalysis}    ${version}
     Add the merging nodes in Sync Form
     synchronize and save file
 
 *** Keywords *** 
-sync with TS     
-    Click Button    //button[@id='btn-sync']
-    Wait Until Element Is Visible       //div[@data-role='apipicker']
-    Click Button    //div[@data-role='apipicker']//button[normalize-space()=${ts_platform_quoted}]
-    authenticate platform        ${ts_platform}    
-    Switch Window    ${draw_title}     
-    sleep between ts forms
-    enter customer details    ${customer}
-    sleep between ts forms
-    enter risk details    ${riskAnalysis}
-    sleep between ts forms
-    enter version details    ${version}
-    sleep between ts forms
+sync with TS after selecting api  
+    [Arguments]    ${customer}    ${riskAnalysis}    ${version}
+    Click Button    //button[@id='btn-sync']       
+    sync with TS     ${customer}    ${riskAnalysis}    ${version}
     Capture Page Screenshot
     Wait Until Element Is Visible    //div[@data-role="form-sync-x"]
     
@@ -76,32 +65,6 @@ Add the merging nodes in Sync Form
     END
     Capture Page Screenshot
     
-    
-Signin to ts    
-    [Arguments]    ${username}    ${password}
-
-authenticate platform
-    [Arguments]    ${api_name}
-    Execute Javascript    window.open(${ts_link_with_pass}, '_blank')
-    Capture Page Screenshot
-
-enter customer details   
-    [Arguments]    ${customer}
-    Wait Until Element Is Visible    //form[@aria-label="Customer"]
-    Select From List By Label    //form[@aria-label="Customer"]//select[@name="customerId"]    ${customer}
-    Click Button    //form[@aria-label="Customer"]//button[@type="submit"]
-    
-enter risk details  
-    [Arguments]    ${riskAnalysis}
-    Wait Until Element Is Visible    //form[@aria-label="Analysis"]
-    Select From List By Label    //form[@aria-label="Analysis"]//select[@name="analysisId"]    ${riskAnalysis}
-    Click Button    //form[@aria-label="Analysis"]//button[@type="submit"]
-
-enter version details   
-    [Arguments]     ${version}
-     Wait Until Element Is Visible    //form[@aria-label="Version"]
-    Select From List By Label    //form[@aria-label="Version"]//select[@name="versionId"]    ${version}
-    Click Button    //form[@aria-label="Version"]//button[@type="submit"]
 
 synchronize and save file
     Click Button    //div[@data-role="form-sync-x"]//button[@type="submit"]
