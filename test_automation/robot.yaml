@@ -5,16 +5,6 @@ tasks:
   # Task names here are used when executing the bots, so renaming these is recommended.
   Run the robot:
     # Uncomment any of the lines to run specific test
-    #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" robotTestSuit/taskOpenExportSave.robot 
-    #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" robotTestSuit/taskImportExcelCreateAssetImport.robot
-    #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" robotTestSuit/taskMergeTSAndGraphAssets.robot
-    #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" robotTestSuit/taskMergeTSAndGraphAssets.robot
-    #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" robotTestSuit/taskOpenSave.robot
-    #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" robotTestSuit/taskTestCollections.robot
-    #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" robotTestSuit/taskCompareEstimations.robot
-    #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" robotTestSuit/taskExportToTS1.robot
-    #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" robotTestSuit/taskExportToTS2.robot
-    #shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" robotTestSuit/taskConnectPython.robot
     shell: python -m robot --report report.html --outputdir output --logtitle "Open/Import Excel Testing" robotTestSuit
 
 condaConfigFile: conda.yaml
