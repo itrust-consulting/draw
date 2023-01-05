@@ -68,13 +68,13 @@
 	<div class="container-fluid d-flex flex-column px-0">
 		<div id="controls" class="p-3">
 			<div class="btn-group">
-				<label class="btn btn-light mb-0"><em class="fa fa-fw fa-folder-open"></em> Open <input type="file" accept=".json,.xlsx,.xls,.xlsm"
+				<label class="btn btn-light mb-0" id="open_file"><em class="fa fa-fw fa-folder-open"></em> Open <input type="file" id="accept_file" accept=".json,.xlsx,.xls,.xlsm"
 						hidden="hidden"
 						onchange="if (event.target.files.length>0) window.editor.load(event.target.files[0]); this.value='';" /></label>
-				<button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+				<button type="button" id="dropdown-open" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
 					aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
 				<div class="dropdown-menu dropdown-menu-right">
-					<label class="dropdown-item"><em class="fa fa-fw fa-upload"></em> Import Excel <input type="file" accept=".xlsx,.xls,.xlsm"
+					<label class="dropdown-item"><em class="fa fa-fw fa-upload"></em> Import Excel <input type="file" id="accept_import_file" accept=".xlsx,.xls,.xlsm"
 						hidden="hidden"
 						onchange="if (event.target.files.length>0) window.editor.importExcelFile(event.target.files[0]); this.value='';" /></label>
 					<div class="dropdown-divider"></div>
@@ -90,7 +90,7 @@
 			<div class="btn-group">
 				<button class="btn btn-light" onclick="window.editor.save()"><em class="fa fa-fw fa-download"></em>
 					Save</button>
-				<button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+				<button type="button" id="dropdown-save" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
 					aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
 				<div class="dropdown-menu dropdown-menu-right">
 					<button class="dropdown-item" onclick="window.editor.savePng()"><em class="fa fa-fw fa-download"></em>
