@@ -1,0 +1,29 @@
+active: true
+derived: false
+header: 'Load and edit graph probability'
+level: 2.1.6
+links:
+- FUNCREQ-CREATEGRAPHEDGEPROBABILITY: null
+- FUNCREQ-INTERFACESAVEEXCEL: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |Testcase Id              | DRAW_TC_ID_31       |
+  |-------------------------| --------------------|
+  |**Testcase description** |  Load and Edit Basic Graph Probability |
+  |**Verification method**  |  Test                   |
+  |**Requirements covered** |                     |
+  |**Testsetup**            |  DRAW v2.0.5 on Microsoft Edge                      |
+  |**Preconditions**        |  Windows 10/11                      |
+  |**Execution Type**       |  Manual                 |
+
+  |**Step#**  | **Step Action**          | **Expected Results**|
+  |-----------|--------------------------|---------------------|
+  |  **1** | Open tests/tests_manual/graph1.json   |                     |
+  |  **2** | Change the probability between  graph nodes by double clicking the edges as: Node1->Node0: 0.25, Node3->Node4:0.75; Node2->Node1:0.95   | These probability must be changed |
+  |  **3** | Save the graph as Excel| The excel file must have same probability between edges as in tests/tests_manual/AssetDSinExcel.xlsx  |
+  |  **4** | Save the graph as JSON | The Json file must match tests/tests_manual/graph1_with_prob.json |
+ 
+  |**Test pass-fail criteria** | The saved excel file matches the expected excel file  |
+  |----------------------------|------------------------------------------------------------------------|

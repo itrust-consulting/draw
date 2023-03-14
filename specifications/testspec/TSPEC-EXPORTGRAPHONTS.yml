@@ -1,0 +1,30 @@
+active: true
+derived: false
+header: 'Export and Load Graph to/from TS'
+level: 2.1.15
+links:
+- FUNCREQ-TRICKSYNCEXPORTDEPGRAPH: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |Testcase Id              | DRAW_TC_ID_32       |
+  |-------------------------| --------------------|
+  |**Testcase description** |  Export and Load Graph to/from TS   |
+  |**Verification method**  |  Test                   |
+  |**Requirements covered** |                     |
+  |**Testsetup**            |  DRAW v2.0.5 on Microsoft Edge  |
+  |**Preconditions**        |  Windows 10/11                      |
+  |**Execution Type**       |  Manual                 |
+
+  |**Step#**  | **Step Action**          | **Expected Results**|
+  |-----------|--------------------------|---------------------|
+  | **1** | Open tests/tests_manual/graph_syncts.json    |  Graph gets loaded into white board |
+  | **2** | Sync with Trick Service  (Choose demo.trickservice.com) (Demo UG, TestingILR,0.4); Choose following: <br> merge: Balancing offer and demand -> Balancing offer and demand - electricity <br> merge: Customer Management -> Customer Management - electricity <br> merge: Grid Development & Services - electricity -> Grid Development & Services <br> merge: ILR_GAS_Air conditioning > Air conditioning <br> merge: Allocation management - gas > Allocation management <br> merge: Bad data detection system - electricity -> Bad data detection system <br> Add to TS: Connection Point -> Add to TS ?? <br> delete from Graph: Connection facilities Transport -> delete from Graph <br> | Save and compare file with graph_syncts_after.json. | 
+  | **3** | Save -> Update Dependency Graph on Trick Service (Choose demo.trickservice.com) (Demo UG, TestingILR,0.4) |  The snapshot should be saved in Trick |
+  | **4** | Clear Working Area; Open-> Load dependency graph from Trick Service (Choose demo.trickservice.com)  (Demo UG, TestingILR,0.4) |  The snapshot should be loaded from Trick Service |
+  | **5** | Save the graph as log/graph.json file  | the log/graph.json must match tests/tests_manual/graph_syncts_after.json |
+  | **6** | Reset: Clear Working Area; Open->tests/tests_manual/graph_reset_syncts.json; Synchronize -> Set all to -> Upload Graph->TS; Save ->  Update Dependency Graph on Trick Service | Reset Step to save the graph back on Trick Service |
+
+  |**Test pass-fail criteria** | The loaded graph must be same as verified in step 4.   |
+  |----------------------------|------------------------------------------------------------------------|

@@ -1,0 +1,31 @@
+active: true
+derived: false
+header: 'Save history of loaded graph'
+level: 2.1.10
+links:
+- FUNCREQ-USABILITYHISTORY: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |Testcase Id              | DRAW_TC_ID_43       |
+  |-------------------------| --------------------|
+  |**Testcase description** |  Save history       |
+  |**Verification method**  |  Test                   |
+  |**Requirements covered** |                     |
+  |**Testsetup**            |  DRAW v2.0.5 on Microsoft Edge  |
+  |**Preconditions**        |  Windows 10/11                      |
+  |**Execution Type**       |  Manual                 |
+
+  |**Step#**  | **Step Action**          | **Expected Results**|
+  |-----------|--------------------------|---------------------|
+  | **1** | Open tests/tests_manual/graph1.json    |  Graph gets loaded into white board |
+  | **2** | Close the browser window |   |
+  | **3** | Reopen the draw url in a new browser window |  Tool must prompt user to resume work from last time |
+  | **4** | Select yes |  Tool must reopen the graph from previous state |
+  | **5** | Save graph and compare with tests/tests_manual/graph1.json |  JSON files must match |
+  | **6** | Close the browser window |   |
+  | **7** | Select Cancel |  Tool must open a blank whiteboard |
+
+  |**Test pass-fail criteria** | The steps 4 amd 6 must show expected results  |
+  |----------------------------|------------------------------------------------------------------------|

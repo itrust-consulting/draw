@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Usability requirements move
+level: 1.4.5
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The tool shall provide an ability to move the selected assets and connected edges in the DRAW whiteboard
+    

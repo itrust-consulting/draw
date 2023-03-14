@@ -1,0 +1,1409 @@
+{
+	"nodes": {
+		"U0.15408291039658173": {
+			"data": {
+				"id": "U0.15408291039658173",
+				"name": "Smartmeter - gas",
+				"type": "Sys",
+				"disabled": false,
+				"trickId": 1156
+			},
+			"position": {
+				"x": 0,
+				"y": 0
+			}
+		},
+		"U0.18741221006733633": {
+			"data": {
+				"id": "U0.18741221006733633",
+				"name": "Smartmeter - electricity",
+				"type": "Sys",
+				"disabled": false,
+				"trickId": 1155
+			},
+			"position": {
+				"x": -63,
+				"y": -26
+			}
+		},
+		"U0.8430728760292721": {
+			"data": {
+				"id": "U0.8430728760292721",
+				"name": "SCADA System - gas",
+				"type": "Sys",
+				"disabled": false,
+				"trickId": 1153
+			},
+			"position": {
+				"x": -113,
+				"y": -52
+			}
+		},
+		"U0.7661056798940304": {
+			"data": {
+				"id": "U0.7661056798940304",
+				"name": "SCADA System - electricity",
+				"type": "Sys",
+				"disabled": false,
+				"trickId": 1152
+			},
+			"position": {
+				"x": -177,
+				"y": -78
+			}
+		},
+		"U0.06067468052144531": {
+			"data": {
+				"id": "U0.06067468052144531",
+				"name": "Users",
+				"type": "Staff",
+				"disabled": false,
+				"trickId": 1127
+			},
+			"position": {
+				"x": -241,
+				"y": -104
+			}
+		},
+		"U0.3874054740781847": {
+			"data": {
+				"id": "U0.3874054740781847",
+				"name": "IT Operation/ Maintenance staff",
+				"type": "Staff",
+				"disabled": false,
+				"trickId": 1126
+			},
+			"position": {
+				"x": -267,
+				"y": -130
+			}
+		},
+		"U0.8893860052550779": {
+			"data": {
+				"id": "U0.8893860052550779",
+				"name": "Developers",
+				"type": "Staff",
+				"disabled": false,
+				"trickId": 1125
+			},
+			"position": {
+				"x": -333,
+				"y": -156
+			}
+		},
+		"U0.9440044691615044": {
+			"data": {
+				"id": "U0.9440044691615044",
+				"name": "Decision maker",
+				"type": "Staff",
+				"disabled": false,
+				"trickId": 1124
+			},
+			"position": {
+				"x": -374.5,
+				"y": -182
+			}
+		},
+		"U0.14146676203319442": {
+			"data": {
+				"id": "U0.14146676203319442",
+				"name": "Server room",
+				"type": "Site",
+				"disabled": false,
+				"trickId": 1154
+			},
+			"position": {
+				"x": -430.5,
+				"y": -208
+			}
+		},
+		"U0.3663494029680503": {
+			"data": {
+				"id": "U0.3663494029680503",
+				"name": "Regional control room - electricity",
+				"type": "Site",
+				"disabled": false,
+				"trickId": 1151
+			},
+			"position": {
+				"x": -475.5,
+				"y": -234
+			}
+		},
+		"U0.9329986084030304": {
+			"data": {
+				"id": "U0.9329986084030304",
+				"name": "ILR_GAS_Datacenter",
+				"type": "Site",
+				"disabled": false,
+				"trickId": 1146
+			},
+			"position": {
+				"x": -537.5,
+				"y": -260
+			}
+		},
+		"U0.7808403321334039": {
+			"data": {
+				"id": "U0.7808403321334039",
+				"name": "ILR_GAS_Air conditioning",
+				"type": "Site",
+				"disabled": false,
+				"trickId": 1144
+			},
+			"position": {
+				"x": -618,
+				"y": -286
+			}
+		},
+		"U0.04617466169264017": {
+			"data": {
+				"id": "U0.04617466169264017",
+				"name": "Field Station - gas",
+				"type": "Site",
+				"disabled": false,
+				"trickId": 1149
+			},
+			"position": {
+				"x": -669,
+				"y": -312
+			}
+		},
+		"U0.7332449515864308": {
+			"data": {
+				"id": "U0.7332449515864308",
+				"name": "External environment",
+				"type": "Site",
+				"disabled": false,
+				"trickId": 1148
+			},
+			"position": {
+				"x": -734.5,
+				"y": -338
+			}
+		},
+		"U0.6376397699858569": {
+			"data": {
+				"id": "U0.6376397699858569",
+				"name": "Dispatching center - electricity",
+				"type": "Site",
+				"disabled": false,
+				"trickId": 1147
+			},
+			"position": {
+				"x": -782,
+				"y": -364
+			}
+		},
+		"U0.34405556349820277": {
+			"data": {
+				"id": "U0.34405556349820277",
+				"name": "Datacenter",
+				"type": "Site",
+				"disabled": false,
+				"trickId": 1166
+			},
+			"position": {
+				"x": -856.5,
+				"y": -390
+			}
+		},
+		"U0.9074882359582332": {
+			"data": {
+				"id": "U0.9074882359582332",
+				"name": "Control Room - gas",
+				"type": "Site",
+				"disabled": false,
+				"trickId": 1145
+			},
+			"position": {
+				"x": -896.5,
+				"y": -416
+			}
+		},
+		"U0.946511537789634": {
+			"data": {
+				"id": "U0.946511537789634",
+				"name": "IT Management",
+				"type": "Serv",
+				"disabled": false,
+				"trickId": 1123
+			},
+			"position": {
+				"x": -967,
+				"y": -442
+			}
+		},
+		"U0.2019598678091068": {
+			"data": {
+				"id": "U0.2019598678091068",
+				"name": "Smart Metering central system - electricity",
+				"type": "SW",
+				"disabled": false,
+				"trickId": 1141
+			},
+			"position": {
+				"x": -1024,
+				"y": -468
+			}
+		},
+		"U0.7965751933243879": {
+			"data": {
+				"id": "U0.7965751933243879",
+				"name": "Operating system",
+				"type": "SW",
+				"disabled": false,
+				"trickId": 1133
+			},
+			"position": {
+				"x": -1083.5,
+				"y": -494
+			}
+		},
+		"U0.7727479029223057": {
+			"data": {
+				"id": "U0.7727479029223057",
+				"name": "Management of metering data - gas",
+				"type": "SW",
+				"disabled": false,
+				"trickId": 1135
+			},
+			"position": {
+				"x": -1147,
+				"y": -520
+			}
+		},
+		"U0.38097935157076956": {
+			"data": {
+				"id": "U0.38097935157076956",
+				"name": "MDMS - gas",
+				"type": "SW",
+				"disabled": false,
+				"trickId": 1138
+			},
+			"position": {
+				"x": -1219,
+				"y": -546
+			}
+		},
+		"U0.157579248775374": {
+			"data": {
+				"id": "U0.157579248775374",
+				"name": "MACO - gas",
+				"type": "SW",
+				"disabled": false,
+				"trickId": 1137
+			},
+			"position": {
+				"x": -1264.5,
+				"y": -572
+			}
+		},
+		"U0.6273668898720142": {
+			"data": {
+				"id": "U0.6273668898720142",
+				"name": "MACO - electricity",
+				"type": "SW",
+				"disabled": false,
+				"trickId": 1142
+			},
+			"position": {
+				"x": -1309.5,
+				"y": -598
+			}
+		},
+		"U0.22563000817655077": {
+			"data": {
+				"id": "U0.22563000817655077",
+				"name": "IT Monitoring system",
+				"type": "SW",
+				"disabled": false,
+				"trickId": 1132
+			},
+			"position": {
+				"x": -1375,
+				"y": -624
+			}
+		},
+		"U0.41623246103614475": {
+			"data": {
+				"id": "U0.41623246103614475",
+				"name": "ILR_GAS_CRM - Customer Relationship Management",
+				"type": "SW",
+				"disabled": false,
+				"trickId": 1128
+			},
+			"position": {
+				"x": -1450,
+				"y": -650
+			}
+		},
+		"U0.7100882411553537": {
+			"data": {
+				"id": "U0.7100882411553537",
+				"name": "HES",
+				"type": "SW",
+				"disabled": false,
+				"trickId": 1136
+			},
+			"position": {
+				"x": -1514.5,
+				"y": -676
+			}
+		},
+		"U0.4193306807997941": {
+			"data": {
+				"id": "U0.4193306807997941",
+				"name": "Electronic messaging software",
+				"type": "SW",
+				"disabled": false,
+				"trickId": 1130
+			},
+			"position": {
+				"x": -1540.5,
+				"y": -702
+			}
+		},
+		"U0.766933930464246": {
+			"data": {
+				"id": "U0.766933930464246",
+				"name": "ERP - Enterprise Resources Planning",
+				"type": "SW",
+				"disabled": false,
+				"trickId": 1131
+			},
+			"position": {
+				"x": -1615,
+				"y": -728
+			}
+		},
+		"U0.529558200676538": {
+			"data": {
+				"id": "U0.529558200676538",
+				"name": "DBMS - Database Management System",
+				"type": "SW",
+				"disabled": false,
+				"trickId": 1129
+			},
+			"position": {
+				"x": -1690,
+				"y": -754
+			}
+		},
+		"U0.8110320029573097": {
+			"data": {
+				"id": "U0.8110320029573097",
+				"name": "Consumption data in DB - electricity",
+				"type": "SW",
+				"disabled": false,
+				"trickId": 1140
+			},
+			"position": {
+				"x": -1757.5,
+				"y": -780
+			}
+		},
+		"U0.892773946983838": {
+			"data": {
+				"id": "U0.892773946983838",
+				"name": "Bad data detection system - electricity",
+				"type": "SW",
+				"disabled": false,
+				"trickId": 1139
+			},
+			"position": {
+				"x": -1825.5,
+				"y": -806
+			}
+		},
+		"U0.9113839577248544": {
+			"data": {
+				"id": "U0.9113839577248544",
+				"name": "Allocation management - gas",
+				"type": "SW",
+				"disabled": false,
+				"trickId": 1134
+			},
+			"position": {
+				"x": -1895.5,
+				"y": -832
+			}
+		},
+		"U0.2856721007218006": {
+			"data": {
+				"id": "U0.2856721007218006",
+				"name": "Water supply",
+				"type": "Out",
+				"disabled": false,
+				"trickId": 1158
+			},
+			"position": {
+				"x": -1965.5,
+				"y": -858
+			}
+		},
+		"U0.35060965720986426": {
+			"data": {
+				"id": "U0.35060965720986426",
+				"name": "Telecommunications services",
+				"type": "Out",
+				"disabled": false,
+				"trickId": 1157
+			},
+			"position": {
+				"x": -2013,
+				"y": -884
+			}
+		},
+		"U0.9458114964672351": {
+			"data": {
+				"id": "U0.9458114964672351",
+				"name": "Power supply",
+				"type": "Out",
+				"disabled": false,
+				"trickId": 1150
+			},
+			"position": {
+				"x": -2088.5,
+				"y": -910
+			}
+		},
+		"U0.21772940287421783": {
+			"data": {
+				"id": "U0.21772940287421783",
+				"name": "Wireless network",
+				"type": "Net",
+				"disabled": false,
+				"trickId": 1113
+			},
+			"position": {
+				"x": -2137.5,
+				"y": -936
+			}
+		},
+		"U0.7600697311829818": {
+			"data": {
+				"id": "U0.7600697311829818",
+				"name": "Telecom Network - radio transmission - electricity",
+				"type": "Net",
+				"disabled": false,
+				"trickId": 1163
+			},
+			"position": {
+				"x": -2199.5,
+				"y": -962
+			}
+		},
+		"U0.5502055259217782": {
+			"data": {
+				"id": "U0.5502055259217782",
+				"name": "Telecom Network - optical fiber - electricity",
+				"type": "Net",
+				"disabled": false,
+				"trickId": 1122
+			},
+			"position": {
+				"x": -2272.5,
+				"y": -988
+			}
+		},
+		"U0.08403138620378514": {
+			"data": {
+				"id": "U0.08403138620378514",
+				"name": "Telecom Network - analogic - electricity",
+				"type": "Net",
+				"disabled": false,
+				"trickId": 1120
+			},
+			"position": {
+				"x": -2342,
+				"y": -1014
+			}
+		},
+		"U0.004712175777611405": {
+			"data": {
+				"id": "U0.004712175777611405",
+				"name": "Telecom Network - DSL line - electricity",
+				"type": "Net",
+				"disabled": false,
+				"trickId": 1121
+			},
+			"position": {
+				"x": -2415.5,
+				"y": -1040
+			}
+		},
+		"U0.23893298656453177": {
+			"data": {
+				"id": "U0.23893298656453177",
+				"name": "Telecom Network - 2G / 4G network - electricity",
+				"type": "Net",
+				"disabled": false,
+				"trickId": 1119
+			},
+			"position": {
+				"x": -2489,
+				"y": -1066
+			}
+		},
+		"U0.7002450895328882": {
+			"data": {
+				"id": "U0.7002450895328882",
+				"name": "Network - voice - gas",
+				"type": "Net",
+				"disabled": false,
+				"trickId": 1118
+			},
+			"position": {
+				"x": -2558.5,
+				"y": -1092
+			}
+		},
+		"U0.8635375888434207": {
+			"data": {
+				"id": "U0.8635375888434207",
+				"name": "Network - radio transmission - gas",
+				"type": "Net",
+				"disabled": false,
+				"trickId": 1117
+			},
+			"position": {
+				"x": -2634.5,
+				"y": -1118
+			}
+		},
+		"U0.41556620793054333": {
+			"data": {
+				"id": "U0.41556620793054333",
+				"name": "Intranet",
+				"type": "Net",
+				"disabled": false,
+				"trickId": 1112
+			},
+			"position": {
+				"x": -2702.5,
+				"y": -1144
+			}
+		},
+		"U0.4966470936021252": {
+			"data": {
+				"id": "U0.4966470936021252",
+				"name": "Internet",
+				"type": "Net",
+				"disabled": false,
+				"trickId": 1111
+			},
+			"position": {
+				"x": -2730.5,
+				"y": -1170
+			}
+		},
+		"U0.16931393655054694": {
+			"data": {
+				"id": "U0.16931393655054694",
+				"name": "ILR_GAS_Network - optical fiber - gas",
+				"type": "Net",
+				"disabled": false,
+				"trickId": 1116
+			},
+			"position": {
+				"x": -2758.5,
+				"y": -1196
+			}
+		},
+		"U0.8184360889595639": {
+			"data": {
+				"id": "U0.8184360889595639",
+				"name": "ILR_GAS_Network - DSL line - gas",
+				"type": "Net",
+				"disabled": false,
+				"trickId": 1115
+			},
+			"position": {
+				"x": -2834,
+				"y": -1222
+			}
+		},
+		"U0.9761821046599846": {
+			"data": {
+				"id": "U0.9761821046599846",
+				"name": "ILR_GAS_Network - 2G / 4G network - gas",
+				"type": "Net",
+				"disabled": false,
+				"trickId": 1114
+			},
+			"position": {
+				"x": -2909.5,
+				"y": -1248
+			}
+		},
+		"U0.6674903046853444": {
+			"data": {
+				"id": "U0.6674903046853444",
+				"name": "Ethernet network",
+				"type": "Net",
+				"disabled": false,
+				"trickId": 1110
+			},
+			"position": {
+				"x": -2985,
+				"y": -1274
+			}
+		},
+		"U0.0030329617463424885": {
+			"data": {
+				"id": "U0.0030329617463424885",
+				"name": "Workstation",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1091
+			},
+			"position": {
+				"x": -3046.5,
+				"y": -1300
+			}
+		},
+		"U0.5320700565708516": {
+			"data": {
+				"id": "U0.5320700565708516",
+				"name": "Valve - gas",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1099
+			},
+			"position": {
+				"x": -3089.5,
+				"y": -1326
+			}
+		},
+		"U0.29051920896069716": {
+			"data": {
+				"id": "U0.29051920896069716",
+				"name": "Switch",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1090
+			},
+			"position": {
+				"x": -3130,
+				"y": -1352
+			}
+		},
+		"U0.9788549211745345": {
+			"data": {
+				"id": "U0.9788549211745345",
+				"name": "Storage",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1089
+			},
+			"position": {
+				"x": -3156,
+				"y": -1378
+			}
+		},
+		"U0.6414967872846198": {
+			"data": {
+				"id": "U0.6414967872846198",
+				"name": "Smartphone",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1088
+			},
+			"position": {
+				"x": -3185,
+				"y": -1404
+			}
+		},
+		"U0.7131458410286267": {
+			"data": {
+				"id": "U0.7131458410286267",
+				"name": "Server",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1087
+			},
+			"position": {
+				"x": -3229.5,
+				"y": -1430
+			}
+		},
+		"U0.4115350823627639": {
+			"data": {
+				"id": "U0.4115350823627639",
+				"name": "Router",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1086
+			},
+			"position": {
+				"x": -3255.5,
+				"y": -1456
+			}
+		},
+		"U0.17744743202589475": {
+			"data": {
+				"id": "U0.17744743202589475",
+				"name": "Removable media",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1085
+			},
+			"position": {
+				"x": -3281.5,
+				"y": -1482
+			}
+		},
+		"U0.20565205094103955": {
+			"data": {
+				"id": "U0.20565205094103955",
+				"name": "Remote relay - electricity",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1108
+			},
+			"position": {
+				"x": -3347,
+				"y": -1508
+			}
+		},
+		"U0.9233628463282457": {
+			"data": {
+				"id": "U0.9233628463282457",
+				"name": "Remote Terminal Unit - gas",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1098
+			},
+			"position": {
+				"x": -3402.5,
+				"y": -1534
+			}
+		},
+		"U0.9673980695135287": {
+			"data": {
+				"id": "U0.9673980695135287",
+				"name": "Remote Terminal Unit - electricity",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1109
+			},
+			"position": {
+				"x": -3466,
+				"y": -1560
+			}
+		},
+		"U0.6849162227304149": {
+			"data": {
+				"id": "U0.6849162227304149",
+				"name": "Proxy server",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1084
+			},
+			"position": {
+				"x": -3529.5,
+				"y": -1586
+			}
+		},
+		"U0.7642857559728378": {
+			"data": {
+				"id": "U0.7642857559728378",
+				"name": "Programmable Logic Controller - electricity",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1107
+			},
+			"position": {
+				"x": -3575.5,
+				"y": -1612
+			}
+		},
+		"U0.4801443918042325": {
+			"data": {
+				"id": "U0.4801443918042325",
+				"name": "Printer",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1083
+			},
+			"position": {
+				"x": -3639.5,
+				"y": -1638
+			}
+		},
+		"U0.9674892720803041": {
+			"data": {
+				"id": "U0.9674892720803041",
+				"name": "Mail server",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1082
+			},
+			"position": {
+				"x": -3665.5,
+				"y": -1664
+			}
+		},
+		"U0.8094717248129115": {
+			"data": {
+				"id": "U0.8094717248129115",
+				"name": "MV transformer station - electricity",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1106
+			},
+			"position": {
+				"x": -3705.5,
+				"y": -1690
+			}
+		},
+		"U0.9073911685813723": {
+			"data": {
+				"id": "U0.9073911685813723",
+				"name": "Load curve meter - gas",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1092
+			},
+			"position": {
+				"x": -3772.5,
+				"y": -1716
+			}
+		},
+		"U0.16844702345414753": {
+			"data": {
+				"id": "U0.16844702345414753",
+				"name": "Load balancer",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1081
+			},
+			"position": {
+				"x": -3843,
+				"y": -1742
+			}
+		},
+		"U0.6679789313736448": {
+			"data": {
+				"id": "U0.6679789313736448",
+				"name": "Line departure - electricity",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1103
+			},
+			"position": {
+				"x": -3894.5,
+				"y": -1768
+			}
+		},
+		"U0.4522370043459818": {
+			"data": {
+				"id": "U0.4522370043459818",
+				"name": "Laptop computer",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1080
+			},
+			"position": {
+				"x": -3954,
+				"y": -1794
+			}
+		},
+		"U0.4328540219186019": {
+			"data": {
+				"id": "U0.4328540219186019",
+				"name": "Index meter - gas",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1093
+			},
+			"position": {
+				"x": -4015,
+				"y": -1820
+			}
+		},
+		"U0.43998353819282543": {
+			"data": {
+				"id": "U0.43998353819282543",
+				"name": "Handheld units - electricity",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1104
+			},
+			"position": {
+				"x": -4078.5,
+				"y": -1846
+			}
+		},
+		"U0.6940725668172671": {
+			"data": {
+				"id": "U0.6940725668172671",
+				"name": "HV transformer station - electricity",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1105
+			},
+			"position": {
+				"x": -4140,
+				"y": -1872
+			}
+		},
+		"U0.827666410677786": {
+			"data": {
+				"id": "U0.827666410677786",
+				"name": "Fixed voice device",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1079
+			},
+			"position": {
+				"x": -4207,
+				"y": -1898
+			}
+		},
+		"U0.20073334182277436": {
+			"data": {
+				"id": "U0.20073334182277436",
+				"name": "Firewall",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1078
+			},
+			"position": {
+				"x": -4274,
+				"y": -1924
+			}
+		},
+		"U0.03437875598282214": {
+			"data": {
+				"id": "U0.03437875598282214",
+				"name": "Fileserver",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1077
+			},
+			"position": {
+				"x": -4302.5,
+				"y": -1950
+			}
+		},
+		"U0.7749774445742286": {
+			"data": {
+				"id": "U0.7749774445742286",
+				"name": "Data Concentrator - electricity",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1102
+			},
+			"position": {
+				"x": -4338.5,
+				"y": -1976
+			}
+		},
+		"U0.2471007043067932": {
+			"data": {
+				"id": "U0.2471007043067932",
+				"name": "Cut-off device - gas",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1094
+			},
+			"position": {
+				"x": -4412,
+				"y": -2002
+			}
+		},
+		"U0.22453984635304636": {
+			"data": {
+				"id": "U0.22453984635304636",
+				"name": "Connection to the upstream network - electricity",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1101
+			},
+			"position": {
+				"x": -4482,
+				"y": -2028
+			}
+		},
+		"U0.4870813463564012": {
+			"data": {
+				"id": "U0.4870813463564012",
+				"name": "Connection facilities Transport - gas",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1096
+			},
+			"position": {
+				"x": -4553.5,
+				"y": -2054
+			}
+		},
+		"U0.9888314869858801": {
+			"data": {
+				"id": "U0.9888314869858801",
+				"name": "Connection facilities Distribution - gas",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1095
+			},
+			"position": {
+				"x": -4628,
+				"y": -2080
+			}
+		},
+		"U0.32400307962381314": {
+			"data": {
+				"id": "U0.32400307962381314",
+				"name": "Connection Point - gas",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1097
+			},
+			"position": {
+				"x": -4702.5,
+				"y": -2106
+			}
+		},
+		"U0.8463780244233003": {
+			"data": {
+				"id": "U0.8463780244233003",
+				"name": "Charging point Chargy - electricity",
+				"type": "HW",
+				"disabled": false,
+				"trickId": 1100
+			},
+			"position": {
+				"x": -4771.5,
+				"y": -2132
+			}
+		},
+		"U0.6128997908574723": {
+			"data": {
+				"id": "U0.6128997908574723",
+				"name": "Trading/Purchasing - gas",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1068
+			},
+			"position": {
+				"x": -4841,
+				"y": -2158
+			}
+		},
+		"U0.864747357167388": {
+			"data": {
+				"id": "U0.864747357167388",
+				"name": "Trading/Purchasing - electricity",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1162
+			},
+			"position": {
+				"x": -4913.5,
+				"y": -2184
+			}
+		},
+		"U0.3596097368433093": {
+			"data": {
+				"id": "U0.3596097368433093",
+				"name": "Supply of natural gas",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1062
+			},
+			"position": {
+				"x": -4986,
+				"y": -2210
+			}
+		},
+		"U0.36004899314704675": {
+			"data": {
+				"id": "U0.36004899314704675",
+				"name": "Supply of electricity",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1071
+			},
+			"position": {
+				"x": -5062,
+				"y": -2236
+			}
+		},
+		"U0.4957374924778113": {
+			"data": {
+				"id": "U0.4957374924778113",
+				"name": "Operation of gas transmission system",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1060
+			},
+			"position": {
+				"x": -5132,
+				"y": -2262
+			}
+		},
+		"U0.7194588905748065": {
+			"data": {
+				"id": "U0.7194588905748065",
+				"name": "Operation of gas distribution system",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1059
+			},
+			"position": {
+				"x": -5207.5,
+				"y": -2288
+			}
+		},
+		"U0.31210476585085845": {
+			"data": {
+				"id": "U0.31210476585085845",
+				"name": "Operation of electricity transmission system",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1070
+			},
+			"position": {
+				"x": -5277,
+				"y": -2314
+			}
+		},
+		"U0.8054638178927549": {
+			"data": {
+				"id": "U0.8054638178927549",
+				"name": "Operation of electricity distribution system",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1069
+			},
+			"position": {
+				"x": -5352.5,
+				"y": -2340
+			}
+		},
+		"U0.2974141603188807": {
+			"data": {
+				"id": "U0.2974141603188807",
+				"name": "Market communication - gas supply",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1165
+			},
+			"position": {
+				"x": -5422,
+				"y": -2366
+			}
+		},
+		"U0.12213475878125579": {
+			"data": {
+				"id": "U0.12213475878125579",
+				"name": "Market communication - gas",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1067
+			},
+			"position": {
+				"x": -5484,
+				"y": -2392
+			}
+		},
+		"U0.1007522692337055": {
+			"data": {
+				"id": "U0.1007522692337055",
+				"name": "Market communication - electricity supply",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1161
+			},
+			"position": {
+				"x": -5546,
+				"y": -2418
+			}
+		},
+		"U0.88172661103824": {
+			"data": {
+				"id": "U0.88172661103824",
+				"name": "Market communication - electricity",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1076
+			},
+			"position": {
+				"x": -5608,
+				"y": -2444
+			}
+		},
+		"U0.08600103038479645": {
+			"data": {
+				"id": "U0.08600103038479645",
+				"name": "Luxmetering services",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1143
+			},
+			"position": {
+				"x": -5670,
+				"y": -2470
+			}
+		},
+		"U0.4594172845260742": {
+			"data": {
+				"id": "U0.4594172845260742",
+				"name": "Grid Operations - gas",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1065
+			},
+			"position": {
+				"x": -5717.5,
+				"y": -2496
+			}
+		},
+		"U0.06197648321898308": {
+			"data": {
+				"id": "U0.06197648321898308",
+				"name": "Grid Operations - electricity",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1074
+			},
+			"position": {
+				"x": -5782,
+				"y": -2522
+			}
+		},
+		"U0.48672795615112063": {
+			"data": {
+				"id": "U0.48672795615112063",
+				"name": "Grid Development & Services - gas",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1064
+			},
+			"position": {
+				"x": -5846.5,
+				"y": -2548
+			}
+		},
+		"U0.18160156776649083": {
+			"data": {
+				"id": "U0.18160156776649083",
+				"name": "Grid Development & Services - electricity",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1073
+			},
+			"position": {
+				"x": -5922,
+				"y": -2574
+			}
+		},
+		"U0.8247277148879475": {
+			"data": {
+				"id": "U0.8247277148879475",
+				"name": "General Services - gas",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1063
+			},
+			"position": {
+				"x": -5997.5,
+				"y": -2600
+			}
+		},
+		"U0.189026689725045": {
+			"data": {
+				"id": "U0.189026689725045",
+				"name": "General Services - electricity",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1072
+			},
+			"position": {
+				"x": -6067,
+				"y": -2626
+			}
+		},
+		"U0.4573901399610498": {
+			"data": {
+				"id": "U0.4573901399610498",
+				"name": "Customer management - gas supply",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1164
+			},
+			"position": {
+				"x": -6136.5,
+				"y": -2652
+			}
+		},
+		"U0.028879434843578355": {
+			"data": {
+				"id": "U0.028879434843578355",
+				"name": "Customer management - electricity supply",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1160
+			},
+			"position": {
+				"x": -6206.5,
+				"y": -2678
+			}
+		},
+		"U0.18465833236197793": {
+			"data": {
+				"id": "U0.18465833236197793",
+				"name": "Customer Management - gas",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1066
+			},
+			"position": {
+				"x": -6268.5,
+				"y": -2704
+			}
+		},
+		"U0.5406393568375973": {
+			"data": {
+				"id": "U0.5406393568375973",
+				"name": "Customer Management - electricity",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1075
+			},
+			"position": {
+				"x": -6338.5,
+				"y": -2730
+			}
+		},
+		"U0.44330261106102054": {
+			"data": {
+				"id": "U0.44330261106102054",
+				"name": "Balancing offer and demand - gas",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1159
+			},
+			"position": {
+				"x": -6393.5,
+				"y": -2756
+			}
+		},
+		"U0.2749156642161239": {
+			"data": {
+				"id": "U0.2749156642161239",
+				"name": "Balancing offer and demand - electricity",
+				"type": "Busi",
+				"disabled": false,
+				"trickId": 1061
+			},
+			"position": {
+				"x": -6465.5,
+				"y": -2782
+			}
+		}
+	},
+	"edges": []
+}

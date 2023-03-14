@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Creating a dependency graph with N edges between two nodes
+level: 1.1.8
+links: []
+normative: true
+ref: ''
+reviewed: 4siuleawq-Bi5GFfhpK6BBEIIbFke70x-i7oVYuKNPk=
+text: |
+  The tool shall be able to create a dependency graph by connecting multiple assets using directed edges.
+  Where the graph may have any number of edges between two assets.

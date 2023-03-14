@@ -1,0 +1,57 @@
+{
+	"nodes": {
+		"U0.19605884054244238": {
+			"data": {
+				"id": "U0.19605884054244238",
+				"name": "Users",
+				"type": "Staff",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -265.56755098087285,
+				"y": -101.63344158694767
+			}
+		},
+		"U0.5196969510272327": {
+			"data": {
+				"id": "U0.5196969510272327",
+				"name": "Valve - gas",
+				"type": "HW",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -361.77908473724136,
+				"y": -107.11881341356253
+			}
+		},
+		"U0.9723504615782741": {
+			"data": {
+				"id": "U0.9723504615782741",
+				"name": "AssetNotINTS",
+				"type": "Compl",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -230.8691314009958,
+				"y": -227.65693246920415
+			}
+		},
+		"U0.7228071344437585": {
+			"data": {
+				"id": "U0.7228071344437585",
+				"name": "AssetNOTINTS1",
+				"type": "Net",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -366.4102429380298,
+				"y": -238.7248004813836
+			}
+		}
+	},
+	"edges": []
+}

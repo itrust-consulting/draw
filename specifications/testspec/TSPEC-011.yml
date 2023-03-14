@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: 'Test Setup'
+level: 1.1
+links: []
+normative: false
+ref: ''
+reviewed: null
+text: |
+  The test cases fall in two categories
+    ---
+    - DRAW  specific tests
+      Load file DRAW_ROOT_DIRECTORY/index.html on browser
+    - DRAW and TrickService interaction testcases
+        Connect with IT Admin to create an account on the following trick service portals before proceeding with these tests.
+        ---
+        - demo.trickservice.com
+        - trickservice.itrust.lu        
+  
+  All files referred for testing and validation in these tests are present in DRAW_ROOT_DIRECTORY/tests in git repository corresponding to appropriate DRAW tool version. 
+  

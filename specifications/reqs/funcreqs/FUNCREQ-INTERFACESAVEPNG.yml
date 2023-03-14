@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Interface Requirements
+level: 1.2.10
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The tool shall provide an interface to Save dependency graph as a PNG file
+  

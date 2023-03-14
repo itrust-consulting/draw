@@ -1,0 +1,32 @@
+active: true
+derived: false
+header: 'Load and save graph'
+level: 2.1.7
+links:
+- FUNCREQ-LOADSAVEJSON: null
+- FUNCREQ-LOADSAVEJSONDEFNAME: null
+- FUNCREQ-LOADSAVEPATH: null
+- FUNCREQ-LOADSAVESTATE: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |Testcase Id              | DRAW_TC_ID_37       |
+  |-------------------------| --------------------|
+  |**Testcase description** |  Load and Save the graph |
+  |**Verification method**  |  Test                   |
+  |**Requirements covered** |                     |
+  |**Testsetup**            |  DRAW v2.0.5 on Microsoft Edge                      |
+  |**Preconditions**        |  Windows 10/11                      |
+  |**Execution Type**       |  Manual                 |
+
+  |**Step#**  | **Step Action**          | **Expected Results**|
+  |-----------|--------------------------|---------------------|
+  |  **1** | Open tests/tests_manual/graph1.json   |                     |
+  |  **2** | Save the graph : log/graph1.json | The JSON file must be saved in downloads directory with name graph<N>.json |
+  |  **3** | Compare the log/graph1.json and tests/tests_manual/graph1.json | The files must match |
+  |  **4** | Open tests/tests_manual/graph4.json  | |
+  |  **5** | Save -> Export as excel  | The saved excel file must match tests/tests_manual/AssetDsinExcel.xlsx |
+
+  |**Test pass-fail criteria** | The steps 3 and 5 must have the Expected Results  |
+  |----------------------------|------------------------------------------------------------------------|

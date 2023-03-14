@@ -1,0 +1,28 @@
+active: true
+derived: false
+header: 'Compare estimation with cyclic graph'
+level: 2.1.19
+links:
+- FUNCREQ-TRICKSYNCCOMPAREESTIMATIONS: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |Testcase Id              | DRAW_TC_ID_46       |
+  |-------------------------| --------------------|
+  |**Testcase description** |  Compare Estimations testing with cyclic graph |
+  |**Verification method**  |  Test                   |
+  |**Requirements covered** |                     |
+  |**Testsetup**            |  DRAW v2.0.5 on Microsoft Edge                      |
+  |**Preconditions**        |  Windows 10/11                      |
+  |**Execution Type**       |  Manual                 |
+
+  |**Step#**  | **Step Action**          | **Expected Results**|
+  |-----------|--------------------------|---------------------|
+  | **1** | Open tests/tests_manual/graph_compare_estimations_cyclic.json    |  Graph with 8 nodes must be loaded  |
+  | **2** | Sync with TRICK Service (demo.trickservice.com) Demo UG, TestingILR, 0.8 | Result in Synchronise window "Everything synchronised with TRICK Service!" |
+  | **3** | Compare estimations (demo.trickservice.com) Demo UG, TestingILR, 0.8 | Generated Report and CSV file |
+  | **4** | Compare the generated report.html and report.csv data with tests/tests_manual/CompareEstimationTestCyclic.xlsx,  | The values in NewImpact, New Financial, New Likelihood must match; Computed Impact, Computed Likelihood, Computed Financial columns in this sheet are present for reference to show rounding errors in computation; alternately compare files with test_compareestimation_report_cyclic.html test_compareestimation_report_cyclic.csv  |
+
+  |**Test pass-fail criteria** | The steps 1-4 must show expected results  |
+  |----------------------------|------------------------------------------------------------------------|

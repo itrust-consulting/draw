@@ -1,0 +1,30 @@
+active: true
+derived: false
+header: |
+  Export and Load Graph to/from TS
+level: 2.1.14
+links:
+- FUNCREQ-TRICKSYNCEXPORTDEPGRAPHDEFGRAPH: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |Testcase Id              | DRAW_TC_ID_33       |
+  |-------------------------| --------------------|
+  |**Testcase description** |  Export and Load unconnected Graph to/from TS   |
+  |**Verification method**  |  Test                   |
+  |**Requirements covered** |                     |
+  |**Testsetup**            |  DRAW v2.0.5 on Microsoft Edge  |
+  |**Preconditions**        |  Windows 10/11                      |
+  |**Execution Type**       |  Manual                 |
+
+  |**Step#**  | **Step Action**          | **Expected Results**|
+  |-----------|--------------------------|---------------------|
+  | **1** | Open tests/tests_manual/graph_tsdep_unconnected.json    |  Graph with 2 nodes gets loaded into white board |
+  | **2** | Save -> Update Dependency Graph on Trick Service (Choose demo.trickservice.com) (Demo UG, TestingILR,0.5) |  The dependency graph should be saved in Trick |
+  | **3** | Clear Working Area; Open-> Load dependency graph from Trick Service (Choose demo.trickservice.com)  (Demo UG, TestingILR,0.5) |  The snapshot should be loaded from Trick Service with all 5 nodes |
+  | **4** | Save the graph as log/graph.json file  | the log/graph.json must match tests/tests_manual/graph_syncts1.json |
+  | **5** | Reset: Clear Working Area; Open->tests/tests_manual/graph_reset_syncts1.json; Synchronize -> Set all to -> Upload Graph->TS; Save ->  Update Dependency Graph on Trick Service | Reset Step to save the graph back on Trick Service |
+
+  |**Test pass-fail criteria** | The loaded graph must be same as verified in step 4.   |
+  |----------------------------|------------------------------------------------------------------------|

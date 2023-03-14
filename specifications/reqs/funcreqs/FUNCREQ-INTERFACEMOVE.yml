@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Interface Requirements move asset
+level: 1.2.6
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The tool shall provide an interface to move an asset
+   

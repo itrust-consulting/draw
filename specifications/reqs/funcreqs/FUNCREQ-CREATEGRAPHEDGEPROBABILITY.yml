@@ -1,0 +1,15 @@
+active: true
+derived: false
+header: |
+  Creating a dependency graph with probability between 0 and 1
+level: 1.1.5
+links: []
+normative: true
+ref: ''
+reviewed: detGMKFIyw606hJ16xeWxR6NlgbXzl0thaBPmj5AL8s=
+text: |+
+  The tool shall be able to create a dependency graph by connecting multiple assets using directed edges where
+  the probability of edge represeting impact of an asset on another can lie between 0 (exclusive) and 1(inclusive).
+
+
+...

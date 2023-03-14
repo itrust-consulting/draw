@@ -1,0 +1,165 @@
+{
+	"nodes": {
+		"U0.504": {
+			"data": {
+				"name": "Users",
+				"disabled": false,
+				"id": "U0.504",
+				"type": "Staff",
+				"trickId": null
+			},
+			"position": {
+				"x": -763.2672678804468,
+				"y": -135.43143564352826
+			}
+		},
+		"U0.428": {
+			"data": {
+				"name": "Valve - gas",
+				"disabled": false,
+				"id": "U0.428",
+				"type": "HW",
+				"trickId": null
+			},
+			"position": {
+				"x": -552.4221375178097,
+				"y": -137.75637471072488
+			}
+		},
+		"U0.447": {
+			"data": {
+				"name": "Wireless network",
+				"disabled": false,
+				"id": "U0.447",
+				"type": "Net",
+				"trickId": null
+			},
+			"position": {
+				"x": -763.9522628093627,
+				"y": -16.09779902264715
+			}
+		},
+		"U0.487": {
+			"data": {
+				"name": "Water supply",
+				"disabled": false,
+				"id": "U0.487",
+				"type": "Out",
+				"trickId": null
+			},
+			"position": {
+				"x": -561.100399980083,
+				"y": -19.77316805183523
+			}
+		},
+		"U0.418": {
+			"data": {
+				"name": "Workstation",
+				"disabled": false,
+				"id": "U0.418",
+				"type": "HW",
+				"trickId": null
+			},
+			"position": {
+				"x": -363.57013448228685,
+				"y": -11.78193924243088
+			}
+		},
+		"U0.9195771793912957": {
+			"data": {
+				"id": "U0.9195771793912957",
+				"name": "Operation",
+				"type": "Info",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -526.6073791733411,
+				"y": 129.10416405223404
+			}
+		},
+		"U0.9513874176348849": {
+			"data": {
+				"id": "U0.9513874176348849",
+				"name": "Operator",
+				"type": "Info",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -359.64219166363216,
+				"y": -139.51062236726295
+			}
+		},
+		"U0.7040720534401572": {
+			"data": {
+				"id": "U0.7040720534401572",
+				"name": "IT Admin",
+				"type": "Info",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -442.8463203944487,
+				"y": -258.90189527885815
+			}
+		}
+	},
+	"edges": [
+		{
+			"source": "U0.504",
+			"target": "U0.428",
+			"p": 0.3
+		},
+		{
+			"source": "U0.504",
+			"target": "U0.447",
+			"p": 0.25
+		},
+		{
+			"source": "U0.447",
+			"target": "U0.487",
+			"p": 0.6
+		},
+		{
+			"source": "U0.487",
+			"target": "U0.418",
+			"p": 0.5
+		},
+		{
+			"source": "U0.428",
+			"target": "U0.487",
+			"p": 0.5
+		},
+		{
+			"source": "U0.9513874176348849",
+			"target": "U0.428",
+			"p": 0.55
+		},
+		{
+			"source": "U0.9513874176348849",
+			"target": "U0.418",
+			"p": 0.75
+		},
+		{
+			"source": "U0.418",
+			"target": "U0.9195771793912957",
+			"p": 0.2
+		},
+		{
+			"source": "U0.9195771793912957",
+			"target": "U0.447",
+			"p": 0.48
+		},
+		{
+			"source": "U0.7040720534401572",
+			"target": "U0.428",
+			"p": 0.1
+		},
+		{
+			"source": "U0.9513874176348849",
+			"target": "U0.7040720534401572",
+			"p": 0.2
+		}
+	]
+}

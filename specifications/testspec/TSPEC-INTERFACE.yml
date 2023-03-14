@@ -1,0 +1,35 @@
+active: true
+derived: false
+header: 'Interface testing delete, undo, redo, move, userguide'
+level: 2.1.16
+links:
+- FUNCREQ-INTERFACEREDO: null
+- FUNCREQ-INTERFACEUNDO: null
+- FUNCREQ-INTERFACEUSERGUIDE: null
+- FUNCREQ-USABILITYSELDELASSET: null
+- FUNCREQ-USABILITYSELDELEDGE: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |Testcase Id              | DRAW_TC_ID_36      |
+  |-------------------------| --------------------|
+  |**Testcase description** |  Interface Testing |
+  |**Verification method**  |  Test                   |
+  |**Requirements covered** |                     |
+  |**Testsetup**            |  DRAW v2.0.5 on Microsoft Edge                      |
+  |**Preconditions**        |  Windows 10/11                      |
+  |**Execution Type**       |  Manual                 |
+
+  |**Step#**  | **Step Action**          | **Expected Results**|
+  |-----------|--------------------------|---------------------|
+  | **1** | Open tests/tests_manual/graph1.json    |  Graph must be laoded  |
+  | **2** | Delete Node2 and Edge from Node2->Node1 | The node and edge must be deleted |
+  | **3** | Now Press Undo last Action or (Ctrl+Z) | The Node2 and edge must appear again |
+  | **4** | Now Redo last Action or (Ctrl+Y) | The edge and Node2 must disappear again |
+  | **5** | Select a few assets and Move them with mouse | The edges and assets should move with mouse |
+  | **6** | Select and click the ? icon | The User Guide must be opened in a new Tab |
+
+
+  |**Test pass-fail criteria** | The steps 1-6 must have the Expected Results  |
+  |----------------------------|------------------------------------------------------------------------|

@@ -1,0 +1,30 @@
+active: true
+derived: false
+header: |
+  Export png to Trick Service
+level: 2.1.13
+links:
+- FUNCREQ-TRICKSYNCEXPORTPNG: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |Testcase Id              | DRAW_TC_ID_34       |
+  |-------------------------| --------------------|
+  |**Testcase description** |  Export PNG on TS   |
+  |**Verification method**  |  Test                   |
+  |**Requirements covered** |                     |
+  |**Testsetup**            |  DRAW v2.0.5 on Microsoft Edge  |
+  |**Preconditions**        |  Windows 10/11                      |
+  |**Execution Type**       |  Manual                 |
+
+  |**Step#**  | **Step Action**          | **Expected Results**|
+  |-----------|--------------------------|---------------------|
+  | **1** | Open tests/tests_manual/graph1.json    |  Graph gets loaded into white board |
+  | **2** | Save -> Export as PNG on Trick Service (Choose demo.trickservice.com) (Demo UG, TestingILR,0.8) |  The PNG should be saved in Trick |
+  | **3** | Open Trick Service Demo for same Analysis | Goto: Open: Goto: Settings: Export -> Word report Choose the default: Internal Template: Click Export button. Rename the saved exported File as   DemoTestingTemplate.docx | Export DemoTestingTemplate.docx without error. |
+  | **4** | Open DemoTestingTemplate.docx; Enable editing. Add any section in the Template.docx. <br> Insert a BookMark named TS_DependencyGraph (TS_DependencyGraph) in any section in the document. Save the file. | Save without error. Not able to see this Bookmark (Check with Ensuif) |
+  | **5** | Goto TrickService again. Export Word Report again. Specify External template this time. <br> In this input box specify the path of DemoTestingTemplate.docx. | Exported file shuld now contain the section where the bookmark was inserted with dependency graph PNG |
+
+  |**Test pass-fail criteria** | The loaded graph in document must be same as in step 1.   |
+  |----------------------------|------------------------------------------------------------------------|

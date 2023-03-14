@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Creating a dependency graph with default probability as 1
+level: 1.1.4
+links: []
+normative: true
+ref: ''
+reviewed: JaL9T749reuONcEWyLfvT5UcXMaBA8YIhNlhCqEeeXE=
+text: |
+  The tool shall be able to create a dependency graph by conecting  connecting multiple assets using directed edges where
+  default probability of an edge shall be 1

@@ -1,0 +1,30 @@
+active: true
+derived: false
+header: 'Load and edit graph edge'
+level: 2.1.5
+links:
+- FUNCREQ-CREATEGRAPHNEDGES: null
+- FUNCREQ-INTERFACELOADJSON: null
+- FUNCREQ-LOADRETAINSTATE: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |Testcase Id              | DRAW_TC_ID_30       |
+  |-------------------------| --------------------|
+  |**Testcase description** |  Load and Edit Basic Graph |
+  |**Verification method**  |  Test                   |
+  |**Requirements covered** |                     |
+  |**Testsetup**            |  DRAW v2.0.5 on Microsoft Edge                      |
+  |**Preconditions**        |  Windows 10/11                      |
+  |**Execution Type**       |  Manual                 |
+
+  |**Step#**  | **Step Action**          | **Expected Results**|
+  |-----------|--------------------------|---------------------|
+  |  **1** | Open tests/tests_manual/graph1.json   |                     |
+  |  **2** | Create another set of edges between all nodes in opposite direction  |
+  |  **3** | Save snippet of graph | The graph visually matches ![New Graph](images/Graph2.png "Multiple edges") ) |
+  |  **4** | Save graph json and compare with tests/tests_manual/graph1_multedges.json  | The json files match   |
+
+  |**Test pass-fail criteria** | The graph matches the images in Step 3 and JSON in Step 4  |
+  |----------------------------|------------------------------------------------------------------------|

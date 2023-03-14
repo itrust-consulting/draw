@@ -1,0 +1,14 @@
+active: true
+derived: false
+header: |
+  Load and Save Dependency graph in JSON format
+level: 1.3.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The tool shall provide the capability to load a dependency graph from an input JSON file. Similarly it shall provide
+  capability to save a dependency graph as JSON file.
+
+  

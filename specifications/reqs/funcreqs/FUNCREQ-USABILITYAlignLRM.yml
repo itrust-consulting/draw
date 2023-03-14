@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Usability requirements
+level: 1.4.2
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+   The tool shall provide an ability to align the assets on left , right and middle
+ 

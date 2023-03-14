@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Usability requirements align bottom, middle and top
+level: 1.4.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The tool shall provide an ability to align the assets on botton , vertical middle and top
+    

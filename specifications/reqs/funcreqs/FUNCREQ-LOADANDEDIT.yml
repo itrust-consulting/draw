@@ -1,0 +1,11 @@
+active: true
+derived: false
+header: |
+  Load and Edit Dependency graph
+level: 1.3.3
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The tool shall provide the capability to edit the graph after loading it and save it back as JSON or any other supported format (JSON/PNG/EXCEL)

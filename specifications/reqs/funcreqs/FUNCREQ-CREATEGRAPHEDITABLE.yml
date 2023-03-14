@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Creating an editable dependency graph
+level: 1.1.6
+links: []
+normative: true
+ref: ''
+reviewed: g8gY6FQ5aZSdj62aPCueaUoWJpGXymv9ueaXBKVyAns=
+text: |
+  The tool shall be able to create a dependency graph by connecting multiple assets using directed edges.
+  The graph must be allowed to be edited (update assets/edges of the graph) after being created.

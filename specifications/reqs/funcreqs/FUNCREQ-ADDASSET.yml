@@ -1,0 +1,26 @@
+active: true
+derived: false
+header: |
+  Adding or updating an asset
+level: 1.1.1
+links: []
+normative: true
+ref: ''
+reviewed: kB73lCYwGhx-mWtt1s-MO32LFeRlmGu-gVA7-Z35kgk=
+text: |
+  The tool shall be able to add or edit an asset of following types and also allow to change state to/from (active/inactive).
+   ---
+   - Business process
+   - Compliance
+   - Financial
+   - Information
+   - Immaterial Value
+   - Outsourced service
+   - Site
+   - Software
+   - Hardware
+   - Network
+   - Service
+   - Personnel
+   - System
+   ...

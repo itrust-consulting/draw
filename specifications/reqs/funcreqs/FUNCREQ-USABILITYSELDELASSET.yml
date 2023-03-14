@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Usability requirements
+level: 1.4.6
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The tool shall provide an ability to select one or more assets and delete them. If the asset is deleted its edge must be deleted as well.
+   
