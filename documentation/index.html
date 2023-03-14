@@ -437,10 +437,16 @@
 			</li>
 			<li><strong>Export as snapshot on TS:</strong> The dependency graph can also be exported to Trick Service as a snapshot. 
 				This snapshot can be later loaded from Trick Service risk analysis profile.
-				Trick Service will save this data but will not interact with it.
+				Trick Service will save this data but will not interact with it which implies that 
+				the connections in this graph are not used to update the Trick Service asset dependency
 			</li>
 			<li><strong>Update dependency graph on TS:</strong> The dependency graph on Trick Service can be saved using this option.
-				This option will update the asset dependency graph on Trick Service.
+				This option will update the asset dependency graph on Trick Service. 
+				By default the asset dependency graph in Trick Service risk analysis comprises of all the assets as unconnected nodes. 
+				This option will update the dependency graph on trick service using the connected nodes in DRAW white board which have been 
+				synchronized with Trick Service earlier. All unconnected asset nodes which are not synchronized with DRAW previously are ignored. 
+				However if a connected asset node is found in DRAW which has not been synchronized with Trick Service earlier 
+				(Implies that asset is not present in Trick Service already) will result in an error.
 			</li>
 		</ul>
 

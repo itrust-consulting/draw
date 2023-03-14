@@ -1,0 +1,27 @@
+active: true
+derived: false
+header: |
+  Compare Estimations Negative test
+level: 2.1.23
+links:
+- FUNCREQ-TRICKSYNCCOMPAREESTIMATIONS: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |Testcase Id              | DRAW_TC_ID_47      |
+  |-------------------------| --------------------|
+  |**Testcase description** |  Compare Estimations Negative testing |
+  |**Verification method**  |  Test                   |
+  |**Requirements covered** |                     |
+  |**Testsetup**            |  DRAW v2.0.5 on Microsoft Edge                      |
+  |**Preconditions**        |  Windows 10/11                      |
+  |**Execution Type**       |  Manual                 |
+
+  |**Step#**  | **Step Action**          | **Expected Results**|
+  |-----------|--------------------------|---------------------|
+  | **1** | Open tests/tests_manual/graph_compare_estimations.json    |  Graph with 5 nodes must be loaded  |
+  | **2** | Compare estimations (demo.trickservice.com) Demo UG, TestingILR, 0.7 | Tool must report error as the graph has yet not been synchronized with Trick service : https://redmine.itrust.lu/issues/6185 |
+
+  |**Test pass-fail criteria** | The steps 2 must result in an error  | 
+  |----------------------------|------------------------------------------------------------------------|

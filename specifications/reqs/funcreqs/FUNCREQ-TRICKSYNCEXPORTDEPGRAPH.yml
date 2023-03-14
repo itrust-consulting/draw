@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Trick Service export dependency graph
+level: 1.5.3
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The tool shall provide interface to Export Dependency Graph to Trick service risk 
+  analysis and also load the dependency graph from trick service risk analysis

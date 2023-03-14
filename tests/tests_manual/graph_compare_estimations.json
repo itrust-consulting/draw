@@ -1,0 +1,96 @@
+{
+	"nodes": {
+		"U0.504": {
+			"data": {
+				"name": "Users",
+				"disabled": false,
+				"id": "U0.504",
+				"type": "Staff",
+				"trickId": null
+			},
+			"position": {
+				"x": -763.2672678804468,
+				"y": -135.43143564352826
+			}
+		},
+		"U0.428": {
+			"data": {
+				"name": "Valve - gas",
+				"disabled": false,
+				"id": "U0.428",
+				"type": "HW",
+				"trickId": null
+			},
+			"position": {
+				"x": -534.5791474326597,
+				"y": -137.0129167905103
+			}
+		},
+		"U0.447": {
+			"data": {
+				"name": "Wireless network",
+				"disabled": false,
+				"id": "U0.447",
+				"type": "Net",
+				"trickId": null
+			},
+			"position": {
+				"x": -763.9522628093627,
+				"y": -16.09779902264715
+			}
+		},
+		"U0.487": {
+			"data": {
+				"name": "Water supply",
+				"disabled": false,
+				"id": "U0.487",
+				"type": "Out",
+				"trickId": null
+			},
+			"position": {
+				"x": -530.618625251285,
+				"y": -18.286252211406058
+			}
+		},
+		"U0.418": {
+			"data": {
+				"name": "Workstation",
+				"disabled": false,
+				"id": "U0.418",
+				"type": "HW",
+				"trickId": null
+			},
+			"position": {
+				"x": -388.1042458493681,
+				"y": -16.242686763718382
+			}
+		}
+	},
+	"edges": [
+		{
+			"source": "U0.504",
+			"target": "U0.428",
+			"p": 0.1
+		},
+		{
+			"source": "U0.504",
+			"target": "U0.447",
+			"p": 0.25
+		},
+		{
+			"source": "U0.447",
+			"target": "U0.487",
+			"p": 0.3
+		},
+		{
+			"source": "U0.487",
+			"target": "U0.418",
+			"p": 0.75
+		},
+		{
+			"source": "U0.428",
+			"target": "U0.487",
+			"p": 0.5
+		}
+	]
+}

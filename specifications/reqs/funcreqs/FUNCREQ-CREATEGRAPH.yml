@@ -1,0 +1,11 @@
+active: true
+derived: false
+header: |
+  Creating a dependency graph
+level: 1.1.2
+links: []
+normative: true
+ref: ''
+reviewed: O-Tphjxh8cxdv9o0phAjOoCppKEQ4qGwC3zMEbhbEac=
+text: |
+  The tool shall be able to create a dependency graph by connecting multiple assets using directed edges.

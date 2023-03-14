@@ -1,0 +1,11 @@
+active: true
+derived: false
+header: |
+  Trick Service export PNG
+level: 1.5.6
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The tool shall provide interface to Export graphical image to Trick service risk analysis.

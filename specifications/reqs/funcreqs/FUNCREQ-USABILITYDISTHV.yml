@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Usability requirements
+level: 1.4.3
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The tool shall provide an ability to distribute the selected assets horizontally and vertically
+  

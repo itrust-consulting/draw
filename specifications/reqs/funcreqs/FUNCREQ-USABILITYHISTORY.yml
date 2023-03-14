@@ -1,0 +1,12 @@
+active: true
+derived: false
+header:  |
+  Usability requirements save history
+level: 1.4.4
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The tool shall provide an ability to save the graph in history and load it when reloading/refreshing the UI
+

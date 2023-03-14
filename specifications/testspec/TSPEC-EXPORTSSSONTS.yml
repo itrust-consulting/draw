@@ -1,0 +1,29 @@
+active: true
+derived: false
+header: 'Export/Load Snapshot to/fron Trick Service'
+level: 2.1.12
+links:
+- FUNCREQ-TRICKSYNCEXPORTSSS: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |Testcase Id              | DRAW_TC_ID_35       |
+  |-------------------------| --------------------|
+  |**Testcase description** |  Export and Load Snapshot from TS   |
+  |**Verification method**  |  Test                   |
+  |**Requirements covered** |                     |
+  |**Testsetup**            |  DRAW v2.0.5 on Microsoft Edge  |
+  |**Preconditions**        |  Windows 10/11                      |
+  |**Execution Type**       |  Manual                 |
+
+  |**Step#**  | **Step Action**          | **Expected Results**|
+  |-----------|--------------------------|---------------------|
+  | **1** | Open tests/tests_manual/graph1.json    |  Graph gets loaded into white board |
+  | **2** | Save -> Export as Snapshot on Trick Service (Choose demo.trickservice.com) (Demo UG, TestingILR,0.3) |  The snapshot should be saved in Trick |
+  | **3** | Clear Working Area; Open-> Load Snapshot from Trick Service (Choose demo.trickservice.com)  (Demo UG, TestingILR,0.3) |  The snapshot should be loaded from Trick Service |
+  | **4** | Save the graph as log/graph.json file  | the log/graph.json must match tests/tests_manual/graph1.json |
+  | **5** | Clear Working Area; Save -> Export as Snapshot on Trick Service  | Reset Step to save the graph back on Trick Service |
+
+  |**Test pass-fail criteria** | The loaded graph must be same as verified in step 4.   |
+  |----------------------------|------------------------------------------------------------------------|

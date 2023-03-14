@@ -198,14 +198,42 @@ UserInterface.prototype.loadDepGraphFromTS = function () {
     this.trick_save_load_dialog_factory.create(this.dependency_graph, callback).show();
 }
 
+
+/* Save dependency graph on Trick Service
+ * By default the asset dependency graph in Trick Service risk analysis comprises of all the assets as unconnected nodes. 
+ * While saviing if a connected asset node is found in DRAW which has not been synchronized with Trick Service earlier 
+ * Implies that asset is not present in Trick Service already this will result in an error.
+ */
 UserInterface.prototype.saveDepGraphOnTS = function () {
 	let self = this;
 	const callback = async (trick_api, graph, analysisId, dialoagCallback) => {
-		trick_api.saveAssetDependencies(analysisId, JSON.stringify(graph.save()))
-			.fail(() => {
-				self.error_dialog_factory.create().show({ "msg": "TRICK Service server return an error while saving data!", "title": "Saving dependency graph" })
-			})
-			.always(() => dialoagCallback());
+		let assets = await new Promise((resolve, reject) => {
+			trick_api.getAssets(analysisId).done(resolve).fail(() => reject([]));
+		});
+
+		let assetIDs = new Set(assets.map(e => e.id));
+		let data = graph.save();
+		let hasError = false;
+
+		for (let edge of Object.values(data.edges)) {
+			let source = data.nodes[edge.source]
+			let target = data.nodes[edge.target]			
+			if(!assetIDs.has(source.data.trickId) || !assetIDs.has(target.data.trickId)){
+				hasError = true;
+				break;
+			}			
+		}
+
+		if (hasError) {
+			self.error_dialog_factory.create().show({ "msg": "Please synchronise with TRICK Service and try again!", "title": "Saving dependency graph" });
+			dialoagCallback();
+		} else {
+			trick_api.saveAssetDependencies(analysisId, JSON.stringify(data))
+				.fail(() => {
+					self.error_dialog_factory.create().show({ "msg": "TRICK Service server return an error while saving data!", "title": "Saving dependency graph" })
+				})
+				.always(() => dialoagCallback());
+		}
 	};
 	this.trick_save_load_dialog_factory.create(this.dependency_graph, callback).show();
 }

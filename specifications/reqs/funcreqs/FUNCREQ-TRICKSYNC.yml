@@ -1,0 +1,21 @@
+active: true
+derived: false
+header: |
+  Trick Service Synchronization 
+level: 1.5.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The tool shall provide interface to synchronize with trick service instances (app or trickservice or demo):
+  Synchronization should enable user to connect to a trick service analysis and:
+  ---
+  - Load all assets from Trick Service which are not present in graph 
+  - Load all assets from Graph which are not present in TS 
+  - View the assets that are mismatched between tricks service and Graph. A mismatch implies the name of asset is same on
+     both sides but asset type or selection state is not the same. User should be allowed to choose on of the following
+     ---
+     - Update asset on side of trick service
+     - Update asset on side of DRAW
+     - Ignore the difference 

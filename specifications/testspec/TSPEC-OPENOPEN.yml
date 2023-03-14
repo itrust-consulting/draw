@@ -1,0 +1,27 @@
+active: true
+derived: false
+header: 'Load file twice'
+level: 2.1.9
+links:
+- FUNCREQ-LOADCLEARGRAPH: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |Testcase Id              | DRAW_TC_ID_42       |
+  |-------------------------| --------------------|
+  |**Testcase description** |  ReLoad a loaded graph |
+  |**Verification method**  |  Test                   |
+  |**Requirements covered** |                     |
+  |**Testsetup**            |  DRAW v2.0.5 on Microsoft Edge                      |
+  |**Preconditions**        |  Windows 10/11                      |
+  |**Execution Type**       |  Manual                 |
+
+  |**Step#**  | **Step Action**          | **Expected Results**|
+  |-----------|--------------------------|---------------------|
+  | **1** | Open tests/tests_manual/graph1.json    |  Graph must be laoded  |
+  | **2** | Open tests/tests_manual/graph1.json |  The Graph must be reloaded again and not merged |
+  | **3** | Save the graph and compare with tests/tests_manual/graph1.json |  Files must match |
+
+  |**Test pass-fail criteria** | The steps 2 must reload the graph and not merge it with existing graph  |
+  |----------------------------|------------------------------------------------------------------------|

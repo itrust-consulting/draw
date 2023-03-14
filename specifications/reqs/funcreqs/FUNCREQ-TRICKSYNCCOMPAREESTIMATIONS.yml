@@ -1,0 +1,117 @@
+active: true
+derived: false
+header: |
+  Trick Service compare estimations
+level: 1.5.2
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The tool shall provide interface to synchronize with trick service instances (app or trickservice or demo) and enable the user to
+  compare risk estimations by comparing the Impact/Likelihood as defined by Trick Service with New Impact/Likelihood computed based on
+  propogation of risk from one asset to another using the dependency graph propogation rates.
+  --- 
+  - The tool shall generate a report at the end of comparison (report.html and report.csv)
+  - The generate report shall contain the following fields for each asset scenario combination:
+
+    ---
+    - **Asset**: This field represents the asset name as defined in Graph/Trick Service.
+    - **Scenario**: This field represents the corresponding scenario for the given asset.
+    - **Old Likelihood**: This field represents the Likelihood for asset/scenario combination as fetched from Trick Service assessment.
+    - **New Likelihood**: This field represents the Likelihood for asset/scenario combination as computed by DRAW. 
+       This takes into account the probability of the edge from one asset to another (propagation probability) 
+       along with likelihood values fetched from Trick Service for the asset/sceanrio combination. The new Likelihood 
+       is the sum total of likelihood of damage starting somewhere else and propagating at the given asset and 
+       contributing to damage done to the given asset. 
+       The new Likelihood is determined as sum of old likelihood and the sum of products of likelihood and the probability 
+       of propagation. 
+
+      Computation of Likelihood of damage for directly connected assets can be computed as below
+
+      ** Likelihood of damage of Assets connected through Path of length 1 ** 
+      If the assets are connected to current asset with a single path then the
+      new Likelihood can be computed as Old Likelihood + Sum of Product of Likelihood of damage of connected asset on the given asset
+      
+      **Refer figure below for illustration.**
+
+      ![Fig1. Likelihood of damage of Assets connected through Path of length 1](images/LikelihoodOfLength1.png)
+
+      `New Likelihood of A1 = Old Likelihood of A1`
+
+      New Likelihood of A2 = Old Likelihood of A2 + Likelihood of A1 * Probability of impact of A1 on A2
+
+      `New Likelihood of A2 = L2 + L1 *Pr12`
+
+      New Likelihood of A3 = Old Likelihood of A3 + Likelihood of A1 * Probability of impact of A1 on A3
+
+      `New Likelihood of A3 = L3 + L1 *Pr13`
+
+      ** Likelihood of Assets connected through Path of length > 1 **
+
+      Consider the following figure where the assets are connected through path of length > 1 and and there are multiple paths
+      between assets A1 and A3.
+
+      ![Fig 2. Likelihood of damage of Assets connected through Path of length >1](images/LikelihoodOfLengthN.png)
+
+      New Likelihood of A1 = Old Likelihood of A1 
+
+      `New Likelihood of A1 = L1`
+
+      New Likelihood of A2 = Old Likelihood of A2 + Likelihood on A1  * Likelihood of impact of damage of A1 on A2
+
+      `New Likelihood of A2 = L2 + L1 * Pr12`
+
+      New Likelihood of A4 = Old Likelihood of A4 + Likelihood on A1  * Likelihood of impact of damage of A1 on A4
+
+      `New Likelihood of A4 = L4 + L1 * Pr14`
+
+      New Likelihood of A3 = Old Likelihood of A3 + Likelihood on A2 * Probability of Impact of A2 on A3 + Impact on A4 * Probability of Impact of A4 on A3 + Impact on A1 * Probability of Impact of A1 on A3`
+
+      `New Likelihood of A3 = L3 + L2 * Pr23 + L4 * Pr43 + L1 * (Pr13A + Pr13B)`
+      
+      `New Likelihood of A3 = L3 + L2 * Pr23 + L4 * Pr43 + L1 * (Pr12*Pr23+ Pr14*Pr43)`
+
+     
+    - **Old Impact**: This field represents the Impact for asset/scenario combination as fetched from Trick Service assessment.
+    - **New Impact**: This field represents the computed impact for asset/scenario combination as computed by DRAW. The new impact 
+    is computed based on the impacts on all assets that might be damaged as a consequence of damage starting at the given asset. 
+    The algorithm to determine new impact determines the new impact as a function of old impact and the probability of propagation 
+    of impacted assets.
+    Computation of Probability of Impact for directly connected assets can be computed as below:
+
+      ** Impact of Assets connected through Path of length 1 ** : 
+      If the Impacting assets are connected to current asset with a single path then the
+      new Impact can be computed as Old Impact + Sum of Product of Impact of Connected asset with Probability of Impact 
+      
+      **Refer figure below for illustration.**
+
+      ![Fig 3. Impact of Assets connected through Path of length 1](images/ImpactConnectionofLength1.png)
+
+      `New Impact on A1 = Old Impact on A1 +  
+      Impact on A2 * Probability of Impact of A2 on A1 + Impact on A3 * Probability of Impact of A3 on A1`
+      
+      `New Impact on A1 = I1 + I2 * Pr12 + I3 * Pr13`
+      
+      ** Impact of Assets connected through Path of length > 1 ** : 
+      
+      Consider the following example where the assets are connected through path of length > 1 and and there are multiple paths
+      between assets A1 and A3.
+
+      ![Fig 4. Impact of Assets connected through Path of length >1](images/ImpactConnectionofLengthN.png)
+            
+      New Impact on A1 = Old Impact on A1 + Impact on A2 * Probability of Impact of A2 on A1 + Impact on A4 * Probability of Impact of A4 on A1 + Impact on A3 * Probability of Impact of A3 on A1
+
+      `New Impact on A1 = I1 + A2 * Pr12 + I4 * Pr14 + I 3 * (Pr13A + Pr13B)`
+      `New Impact on A1 = I1 + A2 * Pr12 + I4 * Pr14 + I 3 * (Pr12 * Pr23 + Pr14 * Pr43)`
+    
+  While computing the New Impact or New Likelihood the tool will require to compute the reachability matrix and impact probability between assets which are connected 
+  through multiple edges and multiple paths. In doing so the tool may encounter cycles and in order to avoid cycles the tool shall use a probabilistic algorithm
+  for determining reachability matrix and impact probability.
+  The tool shall simulate about 1 million situations, in which propagation decisions are randomly taken, and averages the overall result. 
+  Thus rounding errors are expected in the results generated.
+    
+
+
+   
+ 

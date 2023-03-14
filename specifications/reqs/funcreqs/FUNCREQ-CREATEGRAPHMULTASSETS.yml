@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Creating a dependency graph with multiple assets with same name
+level: 1.1.7
+links: []
+normative: true
+ref: ''
+reviewed: KkzPWRwq0mDm4ihKEDCzMhjT530UhvMRKllXBafgFY0=
+text: |
+  The tool shall be able to create a dependency graph by connecting multiple assets using directed edges.
+  Where the graph may have multiple assets with the same name with same or different type.

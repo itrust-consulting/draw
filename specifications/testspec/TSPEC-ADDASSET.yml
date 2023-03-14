@@ -1,0 +1,28 @@
+active: true
+derived: false
+header: 'Add asset'
+level: 2.1.1
+links:
+- FUNCREQ-ADDASSET: null
+- FUNCREQ-INTERFACEADDASSET: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |Testcase Id              | DRAW_TC_ID_26       |
+  |-------------------------| ------------------|
+  |**Testcase description** | Add asset with asset type  |
+  |**Verification method**  | Test                  |
+  |**Requirements covered** |                |
+  |**Testsetup**            | DRAW v2.0.5 on Microsoft Edge                |
+  |**Preconditions**        | Windows 10/11                  |
+  |**Execution Type**       |  Manual                 |
+
+  |**Step#**  | **Step Action**          | **Expected Results**|
+  |-----------|--------------------------|---------------------|
+  |  **1** | Add Asset (all 13 types)                       |  Asset is created with appropriate type                 |
+  |  **2** |Add Asset with same name and type as in Step 1                       | Asset is allowed to be created                  |
+  |  **3** | Add Asset with inactive state                  | Allowed to change the state of asset to inactive. Asset is light greyed
+
+  |**Test pass-fail criteria** | All assets are allowed to be created               |
+  |----------------------------|----------------------------------------------------|

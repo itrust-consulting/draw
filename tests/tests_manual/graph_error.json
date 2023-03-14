@@ -1,0 +1,37 @@
+{
+	"nodesss": {
+		"U0.0680889277989909": {
+			"data": {
+				"id": "U0.0680889277989909",
+				"name": "Node1",
+				"type": "Info",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": 0,
+				"y": 0
+			}
+		},
+		"U0.24509884406079774": {
+			"data": {
+				"id": "U0.24509884406079774",
+				"name": "Node2",
+				"type": "IV",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": 96.72934848322477,
+				"y": -19.518789009469998
+			}
+		}
+	},
+	"edgesss": [
+		{
+			"source": "U0.0680889277989909",
+			"target": "U0.6250563081202904",
+			"p": 0.25
+		}
+	]
+}

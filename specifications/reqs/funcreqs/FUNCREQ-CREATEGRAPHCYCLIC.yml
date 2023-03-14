@@ -1,0 +1,11 @@
+active: true
+derived: false
+header: |
+  Creating a cyclic directed dependency graph
+level: 1.1.3
+links: []
+normative: true
+ref: ''
+reviewed: bUfvJ70k1eV_wpX5kQJ_nbIsuM0a6r56X-5TmJzKoCc=
+text: |
+  The tool shall be able to create a cyclic dependency graph by connecting multiple assets using directed edges.

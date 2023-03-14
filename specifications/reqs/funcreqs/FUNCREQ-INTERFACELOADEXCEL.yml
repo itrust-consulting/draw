@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Interface Requirements
+level: 1.2.4
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The tool shall provide a web interface to Load an Excel file
+  

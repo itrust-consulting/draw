@@ -1,0 +1,11 @@
+active: true
+derived: false
+header: |
+  Interface Requirements
+level: 1.2.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The tool shall provide a web interface that shall provide provision to add an asset

@@ -1,0 +1,88 @@
+Asset,Scenario,Old Likelihood, New Likelihood,Old IMPACT,New IMPACT,Old FINANCIAL,New FINANCIAL
+Users,A-p:PermLoss,0.1,0.1,50000,77250.425,312500,318198.515625
+Users,A-t:TmpUnavail,0,0,0,0,0,0
+Users,D_1 - Perte partielle ou temporaire,0,0,0,0,0,0
+Users,"D_all - Perte complète, backup inclus",0,0,0,0,0,0
+Users,E-PE-a-SecTr,0,0,0,0,0,0
+Users,E-PE-b-PersonAbs,0,0,0,0,0,0
+Users,E-PE-c-InadRecruit,0,0,0,0,0,0
+Users,E-PE-f-Monitor,0,0,0,0,0,0
+Users,E-PE-g-Unsuperv3P,0,0,0,0,0,0
+Users,E-PE-h-TelecMsgUse,0,0,0,0,0,0
+Users,Pa:Unaware,0,0,0,0,0,0
+Users,E-PE-d-SoftHardUse,0,0,0,0,0,0
+Users,E-PE-e-SecAwarenss,0,0,0,0,0,0
+Users,I1 -  Manipulation frauduleuse d'un externe,0,0,0,0,0,0
+Valve - gas,A-p:PermLoss,0.3,0.309934,0,9367.9,9765.625,29287.216796875
+Valve - gas,A-t:TmpUnavail,0,0,0,0,0,0
+Valve - gas,D_1 - Perte partielle ou temporaire,0,0,0,0,0,0
+Valve - gas,"D_all - Perte complète, backup inclus",0,0,0,0,0,0
+Valve - gas,E-HW-a-InsufMaint,0,0,0,0,0,0
+Valve - gas,E-HW-b-ConfigChange,0,0,0,0,0,0
+Valve - gas,E-HW-d-Replacmt,0,0,0,0,0,0
+Valve - gas,E-HW-e-HumDustS,0,0,0,0,0,0
+Valve - gas,E-HW-f-ElMagm,0,0,0,0,0,0
+Valve - gas,E-HW-g-VoltageVar,0,0,0,0,0,0
+Valve - gas,E-HW-h-Temperature,0,0,0,0,0,0
+Valve - gas,E-HW-c-UncaredDisposal,0,0,0,0,0,0
+Valve - gas,E-HW-i-UnprotStorage,0,0,0,0,0,0
+Valve - gas,E-HW-j-UnctrlCopy,0,0,0,0,0,0
+Valve - gas,I1 -  Manipulation frauduleuse d'un externe,0,0,0,0,0,0
+Valve - gas,I1:ExtManip,0,0,0,0,0,0
+Valve - gas,I2 - Manipulation frauduleuse d'un interne,0,0,0,0,0,0
+Valve - gas,I2:IntManip,0,0,0,0,0,0
+Valve - gas,I3 - Modification accidentelle,0,0,0,0,0,0
+Valve - gas,I3:AccidManip,0,0,0,0,0,0
+Water supply,A-p:PermLoss,0.5,0.692037,0,18746.2,9765.625,39056.5625
+Water supply,A-t:TmpUnavail,0,0,0,0,0,0
+Water supply,E-OU-a-3pCnt,0,0,0,0,0,0
+Water supply,C1:PartExtTheft,0,0,0,0,0,0
+Water supply,C2:DelibDiscl,0,0,0,0,0,0
+Water supply,C3:AccidDiscl,0,0,0,0,0,0
+Water supply,I1:ExtManip,0,0,0,0,0,0
+Water supply,I2:IntManip,0,0,0,0,0,0
+Water supply,I3:AccidManip,0,0,0,0,0,0
+Wireless network,A-p:PermLoss,0.1,0.1250676,100000,105619.4,0,11706.34765625
+Wireless network,A-t:TmpUnavail,0,0,0,0,0,0
+Wireless network,D_1 - Perte partielle ou temporaire,0,0,0,0,0,0
+Wireless network,"D_all - Perte complète, backup inclus",0,0,0,0,0,0
+Wireless network,E-NW-a-SPF,0,0,0,0,0,0
+Wireless network,E-NW-e-PoorJointCabl,0,0,0,0,0,0
+Wireless network,E-NW-i-InadNetwrkMgt,0,0,0,0,0,0
+Wireless network,C1 - Vol partiel d'origine externe,0,0,0,0,0,0
+Wireless network,C1:PartExtTheft,0,0,0,0,0,0
+Wireless network,C2 -  Divulgation délibérée,0,0,0,0,0,0
+Wireless network,C2:DelibDiscl,0,0,0,0,0,0
+Wireless network,C3:AccidDiscl,0,0,0,0,0,0
+Wireless network,E-NW-c-UnprotComLines,0,0,0,0,0,0
+Wireless network,E-NW-d-UnprotTraf,0,0,0,0,0,0
+Wireless network,E-NW-g-NetArch,0,0,0,0,0,0
+Wireless network,E-NW-h-ClearPWD,0,0,0,0,0,0
+Wireless network,E-NW-j-PubNet,0,0,0,0,0,0
+Wireless network,E-NW-b-MessageProof,0,0,0,0,0,0
+Wireless network,I1 -  Manipulation frauduleuse d'un externe,0,0,0,0,0,0
+Wireless network,I1:ExtManip,0,0,0,0,0,0
+Wireless network,I2 - Manipulation frauduleuse d'un interne,0,0,0,0,0,0
+Wireless network,I2:IntManip,0,0,0,0,0,0
+Wireless network,I3 - Modification accidentelle,0,0,0,0,0,0
+Wireless network,I3:AccidManip,0,0,0,0,0,0
+Workstation,A-p:PermLoss,0.33,0.8490131999999999,25000,25000,39062.5,39062.5
+Workstation,A-t:TmpUnavail,0,0,0,0,0,0
+Workstation,D_1 - Perte partielle ou temporaire,0,0,0,0,0,0
+Workstation,"D_all - Perte complète, backup inclus",0,0,0,0,0,0
+Workstation,E-HW-a-InsufMaint,0,0,0,0,0,0
+Workstation,E-HW-b-ConfigChange,0,0,0,0,0,0
+Workstation,E-HW-d-Replacmt,0,0,0,0,0,0
+Workstation,E-HW-e-HumDustS,0,0,0,0,0,0
+Workstation,E-HW-f-ElMagm,0,0,0,0,0,0
+Workstation,E-HW-g-VoltageVar,0,0,0,0,0,0
+Workstation,E-HW-h-Temperature,0,0,0,0,0,0
+Workstation,E-HW-c-UncaredDisposal,0,0,0,0,0,0
+Workstation,E-HW-i-UnprotStorage,0,0,0,0,0,0
+Workstation,E-HW-j-UnctrlCopy,0,0,0,0,0,0
+Workstation,I1 -  Manipulation frauduleuse d'un externe,0,0,0,0,0,0
+Workstation,I1:ExtManip,0,0,0,0,0,0
+Workstation,I2 - Manipulation frauduleuse d'un interne,0,0,0,0,0,0
+Workstation,I2:IntManip,0,0,0,0,0,0
+Workstation,I3 - Modification accidentelle,0,0,0,0,0,0
+Workstation,I3:AccidManip,0,0,0,0,0,0

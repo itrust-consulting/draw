@@ -1,0 +1,30 @@
+active: true
+derived: false
+header: 'Load and save graph json/excel format'
+level: 2.1.8
+links:
+- FUNCREQ-INTERFACELOADEXCEL: null
+- FUNCREQ-INTERFACESAVEPNG: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |Testcase Id              | DRAW_TC_ID_38       |
+  |-------------------------| --------------------|
+  |**Testcase description** |  Load and Save the graph |
+  |**Verification method**  |  Test                   |
+  |**Requirements covered** |                     |
+  |**Testsetup**            |  DRAW v2.0.5 on Microsoft Edge                      |
+  |**Preconditions**        |  Windows 10/11                      |
+  |**Execution Type**       |  Manual                 |
+
+  |**Step#**  | **Step Action**          | **Expected Results**|
+  |-----------|--------------------------|---------------------|
+  |  **1** | Open tests/tests_manual/AssetDSinExcel2.xlsx    |                     |
+  |  **2** | Save the graph : log/graph1.json |
+  |  **3** | Compare the log/graph1.json and tests/tests_manual/graph5.json | The files must match |
+  |  **4** | Open tests/tests_manual/graph5.json  | |
+  |  **5** | Save -> Export as picture (PNG)  | The saved PNG file must match tests/tests_manual/graph5.png |
+
+  |**Test pass-fail criteria** | The steps 3 and 5 must have the Expected Results  |
+  |----------------------------|------------------------------------------------------------------------|

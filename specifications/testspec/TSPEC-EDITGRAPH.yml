@@ -1,0 +1,32 @@
+active: true
+derived: false
+header: 'Load and Edit Graph assets'
+level: 2.1.4
+links:
+- FUNCREQ-CREATEGRAPHEDITABLE: null
+- FUNCREQ-INTERFACESAVEJSON: null
+- FUNCREQ-LOADANDEDIT: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |Testcase Id              | DRAW_TC_ID_29       |
+  |-------------------------| --------------------|
+  |**Testcase description** |  Load and Edit Basic Graph |
+  |**Verification method**  |  Test                   |
+  |**Requirements covered** |                     |
+  |**Testsetup**            |  DRAW v2.0.5 on Microsoft Edge                      |
+  |**Preconditions**        |  Windows 10/11                      |
+  |**Execution Type**       |  Manual                 |
+
+  |**Step#**  | **Step Action**          | **Expected Results**|
+  |-----------|--------------------------|---------------------|
+  |  **1** | Open tests/tests_manual/graph1.json   |                     |
+  |  **2** | Delete asset Node4, Add Asset Node6 (Network), Connect it to Node1 |  JSON files match graph2.json         |
+  |  **3** | Dropdown right of Open->Clear Working Area >  Open tests/tests_manual/graph2.json  |  Graph is loaded |
+  |  **4** | Create Edge (Node0->Node6)  |   |
+  |  **5** | Save Graph and Compare with tests/tests_manual/Graph3.json  | The Saved graph and Graph3.json match  |
+
+
+  |**Test pass-fail criteria** | The saved JSON file matches the expected JSON file after step2, step5  |
+  |----------------------------|------------------------------------------------------------------------|

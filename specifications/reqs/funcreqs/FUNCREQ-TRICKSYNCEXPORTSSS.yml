@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Trick Service export snapshot
+level: 1.5.7
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+    The tool shall provide interface to Export Snapshot graph to Trick service risk analysis and also load the Snapshot graph from trick service risk analysis.
+    This snapshot shall not impact the trick service analysis and also a synchronization with Trick Service assets should not be needed for this export to work.

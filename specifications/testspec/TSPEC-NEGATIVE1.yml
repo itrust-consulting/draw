@@ -1,0 +1,26 @@
+active: true
+derived: false
+header: 'Error handling for unsynchronized graph'
+level: 2.1.22
+links:
+- FUNCREQ-TRICKSYNCEXPORTDEPGRAPHUNSYNC: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |Testcase Id              | DRAW_TC_ID_41       |
+  |-------------------------| --------------------|
+  |**Testcase description** |  Negative testing   |
+  |**Verification method**  |  Test                   |
+  |**Requirements covered** |                     |
+  |**Testsetup**            |  DRAW v2.0.5 on Microsoft Edge  |
+  |**Preconditions**        |  Windows 10/11                      |
+  |**Execution Type**       |  Manual                 |
+
+  |**Step#**  | **Step Action**          | **Expected Results**|
+  |-----------|--------------------------|---------------------|
+  | **1** | Open tests/tests_manual/graph1.json    |  Graph gets loaded into white board |
+  | **2** | Save -> Update dependency graph on Trick Service (Choose demo.trickservice.com) (Demo UG, test3,0.1) |  An error message expected as no synchronization had hapenned |
+
+  |**Test pass-fail criteria** | The steps 2 must throw a message asking user to synchronize with trick service before updating graph  |
+  |----------------------------|------------------------------------------------------------------------|

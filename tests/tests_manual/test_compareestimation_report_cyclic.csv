@@ -1,0 +1,142 @@
+Asset,Scenario,Old Likelihood, New Likelihood,Old IMPACT,New IMPACT,Old FINANCIAL,New FINANCIAL
+IT Admin,A-p:PermLoss,0.33,0.3660855,10000,17252.71,19531.25,30541.25
+IT Admin,A-t:TmpUnavail,0,0,0,0,0,0
+IT Admin,D_1 - Perte partielle ou temporaire,0,0,0,0,0,0
+IT Admin,"D_all - Perte complète, backup inclus",0,0,0,0,0,0
+IT Admin,C1 - Vol partiel d'origine externe,0,0,0,0,0,0
+IT Admin,C1:PartExtTheft,0,0,0,0,0,0
+IT Admin,C2 -  Divulgation délibérée,0,0,0,0,0,0
+IT Admin,C2:DelibDiscl,0,0,0,0,0,0
+IT Admin,C3:AccidDiscl,0,0,0,0,0,0
+IT Admin,P5:StorageLim,0,0,0,0,0,0
+IT Admin,P9:DetectExist,0,0,0,0,0,0
+IT Admin,Pa:Unaware,0,0,0,0,0,0
+IT Admin,I1 -  Manipulation frauduleuse d'un externe,0,0,0,0,0,0
+IT Admin,I1:ExtManip,0,0,0,0,0,0
+IT Admin,I2 - Manipulation frauduleuse d'un interne,0,0,0,0,0,0
+IT Admin,I2:IntManip,0,0,0,0,0,0
+IT Admin,I3 - Modification accidentelle,0,0,0,0,0,0
+IT Admin,I3:AccidManip,0,0,0,0,0,0
+Operation,A-p:PermLoss,0.1,0.270151,30000,88819.825,39062.5,108537.96875
+Operation,A-t:TmpUnavail,0,0,0,0,0,0
+Operation,D_1 - Perte partielle ou temporaire,0,0,0,0,0,0
+Operation,"D_all - Perte complète, backup inclus",0,0,0,0,0,0
+Operation,C1 - Vol partiel d'origine externe,0,0,0,0,0,0
+Operation,C1:PartExtTheft,0,0,0,0,0,0
+Operation,C2 -  Divulgation délibérée,0,0,0,0,0,0
+Operation,C2:DelibDiscl,0,0,0,0,0,0
+Operation,C3:AccidDiscl,0,0,0,0,0,0
+Operation,P5:StorageLim,0,0,0,0,0,0
+Operation,P9:DetectExist,0,0,0,0,0,0
+Operation,Pa:Unaware,0,0,0,0,0,0
+Operation,I1 -  Manipulation frauduleuse d'un externe,0,0,0,0,0,0
+Operation,I1:ExtManip,0,0,0,0,0,0
+Operation,I2 - Manipulation frauduleuse d'un interne,0,0,0,0,0,0
+Operation,I2:IntManip,0,0,0,0,0,0
+Operation,I3 - Modification accidentelle,0,0,0,0,0,0
+Operation,I3:AccidManip,0,0,0,0,0,0
+Operator,A-p:PermLoss,0.18,0.18,65000,134600.15,78125,181187.16796875
+Operator,A-t:TmpUnavail,0,0,0,0,0,0
+Operator,D_1 - Perte partielle ou temporaire,0,0,0,0,0,0
+Operator,"D_all - Perte complète, backup inclus",0,0,0,0,0,0
+Operator,C1 - Vol partiel d'origine externe,0,0,0,0,0,0
+Operator,C1:PartExtTheft,0,0,0,0,0,0
+Operator,C2 -  Divulgation délibérée,0,0,0,0,0,0
+Operator,C2:DelibDiscl,0,0,0,0,0,0
+Operator,C3:AccidDiscl,0,0,0,0,0,0
+Operator,P5:StorageLim,0,0,0,0,0,0
+Operator,P9:DetectExist,0,0,0,0,0,0
+Operator,Pa:Unaware,0,0,0,0,0,0
+Operator,I1 -  Manipulation frauduleuse d'un externe,0,0,0,0,0,0
+Operator,I1:ExtManip,0,0,0,0,0,0
+Operator,I2 - Manipulation frauduleuse d'un interne,0,0,0,0,0,0
+Operator,I2:IntManip,0,0,0,0,0,0
+Operator,I3 - Modification accidentelle,0,0,0,0,0,0
+Operator,I3:AccidManip,0,0,0,0,0,0
+Users,I1 -  Manipulation frauduleuse d'un externe,0,0,0,0,0,0
+Users,E-PE-e-SecAwarenss,0,0,0,0,0,0
+Users,E-PE-d-SoftHardUse,0,0,0,0,0,0
+Users,Pa:Unaware,0,0,0,0,0,0
+Users,E-PE-h-TelecMsgUse,0,0,0,0,0,0
+Users,E-PE-g-Unsuperv3P,0,0,0,0,0,0
+Users,E-PE-f-Monitor,0,0,0,0,0,0
+Users,E-PE-c-InadRecruit,0,0,0,0,0,0
+Users,E-PE-b-PersonAbs,0,0,0,0,0,0
+Users,E-PE-a-SecTr,0,0,0,0,0,0
+Users,"D_all - Perte complète, backup inclus",0,0,0,0,0,0
+Users,D_1 - Perte partielle ou temporaire,0,0,0,0,0,0
+Users,A-t:TmpUnavail,0,0,0,0,0,0
+Users,A-p:PermLoss,0.1,0.1,50000,101734.22499999998,312500,378220.859375
+Valve - gas,I3:AccidManip,0,0,0,0,0,0
+Valve - gas,I3 - Modification accidentelle,0,0,0,0,0,0
+Valve - gas,I2:IntManip,0,0,0,0,0,0
+Valve - gas,I2 - Manipulation frauduleuse d'un interne,0,0,0,0,0,0
+Valve - gas,I1:ExtManip,0,0,0,0,0,0
+Valve - gas,I1 -  Manipulation frauduleuse d'un externe,0,0,0,0,0,0
+Valve - gas,E-HW-j-UnctrlCopy,0,0,0,0,0,0
+Valve - gas,E-HW-i-UnprotStorage,0,0,0,0,0,0
+Valve - gas,E-HW-c-UncaredDisposal,0,0,0,0,0,0
+Valve - gas,E-HW-h-Temperature,0,0,0,0,0,0
+Valve - gas,E-HW-g-VoltageVar,0,0,0,0,0,0
+Valve - gas,E-HW-f-ElMagm,0,0,0,0,0,0
+Valve - gas,E-HW-e-HumDustS,0,0,0,0,0,0
+Valve - gas,E-HW-d-Replacmt,0,0,0,0,0,0
+Valve - gas,E-HW-b-ConfigChange,0,0,0,0,0,0
+Valve - gas,E-HW-a-InsufMaint,0,0,0,0,0,0
+Valve - gas,"D_all - Perte complète, backup inclus",0,0,0,0,0,0
+Valve - gas,D_1 - Perte partielle ou temporaire,0,0,0,0,0,0
+Valve - gas,A-t:TmpUnavail,0,0,0,0,0,0
+Valve - gas,A-p:PermLoss,0.3,0.46338262999999996,50000,72640.08,19531.25,110202.890625
+Water supply,I3:AccidManip,0,0,0,0,0,0
+Water supply,I2:IntManip,0,0,0,0,0,0
+Water supply,I1:ExtManip,0,0,0,0,0,0
+Water supply,C3:AccidDiscl,0,0,0,0,0,0
+Water supply,C2:DelibDiscl,0,0,0,0,0,0
+Water supply,C1:PartExtTheft,0,0,0,0,0,0
+Water supply,E-OU-a-3pCnt,0,0,0,0,0,0
+Water supply,A-t:TmpUnavail,0,0,0,0,0,0
+Water supply,A-p:PermLoss,0.5,0.8578552599999998,25000,45301.87,156250,181558.2421875
+Wireless network,I3:AccidManip,0,0,0,0,0,0
+Wireless network,I3 - Modification accidentelle,0,0,0,0,0,0
+Wireless network,I2:IntManip,0,0,0,0,0,0
+Wireless network,I2 - Manipulation frauduleuse d'un interne,0,0,0,0,0,0
+Wireless network,I1:ExtManip,0,0,0,0,0,0
+Wireless network,I1 -  Manipulation frauduleuse d'un externe,0,0,0,0,0,0
+Wireless network,E-NW-b-MessageProof,0,0,0,0,0,0
+Wireless network,E-NW-j-PubNet,0,0,0,0,0,0
+Wireless network,E-NW-h-ClearPWD,0,0,0,0,0,0
+Wireless network,E-NW-g-NetArch,0,0,0,0,0,0
+Wireless network,E-NW-d-UnprotTraf,0,0,0,0,0,0
+Wireless network,E-NW-c-UnprotComLines,0,0,0,0,0,0
+Wireless network,C3:AccidDiscl,0,0,0,0,0,0
+Wireless network,C2:DelibDiscl,0,0,0,0,0,0
+Wireless network,C2 -  Divulgation délibérée,0,0,0,0,0,0
+Wireless network,C1:PartExtTheft,0,0,0,0,0,0
+Wireless network,C1 - Vol partiel d'origine externe,0,0,0,0,0,0
+Wireless network,E-NW-i-InadNetwrkMgt,0,0,0,0,0,0
+Wireless network,E-NW-e-PoorJointCabl,0,0,0,0,0,0
+Wireless network,E-NW-a-SPF,0,0,0,0,0,0
+Wireless network,"D_all - Perte complète, backup inclus",0,0,0,0,0,0
+Wireless network,D_1 - Perte partielle ou temporaire,0,0,0,0,0,0
+Wireless network,A-t:TmpUnavail,0,0,0,0,0,0
+Wireless network,A-p:PermLoss,0.1,0.25093672000000006,100000,124292.01,39062.5,146830.3515625
+Workstation,I3:AccidManip,0,0,0,0,0,0
+Workstation,I3 - Modification accidentelle,0,0,0,0,0,0
+Workstation,I2:IntManip,0,0,0,0,0,0
+Workstation,I2 - Manipulation frauduleuse d'un interne,0,0,0,0,0,0
+Workstation,I1:ExtManip,0,0,0,0,0,0
+Workstation,I1 -  Manipulation frauduleuse d'un externe,0,0,0,0,0,0
+Workstation,E-HW-j-UnctrlCopy,0,0,0,0,0,0
+Workstation,E-HW-i-UnprotStorage,0,0,0,0,0,0
+Workstation,E-HW-c-UncaredDisposal,0,0,0,0,0,0
+Workstation,E-HW-h-Temperature,0,0,0,0,0,0
+Workstation,E-HW-g-VoltageVar,0,0,0,0,0,0
+Workstation,E-HW-f-ElMagm,0,0,0,0,0,0
+Workstation,E-HW-e-HumDustS,0,0,0,0,0,0
+Workstation,E-HW-d-Replacmt,0,0,0,0,0,0
+Workstation,E-HW-b-ConfigChange,0,0,0,0,0,0
+Workstation,E-HW-a-InsufMaint,0,0,0,0,0,0
+Workstation,"D_all - Perte complète, backup inclus",0,0,0,0,0,0
+Workstation,D_1 - Perte partielle ou temporaire,0,0,0,0,0,0
+Workstation,A-t:TmpUnavail,0,0,0,0,0,0
+Workstation,A-p:PermLoss,0.33,0.8628775300000001,25000,42066.38,39062.5,59644.0234375

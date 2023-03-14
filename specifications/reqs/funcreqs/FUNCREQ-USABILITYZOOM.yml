@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Usability requirement to Zoom
+level: 1.4.8
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The tool shall provide an ability to zoom in and out the graph on the DRAW whiteboard
+    

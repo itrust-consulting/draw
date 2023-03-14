@@ -1,0 +1,34 @@
+active: true
+derived: false
+header: |
+  Create and edit graph
+level: 1.1
+links:
+- TSPEC-ADDASSET: null
+- TSPEC-CREATEGRAPH: null
+- TSPEC-EDITASSET: null
+- TSPEC-EDITGRAPH: null
+- TSPEC-EDITGRAPH1: null
+- TSPEC-EDITGRAPH2: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  | Test procedure ID         | TP1                 |
+  |---------------------------| --------------------|
+  |**Executed by**            |  R. Pande           |
+  |**Date of execution**      |  08.03.2023         |
+  |**Time of execution**      |  14:00              |
+  |**Test cases covered**     |                     | <-Not be needed?
+  |**Requirements covered**   |                     | <-Not be needed>
+  |**List of version tested** | 2.0.5               |
+  |**Test configuration details** |    DRAW v2.0.5 on Microsoft Edge                 |
+  |**Precondition for test** | Windows 10/11                     |
+  |**Expected input and output** | Expected input may be an JSON File/Excel file or a manual creation of Graph. Output is Creation of Graph as per Graph Creation and Updation FUNCREQ-011                     |
+
+  | **#Steps**| **Step Action** | **Expected Result** |**Comments**   |
+  |-------|-------------|-----------------|-----------|
+  | **1** |
+  | **2** |
+  | **3** |
+  | **4** |
