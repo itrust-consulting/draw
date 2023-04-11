@@ -1,13 +1,14 @@
 active: true
 derived: false
-header: 'Load and edit graph probability'
+header: |
+  Load and edit graph probability
 level: 2.1.6
 links:
-- FUNCREQ-CREATEGRAPHEDGEPROBABILITY: null
-- FUNCREQ-INTERFACESAVEEXCEL: null
+- FUNCREQ-CREATEGRAPHEDGEPROBABILITY: TzAvglK8SsM3RTefzoBxS2LkAgOwNNt_uoGruR6cZOo=
+- FUNCREQ-INTERFACESAVEEXCEL: Bgds5X5Eeko3ioU9HZjBERVKXXWzBroV31Cjh0drA8w=
 normative: true
 ref: ''
-reviewed: null
+reviewed: 6lzietCq_rSw1qX3EzdCU1psoy216eFdV8QhQA9RnNs=
 text: |
   |Testcase Id              | DRAW_TC_ID_31       |
   |-------------------------| --------------------|
@@ -24,6 +25,6 @@ text: |
   |  **2** | Change the probability between  graph nodes by double clicking the edges as: Node1->Node0: 0.25, Node3->Node4:0.75; Node2->Node1:0.95   | These probability must be changed |
   |  **3** | Save the graph as Excel| The excel file must have same probability between edges as in tests/tests_manual/AssetDSinExcel.xlsx  |
   |  **4** | Save the graph as JSON | The Json file must match tests/tests_manual/graph1_with_prob.json |
- 
+
   |**Test pass-fail criteria** | The saved excel file matches the expected excel file  |
   |----------------------------|------------------------------------------------------------------------|

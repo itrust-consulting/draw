@@ -1,13 +1,14 @@
 active: true
 derived: false
-header: 'Add asset'
+header: |
+  Add asset
 level: 2.1.1
 links:
-- FUNCREQ-ADDASSET: null
-- FUNCREQ-INTERFACEADDASSET: null
+- FUNCREQ-ADDASSET: kB73lCYwGhx-mWtt1s-MO32LFeRlmGu-gVA7-Z35kgk=
+- FUNCREQ-INTERFACEADDASSET: 2Gcfsib3u43pd3coT81RhxeQAiT5Py47IlpGQ3WYeEA=
 normative: true
 ref: ''
-reviewed: null
+reviewed: EC3w_Xi_LVV5CZBcoDDeU4GE-cvAtMDIagLzbZIG57c=
 text: |
   |Testcase Id              | DRAW_TC_ID_26       |
   |-------------------------| ------------------|

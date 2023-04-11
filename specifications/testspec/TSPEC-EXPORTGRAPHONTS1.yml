@@ -4,10 +4,10 @@ header: |
   Export and Load Graph to/from TS
 level: 2.1.14
 links:
-- FUNCREQ-TRICKSYNCEXPORTDEPGRAPHDEFGRAPH: null
+- FUNCREQ-TRICKSYNCEXPORTDEPGRAPHDEFGRAPH: vtq5WhdCc8t7MHpTqZvrlc_8Kxuske2TfRqZ06JqLSs=
 normative: true
 ref: ''
-reviewed: null
+reviewed: Rv-v84T2dfBRxZ6o_l9Jr7O-IwmdpvAlB_B41u3R4us=
 text: |
   |Testcase Id              | DRAW_TC_ID_33       |
   |-------------------------| --------------------|

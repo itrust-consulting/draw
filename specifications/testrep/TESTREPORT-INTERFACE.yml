@@ -1,0 +1,38 @@
+active: true
+derived: false
+header: ''
+level: 1.11
+links:
+- TSPEC-INTERFACE: K0Ktqf_Qk8iL6i6SsMk7H7VU8VQsV9Hg9p_mkOewcY8=
+normative: true
+ref: ''
+reviewed: U6VhX3PJ57SiDMokfAytEg3-B668VUocaO_zhcXVBJE=
+text: |
+  | Test procedure ID         | TP1                 |
+  |---------------------------| --------------------|
+  |**Executed by**            |   R. Santos         |
+  |**Date of execution**      |   29.03.2023        |
+  |**Time of execution**      |   17:25             |
+  |**Test cases covered**     |   DRAW_TC_ID_36     | <-Not be needed?
+  |**Requirements covered**   |                     | <-Not be needed>
+  |**List of version tested** |                     |
+  |**List of version tested** |  2.0.5              |
+  |**Test configuration details** | DRAW v2.0.5 on Mozilla Firefox |
+  |**Precondition for test** | Windows 10/11 |
+  |**Expected input and output** |                      |
+
+  | **#Steps**| **Step Action** | **Expected Result** |**Comments**   |
+  |-------|-------------|-----------------|-----------|
+  | **1** | Open tests/tests_manual/graph1.json    |  Graph must be loaded  | **PASS** |
+  | **2** | Delete Node2 and Edge from Node2->Node1 | The node and edge must be deleted | **PASS** |
+  | **3** | Now Press Undo last Action or (Ctrl+Z) | The Node2 and edge must appear again | **PASS** |
+  | **4** | Now Redo last Action or (Ctrl+Y) | The edge and Node2 must disappear again | **PASS** |
+  | **5** | Select a few assets and Move them with mouse | The edges and assets should move with mouse | **PASS** |
+  | **6** | Select and click the ? icon | The User Guide must be opened in a new Tab | **PASS** |
+  | **SPR open** | None |
+  | **SPR closed** | None |
+  | **Total steps** | **Steps Passed** | **Steps Failed** | **Steps not executed** |
+  | 6 | 6 | 0 | 0 |
+  | **Result** | **PASSED** |
+  | **Annex** |  |
+  |----------------------------|----------------------------------------------------|

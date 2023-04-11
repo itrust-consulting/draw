@@ -1,12 +1,13 @@
 active: true
 derived: false
-header: 'Save history of loaded graph'
+header: |
+  Save history of loaded graph
 level: 2.1.10
 links:
-- FUNCREQ-USABILITYHISTORY: null
+- FUNCREQ-USABILITYHISTORY: mdJv2EXbYw36J7LVQGmAFqDHxpgcDYjIFqZhaUY4mdQ=
 normative: true
 ref: ''
-reviewed: null
+reviewed: tD5-P1IgTwaxKjgWle6kHXtPrbIdS7pnqzQlZu-zJN8=
 text: |
   |Testcase Id              | DRAW_TC_ID_43       |
   |-------------------------| --------------------|

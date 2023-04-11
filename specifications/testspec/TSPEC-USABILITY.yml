@@ -1,17 +1,18 @@
 active: true
 derived: false
-header: 'Usability test zoom/alignment/distribution'
+header: |
+  Usability test zoom/alignment/distribution
 level: 2.1.20
 links:
-- FUNCREQ-INTERFACEMOVE: null
-- FUNCREQ-USABILITYAlignBMT: null
-- FUNCREQ-USABILITYAlignLRM: null
-- FUNCREQ-USABILITYDISTHV: null
-- FUNCREQ-USABILITYMOVE: null
-- FUNCREQ-USABILITYZOOM: null
+- FUNCREQ-INTERFACEMOVE: ce8NLr_lxox-pXd8qhm4VPO1u_CEw-LIBPikNtNVYsA=
+- FUNCREQ-USABILITYAlignBMT: bOTo10A1A0HAp61xOPb9JgcdP3d5RVQelzC8ARDnhsk=
+- FUNCREQ-USABILITYAlignLRM: aM39IBPAssBMtcw2x8dOoIbsgdUnKbGKKAygnfmHPQ8=
+- FUNCREQ-USABILITYDISTHV: mfnaHPHimZc9VUf1GkNjiuL0ZlLPrIzg6lU5bnYVCEQ=
+- FUNCREQ-USABILITYMOVE: 0m-49Aug7pmM9Crgr-zgK5rLPeV0wMnDr37_aXyM_To=
+- FUNCREQ-USABILITYZOOM: yZZUA7ez1bVrTt9eKsh7G5sraT1HtxNoxM05B_BIoKs=
 normative: true
 ref: ''
-reviewed: null
+reviewed: o2Ufkui6axG1eHvi_HoQciVxj3rWpa2yfEmXISOuAt8=
 text: |
   |Testcase Id              | DRAW_TC_ID_48       |
   |-------------------------| --------------------|

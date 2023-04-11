@@ -1,0 +1,35 @@
+active: true
+derived: false
+header: ''
+level: 1.6
+links:
+- TSPEC-EDITGRAPH2: a_vCixMdceIpYV_VRBvAlBhCZ53RMbWwECOO7WfYAMo=
+normative: true
+ref: ''
+reviewed: NzW6oiHxrE9IRLWmF4RjHEKwdT66Pf54IfBaqZ3jS9A=
+text: |
+  | Test procedure ID         | TP6                 |
+  |---------------------------| --------------------|
+  |**Executed by**            |   R. Santos         |
+  |**Date of execution**      |   29.03.2023        |
+  |**Time of execution**      |   16:00             |
+  |**Test cases covered**     |   DRAW_TC_ID_31     | <-Not be needed?
+  |**Requirements covered**   |                     | <-Not be needed>
+  |**List of version tested** |                     |
+  |**List of version tested** |  2.0.5              |
+  |**Test configuration details** | DRAW v2.0.5 on Mozilla Firefox |
+  |**Precondition for test** | Windows 10/11 |
+  |**Expected input and output** | Input file tests/tests_manual/graph1.json, output a new file with edited edges between the nodes. |
+  | **#Steps**| **Step Action** | **Expected Result** |**Comments**   |
+  |-------|-------------|-----------------|-----------|
+  |  **1** | Open tests/tests_manual/graph1.json   |                     | **PASS** |
+  |  **2** | Change the probability between  graph nodes by double clicking the edges as: Node1->Node0: 0.25, Node3->Node4:0.75; Node2->Node1:0.95   | These probability must be changed | **PASS** |
+  |  **3** | Save the graph as Excel| The excel file must have same probability between edges as in tests/tests_manual/AssetDSinExcel.xlsx  | **PASS** |
+  |  **4** | Save the graph as JSON | The Json file must match tests/tests_manual/graph1_with_prob.json | **PASS** |
+  | **SPR open** | None |
+  | **SPR closed** | None |
+  | **Total steps** | **Steps Passed** | **Steps Failed** | **Steps not executed** |
+  | 4 | 4 | 0 | 0 |
+  | **Result** | **PASSED** |
+  | **Annex** |  |
+  |----------------------------|----------------------------------------------------|

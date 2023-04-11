@@ -1,12 +1,13 @@
 active: true
 derived: false
-header: 'Export and Load Graph to/from TS'
+header: |
+  Export and Load Graph to/from TS
 level: 2.1.15
 links:
-- FUNCREQ-TRICKSYNCEXPORTDEPGRAPH: null
+- FUNCREQ-TRICKSYNCEXPORTDEPGRAPH: rKWbkuwd4A-Gqv_R_ANidAidtMP-8XdDSt2ZI4di98k=
 normative: true
 ref: ''
-reviewed: null
+reviewed: NN111qQSjieR7rhM6HXqfQhR8N8o9IglamOKMO-I8is=
 text: |
   |Testcase Id              | DRAW_TC_ID_32       |
   |-------------------------| --------------------|
@@ -20,7 +21,7 @@ text: |
   |**Step#**  | **Step Action**          | **Expected Results**|
   |-----------|--------------------------|---------------------|
   | **1** | Open tests/tests_manual/graph_syncts.json    |  Graph gets loaded into white board |
-  | **2** | Sync with Trick Service  (Choose demo.trickservice.com) (Demo UG, TestingILR,0.4); Choose following: <br> merge: Balancing offer and demand -> Balancing offer and demand - electricity <br> merge: Customer Management -> Customer Management - electricity <br> merge: Grid Development & Services - electricity -> Grid Development & Services <br> merge: ILR_GAS_Air conditioning > Air conditioning <br> merge: Allocation management - gas > Allocation management <br> merge: Bad data detection system - electricity -> Bad data detection system <br> Add to TS: Connection Point -> Add to TS ?? <br> delete from Graph: Connection facilities Transport -> delete from Graph <br> | Save and compare file with graph_syncts_after.json. | 
+  | **2** | Sync with Trick Service  (Choose demo.trickservice.com) (Demo UG, TestingILR,0.4); Choose following: <br> merge: Balancing offer and demand -> Balancing offer and demand - electricity <br> merge: Customer Management -> Customer Management - electricity <br> merge: Grid Development & Services - electricity -> Grid Development & Services <br> merge: ILR_GAS_Air conditioning > Air conditioning <br> merge: Allocation management - gas > Allocation management <br> merge: Bad data detection system - electricity -> Bad data detection system <br> Add to TS: Connection Point -> Add to TS ?? <br> delete from Graph: Connection facilities Transport -> delete from Graph <br> | Save and compare file with graph_syncts_after.json. |
   | **3** | Save -> Update Dependency Graph on Trick Service (Choose demo.trickservice.com) (Demo UG, TestingILR,0.4) |  The snapshot should be saved in Trick |
   | **4** | Clear Working Area; Open-> Load dependency graph from Trick Service (Choose demo.trickservice.com)  (Demo UG, TestingILR,0.4) |  The snapshot should be loaded from Trick Service |
   | **5** | Save the graph as log/graph.json file  | the log/graph.json must match tests/tests_manual/graph_syncts_after.json |

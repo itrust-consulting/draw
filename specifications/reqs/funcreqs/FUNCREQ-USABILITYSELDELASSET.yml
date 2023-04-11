@@ -6,7 +6,6 @@ level: 1.4.6
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: tphdmUdv7KvzocfItIqshDmlT3MZWGnPOCanPbZpNTE=
 text: |
   The tool shall provide an ability to select one or more assets and delete them. If the asset is deleted its edge must be deleted as well.
-   

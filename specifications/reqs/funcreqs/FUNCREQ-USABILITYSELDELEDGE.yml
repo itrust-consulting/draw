@@ -6,7 +6,6 @@ level: 1.4.7
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: JuK3CSMrqueMhiesIUS-j3NVHgqvJp0r-Rmkz0iZA-I=
 text: |
   The tool shall provide an ability to delete the selected edges in the DRAW whiteboard. If edge is deleted the connected asset must not be deleted.
-   

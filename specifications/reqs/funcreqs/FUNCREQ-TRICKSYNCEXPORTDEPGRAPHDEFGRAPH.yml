@@ -6,6 +6,6 @@ level: 1.5.4
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: vtq5WhdCc8t7MHpTqZvrlc_8Kxuske2TfRqZ06JqLSs=
 text: |
-  The tool shall provide interface to Export Dependency Graph to Trick service risk analysis and also load the dependency graph from trick service risk analysis where the default asset dependency graph in Trick Service risk analysis comprises of all the assets which are unconnected implying no dependency is defined between assets. 
+  The tool shall provide interface to Export Dependency Graph to Trick service risk analysis and also load the dependency graph from trick service risk analysis where the default asset dependency graph in Trick Service risk analysis comprises of all the assets which are unconnected implying no dependency is defined between assets.

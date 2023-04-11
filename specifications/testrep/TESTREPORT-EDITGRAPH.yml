@@ -1,0 +1,37 @@
+active: true
+derived: false
+header: ''
+level: 1.4
+links:
+- TSPEC-EDITGRAPH: Um0lU5ObYRHhAaxILw8IrDn7MZrLbY8JwK0XVzcJ2DM=
+normative: true
+ref: ''
+reviewed: YSQxEaGuARH7vfRgoGnwCpAEmoF6auenPSM_NaQqPms=
+text: |
+  | Test procedure ID         | TP4                 |
+  |---------------------------| --------------------|
+  |**Executed by**            |   R. Santos         |
+  |**Date of execution**      |   29.03.2023        |
+  |**Time of execution**      |   15:15             |
+  |**Test cases covered**     |  DRAW_TC_ID_29      | <-Not be needed?
+  |**Requirements covered**   |                     | <-Not be needed>
+  |**List of version tested** |                     |
+  |**List of version tested** |  2.0.5              |
+  |**Test configuration details** | DRAW v2.0.5 on Mozilla Firefox |
+  |**Precondition for test** | Windows 10/11 |
+  |**Expected input and output** | Input a blank whiteboard and as output, filled whiteboard with edited elements. |
+
+  | **#Steps**| **Step Action** | **Expected Result** |**Comments**   |
+  |-------|-------------|-----------------|-----------|
+  |  **1** | Open tests/tests_manual/graph1.json   |                     | **PASS** |
+  |  **2** | Delete asset Node4, Add Asset Node6 (Network), Connect it to Node1 |  JSON files match graph2.json         | **PASS** |
+  |  **3** | Dropdown right of Open->Clear Working Area >  Open tests/tests_manual/graph2.json  |  Graph is loaded | **PASS** |
+  |  **4** | Create Edge (Node0->Node6)  |   | **PASS** |
+  |  **5** | Save Graph and Compare with tests/tests_manual/Graph3.json  | The Saved graph and Graph3.json match  | **PASS** |
+  | **SPR open** | None |
+  | **SPR closed** | None |
+  | **Total steps** | **Steps Passed** | **Steps Failed** | **Steps not executed** |
+  | 5 | 5 | 0 | 0 |
+  | **Result** | **PASSED** |
+  | **Annex** |  |
+  |----------------------------|----------------------------------------------------|

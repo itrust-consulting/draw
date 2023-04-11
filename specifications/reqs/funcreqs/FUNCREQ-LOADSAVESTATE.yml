@@ -6,12 +6,11 @@ level: 1.3.7
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: cR6Rou_mcOPfzSjzygHWiBJyDWCQl5PQEqoRe0Witfc=
 text: |
-  The tool shall provide the capability to load the a dependency graph from an input JSON file while  
+  The tool shall provide the capability to load the a dependency graph from an input JSON file while
   retaining the properties of the graph when it was saved.
   The following implies state of GRAPH:
   ---
     - Edges and their properties including position (Probability, Source and Target Asset)
     - Nodes and their properties including position (Name, TrickID, Position)
-  

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head><title>Doorstop</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="assets/doorstop/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/doorstop/general.css" />
+  <link type="text/css" rel="stylesheet" href="assets/doorstop/sidebar.css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" ></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+  });
+  </script>
+</head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2 hidden-sm hidden-xs">
+          <nav id="TOC" class="nav nav-stacked fixed sidebar">
+              <h3>Table of Contents</h3>
+<pre><code>* [1.1 Create and edit graph](#TESTREPORT-CREATEGRAPH)
+* [1.2 TESTREPORT-ADDASSET](#TESTREPORT-ADDASSET)
+* [1.3 TESTREPORT-EDITASSET](#TESTREPORT-EDITASSET)
+* [1.4 TESTREPORT-EDITGRAPH](#TESTREPORT-EDITGRAPH)
+</code></pre>
+          </nav>
+      </div>
+      <div class="col-lg-8" id="main">
+        <h2 id="TESTREPORT-CREATEGRAPH">1.1 Create and edit graph <small>TESTREPORT-CREATEGRAPH</small></h2>
+<table>
+<thead>
+<tr>
+<th>Test procedure ID</th>
+<th>TP2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Executed by</strong></td>
+<td>R. Santos</td>
+</tr>
+<tr>
+<td><strong>Date of execution</strong></td>
+<td>29.03.2023</td>
+</tr>
+<tr>
+<td><strong>Time of execution</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Test cases covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>List of version tested</strong></td>
+<td>2.0.5</td>
+</tr>
+<tr>
+<td><strong>Test configuration details</strong></td>
+<td>DRAW v2.0.5 on Mozilla Firefox</td>
+</tr>
+<tr>
+<td><strong>Precondition for test</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Expected input and output</strong></td>
+<td>Expected input may be an JSON File/Excel file or a manual creation of Graph. Output is Creation of Graph as per Graph Creation and Updation FUNCREQ-011</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>#Steps</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Result</strong></th>
+<th><strong>Comments</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Create graph</td>
+<td><a href="images/Graph1.png" title="Basic Graph">Alt text</a></td>
+<td><strong>PASSED</strong></td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Save the graph as JSON and compare with graph1.json</td>
+<td>Comparison successful</td>
+<td><strong>PASSED</strong></td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Click on Open -&gt; Clear Working Area</td>
+<td>Graph is cleared</td>
+<td><strong>PASSED</strong></td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Create a graph as in image  <img alt="Alt text" src="images/graph_cyclic.png" title="Cyclic Graph" /></td>
+<td><strong>PASSED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Save the graph as JSON and compare with graph_cyclic.json</td>
+<td>JSON files match</td>
+<td><strong>PASSED</strong></td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td>DropDownRight of Open-&gt;Clear Working Area</td>
+<td>Graph is cleared</td>
+<td><strong>PASSED</strong></td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td>Create a graph as in image  <img alt="Alt text" src="images/graph_same_name.png" title="Same Name of Assets Graph" /></td>
+<td>Tool allows to create the graph</td>
+<td><strong>PASSED</strong></td>
+</tr>
+<tr>
+<td><strong>8</strong></td>
+<td>Save the graph as JSON and compare with graph_same_name.json</td>
+<td>This will not match through graphdiff.py and comparison needs to be done visually</td>
+<td><strong>PASSED</strong></td>
+</tr>
+<tr>
+<td><strong>9</strong></td>
+<td>DropDownRight of Open-&gt;Clear Working Area</td>
+<td>Graph is cleared</td>
+<td><strong>PASSED</strong></td>
+</tr>
+<tr>
+<td><strong>SPR open</strong></td>
+<td>None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SPR closed</strong></td>
+<td>None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Total steps</strong></td>
+<td><strong>Steps Passed</strong></td>
+<td><strong>Steps Failed</strong></td>
+<td><strong>Steps not executed</strong></td>
+</tr>
+<tr>
+<td>9</td>
+<td>9</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>Result</strong></td>
+<td><strong>PASSED</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Annex</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>----------------------------</td>
+<td>----------------------------------------------------</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="TSPEC.html#TSPEC-ADDASSET">TSPEC-ADDASSET Add asset</a>, <a href="TSPEC.html#TSPEC-CREATEGRAPH">TSPEC-CREATEGRAPH Create DRAW graph</a>, <a href="TSPEC.html#TSPEC-EDITASSET">TSPEC-EDITASSET Edit asset</a>, <a href="TSPEC.html#TSPEC-EDITGRAPH">TSPEC-EDITGRAPH Load and Edit Graph assets</a>, <a href="TSPEC.html#TSPEC-EDITGRAPH1">TSPEC-EDITGRAPH1 Load and edit graph edge</a>, <a href="TSPEC.html#TSPEC-EDITGRAPH2">TSPEC-EDITGRAPH2 Load and edit graph probability</a></p>
+<h2 id="TESTREPORT-ADDASSET">1.2 TESTREPORT-ADDASSET</h2>
+<table>
+<thead>
+<tr>
+<th>Test procedure ID</th>
+<th>TP1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Executed by</strong></td>
+<td>R. Santos</td>
+</tr>
+<tr>
+<td><strong>Date of execution</strong></td>
+<td>29.03.2023</td>
+</tr>
+<tr>
+<td><strong>Time of execution</strong></td>
+<td>14:00</td>
+</tr>
+<tr>
+<td><strong>Test cases covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>List of version tested</strong></td>
+<td>2.0.5</td>
+</tr>
+<tr>
+<td><strong>Test configuration details</strong></td>
+<td>DRAW v2.0.5 on Mozilla Firefox</td>
+</tr>
+<tr>
+<td><strong>Precondition for test</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Expected input and output</strong></td>
+<td>Asset with asset type added to the whiteboard</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>#Steps</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Result</strong></th>
+<th><strong>Comments</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Add Asset (all 13 types)</td>
+<td>Asset is created with appropriate type</td>
+<td><strong>PASSED</strong></td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Add Asset with same name and type as in Step 1</td>
+<td>Asset is allowed to be created</td>
+<td><strong>PASSED</strong></td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Add Asset with inactive state</td>
+<td>Allowed to change the state of asset to inactive. Asset is light greyed</td>
+<td><strong>PASSED</strong></td>
+</tr>
+<tr>
+<td><strong>SPR open</strong></td>
+<td>None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SPR closed</strong></td>
+<td>None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Total steps</strong></td>
+<td><strong>Steps Passed</strong></td>
+<td><strong>Steps Failed</strong></td>
+<td><strong>Steps not executed</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>Result</strong></td>
+<td><strong>PASSED</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Annex</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>----------------------------</td>
+<td>----------------------------------------------------</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="TESTREPORT-EDITASSET">1.3 TESTREPORT-EDITASSET</h2>
+<table>
+<thead>
+<tr>
+<th>Test procedure ID</th>
+<th>TP3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Executed by</strong></td>
+<td>R. Santos</td>
+</tr>
+<tr>
+<td><strong>Date of execution</strong></td>
+<td>29.03.2023</td>
+</tr>
+<tr>
+<td><strong>Time of execution</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Test cases covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>List of version tested</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>List of version tested</strong></td>
+<td>2.0.5</td>
+</tr>
+<tr>
+<td><strong>Test configuration details</strong></td>
+<td>DRAW v2.0.5 on Mozilla Firefox</td>
+</tr>
+<tr>
+<td><strong>Precondition for test</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Expected input and output</strong></td>
+<td>Input a blank whiteboard and as output, filled whiteboard with edited elements.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>#Steps</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Result</strong></th>
+<th><strong>Comments</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Add Asset any type, Change its name</td>
+<td>Asset created with appropriate type and name change is applied</td>
+<td><strong>PASSED</strong></td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Add Asset any type and modify its type</td>
+<td>Asset'type is change</td>
+<td><strong>PASSED</strong></td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Add Asset and change its state from active to inactive and vice versa</td>
+<td>Allowed to change the state of asset to inactive. Asset is light greyed when inactive</td>
+<td><strong>PASSED</strong></td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Add Asset and delete the same</td>
+<td>Asset deleted without any error</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SPR open</strong></td>
+<td>None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SPR closed</strong></td>
+<td>None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Total steps</strong></td>
+<td><strong>Steps Passed</strong></td>
+<td><strong>Steps Failed</strong></td>
+<td><strong>Steps not executed</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>Result</strong></td>
+<td><strong>PASSED</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Annex</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>----------------------------</td>
+<td>----------------------------------------------------</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="TESTREPORT-EDITGRAPH">1.4 TESTREPORT-EDITGRAPH</h2>
+<table>
+<thead>
+<tr>
+<th>Test procedure ID</th>
+<th>TP3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Executed by</strong></td>
+<td>R. Santos</td>
+</tr>
+<tr>
+<td><strong>Date of execution</strong></td>
+<td>29.03.2023</td>
+</tr>
+<tr>
+<td><strong>Time of execution</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Test cases covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>List of version tested</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>List of version tested</strong></td>
+<td>2.0.5</td>
+</tr>
+<tr>
+<td><strong>Test configuration details</strong></td>
+<td>DRAW v2.0.5 on Mozilla Firefox</td>
+</tr>
+<tr>
+<td><strong>Precondition for test</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Expected input and output</strong></td>
+<td>Input a blank whiteboard and as output, filled whiteboard with edited elements.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>#Steps</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Result</strong></th>
+<th><strong>Comments</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph1.json</td>
+<td></td>
+<td><strong>PASS</strong></td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Delete asset Node4, Add Asset Node6 (Network), Connect it to Node1</td>
+<td>JSON files match graph2.json</td>
+<td><strong>PASS</strong></td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Dropdown right of Open-&gt;Clear Working Area &gt;  Open tests/tests_manual/graph2.json</td>
+<td>Graph is loaded</td>
+<td><strong>PASS</strong></td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Create Edge (Node0-&gt;Node6)</td>
+<td></td>
+<td><strong>PASS</strong></td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Save Graph and Compare with tests/tests_manual/Graph3.json</td>
+<td>The Saved graph and Graph3.json match</td>
+<td><strong>PASS</strong></td>
+</tr>
+<tr>
+<td><strong>SPR open</strong></td>
+<td>None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>SPR closed</strong></td>
+<td>None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Total steps</strong></td>
+<td><strong>Steps Passed</strong></td>
+<td><strong>Steps Failed</strong></td>
+<td><strong>Steps not executed</strong></td>
+</tr>
+<tr>
+<td>5</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>Result</strong></td>
+<td><strong>PASSED</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Annex</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>----------------------------</td>
+<td>----------------------------------------------------</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+      </div>
+    </div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="assets/doorstop/jquery.min.js"></script>
+<script src="assets/doorstop/bootstrap.min.js"></script>
+<script>
+    $(function() {
+        $("table").addClass("table");
+        $("nav ul").addClass("nav nav-stacked");
+        $("nav").affix();
+        $('body').scrollspy({
+          target: '.sidebar'
+        });
+        $("#main a").attr("target", "parent");
+
+  $(window).on('hashchange', function() {
+    $(window).scrollTop($(location.hash.toLowerCase()).offset().top);});
+  });
+</script>
+</body>
+</html>
+

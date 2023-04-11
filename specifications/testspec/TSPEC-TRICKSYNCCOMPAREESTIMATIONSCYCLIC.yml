@@ -1,12 +1,13 @@
 active: true
 derived: false
-header: 'Compare estimation with cyclic graph'
+header: |
+  Compare estimation with cyclic graph
 level: 2.1.19
 links:
-- FUNCREQ-TRICKSYNCCOMPAREESTIMATIONS: null
+- FUNCREQ-TRICKSYNCCOMPAREESTIMATIONS: AdWw0i4wKwY-8kfMEHqcYZaM1PkibqhNaDFSkA27J3c=
 normative: true
 ref: ''
-reviewed: null
+reviewed: 5Dib2BWaBGqLeYBXz_1tobccx1BIBsYFZbDASf8kr70=
 text: |
   |Testcase Id              | DRAW_TC_ID_46       |
   |-------------------------| --------------------|

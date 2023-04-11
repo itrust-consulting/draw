@@ -3,10 +3,10 @@ derived: false
 header: |
   Load after clearning existing graph
 level: 1.3.2
-links: [] 
+links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: 10WBVuZT7m-tRnq1Imq8Brbt_PaLB6tADYNzMvAFoCU=
 text: |
   The tool shall provide the capability to load a fresh graph into whiteboard if an existing graph already exists in the white board.
   The existing graph shall be cleared before loading a new graph.

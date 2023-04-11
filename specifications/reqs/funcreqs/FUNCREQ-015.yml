@@ -1,11 +1,11 @@
 active: true
 derived: false
-header: 'Trick Service Syncronization'
+header: |
+  Trick Service Syncronization
 level: 1.5
 links: []
 normative: false
 ref: ''
-reviewed: null
+reviewed: 3j_6UgjsUcFi8HUKR7n2taIez592p8yMee1cffZo2tA=
 text: |
   The following section cover the trick service interaction requirements.
-  

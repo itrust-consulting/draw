@@ -1,0 +1,36 @@
+active: true
+derived: false
+header: ''
+level: 1.3
+links:
+- TSPEC-EDITASSET: m8NB6wDc-YyVvP3e2faw0qMZx2TbrkrQXzSVWmAA4Ho=
+normative: true
+ref: ''
+reviewed: iszbe964Excjb6WHhvqMo_PquhjD7iMah4GxbTv4Rl8=
+text: |
+  | Test procedure ID         | TP3                 |
+  |---------------------------| --------------------|
+  |**Executed by**            |   R. Santos         |
+  |**Date of execution**      |   29.03.2023        |
+  |**Time of execution**      |   15:00             |
+  |**Test cases covered**     |   DRAW_TC_ID_28     | <-Not be needed?
+  |**Requirements covered**   |                     | <-Not be needed>
+  |**List of version tested** |                     |
+  |**List of version tested** |  2.0.5              |
+  |**Test configuration details** | DRAW v2.0.5 on Mozilla Firefox |
+  |**Precondition for test** | Windows 10/11 |
+  |**Expected input and output** | Input a blank whiteboard and as output, filled whiteboard with edited elements. |
+
+  | **#Steps**| **Step Action** | **Expected Result** |**Comments**   |
+  |-------|-------------|-----------------|-----------|
+   |  **1** |Add Asset any type, Change its name               |  Asset created with appropriate type and name change is applied                 | **PASSED** |
+  |  **2** |Add Asset any type and modify its type            | Asset'type is change                   | **PASSED** |
+  |  **3** | Add Asset and change its state from active to inactive and vice versa                 | Allowed to change the state of asset to inactive. Asset is light greyed when inactive | **PASSED** |
+  |  **4** | Add Asset and delete the same                 | Asset deleted without any error |
+  | **SPR open** | None |
+  | **SPR closed** | None |
+  | **Total steps** | **Steps Passed** | **Steps Failed** | **Steps not executed** |
+  | 4 | 4 | 0 | 0 |
+  | **Result** | **PASSED** |
+  | **Annex** |  |
+  |----------------------------|----------------------------------------------------|

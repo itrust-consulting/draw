@@ -1,12 +1,13 @@
 active: true
 derived: false
-header: 'Load file twice'
+header: |
+  Load file twice
 level: 2.1.9
 links:
-- FUNCREQ-LOADCLEARGRAPH: null
+- FUNCREQ-LOADCLEARGRAPH: 10WBVuZT7m-tRnq1Imq8Brbt_PaLB6tADYNzMvAFoCU=
 normative: true
 ref: ''
-reviewed: null
+reviewed: cuW935Cb1T3ClFPA5ZVQA-8GdnjJidiQHLKsQ3li6P8=
 text: |
   |Testcase Id              | DRAW_TC_ID_42       |
   |-------------------------| --------------------|

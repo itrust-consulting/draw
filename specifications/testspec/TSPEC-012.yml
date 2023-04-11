@@ -1,24 +1,25 @@
 active: true
 derived: false
-header: 'Verification Step'
+header: |
+  Verification Step
 level: 1.2
 links: []
 normative: false
 ref: ''
-reviewed: null
-text: |
-  This validation step verifies that the saved JSON file (log.json) is similar as an expected JSON file (graph.json). Similarity of two dependency graph json files implies that the two files are matched based on corresponding asset name and asset types. This comparison compares graphs after mapping corresponding IDs of graph nodes and graph edges comparison.
-  Before carrying out this step copy <DRAW_ROOT_DIRECTORY>/tests/tests_automated/tests/graphdiff.py  to test logging directory. Also ensure python3.exe is installed in the system where testing is performed and is added to PATH env variable.
-  Steps
-  ---        
-   -	Save the graph as JSON
-   -	Rename this JSON file as log.json and move this file to the test log directory
-   -	Run the following verification command by changing the path/name of graph.json and log.json file appropriately.
-  
-   `$ python3.exe graphdiff.py –-gold_file graph.json –-log_file log.json`
-   `The gold and Log files match.`
-
-  The above output signifies that the log.json and graph.json are similar. 
-  If the file paths are incorrect; correct the paths. If the following output is returned it signifies the files do not match and the test fails as a result.
-    `The gold and Log files do not match.`
-
+reviewed: HaGKUZiN3ZYS5CeGCxmBJ85RTYd8Lfc9TMo61Ks0WIE=
+text: "This validation step verifies that the saved JSON file (log.json) is similar\
+  \ as an expected JSON file (graph.json). Similarity of two dependency graph json\
+  \ files implies that the two files are matched based on corresponding asset name\
+  \ and asset types. This comparison compares graphs after mapping corresponding IDs\
+  \ of graph nodes and graph edges comparison.\nBefore carrying out this step copy\
+  \ <DRAW_ROOT_DIRECTORY>/tests/tests_automated/tests/graphdiff.py  to test logging\
+  \ directory. Also ensure python3.exe is installed in the system where testing is\
+  \ performed and is added to PATH env variable.\nSteps\n---\n -\tSave the graph as\
+  \ JSON\n -\tRename this JSON file as log.json and move this file to the test log\
+  \ directory\n -\tRun the following verification command by changing the path/name\
+  \ of graph.json and log.json file appropriately.\n\n `$ python3.exe graphdiff.py\
+  \ –-gold_file graph.json –-log_file log.json`\n `The gold and Log files match.`\n\
+  \nThe above output signifies that the log.json and graph.json are similar.\nIf the\
+  \ file paths are incorrect; correct the paths. If the following output is returned\
+  \ it signifies the files do not match and the test fails as a result.\n  `The gold\
+  \ and Log files do not match.`\n"
