@@ -1,14 +1,15 @@
 active: true
 derived: false
-header: 'Load and edit graph edge'
+header: |
+  Load and edit graph edge
 level: 2.1.5
 links:
-- FUNCREQ-CREATEGRAPHNEDGES: null
-- FUNCREQ-INTERFACELOADJSON: null
-- FUNCREQ-LOADRETAINSTATE: null
+- FUNCREQ-CREATEGRAPHNEDGES: 4siuleawq-Bi5GFfhpK6BBEIIbFke70x-i7oVYuKNPk=
+- FUNCREQ-INTERFACELOADJSON: PXepLJDXRs2EyY31yByzQJa91hfHdObZWJC6DcK_HbY=
+- FUNCREQ-LOADRETAINSTATE: EXwkG9wNTUiZFmd_C6S9qsZNdQIrqkZAVPF7AGCyRkA=
 normative: true
 ref: ''
-reviewed: null
+reviewed: MgQt6LkhzPB2aq0VIDvyG0OgEzusvRYCJh2bxoa6p4k=
 text: |
   |Testcase Id              | DRAW_TC_ID_30       |
   |-------------------------| --------------------|

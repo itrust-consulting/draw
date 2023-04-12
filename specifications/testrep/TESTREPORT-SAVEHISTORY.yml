@@ -1,0 +1,38 @@
+active: true
+derived: false
+header: ''
+level: 1.18
+links:
+- TSPEC-SAVEHISTORY: d9awUwuozJLyDRc3aOMeq49YUV0WlNKZzpaCsWc91Lw=
+normative: true
+ref: ''
+reviewed: FPpz5vHgN7V9BmHFutPm5MMFBGh-OGEg4SUsMfMrbAQ=
+text: |
+  | Test procedure ID         | TP1                 |
+  |---------------------------| --------------------|
+  |**Executed by**            |   R. Santos         |
+  |**Date of execution**      |   29.03.2023        |
+  |**Time of execution**      |   18:30             |
+  |**Test cases covered**     |   DRAW_TC_ID_43     | <-Not be needed?
+  |**Requirements covered**   |                     | <-Not be needed>
+  |**List of version tested** |                     |
+  |**List of version tested** |  2.0.5              |
+  |**Test configuration details** | DRAW v2.0.5 on Mozilla Firefox |
+  |**Precondition for test** | Windows 10/11 |
+  |**Expected input and output** |                      |
+  | **#Steps**| **Step Action** | **Expected Result** |**Comments**   |
+  |-------|-------------|-----------------|-----------|
+  | **1** | Open tests/tests_manual/graph1.json    |  Graph gets loaded into white board | **PASS** |
+  | **2** | Close the browser window |   | **PASS** |
+  | **3** | Reopen the draw url in a new browser window |  Tool must prompt user to resume work from last time | **PASS** |
+  | **4** | Select yes |  Tool must reopen the graph from previous state | **PASS** |
+  | **5** | Save graph and compare with tests/tests_manual/graph1.json |  JSON files must match | **PASS** |
+  | **6** | Close the browser window |   | **PASS** |
+  | **7** | Select Cancel |  Tool must open a blank whiteboard | **PASS** |
+  | **SPR open** | None |
+  | **SPR closed** | None |
+  | **Total steps** | **Steps Passed** | **Steps Failed** | **Steps not executed** |
+  | 7 | 7 | 0 | 0 |
+  | **Result** | **PASSED** |
+  | **Annex** |  |
+  |----------------------------|----------------------------------------------------|

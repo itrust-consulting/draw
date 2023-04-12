@@ -1,11 +1,12 @@
 active: true
 derived: false
-header: 'Test Setup'
+header: |
+  Test Setup
 level: 1.1
 links: []
 normative: false
 ref: ''
-reviewed: null
+reviewed: mZQt8mxm_fyCfZfPJ8COK_suJqD5GNITdqDD8GcI2fk=
 text: |
   The test cases fall in two categories
     ---
@@ -15,7 +16,6 @@ text: |
         Connect with IT Admin to create an account on the following trick service portals before proceeding with these tests.
         ---
         - demo.trickservice.com
-        - trickservice.itrust.lu        
-  
-  All files referred for testing and validation in these tests are present in DRAW_ROOT_DIRECTORY/tests in git repository corresponding to appropriate DRAW tool version. 
-  
+        - trickservice.itrust.lu
+
+  All files referred for testing and validation in these tests are present in DRAW_ROOT_DIRECTORY/tests in git repository corresponding to appropriate DRAW tool version.

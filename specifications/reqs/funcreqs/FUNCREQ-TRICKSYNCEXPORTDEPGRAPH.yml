@@ -6,7 +6,7 @@ level: 1.5.3
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: rKWbkuwd4A-Gqv_R_ANidAidtMP-8XdDSt2ZI4di98k=
 text: |
-  The tool shall provide interface to Export Dependency Graph to Trick service risk 
+  The tool shall provide interface to Export Dependency Graph to Trick service risk
   analysis and also load the dependency graph from trick service risk analysis

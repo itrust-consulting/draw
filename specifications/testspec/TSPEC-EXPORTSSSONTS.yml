@@ -1,12 +1,13 @@
 active: true
 derived: false
-header: 'Export/Load Snapshot to/fron Trick Service'
+header: |
+  Export/Load Snapshot to/fron Trick Service
 level: 2.1.12
 links:
-- FUNCREQ-TRICKSYNCEXPORTSSS: null
+- FUNCREQ-TRICKSYNCEXPORTSSS: eKldr1_bYj5H61UUQczkP5rO8eu56sK19f_Eaz3c7bk=
 normative: true
 ref: ''
-reviewed: null
+reviewed: M5PkQEZ0Ioo0w2N8s-XH8pQRWa5bBn3RvKQ6u8zJSFM=
 text: |
   |Testcase Id              | DRAW_TC_ID_35       |
   |-------------------------| --------------------|

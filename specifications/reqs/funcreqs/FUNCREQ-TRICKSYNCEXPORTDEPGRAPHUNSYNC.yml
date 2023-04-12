@@ -6,9 +6,9 @@ level: 1.5.5
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: VuenRWasHwHTXL3UP5V6tbPaHkAH7ZIVT68Os3sR6dc=
 text: |
-   The update dependency graph feature will update the dependency graph on trick service using the connected nodes in DRAW white board which have been synchronized with Trick Service earlier. 
-   All unconnected asset nodes which are not synchronized with DRAW previously are ignored. 
-   However if a connected asset node is found in DRAW which has not been synchronized with Trick Service earlier will result in an error.
-   Implying that asset is not present in Trick Service already.
+  The update dependency graph feature will update the dependency graph on trick service using the connected nodes in DRAW white board which have been synchronized with Trick Service earlier.
+  All unconnected asset nodes which are not synchronized with DRAW previously are ignored.
+  However if a connected asset node is found in DRAW which has not been synchronized with Trick Service earlier will result in an error.
+  Implying that asset is not present in Trick Service already.

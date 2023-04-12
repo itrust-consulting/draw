@@ -1,12 +1,13 @@
 active: true
 derived: false
-header: 'Negative testing for unsupported structures of json'
+header: |
+  Negative testing for unsupported structures of json
 level: 2.1.21
 links:
-- FUNCREQ-LOADANDEDIT: null
+- FUNCREQ-LOADANDEDIT: RdnqumxqKpqq8y2gs5bkIayl7yVPOeqOL44nglkVEAI=
 normative: true
 ref: ''
-reviewed: null
+reviewed: JTkqNfKk8NzigP4UwfIK2iRulCNKThIKgmUI-DXCDh4=
 text: |
   |Testcase Id              | DRAW_TC_ID_40       |
   |-------------------------| --------------------|
@@ -20,7 +21,7 @@ text: |
   |**Step#**  | **Step Action**          | **Expected Results**|
   |-----------|--------------------------|---------------------|
   | **1** | Open tests/tests_manual/graph5.png    |  Expected message (Unsupported file format)  |
-  | **2** | Open tests/tests_manual/graph_unsuppstruct.json |  An error message expected , https://redmine.itrust.lu/issues/6184 | 
+  | **2** | Open tests/tests_manual/graph_unsuppstruct.json |  An error message expected , https://redmine.itrust.lu/issues/6184 |
   | **3** | Open tests/tests_manual/graph_error.json |  An error message expected, FILE Ticket, https://redmine.itrust.lu/issues/6184 |
   | **4** | Open tests/tests_manual/graph_missingfield.json |  An error message expected, FILE Ticket, https://redmine.itrust.lu/issues/6184 |
 

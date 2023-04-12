@@ -1,0 +1,37 @@
+active: true
+derived: false
+header: ''
+level: 1.13
+links:
+- TSPEC-LOADSAVE1: kYhcNtJL2oSFE0UUgQXlYF0AiWFlbBT2vs5hizygBzg=
+normative: true
+ref: ''
+reviewed: oaltghmQMlxhoxpabtft2UV7OydyCnAJ6Pix0tla-ng=
+text: |
+  | Test procedure ID         | TP1                 |
+  |---------------------------| --------------------|
+  |**Executed by**            |   R. Santos         |
+  |**Date of execution**      |   29.03.2023        |
+  |**Time of execution**      |   17:40             |
+  |**Test cases covered**     |   DRAW_TC_ID_38     | <-Not be needed?
+  |**Requirements covered**   |                     | <-Not be needed>
+  |**List of version tested** |                     |
+  |**List of version tested** |  2.0.5              |
+  |**Test configuration details** | DRAW v2.0.5 on Mozilla Firefox |
+  |**Precondition for test** | Windows 10/11 |
+  |**Expected input and output** |                      |
+
+  | **#Steps**| **Step Action** | **Expected Result** |**Comments**   |
+  |-------|-------------|-----------------|-----------|
+  |  **1** | Open tests/tests_manual/AssetDSinExcel2.xlsx    | **PASS** |
+  |  **2** | Save the graph : log/graph1.json | **PASS** |
+  |  **3** | Compare the log/graph1.json and tests/tests_manual/graph5.json | The files must match | **PASS** |
+  |  **4** | Open tests/tests_manual/graph5.json  | **PASS** |
+  |  **5** | Save -> Export as picture (PNG)  | The saved PNG file must match tests/tests_manual/graph5.png | **PASS** |
+  | **SPR open** | None |
+  | **SPR closed** | None |
+  | **Total steps** | **Steps Passed** | **Steps Failed** | **Steps not executed** |
+  | 5 | 5 | 0 | 0 |
+  | **Result** | **PASSED** |
+  | **Annex** |  |
+  |----------------------------|----------------------------------------------------|

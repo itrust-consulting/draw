@@ -4,10 +4,10 @@ header: |
   Export png to Trick Service
 level: 2.1.13
 links:
-- FUNCREQ-TRICKSYNCEXPORTPNG: null
+- FUNCREQ-TRICKSYNCEXPORTPNG: qWRTisWVWGFE995iIht6nMeeeugd-CK0V9dlpRg15M0=
 normative: true
 ref: ''
-reviewed: null
+reviewed: jBTQHu2P_etIojQ7CoWULRdgRTN4_6VkzREWfK7XuUI=
 text: |
   |Testcase Id              | DRAW_TC_ID_34       |
   |-------------------------| --------------------|

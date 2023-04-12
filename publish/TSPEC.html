@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html>
+<head><title>Doorstop</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="assets/doorstop/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/doorstop/general.css" />
+  <link type="text/css" rel="stylesheet" href="assets/doorstop/sidebar.css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" ></script>
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+  });
+  </script>
+</head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2 hidden-sm hidden-xs">
+          <nav id="TOC" class="nav nav-stacked fixed sidebar">
+              <h3>Table of Contents</h3>
+<ul>
+<li><a href="#TSPEC-001">1 Test Case Specification of DRAW</a><ul>
+<li><a href="#TSPEC-011">1.1 Test Setup</a></li>
+<li><a href="#TSPEC-012">1.2 Verification Step</a></li>
+<li><a href="#TSPEC-021">2.1 Test Cases</a><ul>
+<li><a href="#TSPEC-ADDASSET">2.1.1 Add asset</a></li>
+<li><a href="#TSPEC-CREATEGRAPH">2.1.2 Create DRAW graph</a></li>
+<li><a href="#TSPEC-EDITASSET">2.1.3 Edit asset</a></li>
+<li><a href="#TSPEC-EDITGRAPH">2.1.4 Load and Edit Graph assets</a></li>
+<li><a href="#TSPEC-EDITGRAPH1">2.1.5 Load and edit graph edge</a></li>
+<li><a href="#TSPEC-EDITGRAPH2">2.1.6 Load and edit graph probability</a></li>
+<li><a href="#TSPEC-LOADSAVE">2.1.7 Load and save graph</a></li>
+<li><a href="#TSPEC-LOADSAVE1">2.1.8 Load and save graph json/excel format</a></li>
+<li><a href="#TSPEC-OPENOPEN">2.1.9 Load file twice</a></li>
+<li><a href="#TSPEC-SAVEHISTORY">2.1.10 Save history of loaded graph</a></li>
+<li><a href="#TSPEC-SYNCTRICK">2.1.11 Synchronize with Trick Service</a></li>
+<li><a href="#TSPEC-EXPORTSSSONTS">2.1.12 Export/Load Snapshot to/fron Trick Service</a></li>
+<li><a href="#TSPEC-EXPORTPNGONTS">2.1.13 Export png to Trick Service</a></li>
+<li><a href="#TSPEC-EXPORTGRAPHONTS1">2.1.14 Export and Load Graph to/from TS</a></li>
+<li><a href="#TSPEC-EXPORTGRAPHONTS">2.1.15 Export and Load Graph to/from TS</a></li>
+<li><a href="#TSPEC-INTERFACE">2.1.16 Interface testing delete, undo, redo, move, userguide</a></li>
+<li><a href="#TSPEC-LOADSAVEWITHTRICKID">2.1.17 Load and save graph with trick ID</a></li>
+<li><a href="#TSPEC-TRICKSYNCCOMPAREESTIMATIONS">2.1.18 Compare estimation feature</a></li>
+<li><a href="#TSPEC-TRICKSYNCCOMPAREESTIMATIONSCYCLIC">2.1.19 Compare estimation with cyclic graph</a></li>
+<li><a href="#TSPEC-USABILITY">2.1.20 Usability test zoom/alignment/distribution</a></li>
+<li><a href="#TSPEC-NEGATIVE">2.1.21 Negative testing for unsupported structures of json</a></li>
+<li><a href="#TSPEC-NEGATIVE1">2.1.22 Error handling for unsynchronized graph</a></li>
+<li><a href="#TSPEC-TRICKSYNCCOMPAREESTIMATIONSNEG">2.1.23 Compare Estimations Negative test</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+          </nav>
+      </div>
+      <div class="col-lg-8" id="main">
+        <h1 id="TSPEC-001">1 Test Case Specification of DRAW <small>TSPEC-001</small></h1>
+<p>The following section details the test setup and test cases</p>
+<h2 id="TSPEC-011">1.1 Test Setup <small>TSPEC-011</small></h2>
+<p>The test cases fall in two categories</p>
+<hr />
+<ul>
+<li>DRAW  specific tests
+    Load file DRAW_ROOT_DIRECTORY/index.html on browser</li>
+<li>DRAW and TrickService interaction testcases
+      Connect with IT Admin to create an account on the following trick service portals before proceeding with these tests.
+      ---<ul>
+<li>demo.trickservice.com</li>
+<li>trickservice.itrust.lu</li>
+</ul>
+</li>
+</ul>
+<p>All files referred for testing and validation in these tests are present in DRAW_ROOT_DIRECTORY/tests in git repository corresponding to appropriate DRAW tool version.</p>
+<h2 id="TSPEC-012">1.2 Verification Step <small>TSPEC-012</small></h2>
+<p>This validation step verifies that the saved JSON file (log.json) is similar as an expected JSON file (graph.json). Similarity of two dependency graph json files implies that the two files are matched based on corresponding asset name and asset types. This comparison compares graphs after mapping corresponding IDs of graph nodes and graph edges comparison.
+Before carrying out this step copy <DRAW_ROOT_DIRECTORY>/tests/tests_automated/tests/graphdiff.py  to test logging directory. Also ensure python3.exe is installed in the system where testing is performed and is added to PATH env variable.
+Steps</p>
+<hr />
+<ul>
+<li>Save the graph as JSON</li>
+<li>Rename this JSON file as log.json and move this file to the test log directory</li>
+<li>Run the following verification command by changing the path/name of graph.json and log.json file appropriately.</li>
+</ul>
+<p><code>$ python3.exe graphdiff.py –-gold_file graph.json –-log_file log.json</code>
+ <code>The gold and Log files match.</code></p>
+<p>The above output signifies that the log.json and graph.json are similar.
+If the file paths are incorrect; correct the paths. If the following output is returned it signifies the files do not match and the test fails as a result.
+  <code>The gold and Log files do not match.</code></p>
+<h2 id="TSPEC-021">2.1 Test Cases <small>TSPEC-021</small></h2>
+<p>This section outlines the testcases</p>
+<h3 id="TSPEC-ADDASSET">2.1.1 Add asset <small>TSPEC-ADDASSET</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_26</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Add asset with asset type</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Add Asset (all 13 types)</td>
+<td>Asset is created with appropriate type</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Add Asset with same name and type as in Step 1</td>
+<td>Asset is allowed to be created</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Add Asset with inactive state</td>
+<td>Allowed to change the state of asset to inactive. Asset is light greyed</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>All assets are allowed to be created</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-ADDASSET">FUNCREQ-ADDASSET Adding or updating an asset</a>, <a href="FUNCREQ.html#FUNCREQ-INTERFACEADDASSET">FUNCREQ-INTERFACEADDASSET Interface Requirements</a></p>
+<p><em>Child links:</em> <a href="TESTREPORT.html#TESTREPORT-CREATEGRAPH">TESTREPORT-CREATEGRAPH Create and edit graph</a></p>
+<h3 id="TSPEC-CREATEGRAPH">2.1.2 Create DRAW graph <small>TSPEC-CREATEGRAPH</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_27</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Create a DRAW Basic Graph</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Create a graph as in image  <img alt="Alt text" src="images/Graph1.png" title="Basic Graph" /></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Save the graph as JSON and compare with graph1.json</td>
+<td>JSON files match</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>DropDownRight of Open-&gt;Clear Working Area</td>
+<td>Graph is cleared</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Create a graph as in image  <img alt="Alt text" src="images/graph_cyclic.png" title="Cyclic Graph" /></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Save the graph as JSON and compare with graph_cyclic.json</td>
+<td>JSON files match</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td>DropDownRight of Open-&gt;Clear Working Area</td>
+<td>Graph is cleared</td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td>Create a graph as in image  <img alt="Alt text" src="images/graph_same_name.png" title="Same Name of Assets Graph" /></td>
+<td>Tool allows to create the graph</td>
+</tr>
+<tr>
+<td><strong>8</strong></td>
+<td>Save the graph as JSON and compare with graph_same_name.json</td>
+<td>This will not match through graphdiff.py and comparison needs to be done visually</td>
+</tr>
+<tr>
+<td><strong>9</strong></td>
+<td>DropDownRight of Open-&gt;Clear Working Area</td>
+<td>Graph is cleared</td>
+</tr>
+<tr>
+<td><strong>Test pass-fail criteria</strong></td>
+<td>The saved JSON file matches the expected JSON files in steps 2, 4, 7</td>
+<td></td>
+</tr>
+<tr>
+<td>----------------------------</td>
+<td>----------------------------------------------------</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-CREATEGRAPH">FUNCREQ-CREATEGRAPH Creating a dependency graph</a>, <a href="FUNCREQ.html#FUNCREQ-CREATEGRAPHCYCLIC">FUNCREQ-CREATEGRAPHCYCLIC Creating a cyclic directed dependency graph</a>, <a href="FUNCREQ.html#FUNCREQ-CREATEGRAPHDEFPROB">FUNCREQ-CREATEGRAPHDEFPROB Creating a dependency graph with default probability as 1</a>, <a href="FUNCREQ.html#FUNCREQ-CREATEGRAPHMULTASSETS">FUNCREQ-CREATEGRAPHMULTASSETS Creating a dependency graph with multiple assets with same name</a>, <a href="FUNCREQ.html#FUNCREQ-INTERFACECLEAR">FUNCREQ-INTERFACECLEAR Interface Requirements</a>, <a href="FUNCREQ.html#FUNCREQ-INTERFACECONNECT">FUNCREQ-INTERFACECONNECT Interface Requirements</a></p>
+<p><em>Child links:</em> <a href="TESTREPORT.html#TESTREPORT-CREATEGRAPH">TESTREPORT-CREATEGRAPH Create and edit graph</a></p>
+<h3 id="TSPEC-EDITASSET">2.1.3 Edit asset <small>TSPEC-EDITASSET</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_28</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Edit asset</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Add Asset any type, Change its name</td>
+<td>Asset created with appropriate type and name change is applied</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Add Asset any type and modify its type</td>
+<td>Asset'type is change</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Add Asset and change its state from active to inactive and vice versa</td>
+<td>Allowed to change the state of asset to inactive. Asset is light greyed when inactive</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Add Asset and delete the same</td>
+<td>Asset deleted without any error</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>All steps 1,2,3 and 4 pass</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-ADDASSET">FUNCREQ-ADDASSET Adding or updating an asset</a></p>
+<p><em>Child links:</em> <a href="TESTREPORT.html#TESTREPORT-CREATEGRAPH">TESTREPORT-CREATEGRAPH Create and edit graph</a></p>
+<h3 id="TSPEC-EDITGRAPH">2.1.4 Load and Edit Graph assets <small>TSPEC-EDITGRAPH</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_29</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Load and Edit Basic Graph</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph1.json</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Delete asset Node4, Add Asset Node6 (Network), Connect it to Node1</td>
+<td>JSON files match graph2.json</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Dropdown right of Open-&gt;Clear Working Area &gt;  Open tests/tests_manual/graph2.json</td>
+<td>Graph is loaded</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Create Edge (Node0-&gt;Node6)</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Save Graph and Compare with tests/tests_manual/Graph3.json</td>
+<td>The Saved graph and Graph3.json match</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The saved JSON file matches the expected JSON file after step2, step5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-CREATEGRAPHEDITABLE">FUNCREQ-CREATEGRAPHEDITABLE Creating an editable dependency graph</a>, <a href="FUNCREQ.html#FUNCREQ-INTERFACESAVEJSON">FUNCREQ-INTERFACESAVEJSON Interface Requirements</a>, <a href="FUNCREQ.html#FUNCREQ-LOADANDEDIT">FUNCREQ-LOADANDEDIT Load and Edit Dependency graph</a></p>
+<p><em>Child links:</em> <a href="TESTREPORT.html#TESTREPORT-CREATEGRAPH">TESTREPORT-CREATEGRAPH Create and edit graph</a></p>
+<h3 id="TSPEC-EDITGRAPH1">2.1.5 Load and edit graph edge <small>TSPEC-EDITGRAPH1</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_30</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Load and Edit Basic Graph</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph1.json</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Create another set of edges between all nodes in opposite direction</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Save snippet of graph</td>
+<td>The graph visually matches <img alt="New Graph" src="images/Graph2.png" title="Multiple edges" /> )</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Save graph json and compare with tests/tests_manual/graph1_multedges.json</td>
+<td>The json files match</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The graph matches the images in Step 3 and JSON in Step 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-CREATEGRAPHNEDGES">FUNCREQ-CREATEGRAPHNEDGES Creating a dependency graph with N edges between two nodes</a>, <a href="FUNCREQ.html#FUNCREQ-INTERFACELOADJSON">FUNCREQ-INTERFACELOADJSON Interface Requirements</a>, <a href="FUNCREQ.html#FUNCREQ-LOADRETAINSTATE">FUNCREQ-LOADRETAINSTATE Save Dependency graph maintaining state</a></p>
+<p><em>Child links:</em> <a href="TESTREPORT.html#TESTREPORT-CREATEGRAPH">TESTREPORT-CREATEGRAPH Create and edit graph</a></p>
+<h3 id="TSPEC-EDITGRAPH2">2.1.6 Load and edit graph probability <small>TSPEC-EDITGRAPH2</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_31</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Load and Edit Basic Graph Probability</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph1.json</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Change the probability between  graph nodes by double clicking the edges as: Node1-&gt;Node0: 0.25, Node3-&gt;Node4:0.75; Node2-&gt;Node1:0.95</td>
+<td>These probability must be changed</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Save the graph as Excel</td>
+<td>The excel file must have same probability between edges as in tests/tests_manual/AssetDSinExcel.xlsx</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Save the graph as JSON</td>
+<td>The Json file must match tests/tests_manual/graph1_with_prob.json</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The saved excel file matches the expected excel file</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-CREATEGRAPHEDGEPROBABILITY">FUNCREQ-CREATEGRAPHEDGEPROBABILITY Creating a dependency graph with probability between 0 and 1</a>, <a href="FUNCREQ.html#FUNCREQ-INTERFACESAVEEXCEL">FUNCREQ-INTERFACESAVEEXCEL Interface Requirements</a></p>
+<p><em>Child links:</em> <a href="TESTREPORT.html#TESTREPORT-CREATEGRAPH">TESTREPORT-CREATEGRAPH Create and edit graph</a></p>
+<h3 id="TSPEC-LOADSAVE">2.1.7 Load and save graph <small>TSPEC-LOADSAVE</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_37</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Load and Save the graph</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph1.json</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Save the graph : log/graph1.json</td>
+<td>The JSON file must be saved in downloads directory with name graph<N>.json</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Compare the log/graph1.json and tests/tests_manual/graph1.json</td>
+<td>The files must match</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Open tests/tests_manual/graph4.json</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Save -&gt; Export as excel</td>
+<td>The saved excel file must match tests/tests_manual/AssetDsinExcel.xlsx</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The steps 3 and 5 must have the Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-LOADSAVEJSON">FUNCREQ-LOADSAVEJSON Load and Save Dependency graph in JSON format</a>, <a href="FUNCREQ.html#FUNCREQ-LOADSAVEJSONDEFNAME">FUNCREQ-LOADSAVEJSONDEFNAME Load and Save Dependency graph in JSON format</a>, <a href="FUNCREQ.html#FUNCREQ-LOADSAVEPATH">FUNCREQ-LOADSAVEPATH Load and Save Dependency graph in JSON format</a>, <a href="FUNCREQ.html#FUNCREQ-LOADSAVESTATE">FUNCREQ-LOADSAVESTATE Load and Save Dependency graph retaining state</a></p>
+<h3 id="TSPEC-LOADSAVE1">2.1.8 Load and save graph json/excel format <small>TSPEC-LOADSAVE1</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_38</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Load and Save the graph</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/AssetDSinExcel2.xlsx</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Save the graph : log/graph1.json</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Compare the log/graph1.json and tests/tests_manual/graph5.json</td>
+<td>The files must match</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Open tests/tests_manual/graph5.json</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Save -&gt; Export as picture (PNG)</td>
+<td>The saved PNG file must match tests/tests_manual/graph5.png</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The steps 3 and 5 must have the Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-INTERFACELOADEXCEL">FUNCREQ-INTERFACELOADEXCEL Interface Requirements</a>, <a href="FUNCREQ.html#FUNCREQ-INTERFACESAVEPNG">FUNCREQ-INTERFACESAVEPNG Interface Requirements</a></p>
+<h3 id="TSPEC-OPENOPEN">2.1.9 Load file twice <small>TSPEC-OPENOPEN</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_42</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>ReLoad a loaded graph</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph1.json</td>
+<td>Graph must be laoded</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Open tests/tests_manual/graph1.json</td>
+<td>The Graph must be reloaded again and not merged</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Save the graph and compare with tests/tests_manual/graph1.json</td>
+<td>Files must match</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The steps 2 must reload the graph and not merge it with existing graph</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-LOADCLEARGRAPH">FUNCREQ-LOADCLEARGRAPH Load after clearning existing graph</a></p>
+<h3 id="TSPEC-SAVEHISTORY">2.1.10 Save history of loaded graph <small>TSPEC-SAVEHISTORY</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_43</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Save history</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph1.json</td>
+<td>Graph gets loaded into white board</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Close the browser window</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Reopen the draw url in a new browser window</td>
+<td>Tool must prompt user to resume work from last time</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Select yes</td>
+<td>Tool must reopen the graph from previous state</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Save graph and compare with tests/tests_manual/graph1.json</td>
+<td>JSON files must match</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td>Close the browser window</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td>Select Cancel</td>
+<td>Tool must open a blank whiteboard</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The steps 4 amd 6 must show expected results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-USABILITYHISTORY">FUNCREQ-USABILITYHISTORY Usability requirements save history</a></p>
+<h3 id="TSPEC-SYNCTRICK">2.1.11 Synchronize with Trick Service <small>TSPEC-SYNCTRICK</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_44</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Sync with Trick Service</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph1.json</td>
+<td>Graph gets loaded into white board</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Save -&gt; Update dependency graph on Trick Service (Choose demo.trickservice.com) (Demo UG, test3,0.1)</td>
+<td>An error message expected as no synchronization had hapenned</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The steps 2 must throw a message asking user to synchronize with trick service before updating graph</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-TRICKSYNCEXPORTDEPGRAPH">FUNCREQ-TRICKSYNCEXPORTDEPGRAPH Trick Service export dependency graph</a></p>
+<h3 id="TSPEC-EXPORTSSSONTS">2.1.12 Export/Load Snapshot to/fron Trick Service <small>TSPEC-EXPORTSSSONTS</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_35</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Export and Load Snapshot from TS</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph1.json</td>
+<td>Graph gets loaded into white board</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Save -&gt; Export as Snapshot on Trick Service (Choose demo.trickservice.com) (Demo UG, TestingILR,0.3)</td>
+<td>The snapshot should be saved in Trick</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Clear Working Area; Open-&gt; Load Snapshot from Trick Service (Choose demo.trickservice.com)  (Demo UG, TestingILR,0.3)</td>
+<td>The snapshot should be loaded from Trick Service</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Save the graph as log/graph.json file</td>
+<td>the log/graph.json must match tests/tests_manual/graph1.json</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Clear Working Area; Save -&gt; Export as Snapshot on Trick Service</td>
+<td>Reset Step to save the graph back on Trick Service</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The loaded graph must be same as verified in step 4.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-TRICKSYNCEXPORTSSS">FUNCREQ-TRICKSYNCEXPORTSSS Trick Service export snapshot</a></p>
+<h3 id="TSPEC-EXPORTPNGONTS">2.1.13 Export png to Trick Service <small>TSPEC-EXPORTPNGONTS</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_34</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Export PNG on TS</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph1.json</td>
+<td>Graph gets loaded into white board</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Save -&gt; Export as PNG on Trick Service (Choose demo.trickservice.com) (Demo UG, TestingILR,0.8)</td>
+<td>The PNG should be saved in Trick</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Open Trick Service Demo for same Analysis</td>
+<td>Goto: Open: Goto: Settings: Export -&gt; Word report Choose the default: Internal Template: Click Export button. Rename the saved exported File as   DemoTestingTemplate.docx</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Open DemoTestingTemplate.docx; Enable editing. Add any section in the Template.docx. <br> Insert a BookMark named TS_DependencyGraph (TS_DependencyGraph) in any section in the document. Save the file.</td>
+<td>Save without error. Not able to see this Bookmark (Check with Ensuif)</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Goto TrickService again. Export Word Report again. Specify External template this time. <br> In this input box specify the path of DemoTestingTemplate.docx.</td>
+<td>Exported file shuld now contain the section where the bookmark was inserted with dependency graph PNG</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The loaded graph in document must be same as in step 1.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-TRICKSYNCEXPORTPNG">FUNCREQ-TRICKSYNCEXPORTPNG Trick Service export PNG</a></p>
+<h3 id="TSPEC-EXPORTGRAPHONTS1">2.1.14 Export and Load Graph to/from TS <small>TSPEC-EXPORTGRAPHONTS1</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_33</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Export and Load unconnected Graph to/from TS</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph_tsdep_unconnected.json</td>
+<td>Graph with 2 nodes gets loaded into white board</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Save -&gt; Update Dependency Graph on Trick Service (Choose demo.trickservice.com) (Demo UG, TestingILR,0.5)</td>
+<td>The dependency graph should be saved in Trick</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Clear Working Area; Open-&gt; Load dependency graph from Trick Service (Choose demo.trickservice.com)  (Demo UG, TestingILR,0.5)</td>
+<td>The snapshot should be loaded from Trick Service with all 5 nodes</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Save the graph as log/graph.json file</td>
+<td>the log/graph.json must match tests/tests_manual/graph_syncts1.json</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Reset: Clear Working Area; Open-&gt;tests/tests_manual/graph_reset_syncts1.json; Synchronize -&gt; Set all to -&gt; Upload Graph-&gt;TS; Save -&gt;  Update Dependency Graph on Trick Service</td>
+<td>Reset Step to save the graph back on Trick Service</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The loaded graph must be same as verified in step 4.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-TRICKSYNCEXPORTDEPGRAPHDEFGRAPH">FUNCREQ-TRICKSYNCEXPORTDEPGRAPHDEFGRAPH Trick Service export dependency graph</a></p>
+<h3 id="TSPEC-EXPORTGRAPHONTS">2.1.15 Export and Load Graph to/from TS <small>TSPEC-EXPORTGRAPHONTS</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_32</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Export and Load Graph to/from TS</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph_syncts.json</td>
+<td>Graph gets loaded into white board</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Sync with Trick Service  (Choose demo.trickservice.com) (Demo UG, TestingILR,0.4); Choose following: <br> merge: Balancing offer and demand -&gt; Balancing offer and demand - electricity <br> merge: Customer Management -&gt; Customer Management - electricity <br> merge: Grid Development &amp; Services - electricity -&gt; Grid Development &amp; Services <br> merge: ILR_GAS_Air conditioning &gt; Air conditioning <br> merge: Allocation management - gas &gt; Allocation management <br> merge: Bad data detection system - electricity -&gt; Bad data detection system <br> Add to TS: Connection Point -&gt; Add to TS ?? <br> delete from Graph: Connection facilities Transport -&gt; delete from Graph <br></td>
+<td>Save and compare file with graph_syncts_after.json.</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Save -&gt; Update Dependency Graph on Trick Service (Choose demo.trickservice.com) (Demo UG, TestingILR,0.4)</td>
+<td>The snapshot should be saved in Trick</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Clear Working Area; Open-&gt; Load dependency graph from Trick Service (Choose demo.trickservice.com)  (Demo UG, TestingILR,0.4)</td>
+<td>The snapshot should be loaded from Trick Service</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Save the graph as log/graph.json file</td>
+<td>the log/graph.json must match tests/tests_manual/graph_syncts_after.json</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td>Reset: Clear Working Area; Open-&gt;tests/tests_manual/graph_reset_syncts.json; Synchronize -&gt; Set all to -&gt; Upload Graph-&gt;TS; Save -&gt;  Update Dependency Graph on Trick Service</td>
+<td>Reset Step to save the graph back on Trick Service</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The loaded graph must be same as verified in step 4.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-TRICKSYNCEXPORTDEPGRAPH">FUNCREQ-TRICKSYNCEXPORTDEPGRAPH Trick Service export dependency graph</a></p>
+<h3 id="TSPEC-INTERFACE">2.1.16 Interface testing delete, undo, redo, move, userguide <small>TSPEC-INTERFACE</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_36</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Interface Testing</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph1.json</td>
+<td>Graph must be laoded</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Delete Node2 and Edge from Node2-&gt;Node1</td>
+<td>The node and edge must be deleted</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Now Press Undo last Action or (Ctrl+Z)</td>
+<td>The Node2 and edge must appear again</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Now Redo last Action or (Ctrl+Y)</td>
+<td>The edge and Node2 must disappear again</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Select a few assets and Move them with mouse</td>
+<td>The edges and assets should move with mouse</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td>Select and click the ? icon</td>
+<td>The User Guide must be opened in a new Tab</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The steps 1-6 must have the Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-INTERFACEREDO">FUNCREQ-INTERFACEREDO Interface Requirements</a>, <a href="FUNCREQ.html#FUNCREQ-INTERFACEUNDO">FUNCREQ-INTERFACEUNDO Interface Requirements</a>, <a href="FUNCREQ.html#FUNCREQ-INTERFACEUSERGUIDE">FUNCREQ-INTERFACEUSERGUIDE Interface Requirements</a>, <a href="FUNCREQ.html#FUNCREQ-USABILITYSELDELASSET">FUNCREQ-USABILITYSELDELASSET Usability requirements</a>, <a href="FUNCREQ.html#FUNCREQ-USABILITYSELDELEDGE">FUNCREQ-USABILITYSELDELEDGE Usability requirements</a></p>
+<h3 id="TSPEC-LOADSAVEWITHTRICKID">2.1.17 Load and save graph with trick ID <small>TSPEC-LOADSAVEWITHTRICKID</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_39</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Load and save graph with trick ID</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph_syncts.json</td>
+<td>Graph gets loaded into white board; Note that the graph has no trick ID</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Sync with Trick Service  (Choose demo.trickservice.com) (Demo UG, TestingILR,0.4); Choose following: <br> merge: Balancing offer and demand -&gt; Balancing offer and demand - electricity <br> merge: Customer Management -&gt; Customer Management - electricity <br> merge: Grid Development &amp; Services - electricity -&gt; Grid Development &amp; Services <br> merge: ILR_GAS_Air conditioning &gt; Air conditioning <br> merge: Allocation management - gas &gt; Allocation management <br> merge: Bad data detection system - electricity -&gt; Bad data detection system <br> Add to TS: Connection Point -&gt; Add to TS <br> delete from Graph: Connection facilities Transport -&gt; delete from Graph <br></td>
+<td>Save and compare file with graph_syncts_after.json. This comparison needs to be done manually as TrickID may have changed after Reset Process.</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Clear Working Area; Open the saved JSON file</td>
+<td>The graph must be loaded</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Sync with Trick Service  (Choose demo.trickservice.com) (Demo UG, TestingILR,0.4);</td>
+<td>Choose default(Ignore) and graph must be synchronized</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Reset: Clear Working Area; Open-&gt;tests/tests_manual/graph_reset_syncts.json; Synchronize -&gt; Set all to -&gt; Upload Graph-&gt;TS; Save -&gt;  Update Dependency Graph on Trick Service</td>
+<td>Reset Step to save the graph back on Trick Service</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The loaded graph must show expected results in steps 2 and 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-LOADSAVEWITHTRICKID">FUNCREQ-LOADSAVEWITHTRICKID Load and Save Dependency graph in JSON format</a>, <a href="FUNCREQ.html#FUNCREQ-TRICKSYNC">FUNCREQ-TRICKSYNC Trick Service Synchronization</a></p>
+<h3 id="TSPEC-TRICKSYNCCOMPAREESTIMATIONS">2.1.18 Compare estimation feature <small>TSPEC-TRICKSYNCCOMPAREESTIMATIONS</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_45</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Compare Estimations testing with acyclic graph</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph_compare_estimations.json</td>
+<td>Graph must be loaded.</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Sync with TRICK Service (demo.trickservice.com) Demo UG, TestingILR, 0.7</td>
+<td>Result in Synchronise window "Everything synchronised with TRICK Service!"</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Compare estimations (demo.trickservice.com) Demo UG, TestingILR, 0.7</td>
+<td>Generated Report and CSV file</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Compare the generated report.html and report.csv data with tests/tests_manual/CompareEstimationTest.xlsx,</td>
+<td>The values in NewImpact, New Financial, New Likelihood must match; Computed Impact, Computed Likelihood, Computed Financial columns in this sheet are present for reference to show rounding errors in computation; alternately compare files with test_compareestimation_report.html test_compareestimation_report.csv</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The steps 1-4 must show expected results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-TRICKSYNCCOMPAREESTIMATIONS">FUNCREQ-TRICKSYNCCOMPAREESTIMATIONS Trick Service compare estimations</a></p>
+<h3 id="TSPEC-TRICKSYNCCOMPAREESTIMATIONSCYCLIC">2.1.19 Compare estimation with cyclic graph <small>TSPEC-TRICKSYNCCOMPAREESTIMATIONSCYCLIC</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_46</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Compare Estimations testing with cyclic graph</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph_compare_estimations_cyclic.json</td>
+<td>Graph with 8 nodes must be loaded</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Sync with TRICK Service (demo.trickservice.com) Demo UG, TestingILR, 0.8</td>
+<td>Result in Synchronise window "Everything synchronised with TRICK Service!"</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Compare estimations (demo.trickservice.com) Demo UG, TestingILR, 0.8</td>
+<td>Generated Report and CSV file</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Compare the generated report.html and report.csv data with tests/tests_manual/CompareEstimationTestCyclic.xlsx,</td>
+<td>The values in NewImpact, New Financial, New Likelihood must match; Computed Impact, Computed Likelihood, Computed Financial columns in this sheet are present for reference to show rounding errors in computation; alternately compare files with test_compareestimation_report_cyclic.html test_compareestimation_report_cyclic.csv</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The steps 1-4 must show expected results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-TRICKSYNCCOMPAREESTIMATIONS">FUNCREQ-TRICKSYNCCOMPAREESTIMATIONS Trick Service compare estimations</a></p>
+<h3 id="TSPEC-USABILITY">2.1.20 Usability test zoom/alignment/distribution <small>TSPEC-USABILITY</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_48</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Usability Testing</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph1.json</td>
+<td>Graph must be laoded</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Try to Zoom In and Zoom out and move assets after graph is laoded</td>
+<td>The graph must be zoomed appropriately</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Select Node0, Node3, Node4 and align them to bottom</td>
+<td>The three asssets must be aligned in bottom</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Select Node0, Node1, align to left</td>
+<td>The two assets must be aligned to left</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Select Node2, Node3, align to right</td>
+<td>The two assets must be aligned to right</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Select Node0, Node4, Node3, evenly distribute the assets horizontally</td>
+<td>The three assets must be spaced equally as <img alt="Aligned assets" src="images/graph1_aligned.png" title="Aligned Graph" /></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The steps 1-6 must have the Expected Results</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-INTERFACEMOVE">FUNCREQ-INTERFACEMOVE Interface Requirements move asset</a>, <a href="FUNCREQ.html#FUNCREQ-USABILITYAlignBMT">FUNCREQ-USABILITYAlignBMT Usability requirements align bottom, middle and top</a>, <a href="FUNCREQ.html#FUNCREQ-USABILITYAlignLRM">FUNCREQ-USABILITYAlignLRM Usability requirements</a>, <a href="FUNCREQ.html#FUNCREQ-USABILITYDISTHV">FUNCREQ-USABILITYDISTHV Usability requirements</a>, <a href="FUNCREQ.html#FUNCREQ-USABILITYMOVE">FUNCREQ-USABILITYMOVE Usability requirements move</a>, <a href="FUNCREQ.html#FUNCREQ-USABILITYZOOM">FUNCREQ-USABILITYZOOM Usability requirement to Zoom</a></p>
+<h3 id="TSPEC-NEGATIVE">2.1.21 Negative testing for unsupported structures of json <small>TSPEC-NEGATIVE</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_40</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Negative testing</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph5.png</td>
+<td>Expected message (Unsupported file format)</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Open tests/tests_manual/graph_unsuppstruct.json</td>
+<td>An error message expected , https://redmine.itrust.lu/issues/6184</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Open tests/tests_manual/graph_error.json</td>
+<td>An error message expected, FILE Ticket, https://redmine.itrust.lu/issues/6184</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>Open tests/tests_manual/graph_missingfield.json</td>
+<td>An error message expected, FILE Ticket, https://redmine.itrust.lu/issues/6184</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The steps 1,2,3,4 must all throw appropriate errors</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-LOADANDEDIT">FUNCREQ-LOADANDEDIT Load and Edit Dependency graph</a></p>
+<h3 id="TSPEC-NEGATIVE1">2.1.22 Error handling for unsynchronized graph <small>TSPEC-NEGATIVE1</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_41</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Negative testing</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph1.json</td>
+<td>Graph gets loaded into white board</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Save -&gt; Update dependency graph on Trick Service (Choose demo.trickservice.com) (Demo UG, test3,0.1)</td>
+<td>An error message expected as no synchronization had hapenned</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The steps 2 must throw a message asking user to synchronize with trick service before updating graph</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-TRICKSYNCEXPORTDEPGRAPHUNSYNC">FUNCREQ-TRICKSYNCEXPORTDEPGRAPHUNSYNC Trick Service export dependency graph</a></p>
+<h3 id="TSPEC-TRICKSYNCCOMPAREESTIMATIONSNEG">2.1.23 Compare Estimations Negative test <small>TSPEC-TRICKSYNCCOMPAREESTIMATIONSNEG</small></h3>
+<table>
+<thead>
+<tr>
+<th>Testcase Id</th>
+<th>DRAW_TC_ID_47</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Testcase description</strong></td>
+<td>Compare Estimations Negative testing</td>
+</tr>
+<tr>
+<td><strong>Verification method</strong></td>
+<td>Test</td>
+</tr>
+<tr>
+<td><strong>Requirements covered</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Testsetup</strong></td>
+<td>DRAW v2.0.5 on Microsoft Edge</td>
+</tr>
+<tr>
+<td><strong>Preconditions</strong></td>
+<td>Windows 10/11</td>
+</tr>
+<tr>
+<td><strong>Execution Type</strong></td>
+<td>Manual</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Step#</strong></th>
+<th><strong>Step Action</strong></th>
+<th><strong>Expected Results</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Open tests/tests_manual/graph_compare_estimations.json</td>
+<td>Graph with 5 nodes must be loaded</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Compare estimations (demo.trickservice.com) Demo UG, TestingILR, 0.7</td>
+<td>Tool must report error as the graph has yet not been synchronized with Trick service : https://redmine.itrust.lu/issues/6185</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Test pass-fail criteria</strong></th>
+<th>The steps 2 must result in an error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Parent links:</em> <a href="FUNCREQ.html#FUNCREQ-TRICKSYNCCOMPAREESTIMATIONS">FUNCREQ-TRICKSYNCCOMPAREESTIMATIONS Trick Service compare estimations</a></p>
+      </div>
+    </div>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="assets/doorstop/jquery.min.js"></script>
+<script src="assets/doorstop/bootstrap.min.js"></script>
+<script>
+    $(function() {
+        $("table").addClass("table");
+        $("nav ul").addClass("nav nav-stacked");
+        $("nav").affix();
+        $('body').scrollspy({
+          target: '.sidebar'
+        });
+        $("#main a").attr("target", "parent");
+
+  $(window).on('hashchange', function() {
+    $(window).scrollTop($(location.hash.toLowerCase()).offset().top);});
+  });
+</script>
+</body>
+</html>
+

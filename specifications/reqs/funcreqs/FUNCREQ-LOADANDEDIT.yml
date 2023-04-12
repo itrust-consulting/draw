@@ -6,6 +6,6 @@ level: 1.3.3
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: RdnqumxqKpqq8y2gs5bkIayl7yVPOeqOL44nglkVEAI=
 text: |
   The tool shall provide the capability to edit the graph after loading it and save it back as JSON or any other supported format (JSON/PNG/EXCEL)

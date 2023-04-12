@@ -1,0 +1,35 @@
+active: true
+derived: false
+header: ''
+level: 1.15
+links:
+- TSPEC-NEGATIVE: pr9yvYi4O8AuhTi3TLlclnM2IviJpHheDbA7Mq3yxhs=
+normative: true
+ref: ''
+reviewed: swdSVEhCmlpIFNFwggqxWrYxU21qKucGCOfrL3WsKl8=
+text: |
+  | Test procedure ID         | TP1                 |
+  |---------------------------| --------------------|
+  |**Executed by**            |   R. Santos         |
+  |**Date of execution**      |   29.03.2023        |
+  |**Time of execution**      |   18:05             |
+  |**Test cases covered**     |   DRAW_TC_ID_40     | <-Not be needed?
+  |**Requirements covered**   |                     | <-Not be needed>
+  |**List of version tested** |                     |
+  |**List of version tested** |  2.0.5              |
+  |**Test configuration details** | DRAW v2.0.5 on Mozilla Firefox |
+  |**Precondition for test** | Windows 10/11 |
+  |**Expected input and output** |                      |
+  | **#Steps**| **Step Action** | **Expected Result** |**Comments**   |
+  |-------|-------------|-----------------|-----------|
+  | **1** | Open tests/tests_manual/graph5.png    |  Expected message (Unsupported file format)  | **PASS** |
+  | **2** | Open tests/tests_manual/graph_unsuppstruct.json |  An error message expected , https://redmine.itrust.lu/issues/6184 | **PASS** |
+  | **3** | Open tests/tests_manual/graph_error.json |  An error message expected, FILE Ticket, https://redmine.itrust.lu/issues/6184 | **PASS** |
+  | **4** | Open tests/tests_manual/graph_missingfield.json |  An error message expected, FILE Ticket, https://redmine.itrust.lu/issues/6184 | **PASS** |
+  | **SPR open** | None |
+  | **SPR closed** | None |
+  | **Total steps** | **Steps Passed** | **Steps Failed** | **Steps not executed** |
+  | 4 | 4 | 0 | 0 |
+  | **Result** | **PASSED** |
+  | **Annex** |  |
+  |----------------------------|----------------------------------------------------|

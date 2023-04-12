@@ -6,10 +6,8 @@ level: 1.3.8
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: nknxnIl5QMs4OBT7vFsIrhwG9qLVCNmhfKoE61Eo7z4=
 text: |
   The tool shall provide the capability to load a dependency graph from an input JSON file. Similarly it shall provide
   capability to save a dependency graph as JSON file. While doing so the graph must also maintain connectivity with TrickService analysis.
   This implies that the graph if synchronized with trick service risk analysis shall also save/load the trick service ID
-
- 

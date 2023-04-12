@@ -1,13 +1,14 @@
 active: true
 derived: false
-header: 'Load and save graph json/excel format'
+header: |
+  Load and save graph json/excel format
 level: 2.1.8
 links:
-- FUNCREQ-INTERFACELOADEXCEL: null
-- FUNCREQ-INTERFACESAVEPNG: null
+- FUNCREQ-INTERFACELOADEXCEL: fuelLG71-vZfkvPDy8nqJycLTAwuvhoicNbZ2CN_RuM=
+- FUNCREQ-INTERFACESAVEPNG: qLPUPp_bM9Y_SLeSvobq-zXCEBNFhGInoQ5kPz50Fw8=
 normative: true
 ref: ''
-reviewed: null
+reviewed: 7DCYJJkfBETdIDTAlyL5S69ozGj-_LEuWWtDUDgnd6E=
 text: |
   |Testcase Id              | DRAW_TC_ID_38       |
   |-------------------------| --------------------|

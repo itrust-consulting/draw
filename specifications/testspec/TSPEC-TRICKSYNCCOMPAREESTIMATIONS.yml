@@ -1,12 +1,13 @@
 active: true
 derived: false
-header: 'Compare estimation feature'
+header: |
+  Compare estimation feature
 level: 2.1.18
 links:
-- FUNCREQ-TRICKSYNCCOMPAREESTIMATIONS: null
+- FUNCREQ-TRICKSYNCCOMPAREESTIMATIONS: AdWw0i4wKwY-8kfMEHqcYZaM1PkibqhNaDFSkA27J3c=
 normative: true
 ref: ''
-reviewed: null
+reviewed: UOD_Sshni60Gk4WuZgpf1k-IsxnhPene3hnswJgpQKY=
 text: |
   |Testcase Id              | DRAW_TC_ID_45       |
   |-------------------------| --------------------|
