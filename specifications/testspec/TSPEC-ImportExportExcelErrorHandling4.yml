@@ -1,0 +1,27 @@
+active: true
+derived: false
+header: |
+  Import excel / Open Excel Error handling
+level: 2.1.8
+links:
+- FUNCREQ-DEPMATRIX-4: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  | **Test case Id**          |DRAW_TC_08 |
+  |-------------------------|---------------------------------------------|
+  |**Test case description** |Import excel / Open Excel Error handling, Open/Import excel operation with excel file with Asset Name being empty|
+  |**Verification method**   |Test|
+  |**Requirements covered**  ||
+  |**Test setup**            |DRAW v2.0.5 on Microsoft Edge|
+  |**Preconditions**         |Windows 10/11|
+  |**Execution Type**        |Manual|
+
+  |**Step \#** |**Step Action**                      |      **Expected Results**|
+  |------|---------------------------------------|-----------------------|
+  |1       Open-\>tests/tc8.xlsx                 |  Error: The excel file with worksheet "Dependency" has an asset with empty label in AssetList Column.  |
+  |2       Import Excel -\> tc8.xlsx             |  Same error as above.|
+
+  | **Test pass- fail criteria** |     Both the Open and Import Excel operations should generate error as the Asset Name is empty.|
+  |------------------------------|---------------------------------------------|

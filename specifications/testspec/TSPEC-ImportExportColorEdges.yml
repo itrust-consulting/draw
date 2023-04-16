@@ -1,0 +1,27 @@
+active: true
+derived: false
+header: |
+  Color edges based on probability of edges
+level: 2.1.15
+links:
+- FUNCREQ-COLORGRAPHONPROB: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test case Id**         |DRAW_TC_15|
+  |-------------------------|---------------------------------------------|
+  |**Test case description** |Color edges based on their probability|
+  |**Verification method**   |Test|
+  |**Requirements covered**  ||
+  |**Test setup**            |DRAW v2.0.5 on Microsoft Edge|
+  |**Preconditions**         |Windows 10/11|
+  |**Execution Type**        |Manual|
+
+  | **Step \#** | **Step Action**                    | **Expected Results**      |
+  |------|---------------------------------------|-----------------------|
+  | 1    | Import Excel->tests/tc15.xlsx <br>Or <br>Open -> tests/tc15.xlsx      | Creates a graph.      |
+  | 2    | Click the tool with arrows on all sides. <br>“Color edges based on their probability” (Before the help menu) <br>Save : log15.json    | The edges get 3 colors based on probability. Check if the edges are colored      |
+
+  |Test pass- fail  criteria |     The graph should have colored edges. The log file generated matches graph15.json|
+  |--------------------------|---------------------------------------------|

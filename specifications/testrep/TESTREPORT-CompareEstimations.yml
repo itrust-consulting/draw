@@ -1,0 +1,55 @@
+active: true
+derived: false
+header: |
+  Compare estimations
+level: 1.12
+links:
+- TSPEC-TRICKSYNCCOMPAREESTIMATIONS: null
+- TSPEC-TRICKSYNCCOMPAREESTIMATIONSCYCLIC: null
+- TSPEC-TRICKSYNCCOMPAREESTIMATIONSNEG: null
+normative: true
+ref: ''
+reviewed: null
+text: "|**Test procedure ID**  |    TP-12 compare estimations test report |\n|-----------------------|-----------------------------|\n\
+  |**Executed by**        |    R. Santos  / itrust|\n|**Date of execution**  |   \
+  \ 29.03.2023 ||\n|**Time of execution**  |      |\n|**Test cases covered** |   \
+  \ DRAW_TC_ID_45, DRAW_TC_ID_46, \tDRAW_TC_ID_47  |\n|**Requirements covered** |\
+  \  |\n|**List of SW versions subject to test** |    2.0.5 |\n|**Test configuration\
+  \ details**  |    DRAW v2.0.5 on Microsoft Edge     |\n|**Preconditions for the\
+  \ test**  |  Windows 10/11 test |\n|**Expected input and expected output** | The\
+  \ tool must synchronize with trick service instances (app or trickservice or demo)\
+  \ and enable the user to compare risk estimations by comparing the Impact/Likelihood\
+  \ as defined by Trick Service with New Impact/Likelihood computed based on propogation\
+  \ of risk from one asset to another using the dependency graph propogation rates\
+  \ and throw error if graph is not synchronized|\n\n| # Steps  | **Step Action**|\
+  \ **Expected result**  | **Comments**     |\n|----------|----------------|----------------------|------------------|\n\
+  | **1** | Open tests/tests_manual/graph_compare_estimations.json |  Graph loaded.\
+  \  | **DRAW_TC_ID_45 Step1 Passes** |\n| **2** | Sync with TRICK Service (demo.trickservice.com)\
+  \ Demo UG, TestingILR, 0.7 | Result in Synchronise window \"Everything synchronised\
+  \ with TRICK Service!\" | **DRAW_TC_ID_45 Step2 Passes** |\n| **3** | Compare estimations\
+  \ (demo.trickservice.com) Demo UG, TestingILR, 0.7 | Generated Report and CSV file\
+  \ | **DRAW_TC_ID_45 Step3 Passes** |\n| **4** | Compare the generated report.html\
+  \ and report.csv data with tests/tests_manual/CompareEstimationTest.xlsx,  | The\
+  \ values in NewImpact, New Financial, New Likelihood match; Computed Impact, Computed\
+  \ Likelihood, Computed Financial columns with rounding errors in computation  |\
+  \ **DRAW_TC_ID_45 Step4 Passes** |\n| **1** | Open tests/tests_manual/graph_compare_estimations_cyclic.json\
+  \    |  Graph with 8 nodes loaded  | **DRAW_TC_ID_46 Step1 Passes** |\n| **2** |\
+  \ Sync with TRICK Service (demo.trickservice.com) Demo UG, TestingILR, 0.8 | Result\
+  \ in Synchronise window \"Everything synchronised with TRICK Service!\" | **DRAW_TC_ID_46\
+  \ Step2 Passes** |\n| **3** | Compare estimations (demo.trickservice.com) Demo UG,\
+  \ TestingILR, 0.8 | Generated Report and CSV file | **DRAW_TC_ID_46 Step3 Passes**\
+  \ |\n| **4** | Compare the generated report.html and report.csv data with tests/tests_manual/CompareEstimationTestCyclic.xlsx,\
+  \  | The values in NewImpact, New Financial, New Likelihood  match; Computed Impact,\
+  \ Computed Likelihood, Computed Financial columns in this sheet are present for\
+  \ reference to show rounding errors in computation; alternately compare files with\
+  \ test_compareestimation_report_cyclic.html test_compareestimation_report_cyclic.csv\
+  \  | **DRAW_TC_ID_46 Step4 Passes** |\n| **1** | Open tests/tests_manual/graph_compare_estimations.json\
+  \    |  Graph with 5 nodes loaded  | **DRAW_TC_ID_47 Step1 Passes** |\n| **2** |\
+  \ Compare estimations (demo.trickservice.com) Demo UG, TestingILR, 0.7 | Tool reports\
+  \ error as the graph has yet not been synchronized with Trick service : https://redmine.itrust.lu/issues/6185\
+  \ | **DRAW_TC_ID_47 Step2 Passes** |\n\n|SPR open       |        https://redmine.itrust.lu/issues/6185\
+  \ |\n|---------------|-------------|\n|SPR closed     |        None |\n\n|Total\
+  \ Steps |  Steps Passes |  Steps Failed  |     Steps not executed |\n|------------|---------------|----------------|------------------------|\n\
+  |10          |  10           |  0             |     0                  |\n\n|Result\
+  \          |       Passes |\n|----------------|--------------|\n|Annex         \
+  \  |  Refer Annex for evidence of log and commands executed.|\n"

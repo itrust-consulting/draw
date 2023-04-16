@@ -1,0 +1,28 @@
+active: true
+derived: false
+header: |
+  Export Snapshot to Trick Service and Load Snapshot from Trick Service
+level: 2.1.24
+links:
+- FUNCREQ-TRICKSYNCEXPORTSSS: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  | **Test case Id**        | DRAW_TC_24 |
+  |-------------------------|---------------------------------------------|
+  |**Test case description** |Export on TS and Load Snapshot from TS|
+  |**Verification method**   |Test|
+  |**Requirements covered**  | |
+  |**Test setup**            |DRAW v2.0.5 on Microsoft Edge|
+  |**Preconditions**         |Windows 10/11|
+  |**Execution Type**        |Manual|
+
+  | **Step \#** | **Step Action**                | **Expected Results**      |
+  |------|---------------------------------------|-----------------------|
+  | 1    | Import Excel->tests /tc24.xlsx<br>Or<br>Open -> tests/ tests / tc24.xlsx     | Graph gets created    |
+  | 2    | Export as snapshot on TS<br>Select: demo.trickservice.com<br>Select: Demo UG -> Demo UG -> 0.3             | No error              |
+  | 3.  | Clear working area<br>Load snapshot from TS:<br>Perform Load again after refreshing the browser.<br>Save: log24.json | Saved json file log24.json must match graph24.json      |
+
+  | **Test pass- fail criteria**    | Saved json file log24.json matched  graph24.json.   <br> Refer Section : 1.2 for verification procedure         |
+  |--------------------------|---------------------------------------------|

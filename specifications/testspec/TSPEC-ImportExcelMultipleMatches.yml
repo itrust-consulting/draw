@@ -1,0 +1,28 @@
+active: true
+derived: false
+header: |
+  Merge graph with multiple matching assets with same name and type
+level: 2.1.16
+links:
+- FUNCREQ-MERGEGRAPH-3: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  | **Test case Id**         | DRAW_TC_16 |
+  |-------------------------|---------------------------------------------|
+  | **Test case description** |Import excel where existing graph contains multiple matching assets having same name and type.|
+  | **Verification method**   |Test|
+  | **Requirements covered**  ||
+  | **Test setup**            |DRAW v2.0.5 on Microsoft Edge|
+  | **Preconditions**         |Windows 10/11|
+  | **Execution Type**        |Manual|
+
+  | **Step \#**| **Step Action**                          | **Expected Results**      |
+  |------|---------------------------------------|-----------------------|
+  | 1    | Import Excel-\>tests/tc16_step1.xlsx  | Creates a graph with 2 Nodes Asset1 and Asset2. |
+  | 2    | Create another asset (name: Asset1, type: Information)  | At this point there are 2 assets with name Asset1 and type Information  |
+  | 3    | Import Excel tc16.xlsx<br>  Save: log16.json | The tool should not throw any error and the asset3 should be connected with any of the assets Asset1 already present in graph. There are 5 assets and 2 edges in graph after import.   |
+
+  | Test pass- fail  criteria |     The graph should have 5 nodes and 2 edges. One edge connects Asset1 with asset3 and other asset3 with asset4.    |
+  |--------------------------|---------------------------------------------|

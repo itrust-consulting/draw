@@ -1,0 +1,11 @@
+active: true
+derived: false
+header: |
+  Tool shall merge asset names in case sensitive manner and AssetType in case insensitive manner
+level: 1.6.13
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The DRAW tool while matching assets shall match the asset name in case sensitive manner.  The asset types shall be matched in case insensitive manner from the list of supported asset types.

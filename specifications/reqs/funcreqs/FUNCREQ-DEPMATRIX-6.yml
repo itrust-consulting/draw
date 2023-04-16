@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Tool shall interpret Dependency Matrix with  intersection of Source and Target assets as the probability of impact
+level: 1.6.7
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The DRAW application shall be able to generate a dependency graph by loading or importing an excel sheet. This excel sheet should be named Dependency sheet.
+  The intersection of source asset with a target asset in Dependency sheet represents probability of impact of source asset on target asset. This probability may be unspecified or lies between 0 and 1 both inclusive.

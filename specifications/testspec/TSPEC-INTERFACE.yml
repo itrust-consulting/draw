@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Interface testing delete, undo, redo, move, userguide
-level: 2.1.16
+level: 2.2.16
 links:
 - FUNCREQ-INTERFACEREDO: FdvNHk4tYCu3aHxz3BkiFM_xjSwRduaWpqnoT7-FnJ4=
 - FUNCREQ-INTERFACEUNDO: jK7ZMeFu_-7d9TycJUhf6Q4m0ZbMfRYPFaUwtwnvt5E=

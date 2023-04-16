@@ -1,0 +1,27 @@
+active: true
+derived: false
+header: |
+  Load dependency sheet for ILR gas and electricity assets
+level: 2.1.26
+links:
+- FUNCREQ-OPENLOADEXCEL: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test case Id**         | DRAW_TC_49|
+  |-------------------------|---------------------------------------------|
+  |**Test case description**| Load dependency sheet for ILR gas and electricity assets|
+  |**Verification method**  | Test|
+  |**Requirements covered** | |
+  |**Test setup**           | DRAW v2.0.5 on Microsoft Edge|
+  |**Preconditions**        | Windows 10/11|
+  |**Execution Type**       | Manual|
+
+  | **Step \#** | **Step Action**                          | **Expected Results**      |
+  |------|---------------------------------------|-----------------------|
+  | 1    | Open:<br><DRAW_ROOT_DIRECTORY>/ILRDependency/ILR-Elec-Dependencies.xlsx<br>Save: log26_elect.json                         | Match log26.json with <DRAW_ROOT_DIRECTORY>/ILRDependency/ILR-Elec-Dependencies.json|
+  | 2    | Open:<br><DRAW_ROOT_DIRECTORY>/ILRDependency/ILR-Gas-Dependencies.xlsx<br>Save: log26_gas.json                            | Match log26.json with <DRAW_ROOT_DIRECTORY>/ILRDependency/ILR-Gas-Dependencies.json |
+
+  |**Test pass- fail criteria** |       The generated log json and the graph json files provided in step1 and step2 must match.|
+  |--------------------------|---------------------------------------------|

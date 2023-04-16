@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Tool shall support import Excel with .xlsx, .xls .xlsm extensions
+level: 1.6.8
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The DRAW application shall be able to generate a dependency graph by loading or importing an excel sheet. This excel sheet should be named Dependency sheet.
+  The supported excel formats of import/load excel file shall be (.xlsx, .xls .xlsm)

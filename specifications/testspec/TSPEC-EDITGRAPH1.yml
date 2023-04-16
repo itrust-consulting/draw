@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Load and edit graph edge
-level: 2.1.5
+level: 2.2.5
 links:
 - FUNCREQ-CREATEGRAPHNEDGES: 4siuleawq-Bi5GFfhpK6BBEIIbFke70x-i7oVYuKNPk=
 - FUNCREQ-INTERFACELOADJSON: PXepLJDXRs2EyY31yByzQJa91hfHdObZWJC6DcK_HbY=

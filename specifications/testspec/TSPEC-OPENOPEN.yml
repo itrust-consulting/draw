@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Load file twice
-level: 2.1.9
+level: 2.2.9
 links:
 - FUNCREQ-LOADCLEARGRAPH: 10WBVuZT7m-tRnq1Imq8Brbt_PaLB6tADYNzMvAFoCU=
 normative: true

@@ -1,0 +1,27 @@
+active: true
+derived: false
+header: |
+  Import excel / Open Excel Error handling
+level: 2.1.10
+links:
+- FUNCREQ-DEPMATRIX-6: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test case Id**         | DRAW_TC_10|
+  |-------------------------|---------------------------------------------|
+  |**Test case description** |Import excel / Open Excel Error handling, Open/Import excel operation with excel file with probability not being a number|
+  |**Verification method**   |Test|
+  |**Requirements covered**  ||
+  |**Test setup**            |DRAW v2.0.5 on Microsoft Edge|
+  |**Preconditions**         |Windows 10/11|
+  |**Execution Type**        |Manual|
+
+  |**Step \#**| **Step Action**                 |           **Expected Results** |
+  |------|---------------------------------------|-----------------------|
+  | 1       |Open-\>tests/tc10.xlsx                |  Error: The excel file with worksheet "Dependency" has an asset value ( ABCD ) which is not a number. Either do not specify anything or specify a number|(probability) between 0 and 1|
+  | 2       |Import Excel -\> tc10.xlsx            |  Same error as above.|
+
+  |**Test pass- fail criteria**  |     Both the Open and Import Excel operations should generate error as the probability is incorrectly specified.|
+  |--------------------------|---------------------------------------------|

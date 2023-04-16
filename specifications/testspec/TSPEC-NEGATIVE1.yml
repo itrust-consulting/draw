@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Error handling for unsynchronized graph
-level: 2.1.22
+level: 2.2.22
 links:
 - FUNCREQ-TRICKSYNCEXPORTDEPGRAPHUNSYNC: VuenRWasHwHTXL3UP5V6tbPaHkAH7ZIVT68Os3sR6dc=
 normative: true

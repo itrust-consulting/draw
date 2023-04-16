@@ -1,0 +1,11 @@
+active: true
+derived: false
+header: |
+  The Open Menu shall also load Dependency graph from an excel file
+level: 1.6.9
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The DRAW application shall be able to generate a dependency graph if an excel document compliant to Dependency sheet is provided as an input to Open menu.

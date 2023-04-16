@@ -1,0 +1,43 @@
+active: true
+derived: false
+header: |
+  Interface testing
+level: 1.3
+links:
+- TSPEC-INTERFACE: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test procedure ID**  |    TP3-interface test |
+  |-----------------------|-----------------------------|
+  |**Executed by**        |    R. Santos  / itrust|
+  |**Date of execution**  |    29.03.2023 ||
+  |**Time of execution**  |      |
+  |**Test cases covered** |    DRAW_TC_ID_36  |
+  |**Requirements covered** |  |
+  |**List of SW versions subject to test** |    2.0.5 |
+  |**Test configuration details**  |    DRAW v2.0.5 on Microsoft Edge     |
+  |**Preconditions for the test**  |  Windows 10/11 test |
+  |**Expected input and expected output** |      |
+
+  | # Steps  | **Step Action**| **Expected result** | *Comments**                    |
+  |----------|----------------|---------------------|--------------------------------|
+  | **1** | Open tests/tests_manual/graph1.json    |  Graph gets laoded  | **DRAW_TC_ID_36 Step1 passes**|
+  | **2** | Delete Node2 and Edge from Node2->Node1 | The node and edge is deleted | **DRAW_TC_ID_36 Step2 passes** |
+  | **3** | Now Press Undo last Action or (Ctrl+Z) | The Node2 and edge appears again | **DRAW_TC_ID_36 Step3 passes** |
+  | **4** | Now Redo last Action or (Ctrl+Y) | The edge and Node2 disappear again | **DRAW_TC_ID_36 Step4 passes** |
+  | **5** | Select a few assets and Move them with mouse | The edges and assets move with mouse |  **DRAW_TC_ID_36 Step5 passes** |
+  | **6** | Select and click the ? icon | The User Guide must be opened in a new Tab |  **DRAW_TC_ID_36 Step6 passes** |
+
+  |SPR open       |        None |
+  |---------------|-------------|
+  |SPR closed     |        None |
+
+  |Total Steps |  Steps Passes |  Steps Failed  |     Steps not executed |
+  |------------|---------------|----------------|------------------------|
+  |      6    |       6      |  0             |     0                  |
+
+  |Result          |       Passes |
+  |----------------|--------------|
+  |Annex           |  Refer Annex for evidence of log and commands executed.|

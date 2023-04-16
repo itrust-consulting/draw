@@ -1,0 +1,27 @@
+active: true
+derived: false
+header: |
+  Import excel / Open Excel Error handling
+level: 2.1.9
+links:
+- FUNCREQ-DEPMATRIX-5: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test case Id**          |DRAW_TC_09 |
+  |-------------------------|---------------------------------------------|
+  |**Test case description** |Import excel / Open Excel Error handling, Open/Import excel operation with excel file with AssetType not supported|
+  |**Verification method**   |Test|
+  |**Requirements covered**  ||
+  |**Test setup**            |DRAW v2.0.5 on Microsoft Edge|
+  |**Preconditions**         |Windows 10/11|
+  |**Execution Type**        |Manual|
+
+  |**Step \#** | **Step Action**                 |         **Expected Results**|
+  |------|---------------------------------------|-----------------------|
+  |1     |  Open-\>tests/tc9.xlsx                |  Error: The excel file with worksheet "Dependency" has an assetType (ComplianceNA) which is not in list of supported list. <br>(Business process,Compliance,Financial,Information,Immaterial Value,Outsourced service,Site,Software,Hardware,Network,Service,Personnel,System).  |
+  |2     |  Import Excel -\> tc9.xlsx            |   Same error as above.|
+
+  |**Test pass- fail criteria**  |     Both the Open and Import Excel operations should generate error as the Asset Type ComplianceNA is not supported.|
+  |--------------------------|---------------------------------------------|

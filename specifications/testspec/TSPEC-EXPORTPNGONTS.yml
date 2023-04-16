@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Export png to Trick Service
-level: 2.1.13
+level: 2.2.13
 links:
 - FUNCREQ-TRICKSYNCEXPORTPNG: qWRTisWVWGFE995iIht6nMeeeugd-CK0V9dlpRg15M0=
 normative: true

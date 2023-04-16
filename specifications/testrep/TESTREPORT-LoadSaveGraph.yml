@@ -1,0 +1,58 @@
+active: true
+derived: false
+header: |
+  Load and Save graph
+level: 1.2
+links:
+- TSPEC-LOADSAVE: null
+- TSPEC-LOADSAVE1: null
+- TSPEC-LOADSAVEWITHTRICKID: null
+- TSPEC-OPENOPEN: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test procedure ID**  |    TP-2 load and save graph report |
+  |-----------------------|-----------------------------|
+  |**Executed by**        |    R. Santos  / itrust|
+  |**Date of execution**  |    29.03.2023 ||
+  |**Time of execution**  |      |
+  |**Test cases covered** |    DRAW_TC_ID_37, DRAW_TC_ID_38, DRAW_TC_ID_39, DRAW_TC_ID_42  |
+  |**Requirements covered** |  |
+  |**List of SW versions subject to test** |    2.0.5 |
+  |**Test configuration details**  |    DRAW v2.0.5 on Microsoft Edge     |
+  |**Preconditions for the test**  |  Windows 10/11 test |
+  |**Expected input and expected output** |     Expected input may be an JSON File/Excel file or a manual creation of Graph. Output is Creation of Graph as per Graph Creation and Updation |
+
+  |# Steps  | **Step Action**| **Expected result** | *Comments**                    |
+  |----------|----------------|---------------------|--------------------------------|
+  |  **1** | Open tests/tests_manual/graph1.json   | File gets loaded                    | **DRAW_TC_ID_37 Step1 Passes** |
+  |  **2** | Save the graph : log/graph1.json | The JSON file saved in downloads directory with name graph<N>.json | **DRAW_TC_ID_37 Step2 Passes** |
+  |  **3** | Compare the log/graph1.json and tests/tests_manual/graph1.json | The files match | **DRAW_TC_ID_37 Step3 Passes** |
+  |  **4** | Open tests/tests_manual/graph4.json  |  File gets loaded                    |**DRAW_TC_ID_37 Step4 Passes** |
+  |  **5** | Save -> Export as excel  | The saved excel file matches tests/tests_manual/AssetDsinExcel.xlsx | **DRAW_TC_ID_37 Step5 Passes** |
+  |  **1** | Open tests/tests_manual/AssetDSinExcel2.xlsx    | File gets loaded|**DRAW_TC_ID_38 Step1 Passes** |
+  |  **2** | Save the graph : log/graph1.json | File gets saved | **DRAW_TC_ID_38 Step2 Passes** |
+  |  **3** | Compare the log/graph1.json and tests/tests_manual/graph5.json | The files match | **DRAW_TC_ID_38 Step3 Passes** |
+  |  **4** | Open tests/tests_manual/graph5.json  |  File gets loaded | **DRAW_TC_ID_38 Step4 Passes** |
+  |  **5** | Save -> Export as picture (PNG)  | The saved PNG file matches tests/tests_manual/graph5.png | **DRAW_TC_ID_38 Step5 Passes** |
+  | **1** | Open tests/tests_manual/graph_syncts.json    |  Graph gets loaded into white board; Note that the graph has no trick ID | **DRAW_TC_ID_39 Step1 Passes** |
+  | **2** | Sync with Trick Service  (Choose demo.trickservice.com) (Demo UG, TestingILR,0.4); Choose following: <br> merge: Balancing offer and demand -> Balancing offer and demand - electricity <br> merge: Customer Management -> Customer Management - electricity <br> merge: Grid Development & Services - electricity -> Grid Development & Services <br> merge: ILR_GAS_Air conditioning > Air conditioning <br> merge: Allocation management - gas > Allocation management <br> merge: Bad data detection system - electricity -> Bad data detection system <br> Add to TS: Connection Point -> Add to TS <br> delete from Graph: Connection facilities Transport -> delete from Graph <br> | Save and compare file with graph_syncts_after.json. This comparison needs to be done manually as TrickID may have changed after Reset Process. | **DRAW_TC_ID_39 Step2 Passes** |
+  | **3** | Clear Working Area; Open the saved JSON file |  The graph must be loaded | **DRAW_TC_ID_39 Step3 Passes** |
+  | **4** | Sync with Trick Service  (Choose demo.trickservice.com) (Demo UG, TestingILR,0.4); | Choose default(Ignore) and graph must be synchronized | **DRAW_TC_ID_39 Step4 Passes** |
+  | **5** | Reset: Clear Working Area; Open->tests/tests_manual/graph_reset_syncts.json; Synchronize -> Set all to -> Upload Graph->TS; Save ->  Update Dependency Graph on Trick Service | Reset Step to save the graph back on Trick Service | **DRAW_TC_ID_39 Step5 Passes** |
+  | **1** | Open tests/tests_manual/graph1.json    |  Graph must be laoded  | **DRAW_TC_ID_42 Step1 Passes** |
+  | **2** | Open tests/tests_manual/graph1.json |  The Graph must be reloaded again and not merged | **DRAW_TC_ID_42 Step2 Passes** |
+  | **3** | Save the graph and compare with tests/tests_manual/graph1.json |  Files must match | **DRAW_TC_ID_42 Step3 Passes** |
+
+  |SPR open       |        None |
+  |---------------|-------------|
+  |SPR closed     |        None |
+
+  |Total Steps |  Steps Passes |  Steps Failed  |     Steps not executed |
+  |------------|---------------|----------------|------------------------|
+  |      18    |       18      |  0             |     0                  |
+
+  |Result          |       Passes |
+  |----------------|--------------|
+  |Annex           |  Refer Annex for evidence of log and commands executed.|

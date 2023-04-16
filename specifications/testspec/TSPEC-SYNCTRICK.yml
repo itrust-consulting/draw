@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Synchronize with Trick Service
-level: 2.1.11
+level: 2.2.11
 links:
 - FUNCREQ-TRICKSYNCEXPORTDEPGRAPH: rKWbkuwd4A-Gqv_R_ANidAidtMP-8XdDSt2ZI4di98k=
 normative: true

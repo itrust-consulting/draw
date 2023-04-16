@@ -1,0 +1,30 @@
+active: true
+derived: false
+header: |
+  Synchronize with Trick Service merge one-one assets from graph to trick
+level: 2.1.21
+links:
+- FUNCREQ-MERGETSASSETS-1: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test case Id**         | DRAW_TC_21|
+  |-------------------------|---------------------------------------------|
+  |**Test case description** |Synchronize with Trick Service with merge assets with one-one mapping of TS to graph assets|
+  |**Verification method**   |Test|
+  |**Requirements covered**  ||
+  |**Test setup**            |DRAW v2.0.5 on Microsoft Edge|
+  |**Preconditions**         |Windows 10/11|
+  |**Execution Type**        |Manual|
+
+  | **Step \#**  | **Step Action**                       | **Expected Results**      |
+  |------|---------------------------------------|-----------------------|
+  | 1    | Import Excel-\>tests/tc21.xlsx  <br>Or <br> Open -\> tests/tc21.xlsx        | No error and the graph is created      |
+  | 2    | Sync with Trick Service  <br>(trickservice.itrust.lu) <br>  Choose<br> Customer: ILR<br>Risk analysis: TestingILR     <br> Version: 0.1           |                       |
+  | 3    | Select Merge with Graph Nodes for following assets <br>**TS Asset Merge with graph node**  <br> Balancing offer and demand -- gas <br>Balancing offer and demand    <br>    |                       |
+  | 4    | Try Selecting Balancing offer and demand for TS asset: <br>  Balancing offer and demand \- electricity <br>   | This should not be  allowed to be selected. |
+  | 5    | Now unselect: <br> Balancing offer and demand -- gas with "-" <br> Select: <br> Balancing offer and demand -- electricity Balancing offer and demand                     | This should now be allowed to be selected.    |
+
+  | **Test pass- fail criteria**   |    Being able to select a graph asset after deselecting it from another trick service asset selection.|
+  |--------------------------|---------------------------------------------|

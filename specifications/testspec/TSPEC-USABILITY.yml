@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Usability test zoom/alignment/distribution
-level: 2.1.20
+level: 2.2.20
 links:
 - FUNCREQ-INTERFACEMOVE: ce8NLr_lxox-pXd8qhm4VPO1u_CEw-LIBPikNtNVYsA=
 - FUNCREQ-USABILITYAlignBMT: bOTo10A1A0HAp61xOPb9JgcdP3d5RVQelzC8ARDnhsk=

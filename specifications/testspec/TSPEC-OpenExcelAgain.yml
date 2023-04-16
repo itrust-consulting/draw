@@ -1,0 +1,27 @@
+active: true
+derived: false
+header: |
+  Reopen Excel
+level: 2.1.4
+links:
+- FUNCREQ-DEPMATRIX: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test case Id**          |DRAW_TC_04 |
+  |--------------------------|--------------------------------------------|
+  |**Test case description** |Open excel followed by Open excel operation must clear the old graph. |
+  |**Verification method**   |Test |
+  |**Requirements covered**  | |
+  |**Test setup**            |DRAW v2.0.5 on Microsoft Edge |
+  |**Preconditions**         |Windows 10/11 |
+  |**Execution Type**        |Manual |
+
+  | Step # | **Step Action**                          | **Expected Results**      |
+  |------|---------------------------------------|-----------------------|
+  | 1    | Open-\>tests/tc4_step1.xlsx           | 3 assets Balancing offer and demand, asset6, asset5 created in graph     |
+  | 2    | Open-\> tc4.xlsx   <br>Save: log4.json    | Should create a graph with 3 nodes and 2 edges only |
+
+  | **Test pass- fail criteria**    | The loaded graph after saving should match graph4.json Refer  Section : 1.2 for match procedure |
+  |---------------------|------------------------------------------------|

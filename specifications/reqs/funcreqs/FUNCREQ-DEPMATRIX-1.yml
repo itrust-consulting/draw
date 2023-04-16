@@ -1,0 +1,14 @@
+active: true
+derived: false
+header: |
+  Tool shall permit Dependency Matrix with constrained headers
+level: 1.6.2
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The DRAW application shall be able to generate a dependency graph by loading or importing an excel sheet. This excel sheet should be named Dependency sheet.
+  The header of Dependency sheet may be present in any row and must look like:
+  AssetList, AssetType, <Target Assets>
+  The AssetList and AssetType shall be keywords and Target assets shall be asset names present in header columns after AssetType header.

@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Compare Estimations Negative test
-level: 2.1.23
+level: 2.2.23
 links:
 - FUNCREQ-TRICKSYNCCOMPAREESTIMATIONS: AdWw0i4wKwY-8kfMEHqcYZaM1PkibqhNaDFSkA27J3c=
 normative: true

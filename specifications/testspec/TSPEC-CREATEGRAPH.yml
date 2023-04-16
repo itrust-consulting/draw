@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Create DRAW graph
-level: 2.1.2
+level: 2.2.2
 links:
 - FUNCREQ-CREATEGRAPH: O-Tphjxh8cxdv9o0phAjOoCppKEQ4qGwC3zMEbhbEac=
 - FUNCREQ-CREATEGRAPHCYCLIC: bUfvJ70k1eV_wpX5kQJ_nbIsuM0a6r56X-5TmJzKoCc=
@@ -34,5 +34,6 @@ text: |
   | **7** | Create a graph as in image  ![Alt text](images/graph_same_name.png "Same Name of Assets Graph")   |  Tool allows to create the graph                   |
   | **8** | Save the graph as JSON and compare with graph_same_name.json         |  This will not match through graphdiff.py and comparison needs to be done visually  |
   | **9** | DropDownRight of Open->Clear Working Area        |  Graph is cleared                  |
+  
   |**Test pass-fail criteria** | The saved JSON file matches the expected JSON files in steps 2, 4, 7  |
   |----------------------------|----------------------------------------------------|

@@ -1,0 +1,54 @@
+active: true
+derived: false
+header: |
+  Import excel
+level: 1.6
+links:
+- TSPEC-ExcelDifferentFormatsUsingTemplates: null
+- TSPEC-ImportExcelAssetsWithSameName: null
+- TSPEC-ImportExcelAssetsWithSameNameDifferentType: null
+- TSPEC-ImportExcelCaseInsensitiveMatch: null
+- TSPEC-ImportExcelMultipleMatches: null
+- TSPEC-ImportExcelOnExistingGraph: null
+- TSPEC-ImportExportExcelNoEdges: null
+- TSPEC-ImportExportExhaustiveGraph: null
+- TSPEC-ImportExportWithSaveExcel: null
+- TSPEC-SyncTrickMergeAssets: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test procedure ID** |  TP-6 import excel test report |
+  |----------------------|--------------------------|
+  |**Executed by**                        |Ritika Pande / itrust|
+  |**Date of execution**                  |24/11/2022|
+  |**Time of execution**                  |6:22 am -- 6:45 am  (duration)|
+  |**Test cases covered**                 |DRAW_TC_12, DRAW_TC_13, DRAW_TC_14,  DRAW_TC_16,         DRAW_TC_17, DRAW_TC_18, DRAW_TC_19, DRAW_TC_20, DRAW_TC_22|
+  |**Requirements covered**   | |
+  |**List of SW versions subject to test** |   2.0.5 |
+  |**Test configuration details**          |DRAW v2.0.5 on Microsoft Edge |
+  |**Preconditions for the test**          |Windows 10/11|
+  |**Expected input and expected output**  |Imported excel should merge assets as per Functional Requirements|
+
+  |**# Steps**  | **Step Action**| **Expected result**  | **Comments**  |
+  |------|-------------|------------------|-----------------------------|
+  | 2    | Import Excel -> tc12.xlsx<br>Save: log12.json    | Log12.json matched graph12.json      | DRAW_TC_12<br>Passes                  |
+  | 1, 2 | Import Excel->tests/tc13.xlsx <br>Export as excel<br><br>Clear<br>Import Excel -> log13.xlsx<br>Save the graph as : log13.json<br>      | Log13.xlsx generated<br><br><br><br>Log13.json matches graph13.json       | DRAW_TC_13<br>Passes                 |
+  | 1,2,3   | Import Excel->tests/tc16_step1.xlsx <br><br>Create another asset (name: Asset1, type: Information)<br><br>Import Excel tc16.xlsx<br>Save: log16.json      | Graph created<br>2 assets with name asset1 and type information<br><br><br><br>No error thrown by tool and graph with 5 nodes and 2 edges   | DRAW_TC_16<br>Passes                  |
+  | 1    | Import Excel->tests/tc17.xlsx <br>Save : log17.json<br>      | Log17.json matches graph17.json      | DRAW_TC_17<br>Passes                  |
+  | 1    | Import Excel->tests/tc18.xlsx <br>Save : log18.json<br>      | Log18.json matches graph18.json      | DRAW_TC_18<br>Passes                  |
+  | 1    | Import Excel->tests/tc19.xlsx <br>Save :log19.json<br>      | Log19.json matches graph19.json       | DRAW_TC_19<br>Passes                  |
+  | 1    | Import Excel->tests/tc20.xlsx<br>Save: log20.json    | Log20.json matches graph20.json       | DRAW_TC_20<br>Passes                  |
+  | 1,2  | Import Excel->tests/tc22.xlsm<br>Save: log22_xlsm.json<br><br>Import Excel->tests/ tc22.xls<br>Save: log22_xls.json      |Log22_xlsm.json matches graph22.json<br>Log22_xls.json matches graph22.json<br><br>  | DRAW_TC_22<br>Passes                  |
+
+  |SPR open       |        None |
+  |---------------|-------------|
+  |SPR closed     |        None |
+
+  |Total Steps |  Steps Passes |  Steps Failed  |     Steps not executed |
+  |------------|---------------|----------------|------------------------|
+  |12          |  12           |  0             |     0                  |
+
+  |Result          |       Passes |
+  |----------------|--------------|
+  |Annex           |  Refer Annex for evidence of log and commands executed.|

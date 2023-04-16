@@ -1,0 +1,11 @@
+active: true
+derived: false
+header: |
+  Tool shall provide an interface to  Color the graph edges based on their probability
+level: 1.2.13
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  Tool shall provide an interface to  Color the graph edges based on their probability to be able to distinguish them

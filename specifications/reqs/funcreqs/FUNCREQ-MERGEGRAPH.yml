@@ -1,0 +1,11 @@
+active: true
+derived: false
+header: |
+  Tool shall merge existing dependency graph with the graph loaded from imported Excel file
+level: 1.6.11
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The DRAW application shall be able to generate a dependency graph from an imported Dependency sheet and automatically merge it with the existing dependency graph by matching asset name and type information.

@@ -1,0 +1,27 @@
+active: true
+derived: false
+header: |
+  Import excel / Open Excel Error handling
+level: 2.1.7
+links:
+- FUNCREQ-DEPMATRIX3: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  | **Test case Id**        | DRAW_TC_07  |
+  |-------------------------|----------------------------------------------|
+  | **Test case description** |Import excel / Open Excel Error handling, Open/Import excel operation with excel file with AssetType not in second column|
+  | **Verification method**   |Test|
+  | **Requirements covered**  ||
+  | **Test setup**            |DRAW v2.0.5 on Microsoft Edge|
+  | **Preconditions**         |Windows 10/11|
+  | **Execution Type**        |Manual|
+
+   |**Step \#**| **Step Action**                      |     **Expected Results** |
+   |------|---------------------------------------|-----------------------|
+   |1     |  Open-\>tests/tc7.xlsx                |  Error: The imported excel file with worksheet "Dependency" does not have AssetList in first Column or AssetType in second column.|
+   |2     |  Import Excel -\> tc7.xlsx            |   Same error as above.|
+
+   |**Test pass- fail criteria**  |     Both the Open and Import Excel operations should generate error as the excel sheet does not have a AssetType keyword in the second column.|
+   |--------------------------|---------------------------------------------|

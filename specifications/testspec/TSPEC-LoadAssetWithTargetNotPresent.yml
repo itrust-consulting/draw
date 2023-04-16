@@ -1,0 +1,26 @@
+active: true
+derived: false
+header: |
+  Load an excel file with a target asset which is not present in assetList
+level: 2.1.2
+links:
+- FUNCREQ-DEPMATRIX-5: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test case Id**          |DRAW_TC_02 |
+  |--------------------------|--------------------------------------------- |
+  |**Test case description** |Load an excel file with a target asset which is not present in assetList |
+  |**Verification method**   |Test |
+  |**Requirements covered**  | |
+  |**Test setup**            |DRAW v2.0.5 on Microsoft Edge |
+  |**Preconditions**         |Windows 10/11 |
+  |**Execution Type**        |Manual |
+
+  | Step # | **Step Action**                          | **Expected Results**      |
+  |------|---------------------------------------|-----------------------|
+  | 1    | Open-\>tests/tc2.xlsx <br>Save: log2.json | The file should be loaded without error and a graph with 3 nodes and 2 edges created without any error. The asset called AssetNE must not be present in the graph.
+
+  | **Test pass-fail criteria**      | The loaded graph log2.json from JSON should match graph2.json Refer Section : 1.2 for verification procedure    |
+  |---------------------|------------------------------------------------|

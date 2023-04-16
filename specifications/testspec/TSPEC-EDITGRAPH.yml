@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Load and Edit Graph assets
-level: 2.1.4
+level: 2.2.4
 links:
 - FUNCREQ-CREATEGRAPHEDITABLE: g8gY6FQ5aZSdj62aPCueaUoWJpGXymv9ueaXBKVyAns=
 - FUNCREQ-INTERFACESAVEJSON: 6-qoPwuAOJFXlkB1zwuRvB8oHgkkEibAVXViWriEl3k=

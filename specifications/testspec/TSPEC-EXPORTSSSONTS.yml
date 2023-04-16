@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Export/Load Snapshot to/fron Trick Service
-level: 2.1.12
+level: 2.2.12
 links:
 - FUNCREQ-TRICKSYNCEXPORTSSS: eKldr1_bYj5H61UUQczkP5rO8eu56sK19f_Eaz3c7bk=
 normative: true

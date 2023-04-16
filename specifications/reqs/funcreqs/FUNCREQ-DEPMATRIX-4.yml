@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Tool shall Ignore Dependency Matrix with  AssetList header where no asset name is specified
+level: 1.6.5
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The DRAW application shall be able to generate a dependency graph by loading or importing an excel sheet. This excel sheet should be named Dependency sheet.
+  The Dependency sheet containing an unspecified source asset shall be ignored by the tool.

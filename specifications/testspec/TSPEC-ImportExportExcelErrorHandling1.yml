@@ -1,0 +1,27 @@
+active: true
+derived: false
+header: |
+  Import excel / Open Excel Validate errors
+level: 2.1.5
+links:
+- FUNCREQ-DEPMATRIX-1: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test case Id**        |  DRAW_TC_05|
+  |---------------------|-------------------------------------------------|
+  |**Test case description** |Import excel / Open Excel Error handling, Open excel operation with excel file with no Dependency sheet present |
+  |**Verification method**  | Test                             |
+  |**Requirements covered** |   |
+  |**Test setup**           | DRAW v2.0.5 on Microsoft Edge|
+  |**Preconditions**        | Windows 10/11|
+  |**Execution Type**       | Manual|
+
+  | **Step \#** | **Step Action**                   |    **Expected Results**|
+  |-------|-------------------------------------|-------------------------|
+  | 1       Open-\>tests/tc5.xlsx               |   Error: The excel File "test3.xlsx" does not have a sheet with name "Dependency" or the sheet is empty. Try with a different file.|
+  | 2       Import Excel -\> tc5.xlsx           |    Same error as above.|
+
+  |**Test pass- fail criteria** |  Both the Open and Import Excel operations should generate error as the excel sheet does not have a file named Dependency|
+  |-------------------------|----------------------------------------------|

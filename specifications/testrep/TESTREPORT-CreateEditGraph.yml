@@ -1,0 +1,65 @@
+active: true
+derived: false
+header: |
+  Create Edit Graph
+level: 1.1
+links:
+- TSPEC-ADDASSET: null
+- TSPEC-CREATEGRAPH: null
+- TSPEC-EDITASSET: null
+- TSPEC-EDITGRAPH: null
+- TSPEC-EDITGRAPH1: null
+- TSPEC-EDITGRAPH2: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test procedure ID**  |    TP-1 create/edit graph report  |
+  |-----------------------|-----------------------------|
+  |**Executed by**        |    R. Santos  / itrust|
+  |**Date of execution**  |    29.03.2023 |
+  |**Time of execution**  |      |
+  |**Test cases covered** |    DRAW_TC_ID_27, DRAW_TC_ID_26, DRAW_TC_ID_28, DRAW_TC_ID_29, DRAW_TC_ID_30, DRAW_TC_ID_31  |
+  |**Requirements covered** |  |
+  |**List of SW versions subject to test** |    2.0.5 |
+  |**Test configuration details**  |    DRAW v2.0.5 on Microsoft Edge     |
+  |**Preconditions for the test**  |  Windows 10/11 test |
+  |**Expected input and expected output** |     Expected input may be an JSON File/Excel file or a manual creation of Graph. Output is Creation of Graph as per Graph Creation and Updation |
+
+  | # Steps  | **Step Action**| **Expected result**  | **Comments**                    |
+  |----------|----------------|----------------------|---------------------------------|
+  | **1** | Create graph | Graph Created |  DRAW_TC_ID_27 Step1 <br> Passes |
+  | **4** | Create a graph as in image  "Cyclic Graph" | Graph Created | DRAW_TC_ID_27 Step4 <br> Passes |
+  | **7** | Create a graph as in image "Same name of Assets Graph" |  Graph Created | DRAW_TC_ID_27 Step7 <br> Passes |
+  |  **1** | Add Asset (all 13 types)  |  Asset is created with appropriate type | DRAW_TC_ID_26 <br> Step1 Passes |
+  |  **2** |Add Asset with same name and type as in Step 1 | Asset is allowed to be created  | DRAW_TC_ID_26 <br> Step2 Passes |
+  |  **3** | Add Asset with inactive state                  | Allowed to change the state of asset to inactive. Asset is light greyed | DRAW_TC_ID_26 <br> Step3 Passes |
+  |  **1** |Add Asset any type, Change its name    |  Asset created with appropriate type and name change is applied                 | DRAW_TC_ID_28 <br> Step1 Passes |
+  |  **2** |Add Asset any type and modify its type            | Asset'type is changed                   |DRAW_TC_ID_28 <br> Step2 Passes |
+  |  **3** | Add Asset and change its state from active to inactive and vice versa                 | Allowed to change the state of asset to inactive. Asset is light greyed when inactive | DRAW_TC_ID_28 <br> Step3 Passes |
+  |  **4** | Add Asset and delete the same       | Asset deleted without any error | DRAW_TC_ID_28 <br> Step4 Passes |
+  |  **1** | Open tests/tests_manual/graph1.json   |  Loaded Graph                   | DRAW_TC_ID_29  <br> Step1 Passes |
+  |  **2** | Delete asset Node4, Add Asset Node6 (Network), Connect it to Node1 |  JSON files match graph2.json         | DRAW_TC_ID_29 <br> Step2 Passes |
+  |  **3** | Dropdown right of Open->Clear Working Area >  Open tests/tests_manual/graph2.json  |  Graph is loaded | DRAW_TC_ID_29  <br> Step3 Passes|
+  |  **4** | Create Edge (Node0->Node6)  |   |DRAW_TC_ID_29 <br> Step4 Passes |
+  |  **5** | Save Graph and Compare with tests/tests_manual/Graph3.json  | The Saved graph and Graph3.json match  | DRAW_TC_ID_29 <br> Step5 Passes |
+  |  **1** | Open tests/tests_manual/graph1.json   | Loaded Graph                     | DRAW_TC_ID_30  <br> Step1 Passes|
+  |  **2** | Create another set of edges between all nodes in opposite direction  |  DRAW_TC_ID_30 <br> Step2 Passes |
+  |  **3** | Save snippet of graph | The graph visually matches "Multiple edges" graph |  *DRAW_TC_ID_30 <br> Step3 Passes |
+  |  **4** | Save graph json and compare with tests/tests_manual/graph1_multedges.json  | The json files match   |  DRAW_TC_ID_30 <br> Step4 Passes |
+  |  **1** | Open tests/tests_manual/graph1.json   |                     | DRAW_TC_ID_31 <br> Step1 Passes |
+  |  **2** | Change the probability between  graph nodes by double clicking the edges as: Node1->Node0: 0.25, Node3->Node4:0.75; Node2->Node1:0.95   | These probability must be changed | DRAW_TC_ID_31 <br> Step2 Passes |
+  |  **3** | Save the graph as Excel| The excel file must have same probability between edges as in tests/tests_manual/AssetDSinExcel.xlsx  | DRAW_TC_ID_31 <br> Step3 Passes |
+  |  **4** | Save the graph as JSON | The Json file must match tests/tests_manual/graph1_with_prob.json | DRAW_TC_ID_31 <br> Step4 Passes |
+
+  |SPR open       |        None |
+  |---------------|-------------|
+  |SPR closed     |        None |
+
+  |Total Steps |  Steps Passes |  Steps Failed  |     Steps not executed |
+  |------------|---------------|----------------|------------------------|
+  |      22    |       22      |  0             |     0                  |
+
+  |Result          |       Passes |
+  |----------------|--------------|
+  |Annex           |  Refer Annex for evidence of log and commands executed.|
