@@ -8,7 +8,7 @@ normative: false
 ref: ''
 reviewed: null
 text: |
-  Test logs can be accessed at [Test logs](N:\RD\itrust\DRAW\03-Test\testing-2023-04-13)
+  Test logs can be accessed at (N:/RD/itrust/DRAW/03-Test/testing-2023-04-13)
 
   |Test Procedure                     |Log files directory |
   |-----------------------------------|---------------------|
@@ -26,4 +26,7 @@ text: |
   |TP-12 compare estimations test report |logs_manual_testing, logs_automated_testing|
 
   **Report for automated testing can be accessed at
-  [Automation test report](N:\RD\itrust\DRAW\03-Test\testing-2023-04-13\logs_automated_testing\report.html)**
+  [Automation test report](N:/RD/itrust/DRAW/03-Test/testing-2023-04-13/logs_automated_testing/report.html)**
+
+  **The Traceablity Matrix or requirements can be accessed at:
+  [Traceability Matrix](N:/RD/itrust/DRAW/01-Specifications/publish/index.html)**
