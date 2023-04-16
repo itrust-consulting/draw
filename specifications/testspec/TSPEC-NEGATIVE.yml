@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Negative testing for unsupported structures of json
-level: 2.1.21
+level: 2.2.21
 links:
 - FUNCREQ-LOADANDEDIT: RdnqumxqKpqq8y2gs5bkIayl7yVPOeqOL44nglkVEAI=
 normative: true

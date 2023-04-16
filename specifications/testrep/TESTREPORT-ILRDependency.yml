@@ -1,0 +1,38 @@
+active: true
+derived: false
+header: |
+  ILR dependency and assets
+level: 1.11
+links:
+- TSPEC-LoadILRGasAndElect: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  | **Test procedure ID** |      TP-11 import ILR Dependency matrix for gas and electricity assets test report    |
+  |-----------------------|-------------------------------------------|
+  | **Executed by**         | Ritika Pande / itrust                          |
+  | **Date of execution**   | 23/11/2022                                     |
+  | **Time of execution (duration)**   | 18:45 pm -- 18:50 pm                           |
+  | **Test cases covered**  | DRAW_TC_49                                     |
+  | **Requirements covered**        |                               |
+  | **List of SW versions subject to test**    |2.0.5|
+  | **Test configuration details**      |DRAW v2.0.5 on Microsoft Edge|
+  |  **Preconditions for the test** |Windows 10/11|
+  | **Expected input and expected output**    | Load dependency sheet for ILR gas and electricity assets **passed**
+   | # Steps  | **Step Action**| **Expected result**  | **Comments**                    |
+   |------|-------------|------------------|-----------------------------|
+   | 1    | Open Elec dependency and save to log26_elec.json  | Must match with ILR-Elec-Dependencies.  json   | DRAW_TC_49 Passes step1 |
+   | 2    | Open Gas dependency and save to log26_gas.json    | Must match with ILR-Gas-Dependencies.json  | DRAW_TC_49 Passes step2  |
+
+   |SPR open       |        None |
+   |---------------|-------------|
+   |SPR closed     |        None |
+
+   |Total Steps |  Steps Passes |  Steps Failed  |     Steps not executed |
+   |------------|---------------|----------------|------------------------|
+   |2          |  2           |  0             |     0                  |
+
+   |Result          |       Passes |
+   |----------------|--------------|
+   |Annex           |  Refer Annex for evidence of log and commands executed.|

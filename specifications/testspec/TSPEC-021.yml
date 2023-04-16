@@ -1,11 +1,11 @@
 active: true
 derived: false
 header: |
-  Test Cases
+  Test Cases (acceptance tests)
 level: 2.1
 links: []
 normative: false
 ref: ''
 reviewed: Suk0KXO-d1JxB5ebhccHb4nCL8QKQCbT9PNZ7JKHxz0=
 text: |
-  This section outlines the testcases
+  This section outlines the testcases focussed on import excel export excel feature along with acceptance testcases. Refer to DRAW_ROOT_DIRECTORY/tests/tests_automated/tests directory for the test files in this section.

@@ -1,0 +1,26 @@
+active: true
+derived: false
+header: |
+  Import excel multiple assets with same name and different type being connected
+level: 2.1.18
+links:
+- FUNCREQ-MERGEGRAPH-3: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test case Id**         | DRAW_TC_18 |
+  |-------------------------|---------------------------------------------|
+  |**Test case description**| Import excel multiple assets with same name and different type information with connectivity of both the duplicate asset names.|
+  |**Verification method**  | Test|
+  |**Requirements covered** | |
+  |**Test setup**           | DRAW v2.0.5 on Microsoft Edge|
+  |**Preconditions**        | Windows 10/11|
+  |**Execution Type**       | Manual|
+
+  | **Step \#** | **Step Action**                          | **Expected Results**      |
+  |------|---------------------------------------|-----------------------|
+  | 1    | Import Excel->tests/tc18.xlsx  <br>Save : log18.json  <br>Or  <br>Open -> tests/tc18.xlsx  <br>Save : log18.json       | Graph must be created without error and Asset1 with type compliance must get created and connected with other nodes. Asset1 financial must be ignored |
+
+  | **Test pass- fail criteria**   | The second asset must be the part of graph. The graph should match graph18.json Refer  Section : 1.2 for match procedure |
+  |---------------------|------------------------------------------------|

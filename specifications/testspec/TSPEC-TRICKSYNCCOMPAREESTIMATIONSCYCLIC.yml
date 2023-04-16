@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Compare estimation with cyclic graph
-level: 2.1.19
+level: 2.2.19
 links:
 - FUNCREQ-TRICKSYNCCOMPAREESTIMATIONS: AdWw0i4wKwY-8kfMEHqcYZaM1PkibqhNaDFSkA27J3c=
 normative: true

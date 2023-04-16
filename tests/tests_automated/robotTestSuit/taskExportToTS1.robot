@@ -14,7 +14,7 @@ Resource            ../resources/common.robot
 
 *** Variables *** 
 ${load_file1}=    tc23.xlsx
-${save_file1}=    graph23.json
+${save_file1}=    graph27.json
 
 ${load_file2}=    tc24.xlsx
 ${save_file2}=    graph24.json

@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Load and edit graph probability
-level: 2.1.6
+level: 2.2.6
 links:
 - FUNCREQ-CREATEGRAPHEDGEPROBABILITY: TzAvglK8SsM3RTefzoBxS2LkAgOwNNt_uoGruR6cZOo=
 - FUNCREQ-INTERFACESAVEEXCEL: Bgds5X5Eeko3ioU9HZjBERVKXXWzBroV31Cjh0drA8w=

@@ -1,0 +1,11 @@
+active: true
+derived: false
+header: |
+  Tool shall merge assets with the any match in case of multiple matches of AssetName and AssetType
+level: 1.6.14
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  In case the DRAW tool while matching assets finds multiple assets with the same asset name and asset type information on the existing graph, then the tool can match with any of the existing nodes of the graph.

@@ -1,0 +1,15 @@
+active: true
+derived: false
+header: |
+  Test Report Summary
+level: 2
+links: []
+normative: false
+ref: ''
+reviewed: null
+text: "The following are list of Open SRs in the DRAW project open in [REDMINE](https://redmine.itrust.lu/)\n\
+  All these open issues are negative use cases.\n\n|Number|Priority|Subject|\n|------|---------|-------|\n\
+  |6185\t|Normal\t|DRAW: If the graph is not synchronized already the compare estimation\
+  \ feature must throw error|\n|6184\t|Normal\t|DRAW: Tool doesn't error if incompatible\
+  \ JSON file is loaded into draw whiteboard\t|\n|6181\t|Normal\t|DRAW: In case the\
+  \ tool encounters an error the next user actions are not handled by the tool|\n"

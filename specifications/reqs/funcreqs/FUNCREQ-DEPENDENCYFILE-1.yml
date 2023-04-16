@@ -1,0 +1,11 @@
+active: true
+derived: false
+header: |
+  Tool shall save excel file named  “AssetDsinExcel.xlsx” while saving graph in excel format
+level: 1.6.17
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The DRAW application shall be able to save the dependency graph into an excel sheet named “AssetDsinExcel.xlsx”. The graph shall be represented in excel sheet named Dependency sheet in the saved excel file.

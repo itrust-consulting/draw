@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  The tool shall provide an interface to merge TrickService asset that is not automatically merged with graph asset maintaining one-one connection
+level: 1.6.20
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The DRAW application shall provide a user interface to merge a TrickService asset that is not automatically mapped with another unmapped graph asset.
+  The merge process must ensure a one trick asset to one graph asset mapping.

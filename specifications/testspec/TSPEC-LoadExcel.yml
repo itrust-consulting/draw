@@ -1,0 +1,25 @@
+active: true
+derived: false
+header: |
+  Load Excel with probability between 1 and 0
+level: 2.1.1
+links:
+- FUNCREQ-DEPMATRIX-1: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  | **Test case Id**       | DRAW_TC_01                                      |
+  |--------------------|-------------------------------------------------|
+  | **Test case description**  |  Load Excel with probability 1, 0 and with probability not specified <br>Load Excel with asset table starting from a random row  |
+  | **Verification method**     | Test                                       |
+  | **Test setup**         | DRAW v2.0.5 on Microsoft Edge                   |
+  | **Preconditions**      | Windows 10/11                                   |
+  | **Execution Type**     | Manual                                          |
+
+  | Step # | **Step Action**                          | **Expected Results**      |
+  |------|---------------------------------------|-----------------------|
+  | 1    | Open-\> tests/tc1.xlsx  Save: log1.json |    The dependency graph that is generated shall exhibit the number of nodes and edges corresponding to input dependency sheet and nodes should have same nodes and types that match the Dependency sheet. |
+
+  | **Test pass-fail criteria**   | The saved log log1.json should match with  graph1.json   <br> Refer Section : 1.2 for verification procedure      |
+  |---------------------|------------------------------------------------|

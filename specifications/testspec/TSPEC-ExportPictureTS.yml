@@ -1,0 +1,29 @@
+active: true
+derived: false
+header: |
+  Export image on Trick Service and test it works with Trick Service bookmark
+level: 2.1.23
+links:
+- FUNCREQ-TRICKSYNCEXPORTPNG: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  | **Test case Id**        |  DRAW_TC_23 |
+  |-------------------------|---------------------------------------------|
+  |**Test case description** |Test exported picture on TrickService.|
+  |**Verification method**   |Test|
+  |**Requirements covered**  ||
+  |**Test setup**            |DRAW v2.0.5 on Microsoft Edge|
+  |**Preconditions**         |Windows 10/11|
+  |**Execution Type**        |Manual|
+
+  | **Step \#** | **Step Action**                | **Expected Results**      |
+  |------|---------------------------------------|-----------------------|
+  | 1    |Import Excel->tests/tc23.xlsx <br>Or<br>Open -> tests/tests/tc23.xlsx<br>Save: log23.json<br><br>Export as picture on TS:<br>Connect: demo.trickservice.lu select<br>Demo UG. Version 0.3 | File gets saved without error. <br> Compare with graph23.json |
+  | 2    | Login to demo: demo.trickservice.com<br>Select Analysis: Demo UG.<br><br>Goto: Open:<br>Goto: Settings: Export -> Word report<br>Choose the default: Internal Template:<br>Click Export button.<br>Rename the saved exported File as   DemoTestingTemplate.docx<br>  | Export file DemoTestingTemplate.docx without error         |
+  | 3    | Open DemoTestingTemplate.docx<br>Enable editing.<br>Add any section in the Template.docx. <br>Insert a BookMark named TS_DependencyGraph (TS_DependencyGraph) in any section in the document. <br>Save the file.       | Save without error.   |
+  | 4    | Goto TrickService again. Export Word Report again. Specify External template this time. <br>In this input box specify the path of DemoTestingTemplate.docx.<br>Save and verify the exported docx file. | Exported file now contains the section where the bookmark was inserted with dependency graph picture that matches the graph created in step1.     |
+
+  |  **Test pass- fail criteria** |      Dependency graph picture in exported report document from Trick Service must match graph created in step1. |
+  |-------------------------------|---------------------------------------------|

@@ -1,0 +1,27 @@
+active: true
+derived: false
+header: |
+  Import Excel without edges
+level: 2.1.12
+links:
+- FUNCREQ-DEPMATRIX-2: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test case Id**         | DRAW_TC_12 |
+  |-------------------------|---------------------------------------------|
+  |**Test case description** |Import excel / Open Excel Load excel without any target asset columns, Both Open and Load excel operations should support loading dependency without any edges.|
+  |**Verification method**   |Test|
+  |**Requirements covered**  ||
+  |**Test setup**            |DRAW v2.0.5 on Microsoft Edge|
+  |**Preconditions**         |Windows 10/11|
+  |**Execution Type**        |Manual|
+
+  | Step | **Step Action**                          | **Expected Results**      |
+  |------|---------------------------------------|-----------------------|
+  | 1    | Open-\>tests/tc12.xlsx  <br> Save : log12.json             | Unconnected Graph with 3 nodes should be created. <br>Save file as log12.json |
+  | 2    | Clear working area <br> Import Excel -\> tc12.xlsx<br>Save: log12.json  | Unconnected Graph with 3 nodes should be created. <br> Save file as log12.json |
+
+  | **Test pass- fail criteria**     | The saved graph log12.json in both steps should match graph12.json in both cases. <br> Refer  Section : 1.2 for match procedure |
+  |--------------------------|---------------------------------------------|

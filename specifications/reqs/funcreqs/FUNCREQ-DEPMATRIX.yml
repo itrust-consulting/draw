@@ -1,0 +1,11 @@
+active: true
+derived: false
+header: |
+  Tool shall suppor load/import/export of an excel file and represent the Dependency Sheet in file as a Dependency Graph
+level: 1.6.1
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The DRAW application shall be able to generate a dependency graph by loading or importing an excel sheet. This excel sheet should be named Dependency sheet. The Dependency sheet must comply to constraints and conventions described in FUNCREQ-DEPMATRIX-1 to FUNCREQ-DEPMATRIX-7.

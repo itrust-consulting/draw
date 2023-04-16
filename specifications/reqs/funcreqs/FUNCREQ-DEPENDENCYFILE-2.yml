@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Tool shall be able to save dependency graph into an excel sheet complying to specific syntax
+level: 1.6.18
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The DRAW application shall be able to save the dependency graph into an excel sheet. The graph shall be represented in excel sheet named Dependency sheet in the saved excel file.
+  The saved Dependency sheet must comply to requirement specification REQ001-1 to REQ001-6.

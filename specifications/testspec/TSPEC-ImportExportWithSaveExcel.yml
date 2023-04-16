@@ -1,0 +1,27 @@
+active: true
+derived: false
+header: |
+  Import excel from a previously saved excel file
+level: 2.1.13
+links:
+- FUNCREQ-DEPMATRIX: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test case Id**         | DRAW_TC_13
+  |-------------------------|---------------------------------------------|
+  |**Test case description**| Import excel from saved excel|
+  |**Verification method**  | Test|
+  |**Requirements covered** | |
+  |**Test setup**           | DRAW v2.0.5 on Microsoft Edge|
+  |**Preconditions**        | Windows 10/11|
+  |**Execution Type**       | Manual|
+
+  | **Step \#** | **Step Action**                          | **Expected Results**      |
+  |------|---------------------------------------|-----------------------|
+  | 1    | Import Excel->tests/tc13.xlsx <br>Export as excel<br>Or<br>Open -> tests/tc13.xlsx<br>Export as excel | Creates a graph from excel file Save the exported file as log13.xlsx |
+  | 2    | Clear working area <br> Import Excel -\> log13.xlsx <br>Save the graph as : log13.json   <br> Or <br>  Open Excel -\> log13.xlsx  | The saved json file must match graph13.json  |
+
+  | **Test pass- fail criteria**    | The graph after importing again should match graph13.json <br>Refer  Section : 1.2 for match procedure|
+  |---------------------|------------------------------------------------|

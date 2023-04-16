@@ -1,0 +1,28 @@
+active: true
+derived: false
+header: |
+  Import excel with high number of nodes and edges
+level: 2.1.14
+links:
+- FUNCREQ-DEPENDENCYFILE-1: null
+- FUNCREQ-DEPENDENCYFILE-2: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test case Id**          |DRAW_TC_14|
+  |-------------------------|---------------------------------------------|
+  |**Test case description** |Import excel with large data and varying probability|
+  |**Verification method**   |Test|
+  |**Requirements covered**  ||
+  |**Test setup**            |DRAW v2.0.5 on Microsoft Edge|
+  |**Preconditions**         |Windows 10/11|
+  |**Execution Type**        |Manual|
+
+  | **Step \#** | **Step Action**                          | **Expected Results** |
+  |------|---------------------------------------|-----------------------|
+  | 1    | Import Excel-\>tests/tc14.xlsx <br>Export as excel <br>Or <br> Open -\> tests/tc14.xlsx <br>   Export as excel        | Save the exported file as log14.xlsx    |
+  | 2    | Clear working area  <br>Import Excel -\> log14.xlsx     <br> Save : log14.json  <br>                  |Creates a graph same as in Step1. Verify it by matching log14.json with graph14.json |
+
+  | **Test pass- fail criteria**     | The json saved file after importing again should match graph14.json. <br> Refer  Section : 1.2 for match procedure. |
+  |---------------------|------------------------------------------------|

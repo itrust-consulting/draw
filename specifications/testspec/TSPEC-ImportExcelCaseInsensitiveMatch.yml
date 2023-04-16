@@ -1,0 +1,26 @@
+active: true
+derived: false
+header: |
+  Import excel case of assets type vary.
+level: 2.1.19
+links:
+- FUNCREQ-MERGEGRAPH-2: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test case Id**         |  DRAW_TC_19 |
+  |-------------------------|---------------------------------------------|
+  |**Test case description** |Import excel assets type matches supported asset types in case insensitive manner.|
+  |**Verification method**   |Test|
+  |**Requirements covered**  ||
+  |**Test setup**            |DRAW v2.0.5 on Microsoft Edge|
+  |**Preconditions**         |Windows 10/11|
+  |**Execution Type**        |Manual|
+
+  | **Step \#** | **Step Action**                          | **Expected Results**      |
+  |------|---------------------------------------|-----------------------|
+  | 1    | Import Excel->tests/tc19.xlsx Save :log19.json Or Open ->tests/tc19.xlsx Save :log19.json        | Graph must be created without error for asset types, Also there must be two nodes asset1 and Asset1.|
+
+  |**Test pass- fail criteria**    | The json logs should match graph19.json <br> Refer  Section : 1.2 for match procedure        |
+  |---------------------|------------------------------------------------|

@@ -1,0 +1,28 @@
+active: true
+derived: false
+header: |
+  Import excel with two assets with same name and different type information
+level: 2.1.17
+links:
+- FUNCREQ-MERGEGRAPH-1: null
+- FUNCREQ-MERGEGRAPH-4: null
+- FUNCREQ-OPENLOADEXCEL-1: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test case Id**          | DRAW_TC_17|
+  |-------------------------|---------------------------------------------|
+  |**Test case description** |Import excel with two assets with same name and different type information|
+  |**Verification method**   |Test|
+  |**Requirements covered**  ||
+  |**Test setup**            |DRAW v2.0.5 on Microsoft Edge|
+  |**Preconditions**         |Windows 10/11|
+  |**Execution Type**        |Manual|
+
+  | **Step \#** | **Step Action**                       | **Expected Results**      |
+  |------|---------------------------------------|-----------------------|
+  | 1    |Import Excel->tests/tc17.xlsx <br>Save : log17.json <br>Or <br>Open -> tests/tc17.xlsx <br>Save: log17.json     | Graph must be created without error and Asset1 with type compliance must get created.|
+
+  | **Test pass- fail criteria** | The JSON files log17.json should match graph17.json. <br> Refer  Section : 1.2 for match procedure |
+  |--------------------------|---------------------------------------------|

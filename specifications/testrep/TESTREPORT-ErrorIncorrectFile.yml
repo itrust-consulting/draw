@@ -1,0 +1,44 @@
+active: true
+derived: false
+header: |
+  Incorrect file format or structure of file
+level: 1.8
+links:
+- TSPEC-NEGATIVE: null
+- TSPEC-NEGATIVE1: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test procedure ID**  |    TP-8 error for incorrect file or structure report |
+  |-----------------------|-----------------------------|
+  |**Executed by**        |    R. Santos  / itrust|
+  |**Date of execution**  |    29.03.2023 ||
+  |**Time of execution**  |      |
+  |**Test cases covered** |    DRAW_TC_ID_40, DRAW_TC_ID_41  |
+  |**Requirements covered** |  |
+  |**List of SW versions subject to test** |    2.0.5 |
+  |**Test configuration details**  |    DRAW v2.0.5 on Microsoft Edge     |
+  |**Preconditions for the test**  |  Windows 10/11 test |
+  |**Expected input and expected output** | In case of incorrect file format specified while opening a file or incorrect structure of opened file specified. Tool must throw error.|
+
+  | # Steps  | **Step Action**| **Expected result**  | **Comments**     |
+  |----------|----------------|----------------------|------------------|
+  | **1** | Open tests/tests_manual/graph5.png    |  Expected message (Unsupported file format)  | **DRAW_TC_ID_40 Step1 Fails** |
+  | **2** | Open tests/tests_manual/graph_unsuppstruct.json |  An error message expected  | **DRAW_TC_ID_40 Step1 Fails** |
+  | **3** | Open tests/tests_manual/graph_error.json |  An error message expected | **DRAW_TC_ID_40 Step1 Fails** |
+  | **4** | Open tests/tests_manual/graph_missingfield.json |  An error message expected| **DRAW_TC_ID_40 Step1 Fails** |
+  | **1** | Open tests/tests_manual/graph1.json    |  Graph gets loaded into white board | **DRAW_TC_ID_41 Step1 Passes** |
+  | **2** | Save -> Update dependency graph on Trick Service (Choose demo.trickservice.com) (Demo UG, test3,0.1) |  An error message expected as no synchronization had hapenned | **DRAW_TC_ID_41 Step2 Passes** |
+
+  |SPR open       |        https://redmine.itrust.lu/issues/6184 <br> https://redmine.itrust.lu/issues/6181 |
+  |---------------|-------------|
+  |SPR closed     |        None |
+
+  |Total Steps |  Steps Passes |  Steps Failed  |     Steps not executed |
+  |------------|---------------|----------------|------------------------|
+  |6          |  2           |  4             |     0                  |
+
+  |Result          |       Passes |
+  |----------------|--------------|
+  |Annex           |  Refer Annex for evidence of log and commands executed.|

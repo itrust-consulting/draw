@@ -1,0 +1,40 @@
+active: true
+derived: false
+header: |
+  Merge Trick Service and Graph Assets
+level: 1.9
+links:
+- TSPEC-SyncTrickMergeAssets: null
+- TSPEC-SyncTrickMergeAssetsOneOneMapping: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  | **Test procedure ID** |     TP-9 merge TS and graph assets test report    |
+  |-----------------------|-------------------------------------------|
+  | **Executed by**            |Ritika Pande / itrust|
+  | **Date of execution**      |24/11/2022|
+  | **Time of execution (duration)**     | 10:05 am to 10:07 am   |
+  | **Test cases covered**     |DRAW_TC_20, DRAW_TC_21|
+  | **Requirements covered**   ||
+  | **List of SW versions subject to test**    |2.0.5|
+  | **Test configuration details**      |DRAW v2.0.5 on Microsoft Edge|
+  | **Preconditions for the test** |Windows 10/11|
+  |**Expected input and expected output**    | Expected input is a dependency graph with assets     that are not in sync with Trick service assets. Expected output is the merged graph with asset    names renamed from trick service assets.|
+
+  | # Steps  | **Step Action**| **Expected result**  |   **Comments**                    |
+  |------|-------------|------------------|-----------------------------|
+  | 1,2,3,4  | Import excel<br>Save: log20.json<br><br>Sync with TS<br><br>Merge   nodes<br><br><br><br>Save: log20_sync.json<br>      | Import excel<br>Save: log20.  json<br><br>Sync with TS<br><br>Merge nodes<br><br><br><br>Save: log20_sync.  json<br>       | DRAW_TC_20<br>Passes                  |
+  | 1,2,3,4,5   | Import excel: tc21.xlsx<br><br>Sync with TS<br><br>Select and   deselect asset to merge<br><br><br><br>      | Being able to select a graph asset   after de selecting it from another trick service asset selection.    | DRAW_TC_21<br>Passes                  |
+
+  |SPR open       |        None |
+  |---------------|-------------|
+  |SPR closed     |        None |
+
+  |Total Steps |  Steps Passes |  Steps Failed  |     Steps not executed |
+  |------------|---------------|----------------|------------------------|
+  |9          |  9           |  0             |     0                  |
+
+  |Result          |       Passes |
+  |----------------|--------------|
+  |Annex           |  Refer Annex for evidence of log and commands executed.|

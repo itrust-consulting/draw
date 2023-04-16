@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Edit asset
-level: 2.1.3
+level: 2.2.3
 links:
 - FUNCREQ-ADDASSET: kB73lCYwGhx-mWtt1s-MO32LFeRlmGu-gVA7-Z35kgk=
 normative: true

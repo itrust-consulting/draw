@@ -1,0 +1,30 @@
+active: true
+derived: false
+header: |
+  Load dependency graph from TrickService, and update the same on trick service
+level: 2.1.25
+links:
+- FUNCREQ-TRICKSYNCEXPORTDEPGRAPH: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |  **Test case Id**       |   DRAW_TC_25 |
+  |-------------------------|---------------------------------------------|
+  |**Test case description** |Load dependency graph from TrickService, update the same, Load the updated graph from TS.|
+  |**Verification method**   |Test|
+  |**Requirements covered**  ||
+  |**Test setup**            |DRAW v2.0.5 on Microsoft Edge|
+  |**Preconditions**         |Windows 10/11|
+  |**Execution Type**        |Manual|
+
+  | **Step \#** | **Step Action**                          | **Expected Results**      |
+  |------|---------------------------------------|-----------------------|
+  | 1    | Load dependency graph from TS<br>Select: demo.trickservice.com<br>Select: Demo UG -> Demo UG -> 0.3        | Loads a graph with 5 nodes.  |
+  | 2  | Import excel -\> tc25.xlsx            | Update the graph with 5 edges. |
+  | 3\.  | Update dependency graph on TrickService            | No error.             |
+  | 4\.  | Clear working area<br>Load dependency graph from TrickService:<br>Select: demo.trickservice.com<br>Select: Demo UG -> Demo UG -> 0.3<br>Save: log25.json                   |The graph should contain 5 nodes and 5 edges.     |
+  | 5\.  | Reset Step:<br>Remove all edges from Graph manually<br>Update dependency graph on TrickService<br>Select: demo.trickservice.com<br>Select: Demo UG -> Demo UG -> 0.3                      | Graph contains 5 nodes and no edge.      |
+
+  | Test pass- fail  criteria   | JSON file log25.json should match graph25.json <br>Refer Section : 1.2 for verification procedure  |
+  |-----------------------------|------------------------------------------------|

@@ -1,0 +1,61 @@
+active: true
+derived: false
+header: |
+  Open Excel
+level: 1.5
+links:
+- TSPEC-ExcelDifferentFormatsUsingTemplates: null
+- TSPEC-ImportExcelAssetsWithSameName: null
+- TSPEC-ImportExcelAssetsWithSameNameDifferentType: null
+- TSPEC-ImportExcelCaseInsensitiveMatch: null
+- TSPEC-ImportExportColorEdges: null
+- TSPEC-ImportExportExcelNoEdges: null
+- TSPEC-ImportExportExhaustiveGraph: null
+- TSPEC-ImportExportWithSaveExcel: null
+- TSPEC-LoadAssetWithTargetNotPresent: null
+- TSPEC-LoadExcel: null
+- TSPEC-OpenExcelAgain: null
+- TSPEC-SyncTrickMergeAssets: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test procedure ID**  |   TP-5 open excel test report |
+  |----------------------|------------------------|
+  |**Executed by**        |    Ritika Pande / itrust|
+  |**Date of execution**  |    23/11/2022||
+  |**Time of execution**  |    19:16 pm -- 19:30 pm and (duration)  |
+  |**Test cases covered** |    DRAW_TC_01, DRAW_TC_02, DRAW_TC_04, DRAW_TC_12,DRAW_TC_13, DRAW_TC_14, DRAW_TC_15, DRAW_TC_17,DRAW_TC_18, DRAW_TC_19, DRAW_TC_20, DRAW_TC_22,  |
+  |**Requirements covered** |
+  |**List of SW versions subject to test** |    2.0.5 |
+  |**Test configuration details**  |    DRAW v2.0.5 on Microsoft Edge     |
+  |**Preconditions for the test**  |  Windows 10/11 test |
+  |**Expected input and expected output** |     Expected input is as excel file with Dependency sheet. Expected output is a dependency graph conforming to Functional Requirements. |
+
+  | # Steps  | **Step Action**| **Expected result**  | **Comments**                    |
+  |------|-------------|------------------|-----------------------------|
+  | 1    | Open-> tests/tc1xlsx<br>Save: log1.json    | log1.json matches graph1.json        | DRAW_TC_01<br>Passes                 |
+  | 1    | Open-> tests/tc2xlsx<br>Save: log2.json    | Log2.json matches graph2.json     | Log2.json matches graph2.json                  |
+  | 1    | Open-> tests/tc12.xlsx<br>Save: log12.json    | Log12.json matches graph12.json      | DRAW_TC_12<br>Passes                 |
+  | 1    | Open-> tests/tc17.xlsx<br>Save: log17.json    | log17.json matches graph17.json       | DRAW_TC_17<br>Passes                  |
+  | 1    | Open-> tests/tc18.xlsx<br>Save: log18.json    | log18.json matches graph18.json       | DRAW_TC_18<br>Passes                  |
+  | 1    | Open-> tests/tc19xlsx<br>Save: log19.json| log19.json matches graph19.json       | DRAW_TC_19<br>Passes                 |
+  | 1    | Open-> tests/tc20.xlsx<br>Save: log20.json   | Log20.json matches graph20.json       | DRAW_TC_20<br>Passes                 |
+  | 1    | Open-> tests/tc23.xlsx<br>Save: log23.json  | Log23.json matches graph23.json       | DRAW_TC_23<br>Passes                 |
+  | 1,2  | Open Excel-tests/tc13.xlsx <br>Export as excel<br><br>Clear <br>Open Excel: log13.xlsx<br>Save: log13.json<br><br>    | Log13.xlsx generated<br><br>Log13.json matches graph13.json     | DRAW_TC_13<br>Passes,                   |
+  | 1,2  | Open Excel->tests/tc14.xlsx <br>Export as excel<br><br>Open tests/log14.xlsx<br>      | Log14.xlsx generated<br><br><br><br>Log14.json matches graph14.json       | DRAW_TC_14<br>Passes                  |
+  | 1,2  |Open->tests/tc4_step1.xlsx<br><br>Open-> tc4.xlsx<br>Save: log4.json      | log4.json matches graph4.json        | DRAW_TC_4<br>Passes                  |
+  | 1,2  | Open tests/tc15.xlsx<br><br>Click the edge color tool<br>Save: log15.json<br>        | The edges get 3 colors based on probability. Check if the edges are colored.<br> | DRAW_TC_15<br>Passes                  |
+  | 1,2  | Open tests/tc22.xlsm<br>Save: log22_xlsm.json<br><br>Open  tests/tc22.xls<br>Save: log22_xls.json<br>        | log22_xlsm.json matches graph22.json<br><br><br><br>log22_xls.json matches graph22.json  | DRAW_TC_22<br>Passes                 |
+
+  |SPR open       |        None |
+  |---------------|-------------|
+  |SPR closed     |        None |
+
+  |Total Steps |  Steps Passes |  Steps Failed  |     Steps not executed |
+  |------------|---------------|----------------|------------------------|
+  |18          |  18           |  0             |     0                  |
+
+  |Result          |       Passes |
+  |----------------|--------------|
+  |Annex           |  Refer Annex for evidence of log and commands executed.|

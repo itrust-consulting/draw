@@ -1,0 +1,12 @@
+active: true
+derived: false
+header: |
+  Tool shall not permit Dependency Matrix with  Target asset not present in source AssetList
+level: 1.6.6
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The DRAW application shall be able to generate a dependency graph by loading or importing an excel sheet. This excel sheet should be named Dependency sheet.
+  The Dependency sheet shall contain Target assets which should be subsets of source assets.

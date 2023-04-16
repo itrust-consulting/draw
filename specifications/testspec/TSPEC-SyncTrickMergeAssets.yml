@@ -1,0 +1,28 @@
+active: true
+derived: false
+header: |
+  Synchronize with Trick Service with merge assets
+level: 2.1.20
+links:
+- FUNCREQ-MERGETSASSETS: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |**Test case Id**         |          DRAW_TC_20 |
+  |-------------------------|---------------------------------------------|
+  |**Test case description**| Synchronize with Trick Service with merge assets.|
+  |**Verification method**  | Test|
+  |**Requirements covered** | |
+  |**Test setup**           | DRAW v2.0.5 on Microsoft Edge|
+  |**Preconditions**        | Windows 10/11|
+  |**Execution Type**       | Manual|
+
+  | **Step \#** | **Step Action**                          | **Expected Results**      |
+  |------|---------------------------------------|-----------------------|
+  | 1    | Import Excel->tests/tc20.xlsx Save: log20.json Or <br> Open -> tests/tc20.xlsx <br> Save: log20.json | Saved log20.json file matches graph20.json |
+  | 2    | Sync with Trick Service (trickservice.itrust.lu) Choose Customer: ILR Risk analysis: TestingILR Version: 0.1              |                       |
+  | 3    |Select Merge with Graph Nodes for following assets and IGNORE the rest: <br> TS Asset                                   Merge with graph node <br>                ILR_GAS_Air conditioning                                   Air Conditioning <br>  Bad data detection system - electricity          Bad data detection system <br> Allocation management - gas                             Allocation management Connection facilities Transport - gas    <br>             Connection facilities Transport Connection Point – gas                                          Connection Point Grid Development & Services - electricity <br>    Grid Development & Services <br> Customer Management - electricity               Customer Management <br> Balancing offer and demand - electricity     Balancing offer and demand <br>  Click : Synchronize Save: log20_sync.json | log20_sync.json must match with graph20_sync.json |
+
+  | **Test pass- fail criteria**     |The json files at each step must match the graph20.json, graph20_sync.json respectively. <br>Refer  Section : 1.2 for match procedure |
+  |---------------------|------------------------------------------------|

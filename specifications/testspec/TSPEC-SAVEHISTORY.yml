@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Save history of loaded graph
-level: 2.1.10
+level: 2.2.10
 links:
 - FUNCREQ-USABILITYHISTORY: mdJv2EXbYw36J7LVQGmAFqDHxpgcDYjIFqZhaUY4mdQ=
 normative: true

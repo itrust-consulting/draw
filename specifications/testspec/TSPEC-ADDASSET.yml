@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Add asset
-level: 2.1.1
+level: 2.2.1
 links:
 - FUNCREQ-ADDASSET: kB73lCYwGhx-mWtt1s-MO32LFeRlmGu-gVA7-Z35kgk=
 - FUNCREQ-INTERFACEADDASSET: 2Gcfsib3u43pd3coT81RhxeQAiT5Py47IlpGQ3WYeEA=

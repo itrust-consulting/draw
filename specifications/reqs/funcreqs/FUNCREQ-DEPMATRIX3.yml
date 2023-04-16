@@ -1,0 +1,25 @@
+active: true
+derived: false
+header: |
+  Tool shall permit 13 AssetTypes in the Dependency Matrix
+level: 1.6.3
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The DRAW application shall be able to generate a dependency graph by loading or importing an excel sheet. This excel sheet should be named Dependency sheet.
+  The rows under AssetType column shall represent the corresponding AssetType information of the source asset. AssetType shall match any one of the predefined asset types supported by tool.
+  Business process
+  Compliance
+  Information
+  Financial
+  Immaterial Value
+  Outsourced service
+  Site
+  Software
+  Hardware
+  Network
+  Service
+  Personnel
+  System

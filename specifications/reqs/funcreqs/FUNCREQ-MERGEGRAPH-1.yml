@@ -1,0 +1,11 @@
+active: true
+derived: false
+header: |
+  Tool shall add additional asset to the graph in case of no match of AssetName and AssetType
+level: 1.6.12
+links: []
+normative: true
+ref: ''
+reviewed: null
+text: |
+  The DRAW tool while matching assets shall add a new graph node corresponding to source asset from Dependency sheet to existing graph if and only if no asset found which matches asset name and asset type.

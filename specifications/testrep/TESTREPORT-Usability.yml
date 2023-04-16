@@ -1,0 +1,44 @@
+active: true
+derived: false
+header: |
+  Usability test
+level: 1.4
+links:
+- TSPEC-SAVEHISTORY: null
+- TSPEC-USABILITY: null
+normative: true
+ref: ''
+reviewed: null
+text: "|**Test procedure ID**  |  TP-4 usability testing report  |\n|-----------------------|-----------------------------|\n\
+  |**Executed by**        |    R. Santos  / itrust|\n|**Date of execution**  |   \
+  \ 29.03.2023 ||\n|**Time of execution**  |      |\n|**Test cases covered** |   \
+  \ DRAW_TC_ID_43, \tDRAW_TC_ID_48  |\n|**Requirements covered** |  |\n|**List of\
+  \ SW versions subject to test** |    2.0.5 |\n|**Test configuration details**  |\
+  \    DRAW v2.0.5 on Microsoft Edge     |\n|**Preconditions for the test**  |  Windows\
+  \ 10/11 test |\n|**Expected input and expected output** |      |\n\n| # Steps  |\
+  \ **Step Action**| **Expected result** | *Comments**                    |\n|----------|----------------|---------------------|--------------------------------|\n\
+  | **1** | Open tests/tests_manual/graph1.json    |  Graph gets loaded into white\
+  \ board | **DRAW_TC_ID_43 Step1 Passes** |\n| **2** | Close the browser window |\
+  \   | **DRAW_TC_ID_43 Step2 Passes** |\n| **3** | Reopen the draw url in a new browser\
+  \ window |  Tool must prompt user to resume work from last time | **DRAW_TC_ID_43\
+  \ Step3 Passes** |\n| **4** | Select yes |  Tool must reopen the graph from previous\
+  \ state | **DRAW_TC_ID_43 Step4 Passes** |\n| **5** | Save graph and compare with\
+  \ tests/tests_manual/graph1.json |  JSON files must match | **DRAW_TC_ID_43 Step5\
+  \ Passes** |\n| **6** | Close the browser window |   | **DRAW_TC_ID_43 Step6 Passes**\
+  \ |\n| **7** | Select Cancel |  Tool must open a blank whiteboard | **DRAW_TC_ID_43\
+  \ Step7 Passes** |\n| **1** | Open tests/tests_manual/graph1.json    |  Graph laoded\
+  \  | **DRAW_TC_ID_48 Step1 Passes** |\n| **2** | Try to Zoom In and Zoom out and\
+  \ move assets after graph is loaded |  The graph is zoomed appropriately | **DRAW_TC_ID_48\
+  \ Step2 Passes** |\n| **3** | Select Node0, Node3, Node4 and align them to bottom\
+  \ |  The three asssets  aligned in bottom | **DRAW_TC_ID_48 Step3 Passes** |\n|\
+  \ **4** | Select Node0, Node1, align to left |  The two assets aligned to left |\
+  \ **DRAW_TC_ID_48 Step4 Passes** |\n| **5** | Select Node2, Node3, align to right\
+  \ |  The two assets aligned to right | **DRAW_TC_ID_48 Step4 Passes** |\n| **6**\
+  \ | Select Node0, Node4, Node3, evenly distribute the assets horizontally |  The\
+  \ three assets are spaced equally as \"Aligned Graph\"  | **DRAW_TC_ID_48 Step5\
+  \ Passes** |\n\n|SPR open       |        None |\n|---------------|-------------|\n\
+  |SPR closed     |        None |\n\n|Total Steps |  Steps Passes |  Steps Failed\
+  \  |     Steps not executed |\n|------------|---------------|----------------|------------------------|\n\
+  |      13    |       13      |  0             |     0                  |\n\n|Result\
+  \          |       Passes |\n|----------------|--------------|\n|Annex         \
+  \  |  Refer Annex for evidence of log and commands executed.|\n"

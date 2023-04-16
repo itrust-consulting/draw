@@ -1,0 +1,11 @@
+active: true
+derived: false
+header: |
+  Test Cases (user functional tests)
+level: 2.2
+links: []
+normative: false
+ref: ''
+reviewed: Suk0KXO-d1JxB5ebhccHb4nCL8QKQCbT9PNZ7JKHxz0=
+text: |
+  This section outlines the generic testcases with focus on functional testing at user level. Refer to DRAW_ROOT_DIRECTORY/tests/tests_manual for the testcase files referred in in this section.

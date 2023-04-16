@@ -1,0 +1,29 @@
+active: true
+derived: false
+header: |
+  Annex: Test logs
+level: 3
+links: []
+normative: false
+ref: ''
+reviewed: null
+text: |
+  Test logs can be accessed at [Test logs](N:\RD\itrust\DRAW\03-Test\testing-2023-04-13)
+
+  |Test Procedure                     |Log files directory |
+  |-----------------------------------|---------------------|
+  |TP-1 create/edit graph report                     |logs_manual_testing|
+  |TP-2 load and save graph report                   |logs_manual_testing|
+  |TP-3 interface testing report                     |logs_manual_testing|
+  |TP-4 usability testing report                     |logs_manual_testing|
+  |TP-5 open excel test report                     |logs_automated_testing|
+  |TP-6 import excel test report                   |logs_automated_testing|
+  |TP-7 load/export excel error test report        |logs_automated_testing|
+  |TP-8 error for incorrect file or structure report        |logs_manual_testing|
+  |TP-9 merge TS and graph assets test report      |logs_automated_testing|
+  |TP-10 load from TS and export to TS test report  |logs_automated_testing|
+  |TP-11 import ILR Dependency matrix for gas and electricity assets test report | logs_automated_testing|
+  |TP-12 compare estimations test report |logs_manual_testing, logs_automated_testing|
+
+  **Report for automated testing can be accessed at
+  [Automation test report](N:\RD\itrust\DRAW\03-Test\testing-2023-04-13\logs_automated_testing\report.html)**
