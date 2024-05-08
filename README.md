@@ -6,7 +6,7 @@ The DRAW is an open source tool by itrust consulting and is used to represent as
 The representation of asset dependencies enable the users to graphically view the impact an asset 
 has on other assets. As an example if there is an edge between Server to Server Data it implies that a problem at Server might cause a problem with Server Data. 
 
-The dependency graph created by DRAW can also be synchronised with Risk Analysis Tool Trick Service which is proprietary to itrust consulting and can enable the user to perform a more effective risk analysis based on asset dependency and probability propagation associated with edges.
+The dependency graph created by DRAW can also be synchronised with Trick Service Risk Analysis Tool  by itrust consulting, enabling the user to perform a more effective risk analysis based on asset dependency and probability propagation associated with edges.
 
 Staring version `v2.0.5` onwards the tool also supports excel format for importing and exporting dependencies into the DRAW whiteboard.  
 
