@@ -628,9 +628,10 @@ UserInterface.prototype.saveAsset = function (form_selector) {
 	let $form_selector = $(form_selector);
 	let id = $form_selector.find("[name=id]").val();
 	let name = $form_selector.find("[name=name]").val();
+	let comment = $form_selector.find("[name=comment]").val();
 	let type = $form_selector.find("[name=type]").val();
 	let disabled = $form_selector.find("[name=disabled]").is(":checked");
-	this.dependency_graph.addNode(id, name, type, disabled);
+	this.dependency_graph.addNode(id, name, type, comment, disabled);
 };
 
 UserInterface.prototype.saveEdge = function (form_selector) {

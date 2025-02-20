@@ -233,7 +233,7 @@ DependencyGraph.prototype.save = function () {
     for (let i = 0; i < nodes.length; i++) {
         data.nodes[nodes[i].id()] = { data: nodes[i].data(), position: nodes[i].position() };
     }
-
+    
     for (let i = 0; i < edges.length; i++) {
         let edgedata = $.extend({}, edges[i].data()); // clone so that we don't modify the original object
         delete edgedata.id;
@@ -252,7 +252,7 @@ DependencyGraph.prototype.save = function () {
 function _convertAssetTableUsingUids(assetTable, mapUidsToNodeNames)  {
     for (let i of assetTable) {
         for (let key in i) {
-            if (key != CONST_ASSET_TYPE) {
+            if (key != CONST_ASSET_TYPE && key != CONST_ASSET_COMMENT) {
                 if (key == CONST_ASSET_IT) {
                     i[CONST_ASSET_IT] = mapUidsToNodeNames[i[CONST_ASSET_IT]];
                 } else {
@@ -280,6 +280,7 @@ DependencyGraph.prototype.saveToExcel = function () {
      */
     let assetTable = [];
     let mapUidsToNodeNames = new Object();
+
     for (let key in data.nodes) {
         mapUidsToNodeNames[key] = data.nodes[key].data.name;
     }
@@ -307,7 +308,8 @@ DependencyGraph.prototype.saveToExcel = function () {
         let rowEntry = new Object();
         rowEntry[CONST_ASSET_IT] = key;
         rowEntry[CONST_ASSET_TYPE] = mapOfSupportedAssetsAbbr.get(data.nodes[key].data.type);
-
+        rowEntry[CONST_ASSET_COMMENT] = data.nodes[key].data.comment;
+        
         for (let subKey of setOfAtleastOneIncomingEdge) {
             rowEntry[subKey] = undefined;
         }
@@ -318,7 +320,7 @@ DependencyGraph.prototype.saveToExcel = function () {
         let sourceNode = i[CONST_ASSET_IT];
 
         for (let key in i) {
-            if (key != CONST_ASSET_IT && key != CONST_ASSET_TYPE) {
+            if (key != CONST_ASSET_IT && key != CONST_ASSET_TYPE && key != CONST_ASSET_COMMENT) {
                 /* These are all the entries of the source to edge mapping which need to be 
                  * populated from mapOfEdges
                  */
@@ -516,13 +518,14 @@ DependencyGraph.prototype.loadMemory = function () {
  * @param {boolean} disabled - Whether the asset should be marked as inactive/disabled. This is only visual right now.
  * @param {string} [trickId] - (Optional) The database identifier of the analogous asset in the TRICK Service database.
  */
-DependencyGraph.prototype.addNode = function (id, name, type, disabled, trickId) {
+DependencyGraph.prototype.addNode = function (id, name, type, comment, disabled, trickId) {
     let bbox = this.cy.nodes().boundingBox();
     let node = {
         group: "nodes",
         data: {
             id: id || ("U" + Math.random()),
             name: name || "New asset",
+            comment: comment,
             type: type,
             disabled: disabled,
             trickId: trickId || (id ? this.cy.getElementById(id).data("trickId") : /* determined when sync'ing: */ null),
@@ -549,10 +552,11 @@ DependencyGraph.prototype.addNode = function (id, name, type, disabled, trickId)
  * @param {*} id : Id of the node to be added
  * @param {*} nameInput : Name of the asset
  * @param {*} type  : Type of asset
+ * @param {*} comment  : Comment for the asset
  * @param {*} disabled : If asset is disabled this value is true
  * @returns 
  */
-DependencyGraph.prototype.addNodeFromImportedFile = function (id, nameInput, type, disabled) {
+DependencyGraph.prototype.addNodeFromImportedFile = function (id, nameInput, type, comment, disabled) {
 
     let convertedType = _compatConvertAssetType(type);
 
@@ -567,7 +571,7 @@ DependencyGraph.prototype.addNodeFromImportedFile = function (id, nameInput, typ
         });
     }
 
-    return this.addNode(id, nameInput, convertedType, disabled);
+    return this.addNode(id, nameInput, comment, convertedType, disabled);
 }
 
 /**

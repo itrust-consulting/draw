@@ -71,3 +71,4 @@ const mapOfSupportedAssetsAbbr = new Map([
 // to and from the excel sheet in importing or exporting excel sheet
 const CONST_ASSET_IT = 'AssetList';
 const CONST_ASSET_TYPE = 'AssetType';
+const CONST_ASSET_COMMENT = 'AssetComment';
