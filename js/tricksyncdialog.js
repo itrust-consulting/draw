@@ -75,6 +75,9 @@ TrickSyncDialog.prototype.showSyncPanel = function($dialog_selector, $dialog_pan
 	selected_list = [];
 
 	assetNamesNotInTS.push("-"); // Not set
+
+	console.log(self.graph.cy.nodes());
+
 	assetsNotInTS = _getDifference(self.graph.cy.nodes(), data);
 	for (let i =0; i<assetsNotInTS.length; i++) {
 		let assetObj = assetsNotInTS[i];
@@ -88,6 +91,9 @@ TrickSyncDialog.prototype.showSyncPanel = function($dialog_selector, $dialog_pan
 	// Insert API data into DOM
 	let $list_selector = $dialog_selector.find("[name=difflist]").empty();
 	for (let i = 0; i < data.length; i++) {
+
+		console.log(data[i]);
+
 		let matches = self.graph.cy.nodes().filter(function(item) { return _compareAsset(item, data[i]); });
 		// nodes do not match between graph and trick service
 		if (matches.length == 0) {
@@ -96,7 +102,7 @@ TrickSyncDialog.prototype.showSyncPanel = function($dialog_selector, $dialog_pan
 		}
 		let match = matches[0];
 		match.data("trickId", data[i].id);
-		if (match.data("name") != data[i].name || match.data("type") != data[i].assetTypeName || !!match.data("disabled") != !data[i].selected) {
+		if (match.data("name") != data[i].name || match.data("type") != data[i].assetTypeName || !!match.data("disabled") != !data[i].selected || match.data("comment") != data[i].comment) {
 			_makeDiffItem(match, data[i], assetNamesNotInTS, selected_list).appendTo($list_selector);
 			continue;
 		}

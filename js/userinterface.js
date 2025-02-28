@@ -305,15 +305,22 @@ function _readJSONDataToInternalDS(jsonData) {
 							foundAssetIndex = true;
 							assetIndex = i;
 						}
+
+						if (jsonData[i]['C'] == CONST_ASSET_COMMENT) {
+							foundAssetIndex = true;
+							assetIndex = i;
+						}
+						// Add comment for asset
 					} 
 				} else {
 					mapJsonIndexToArrayAssetKey[jsonData[i]['A']] = [];
 					mapJsonIndexToArrayAssetKey[jsonData[i]['A']][CONST_ASSET_TYPE] = jsonData[i]['B'];
+					mapJsonIndexToArrayAssetKey[jsonData[i]['A']][CONST_ASSET_COMMENT] = jsonData[i]['C'];
 				}
 			}
 
 			if (!foundAssetIndex) {
-				let msg = 'The imported excel file with worksheet \"Dependency\" does not have ' + CONST_ASSET_IT + ' in first Column or ' + CONST_ASSET_TYPE + ' in second column';
+				let msg = 'The imported excel file with worksheet \"Dependency\" does not have ' + CONST_ASSET_IT + ' in first Column or ' + CONST_ASSET_TYPE + ' in second column or ' + CONST_ASSET_TYPE + ' in the third column';
 				throw new Error(msg);
 			}
 
@@ -321,6 +328,8 @@ function _readJSONDataToInternalDS(jsonData) {
 			for (let key in mapJsonIndexToArrayAssetKey) {
 				for (let subkey in mapJsonIndexToArrayAssetKey) {
 					mapJsonIndexToArrayAssetKey[key][subkey] = 0;
+
+					// Move from column C to column D
 				}
 			}
 
@@ -331,7 +340,7 @@ function _readJSONDataToInternalDS(jsonData) {
 
 			for (let i = assetIndex + 1; i < length; i++) {
 				for (let keys in jsonData[i]) {
-					if (keys != 'A' && keys != 'B') {						
+					if (keys != 'A' && keys != 'B' && keys != 'C') {						
 						if (jsonData[i][keys] != undefined) {
 							mapJsonIndexToArrayAssetKey[jsonData[i]['A']][jsonData[assetIndex][keys]] = jsonData[i][keys];
 						} else {
@@ -359,7 +368,8 @@ function _sanityProbability(sourceID, mapJsonIndexToArrayAssetKey) {
 	let errorStatus = false;
 	try {	
 		for (let targetID in mapJsonIndexToArrayAssetKey[sourceID]) {
-			if (targetID != CONST_ASSET_TYPE && mapJsonIndexToArrayAssetKey[sourceID][targetID] != 0) {
+
+			if (targetID != CONST_ASSET_COMMENT && targetID != CONST_ASSET_TYPE && mapJsonIndexToArrayAssetKey[sourceID][targetID] != 0) {
 				// check if  mapJsonIndexToArrayAssetKey[sourceID][targetID]  is a number should be  0, 1 or between 0 and 1
 				if (mapJsonIndexToArrayAssetKey[sourceID][targetID] != undefined &&
 					typeof (mapJsonIndexToArrayAssetKey[sourceID][targetID]) != "number") {
@@ -403,10 +413,11 @@ function _sanityInternalDS(mapJsonIndexToArrayAssetKey) {
 				let msg = 'The excel file with worksheet \"Dependency\" has an asset with empty label in ' + CONST_ASSET_IT + ' Column.';
 				throw new Error(msg);
 			}
+
 			if (mapJsonIndexToArrayAssetKey[key][CONST_ASSET_TYPE] == "" || !_checkHasValidAssetTypes(mapJsonIndexToArrayAssetKey[key][CONST_ASSET_TYPE])) {
 				let msg = 'The excel file with worksheet \"Dependency\" has an assetType (' + mapJsonIndexToArrayAssetKey[key][CONST_ASSET_TYPE] + ') which is not in list of supported list. (' + listOfSupportedAssets + ').';
 				throw new Error(msg);
-			}		 		
+			}	
 		
 			if (_sanityProbability(key, mapJsonIndexToArrayAssetKey)) {
 				errorStatus = true;
@@ -435,15 +446,14 @@ function _createGraphNodesFromInternalDS(mapJsonIndexToArrayAssetKey)
 	try {		
 		// add nodes to the dependency_graph with null id (So an ID is created) or pick up an Id already 
 		// existing in the graph with matching name and type
-		for (let key in mapJsonIndexToArrayAssetKey) {
-			let id = window.editor.dependency_graph.addNodeFromImportedFile("", key, mapJsonIndexToArrayAssetKey[key][CONST_ASSET_TYPE], false);
+		for (let key in mapJsonIndexToArrayAssetKey) {let id = window.editor.dependency_graph.addNodeFromImportedFile("", key, mapJsonIndexToArrayAssetKey[key][CONST_ASSET_TYPE], mapJsonIndexToArrayAssetKey[key][CONST_ASSET_COMMENT], false);
 			mapOfIDsOfNodes[key] = id;
 		}
 
 		for (let key in mapJsonIndexToArrayAssetKey) {
 			let idOfSource = mapOfIDsOfNodes[key];
 			for (let subkey in mapJsonIndexToArrayAssetKey[key]) {
-				if (subkey != CONST_ASSET_TYPE) {
+				if (subkey != CONST_ASSET_TYPE && subkey != CONST_ASSET_COMMENT) {
 					let idOfSink = mapOfIDsOfNodes[subkey];
 					window.editor.dependency_graph.updateEdge(idOfSource, idOfSink, mapJsonIndexToArrayAssetKey[key][subkey]);
 				}
@@ -473,6 +483,10 @@ function _processJsonData(jsonData) {
 				let sanityError = _sanityInternalDS(mapJsonIndexToArrayAssetKey);
 				
 				if (!sanityError) 
+
+					console.log("mapJsonIndexToArrayAssetKey: ");
+					console.log(mapJsonIndexToArrayAssetKey);
+
 					_createGraphNodesFromInternalDS(mapJsonIndexToArrayAssetKey);
 			}
 			
@@ -511,6 +525,7 @@ UserInterface.prototype.importExcelFile = function (file) {
 	try {
 		let reader = new FileReader();
 		reader.readAsBinaryString(file);
+		//reader.readAsArrayBuffer(file)
 		reader.onload = function (e) {
 			let data = e.target.result;
 			try {

@@ -72,3 +72,6 @@ const mapOfSupportedAssetsAbbr = new Map([
 const CONST_ASSET_IT = 'AssetList';
 const CONST_ASSET_TYPE = 'AssetType';
 const CONST_ASSET_COMMENT = 'AssetComment';
+
+// Defines the layout of the Excel file for the initial columns
+const ExcelLayout = [CONST_ASSET_IT, CONST_ASSET_TYPE, CONST_ASSET_COMMENT];

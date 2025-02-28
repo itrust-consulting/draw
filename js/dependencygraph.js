@@ -233,7 +233,7 @@ DependencyGraph.prototype.save = function () {
     for (let i = 0; i < nodes.length; i++) {
         data.nodes[nodes[i].id()] = { data: nodes[i].data(), position: nodes[i].position() };
     }
-    
+
     for (let i = 0; i < edges.length; i++) {
         let edgedata = $.extend({}, edges[i].data()); // clone so that we don't modify the original object
         delete edgedata.id;
@@ -255,6 +255,7 @@ function _convertAssetTableUsingUids(assetTable, mapUidsToNodeNames)  {
             if (key != CONST_ASSET_TYPE && key != CONST_ASSET_COMMENT) {
                 if (key == CONST_ASSET_IT) {
                     i[CONST_ASSET_IT] = mapUidsToNodeNames[i[CONST_ASSET_IT]];
+
                 } else {
                     let old_key = key;
                     let new_key = mapUidsToNodeNames[old_key];
@@ -264,8 +265,7 @@ function _convertAssetTableUsingUids(assetTable, mapUidsToNodeNames)  {
             }
         }
     }
-
-    return assetTable;
+    return assetTable.sort((a,b)=> a.AssetList.localeCompare(b.AssetList));
 }
 
 /* This function saved the dependency graph to excel format
@@ -273,17 +273,13 @@ function _convertAssetTableUsingUids(assetTable, mapUidsToNodeNames)  {
 DependencyGraph.prototype.saveToExcel = function () {
     let data = this.save();
     /* Convert this data to an assetTable of following form 
-     *  assetTable = [{assetList: "asset1", assetType:"Business Process", asset1: "0", "asset2": 1, "asset3": 1}, 
-     *               {assetList: "asset2", assetType:"Financial", asset1: "1", "asset2": 0, "asset3": 1},
-     *               {assetList: "asset3", assetType:"Compliance", asset1: "1", "asset2": 0, "asset3": 0}                 
+     *  assetTable = [{assetList: "asset1", assetType:"Business Process","assetComment": "", asset1: "0", "asset2": 1, "asset3": 1}, 
+     *               {assetList: "asset2", assetType:"Financial","assetComment": "", asset1: "1", "asset2": 0, "asset3": 1},
+     *               {assetList: "asset3", assetType:"Compliance","assetComment": "", asset1: "1", "asset2": 0, "asset3": 0}                 
      *               ];
      */
     let assetTable = [];
-    let mapUidsToNodeNames = new Object();
-
-    for (let key in data.nodes) {
-        mapUidsToNodeNames[key] = data.nodes[key].data.name;
-    }
+    let mapUidsToNodeNames = Object.fromEntries(Object.values(data.nodes).map((key) => [key.data.id, key.data.name]));
 
     /* This map contains a map of sets [mapping from Source to all destinations] */
     let mapOfEdges = new Object();
@@ -291,7 +287,10 @@ DependencyGraph.prototype.saveToExcel = function () {
      * if there is no incoming edge then these assets need not be present in the exported table
      */
     let setOfAtleastOneIncomingEdge = new Set();
-    for (let edge of data.edges) {
+    let sortedEdges = data.edges.sort((e1,e2)=> mapUidsToNodeNames[e1.target].localeCompare(mapUidsToNodeNames[e2.target]));
+
+    for (let edge of sortedEdges) {
+        
         if (!mapOfEdges[edge.source]) {
             mapOfEdges[edge.source] = new Object();
         }
@@ -306,9 +305,9 @@ DependencyGraph.prototype.saveToExcel = function () {
     /* First Populate Map using UIDs */
     for (let key in data.nodes) {
         let rowEntry = new Object();
-        rowEntry[CONST_ASSET_IT] = key;
-        rowEntry[CONST_ASSET_TYPE] = mapOfSupportedAssetsAbbr.get(data.nodes[key].data.type);
-        rowEntry[CONST_ASSET_COMMENT] = data.nodes[key].data.comment;
+        rowEntry[ExcelLayout[0]] = key;
+        rowEntry[ExcelLayout[1]] = mapOfSupportedAssetsAbbr.get(data.nodes[key].data.type);
+        rowEntry[ExcelLayout[2]] = data.nodes[key].data.comment;
         
         for (let subKey of setOfAtleastOneIncomingEdge) {
             rowEntry[subKey] = undefined;
@@ -317,31 +316,30 @@ DependencyGraph.prototype.saveToExcel = function () {
     }
 
     for (let i of assetTable) {
-        let sourceNode = i[CONST_ASSET_IT];
+        let sourceNode = i[CONST_ASSET_IT];        
 
         for (let key in i) {
-            if (key != CONST_ASSET_IT && key != CONST_ASSET_TYPE && key != CONST_ASSET_COMMENT) {
+            if (!ExcelLayout.includes(key)) {
                 /* These are all the entries of the source to edge mapping which need to be 
                  * populated from mapOfEdges
                  */
                 if (mapOfEdges[sourceNode] && mapOfEdges[sourceNode][key]) {
-                    i[key] = mapOfEdges[sourceNode][key];
+                    i[key] = mapOfEdges[sourceNode][key]; 
                 }
             }
         }
     }
-
+    
     /* Finally convert assetTable from UIds using assetNames by utilizing mapUidsToNodeNames */
     assetTable = _convertAssetTableUsingUids(assetTable, mapUidsToNodeNames);
 
     let binaryWS1 = XLSX.utils.json_to_sheet(assetTable);
     let wb = XLSX.utils.book_new();
+
     XLSX.utils.book_append_sheet(wb, binaryWS1, 'Dependency');
 
-    let validAssets = [];
-    for (let i of listOfSupportedAssets) {
-        validAssets.push({ "Valid Asset Type": i });
-    }
+    let validAssets = listOfSupportedAssets.map((i) =>( {"Valid Asset Type" : i}));
+   
     let binaryWS2 = XLSX.utils.json_to_sheet(validAssets);
     XLSX.utils.book_append_sheet(wb, binaryWS2, 'Parameters');
 
@@ -570,8 +568,7 @@ DependencyGraph.prototype.addNodeFromImportedFile = function (id, nameInput, typ
             }
         });
     }
-
-    return this.addNode(id, nameInput, comment, convertedType, disabled);
+    return this.addNode(id, nameInput, convertedType, comment, disabled);
 }
 
 /**
