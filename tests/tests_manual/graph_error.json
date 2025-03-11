@@ -6,7 +6,8 @@
 				"name": "Node1",
 				"type": "Info",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": "Comment for Node1"
 			},
 			"position": {
 				"x": 0,
@@ -19,7 +20,8 @@
 				"name": "Node2",
 				"type": "IV",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": "Comment for Node2"
 			},
 			"position": {
 				"x": 96.72934848322477,

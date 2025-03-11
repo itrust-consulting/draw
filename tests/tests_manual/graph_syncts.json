@@ -6,7 +6,8 @@
 				"name": "Balancing offer and demand",
 				"type": "Busi",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -718.1401563268867,
@@ -19,7 +20,8 @@
 				"name": "Customer Management",
 				"type": "Busi",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -718.1401563268867,
@@ -32,7 +34,8 @@
 				"name": "Grid Development & Services",
 				"type": "Busi",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -718.1401563268867,
@@ -45,7 +48,8 @@
 				"name": "Supply of natural gas",
 				"type": "Busi",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -718.1401563268867,
@@ -58,7 +62,8 @@
 				"name": "Air Conditioning",
 				"type": "Site",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -215.77766377698467,
@@ -71,7 +76,8 @@
 				"name": "Allocation management",
 				"type": "SW",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -474.45366026062817,
@@ -84,7 +90,8 @@
 				"name": "Bad data detection system",
 				"type": "SW",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -474.45366026062817,
@@ -97,7 +104,8 @@
 				"name": "Connection Point",
 				"type": "HW",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -410.007628530831,
@@ -110,7 +118,8 @@
 				"name": "Connection facilities Transport",
 				"type": "HW",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -410.007628530831,

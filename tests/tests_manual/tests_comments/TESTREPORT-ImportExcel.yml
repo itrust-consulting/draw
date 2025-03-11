@@ -1,0 +1,50 @@
+active: true
+derived: false
+header: |
+  Import Excel File without edges
+level: 1.6
+links:
+- TSPEC-ExcelDifferentFormatsUsingTemplates: null
+- TSPEC-ImportExcelAssetsWithSameName: null
+- TSPEC-ImportExcelAssetsWithSameNameDifferentType: null
+- TSPEC-ImportExcelCaseInsensitiveMatch: null
+- TSPEC-ImportExcelMultipleMatches: null
+- TSPEC-ImportExcelOnExistingGraph: null
+- TSPEC-ImportExportExcelNoEdges: null
+- TSPEC-ImportExportExhaustiveGraph: null
+- TSPEC-ImportExportWithSaveExcel: null
+- TSPEC-SyncTrickMergeAssets: null
+normative: true
+ref: ''
+reviewed: null
+text: |
+  |              **Test procedure ID**              |  TP-3 Import Excel File        |
+  |-------------------------------------------------|--------------------------------|
+  |**Executed by**                                  | Ricardo Santos / itrust        |
+  |**Date of execution**                            | 06/03/2025                     |
+  |**Time of execution**                            | 6:22 am -- 6:45 am  (duration) |
+  |**Test cases covered**                           | DRAW_TC_12, DRAW_TC_13, DRAW_TC_14,  DRAW_TC_16,         DRAW_TC_17, DRAW_TC_18, DRAW_TC_19, DRAW_TC_20, DRAW_TC_22|
+  |**Requirements covered**                         | |
+  |**List of SW versions subject to test**          |    2.0.6.1 |
+  |**Test configuration details**                   | DRAW v2.0.6.1 on Microsoft Edge |
+  |**Preconditions for the test**                   | Windows 10/11|
+  |**Expected input and expected output**           | Assets should be imported from Excel File, but not linked together |
+  
+  |**# Steps**  |    **Step Action**    |    **Expected result**    |             **Comments**              |
+  |-------------|-----------------------|---------------------------|---------------------------------------|
+  | 1           | Click on the Arrow on the right of the "Open" button. | Open the dropdown menu for the "Open" button   |                  |
+  | 2           | Click on the "Import Excel" button. | Open the "File Upload" dialog  |                  |
+  | 3           | Select the file AssetNoLinks.xlx  and click on the "Open" button. | Five assets, named Node0 to Node4 are added to the canvas, without edges connecting the assets.  |                  |
+  | 4           | Double click on assets. | The dialog "Add\edit asset" should open and the asset's comment should be present in the window. |                  |
+  
+  |SPR open       |        None |
+  |---------------|-------------|
+  |SPR closed     |        None |
+
+  |Total Steps |  Steps Passes |  Steps Failed  |     Steps not executed |
+  |------------|---------------|----------------|------------------------|
+  |12          |  12           |  0             |     0                  |
+
+  |Result          |       Passes |
+  |----------------|--------------|
+  |Annex           |  Refer Annex for evidence of log and commands executed.|

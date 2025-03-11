@@ -75,6 +75,9 @@ TrickSyncDialog.prototype.showSyncPanel = function($dialog_selector, $dialog_pan
 	selected_list = [];
 
 	assetNamesNotInTS.push("-"); // Not set
+
+	console.log(self.graph.cy.nodes());
+
 	assetsNotInTS = _getDifference(self.graph.cy.nodes(), data);
 	for (let i =0; i<assetsNotInTS.length; i++) {
 		let assetObj = assetsNotInTS[i];
@@ -88,6 +91,9 @@ TrickSyncDialog.prototype.showSyncPanel = function($dialog_selector, $dialog_pan
 	// Insert API data into DOM
 	let $list_selector = $dialog_selector.find("[name=difflist]").empty();
 	for (let i = 0; i < data.length; i++) {
+
+		console.log(data[i]);
+
 		let matches = self.graph.cy.nodes().filter(function(item) { return _compareAsset(item, data[i]); });
 		// nodes do not match between graph and trick service
 		if (matches.length == 0) {
@@ -96,7 +102,7 @@ TrickSyncDialog.prototype.showSyncPanel = function($dialog_selector, $dialog_pan
 		}
 		let match = matches[0];
 		match.data("trickId", data[i].id);
-		if (match.data("name") != data[i].name || match.data("type") != data[i].assetTypeName || !!match.data("disabled") != !data[i].selected) {
+		if (match.data("name") != data[i].name || match.data("type") != data[i].assetTypeName || !!match.data("disabled") != !data[i].selected || match.data("comment") != data[i].comment) {
 			_makeDiffItem(match, data[i], assetNamesNotInTS, selected_list).appendTo($list_selector);
 			continue;
 		}
@@ -201,13 +207,13 @@ TrickSyncDialog.prototype.onSyncClicked = function() {
 
 		// Run action
 		switch (q.action) {
-			case "ins-ts": self.trick_api.addAsset(versionId, q.asset_node.data("name"), q.asset_node.data("type"), !q.asset_node.data("disabled")).done(done).fail(fail); break;
-			case "upd-ts": self.trick_api.updateAsset(versionId, q.trick_asset.id, q.asset_node.data("name"), q.asset_node.data("type"), !q.asset_node.data("disabled")).done(done).fail(fail); break;
+			case "ins-ts": self.trick_api.addAsset(versionId, q.asset_node.data("name"), q.asset_node.data("type"), q.asset_node.data("comment"), !q.asset_node.data("disabled")).done(done).fail(fail); break;
+			case "upd-ts": self.trick_api.updateAsset(versionId, q.trick_asset.id, q.asset_node.data("name"), q.asset_node.data("type"), q.asset_node.data("comment"), !q.asset_node.data("disabled")).done(done).fail(fail); break;
 			case "del-ts": self.trick_api.deleteAsset(versionId, q.trick_asset.id).done(done).fail(fail); break;
-			case "ins-gr": self.graph.addNode(null, q.trick_asset.name, q.trick_asset.assetTypeName, !q.trick_asset.selected, q.trick_asset.id); done(); break;
-			case "upd-gr": self.graph.addNode(q.asset_node.id(), q.trick_asset.name, q.trick_asset.assetTypeName, !q.trick_asset.selected, q.trick_asset.id); done(); break;
+			case "ins-gr": self.graph.addNode(null, q.trick_asset.name, q.trick_asset.assetTypeName, q.trick_asset.comment, !q.trick_asset.selected, q.trick_asset.id); done(); break;
+			case "upd-gr": self.graph.addNode(q.asset_node.id(), q.trick_asset.name, q.trick_asset.assetTypeName, q.trick_asset.comment, !q.trick_asset.selected, q.trick_asset.id); done(); break;
 			case "del-gr": self.graph.cy.remove(q.asset_node); done(); break;
-			case "merge-tg": self.graph.addNode(q.merging_asset.id(), q.trick_asset.name, q.trick_asset.assetTypeName, !q.trick_asset.selected, q.trick_asset.id); done(); break;
+			case "merge-tg": self.graph.addNode(q.merging_asset.id(), q.trick_asset.name, q.trick_asset.assetTypeName, q.trick_asset.comment, !q.trick_asset.selected, q.trick_asset.id); done(); break;
 			default: done(); break;
 		}
 	};

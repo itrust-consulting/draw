@@ -60,12 +60,12 @@ TrickApi.prototype.getAssets = function (analysis_version_id) {
 	return this.invokeWithErrorHandling("get", "data/analysis/" + encodeURIComponent(analysis_version_id) + "/assets", {});
 }
 
-TrickApi.prototype.addAsset = function (analysis_version_id, name, type, selected) {
-	return this.invoke("post", "data/analysis/" + encodeURIComponent(analysis_version_id) + "/new-asset", { name: name, type: type, selected: selected }, "application/x-www-form-urlencoded");
+TrickApi.prototype.addAsset = function (analysis_version_id, name, type, comment, selected) {
+	return this.invoke("post", "data/analysis/" + encodeURIComponent(analysis_version_id) + "/new-asset", { name: name, type: type, comment: comment, selected: selected }, "application/x-www-form-urlencoded");
 }
 
-TrickApi.prototype.updateAsset = function (analysis_version_id, id, name, type, selected) {
-	return this.invoke("post", "data/analysis/" + encodeURIComponent(analysis_version_id) + "/assets/" + encodeURIComponent(id), { name: name, type: type, selected: selected}, "application/x-www-form-urlencoded");
+TrickApi.prototype.updateAsset = function (analysis_version_id, id, name, type, comment, selected) {
+	return this.invoke("post", "data/analysis/" + encodeURIComponent(analysis_version_id) + "/assets/" + encodeURIComponent(id), { name: name, type: type, comment: comment, selected: selected}, "application/x-www-form-urlencoded");
 }
 
 TrickApi.prototype.deleteAsset = function (analysis_version_id, id) {
