@@ -27,15 +27,26 @@ text: |
   |**Requirements covered**                         |                                                                                                                      |
   |**List of SW versions subject to test**          |   2.0.6.1                                                                                                            |
   |**Test configuration details**                   |DRAW v2.0.6.1 on Microsoft Edge                                                                                       |
-  |**Preconditions for the test**                   |Windows 10/11                                                                                                         |
+  |**Preconditions for the test**                   |Windows 10/11, clear working area                                                                                     |
   |**Expected input and expected output**           |The imported asset should be created and contain a comment section in it.                                             |
 
   |**# Steps**  |                                                                       **Step Action**                                                                     |                                                             **Expected result**                                                             |             **Comments**              |
   |-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
-  | 1     | Click on "Add asset" button      | The "Add asset" window should appear and have a field reserver for comments.   |                  |
-  | 2     | Fill the "Add/edit asset" window fields Name, Type and Comment and click on the button "Save".      |  The icon for the asset should be visible in the window canvas.  |                  |
-  | 3     | Double click on the asset icon and open the "Add\edit asset".      | The comment should be present in  the newly open window.   |                  |
-
+  | 1           | Add an asset and name it as "Air conditioner". | The asset "Air conditioner" should appear in the working area.  |                  |
+  | 2           | Add an asset and name it as "Computer". | The asset "Computer" should appear in the working area.  |                  |
+  | 3           | Connect the two assets in the working area. | The assets "Air conditioner" and "Computer" should appear connected in the working area.  |                  |
+  | 4           | Click on the Arrow on the right of the "Save" button. | Open the dropdown menu for the "Save" button   |                  |
+  | 5           | Click on the "Export as Excel (XLSX)" button. | An Excel file downloads.  |                  |
+  | 6           | Open the downloaded Excel file. | Excel or a similar spreadsheet software should open displaying the file.  |                  |
+  | 7           | Verify if assets in the first column and in the end of the first line are in alphabetical order. | The asset names should be in alphabetical order. |                  |
+  | 8           | Add an asset and name it as "Backup server". | The asset "Backup server" should appear in the working area.  |                  |
+  | 9           | Connect the two assets in the working area to the new "Backup server" asset. | The assets should appear connected in the working area.  |                  |
+  | 10          | Click on the Arrow on the right of the "Save" button. | Open the dropdown menu for the "Save" button   |                  |
+  | 11          | Click on the "Export as Excel (XLSX)" button. | An Excel file downloads.  |                  |
+  | 12          | Open the downloaded Excel file. | Excel or a similar spreadsheet software should open displaying the file.  |                  |
+  | 13          | Verify if assets in the first column and in the end of the first line are in alphabetical order. | The asset names should be in alphabetical order. |                  |
+  |
+  
   |SPR open       |        None |
   |---------------|-------------|
   |SPR closed     |        None |

@@ -6,7 +6,8 @@
 				"name": "Node1",
 				"type": "Info",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -665.1138233326669,
@@ -19,7 +20,8 @@
 				"name": "Node2",
 				"type": "IV",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -560.3593690785964,
@@ -32,7 +34,8 @@
 				"name": "Node3",
 				"type": "SW",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -564.1286548681306,
@@ -45,7 +48,8 @@
 				"name": "Node0",
 				"type": "Busi",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -798.7568532567861,
@@ -58,7 +62,8 @@
 				"name": "Node6",
 				"type": "Net",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -690.6512075474282,

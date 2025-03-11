@@ -1,7 +1,7 @@
 active: true
 derived: false
 header: |
-  Import Excel File without edges
+  Export Excel File without edges
 level: 1.6
 links:
 - TSPEC-ExcelDifferentFormatsUsingTemplates: null
@@ -18,7 +18,7 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  |              **Test procedure ID**              |  TP-3 Import Excel File        |
+  |              **Test procedure ID**              |  TP-3 Export Excel File        |
   |-------------------------------------------------|--------------------------------|
   |**Executed by**                                  | Ricardo Santos / itrust        |
   |**Date of execution**                            | 06/03/2025                     |
@@ -27,15 +27,15 @@ text: |
   |**Requirements covered**                         | |
   |**List of SW versions subject to test**          |    2.0.6.1 |
   |**Test configuration details**                   | DRAW v2.0.6.1 on Microsoft Edge |
-  |**Preconditions for the test**                   | Windows 10/11|
-  |**Expected input and expected output**           | Assets should be imported from Excel File, but not linked together |
+  |**Preconditions for the test**                   | Windows 10/11, import assets fom TRICK Service |
+  |**Expected input and expected output**           | Assets should be export to Excel File, but not linked together |
   
-  |**# Steps**  |    **Step Action**    |    **Expected result**    |             **Comments**              |
-  |-------------|-----------------------|---------------------------|---------------------------------------|
-  | 1           | Click on the Arrow on the right of the "Open" button. | Open the dropdown menu for the "Open" button   |                  |
-  | 2           | Click on the "Import Excel" button. | Open the "File Upload" dialog  |                  |
-  | 3           | Select the file AssetNoLinks.xlx  and click on the "Open" button. | Five assets, named Node0 to Node4 are added to the canvas, without edges connecting the assets.  |                  |
-  | 4           | Double click on assets. | The dialog "Add\edit asset" should open and the asset's comment should be present in the window. |                  |
+  |**# Steps**  |                                                                       **Step Action**                                                                     |                                                             **Expected result**                                                             |             **Comments**              |
+  |-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
+  | 1           | Click on the Arrow on the right of the "Save" button. | Open the dropdown menu for the "Save" button   |                  |
+  | 2           | Click on the "Export as Excel (XLSX)" button. | An Excel file downloads.  |                  |
+  | 3           | Open the downloaded Excel file. | Excel or a similar spreadsheet software should open displaying the file.  |                  |
+  | 4           | Verify if assets in the first column are in alphabetical order. | The asset names should be in alphabetical order. |                  |
   
   |SPR open       |        None |
   |---------------|-------------|

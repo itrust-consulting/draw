@@ -1,7 +1,7 @@
 active: true
 derived: false
 header: |
-  Create assets with comments
+  Update 
 level: 1.6
 links:
 - TSPEC-ExcelDifferentFormatsUsingTemplates: null
@@ -27,14 +27,20 @@ text: |
   |**Requirements covered**                         |                                                                                                                      |
   |**List of SW versions subject to test**          |   2.0.6.1                                                                                                            |
   |**Test configuration details**                   |DRAW v2.0.6.1 on Microsoft Edge                                                                                       |
-  |**Preconditions for the test**                   |Windows 10/11                                                                                                         |
+  |**Preconditions for the test**                   |Windows 10/11, assets imported from TRICK Service                                                                                                         |
   |**Expected input and expected output**           |The imported asset should be created and contain a comment section in it.                                             |
 
   |**# Steps**  |                                                                       **Step Action**                                                                     |                                                             **Expected result**                                                             |             **Comments**              |
   |-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
-  | 1     | Click on "Add asset" button      | The "Add asset" window should appear and have a field reserver for comments.   |                  |
-  | 2     | Fill the "Add/edit asset" window fields Name, Type and Comment and click on the button "Save".      |  The icon for the asset should be visible in the window canvas.  |                  |
-  | 3     | Double click on the asset icon and open the "Add\edit asset".      | The comment should be present in  the newly open window.   |                  |
+  | 1           | Double click on the "Airconditioner" asset. | The "Add/edit asset" dialog box should appear. |                  |
+  | 2           | Replace the text in the "Comment" text box and click on the "Save" button. | The "Add/edit asset" dialog should close with no errors. |                  |
+  | 3           | Click on the "Sync with TRICK Service" button. | Open the "Pick a TRICK Service platform" dialog  |                  |
+  | 4           | Click on the "demo.trickservice.com" button. | If not logged in, open the login box. If logged in, show the "(1/4) Choose a customer" dialog box. |                  |
+  | 5           | Select the "Demo UG" customer and click on the "Next" button. | The dialog "(2/4) Choose an analysis" should appear. |                  |
+  | 6           | On the "Risk analysis" dropdown box, select the "Demo UG" customer and click on the "Next" button. | The dialog "(3/4) Version of risk analysis" should appear. |                  |
+  | 7           | On the "Version of risk analysis" dropdown box, select the "0.3" version and click on the "Next" button. | The dialog "(4/4) Version of risk analysis" should appear and the window should show "Airconditioner [HW] in TS ≠ Airconditioner [HW] in graph". |                  |
+  | 8           | Click on the "Upload graph → TS" link. | The asset should have the "Update in TS" button highlighted. |                  |
+  | 9           | Click on the "Synchronise" button. | The "Synchronise" dialog box should close with no errors. |                  |
 
   |SPR open       |        None |
   |---------------|-------------|

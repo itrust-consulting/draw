@@ -6,7 +6,8 @@
 				"name": "Asset1",
 				"type": "Info",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -802.3960684691868,
@@ -19,7 +20,8 @@
 				"name": "Asset1",
 				"type": "Info",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -648.383757725341,
@@ -32,7 +34,8 @@
 				"name": "Asset2",
 				"type": "Info",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -804.5368226527117,
@@ -45,7 +48,8 @@
 				"name": "Asset2",
 				"type": "Fin",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -645.0720492674366,
@@ -58,7 +62,8 @@
 				"name": "Asset1",
 				"type": "HW",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -511.240137478762,
@@ -71,7 +76,8 @@
 				"name": "Asset2",
 				"type": "Serv",
 				"disabled": false,
-				"trickId": null
+				"trickId": null,
+				"comment": ""
 			},
 			"position": {
 				"x": -513.1308935396028,

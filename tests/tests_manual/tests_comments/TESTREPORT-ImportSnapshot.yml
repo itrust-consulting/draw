@@ -1,7 +1,7 @@
 active: true
 derived: false
 header: |
-  Import Excel File without edges
+  Load a snapshot from TRICK
 level: 1.6
 links:
 - TSPEC-ExcelDifferentFormatsUsingTemplates: null
@@ -18,7 +18,7 @@ normative: true
 ref: ''
 reviewed: null
 text: |
-  |              **Test procedure ID**              |  TP-3 Import Excel File        |
+  |              **Test procedure ID**              |  TP-4 Load snapshots       |
   |-------------------------------------------------|--------------------------------|
   |**Executed by**                                  | Ricardo Santos / itrust        |
   |**Date of execution**                            | 06/03/2025                     |
@@ -28,15 +28,18 @@ text: |
   |**List of SW versions subject to test**          |    2.0.6.1 |
   |**Test configuration details**                   | DRAW v2.0.6.1 on Microsoft Edge |
   |**Preconditions for the test**                   | Windows 10/11|
-  |**Expected input and expected output**           | Assets should be imported from Excel File, but not linked together |
+  |**Expected input and expected output**           | Assets should be imported from TRICK service snapshot |
   
   |**# Steps**  |    **Step Action**    |    **Expected result**    |             **Comments**              |
   |-------------|-----------------------|---------------------------|---------------------------------------|
   | 1           | Click on the Arrow on the right of the "Open" button. | Open the dropdown menu for the "Open" button   |                  |
-  | 2           | Click on the "Import Excel" button. | Open the "File Upload" dialog  |                  |
-  | 3           | Select the file AssetNoLinks.xlx  and click on the "Open" button. | Five assets, named Node0 to Node4 are added to the canvas, without edges connecting the assets.  |                  |
-  | 4           | Double click on assets. | The dialog "Add\edit asset" should open and the asset's comment should be present in the window. |                  |
-  
+  | 2           | Click on the "Load Snapshot from TS" button. | Open the "Pick a TRICK Service platform" dialog  |                  |
+  | 3           | Click on the "demo.trickservice.com" button. | If not logged in, open the login box. If logged in, show the "(1/3) Choose a customer" dialog box. |                  |
+  | 4           | Select the "Demo UG" customer and click on the "Next" button. | The dialog "(2/3) Choose an analysis" should appear. |                  |
+  | 5           | On the "Risk analysis" dropdown box, select the "Demo UG" customer and click on the "Next" button. | The dialog "(3/3) Version of risk analysis" should appear. |                  |
+  | 6           | On the "Version of risk analysis" dropdown box, select the "0.3" version and click on the "Next" button. | A diagram with assets connected between themselves should appear on the window. |                  |
+  | 6           | Double click on the "Website" asset and open the "Add\edit asset". | The comment should be present in  the newly open window. |                  |
+
   |SPR open       |        None |
   |---------------|-------------|
   |SPR closed     |        None |

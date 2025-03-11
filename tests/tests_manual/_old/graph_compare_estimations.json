@@ -6,12 +6,11 @@
 				"disabled": false,
 				"id": "U0.504",
 				"type": "Staff",
-				"trickId": 1401,
-				"comment": "Comment for Users"
+				"trickId": null
 			},
 			"position": {
-				"x": -226.9982318929636,
-				"y": -47.38209166109731
+				"x": -763.2672678804468,
+				"y": -135.43143564352826
 			}
 		},
 		"U0.428": {
@@ -20,12 +19,11 @@
 				"disabled": false,
 				"id": "U0.428",
 				"type": "HW",
-				"trickId": 1448,
-				"comment": "Comment for Valve - gas"
+				"trickId": null
 			},
 			"position": {
-				"x": -317.92229708218986,
-				"y": -43.41715743910731
+				"x": -534.5791474326597,
+				"y": -137.0129167905103
 			}
 		},
 		"U0.447": {
@@ -34,12 +32,11 @@
 				"disabled": false,
 				"id": "U0.447",
 				"type": "Net",
-				"trickId": 1433,
-				"comment": "Comment for Wireless network"
+				"trickId": null
 			},
 			"position": {
-				"x": -447.45993581739623,
-				"y": -114.54667182190065
+				"x": -763.9522628093627,
+				"y": -16.09779902264715
 			}
 		},
 		"U0.487": {
@@ -48,12 +45,11 @@
 				"disabled": false,
 				"id": "U0.487",
 				"type": "Out",
-				"trickId": 1430,
-				"comment": "Comment for Water supply"
+				"trickId": null
 			},
 			"position": {
-				"x": -473.07456579820024,
-				"y": -20.366157974770605
+				"x": -530.618625251285,
+				"y": -18.286252211406058
 			}
 		},
 		"U0.418": {
@@ -62,14 +58,39 @@
 				"disabled": false,
 				"id": "U0.418",
 				"type": "HW",
-				"trickId": 1447,
-				"comment": "Comment for Workstation"
+				"trickId": null
 			},
 			"position": {
-				"x": -574.9491135916134,
-				"y": -132.0241075910095
+				"x": -388.1042458493681,
+				"y": -16.242686763718382
 			}
 		}
 	},
-	"edges": []
+	"edges": [
+		{
+			"source": "U0.504",
+			"target": "U0.428",
+			"p": 0.1
+		},
+		{
+			"source": "U0.504",
+			"target": "U0.447",
+			"p": 0.25
+		},
+		{
+			"source": "U0.447",
+			"target": "U0.487",
+			"p": 0.3
+		},
+		{
+			"source": "U0.487",
+			"target": "U0.418",
+			"p": 0.75
+		},
+		{
+			"source": "U0.428",
+			"target": "U0.487",
+			"p": 0.5
+		}
+	]
 }
