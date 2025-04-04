@@ -6,6 +6,6 @@ level: 1.6.9
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: C2VtSYuCVBHITHPN0GwoE0XbI-zPsJuVgQBFoigcA1o=
 text: |
   The DRAW application shall be able to generate a dependency graph if an excel document compliant to Dependency sheet is provided as an input to Open menu.

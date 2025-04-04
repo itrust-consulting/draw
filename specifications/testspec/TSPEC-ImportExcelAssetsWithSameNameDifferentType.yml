@@ -4,10 +4,10 @@ header: |
   Import excel multiple assets with same name and different type being connected
 level: 2.1.18
 links:
-- FUNCREQ-MERGEGRAPH-3: null
+- FUNCREQ-MERGEGRAPH-3: rOUhk45-jjThh5YELIqlOzrcmSwace6QGTcDR-ke3JY=
 normative: true
 ref: ''
-reviewed: null
+reviewed: roM6bQP9gZ5QifpkHl1vP3-nLGnKBFjLKAjArEaAGzA=
 text: |
   |**Test case Id**         | DRAW_TC_18 |
   |-------------------------|---------------------------------------------|

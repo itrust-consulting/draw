@@ -4,10 +4,10 @@ header: |
   Import /Export Excel Error handling
 level: 2.1.6
 links:
-- FUNCREQ-DEPMATRIX-2: null
+- FUNCREQ-DEPMATRIX-2: pqRtr3HmFj92V7IIXgfevefAuA_QSAOcUkMbkMrEYos=
 normative: true
 ref: ''
-reviewed: null
+reviewed: FdJsjT140Tl41Kn5pRmR_UaL4PfY0yy0RosDk2N7A_c=
 text: |
   |**Test case Id**         | DRAW_TC_06|
   |-------------------------|----------------------------------------------|

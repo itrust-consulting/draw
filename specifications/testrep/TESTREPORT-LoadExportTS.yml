@@ -4,17 +4,17 @@ header: |
   Load to or from Trick Service
 level: '1.10'
 links:
-- TSPEC-EXPORTGRAPHONTS: null
-- TSPEC-EXPORTGRAPHONTS1: null
-- TSPEC-EXPORTPNGONTS: null
-- TSPEC-EXPORTSSSONTS: null
-- TSPEC-ExportAndLoadSSSOnTS: null
-- TSPEC-ExportPictureTS: null
-- TSPEC-LoadAndUpdateGraphOnTS: null
-- TSPEC-SYNCTRICK: null
+- TSPEC-EXPORTGRAPHONTS: NP8VWNqpVGMbeqp_qAgy-qgYHBQjzBwUlAIgJpWk9OA=
+- TSPEC-EXPORTGRAPHONTS1: ClCMV4jHy1ieFQOBJnWtQHAQkYhzzWTVTT6a6tDpRss=
+- TSPEC-EXPORTPNGONTS: p_p4MvFlR5-Fw9fTGz0-pNSa3CMC_kAk-CFgPTPZHj4=
+- TSPEC-EXPORTSSSONTS: a1MPkafVRGnl4cLLwEX0KkvX6-0VJWOO6j357mAGcYI=
+- TSPEC-ExportAndLoadSSSOnTS: VZCPgk-UO9VGfHK4rCSg-XbK63M8OgI9za83_FN_WKE=
+- TSPEC-ExportPictureTS: xGcuK3i7KinZxg2wmG5PEzHki2v5BosMENplPTuRVpE=
+- TSPEC-LoadAndUpdateGraphOnTS: ApIFY7OIGUza9gVdui6cllnT1D72rBJU8Wjkgan9zzE=
+- TSPEC-SYNCTRICK: 3jCsPsiPcSx-zIYVUdQK_sX99V2sFqIpLISbRach0nQ=
 normative: true
 ref: ''
-reviewed: null
+reviewed: kESuGqR92RuC0DLnnwd2r5Eoy5AZDY0OHYmkJx-rUAI=
 text: |
   | **Test procedure ID**   | TP-10 load from TS and export to TS test report |
   |-------------------------|------------------------------------------------|

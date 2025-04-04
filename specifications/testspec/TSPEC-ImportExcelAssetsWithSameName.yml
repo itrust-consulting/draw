@@ -4,12 +4,12 @@ header: |
   Import excel with two assets with same name and different type information
 level: 2.1.17
 links:
-- FUNCREQ-MERGEGRAPH-1: null
-- FUNCREQ-MERGEGRAPH-4: null
-- FUNCREQ-OPENLOADEXCEL-1: null
+- FUNCREQ-MERGEGRAPH-1: zT6ftE4xqFL2ahYFCa2BW7w7KNg3RbG8R7Zunu1GIa4=
+- FUNCREQ-MERGEGRAPH-4: T1hd1U3snJ5vCzftPfUCbxrj0qxcksTtci-aBfoXYjw=
+- FUNCREQ-OPENLOADEXCEL-1: QBiKX6qVn9CEfdMOH9mwxW8KgK4LDWZduqHV7tC6ovU=
 normative: true
 ref: ''
-reviewed: null
+reviewed: OceiwL53Ob02Qymmm3zZVQmwMElL8tMFtwP2p-KFydk=
 text: |
   |**Test case Id**          | DRAW_TC_17|
   |-------------------------|---------------------------------------------|

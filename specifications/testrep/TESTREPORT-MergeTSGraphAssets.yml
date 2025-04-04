@@ -4,11 +4,11 @@ header: |
   Merge Trick Service and Graph Assets
 level: 1.9
 links:
-- TSPEC-SyncTrickMergeAssets: null
-- TSPEC-SyncTrickMergeAssetsOneOneMapping: null
+- TSPEC-SyncTrickMergeAssets: ipDopCPNV7vTnFKGjk5jn20oyyivXrCIWzJahqMiU8A=
+- TSPEC-SyncTrickMergeAssetsOneOneMapping: vgB-BvVmI5JWJE8wqPvzLuZqHQus-Qpy6pL0ab0s3zA=
 normative: true
 ref: ''
-reviewed: null
+reviewed: O-wtzsV7rsxIJjv4xWSZlM3unHVeelrYMkONipl6Bkw=
 text: |
   | **Test procedure ID** |     TP-9 merge TS and graph assets test report    |
   |-----------------------|-------------------------------------------|

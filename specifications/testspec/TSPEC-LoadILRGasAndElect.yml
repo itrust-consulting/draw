@@ -4,10 +4,10 @@ header: |
   Load dependency sheet for ILR gas and electricity assets
 level: 2.1.26
 links:
-- FUNCREQ-OPENLOADEXCEL: null
+- FUNCREQ-OPENLOADEXCEL: C2VtSYuCVBHITHPN0GwoE0XbI-zPsJuVgQBFoigcA1o=
 normative: true
 ref: ''
-reviewed: null
+reviewed: OXZkwXZen8WPeHK7HnZC6ZHw5jD_Oy4wgNuQhgXcnSg=
 text: |
   |**Test case Id**         | DRAW_TC_49|
   |-------------------------|---------------------------------------------|

@@ -4,10 +4,10 @@ header: |
   Import excel case of assets type vary.
 level: 2.1.19
 links:
-- FUNCREQ-MERGEGRAPH-2: null
+- FUNCREQ-MERGEGRAPH-2: YM7llzIXjI43uPA4mNit0Ajv-fDiH1v9eDWUJjl4bLM=
 normative: true
 ref: ''
-reviewed: null
+reviewed: C7YxMCrsK_wpobtd6Z2Ubhvl7QJ4gzirqu2iQLEzZ6Q=
 text: |
   |**Test case Id**         |  DRAW_TC_19 |
   |-------------------------|---------------------------------------------|

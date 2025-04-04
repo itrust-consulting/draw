@@ -4,12 +4,12 @@ header: |
   Compare estimations
 level: 1.12
 links:
-- TSPEC-TRICKSYNCCOMPAREESTIMATIONS: null
-- TSPEC-TRICKSYNCCOMPAREESTIMATIONSCYCLIC: null
-- TSPEC-TRICKSYNCCOMPAREESTIMATIONSNEG: null
+- TSPEC-TRICKSYNCCOMPAREESTIMATIONS: MTOiOlzgEWbCig9BdlUyYXYpcAS4Y9EOZR5yUIvusBI=
+- TSPEC-TRICKSYNCCOMPAREESTIMATIONSCYCLIC: vsZIalVTiroFIbNmIKu89tmNKgij39avmTashC6p4cM=
+- TSPEC-TRICKSYNCCOMPAREESTIMATIONSNEG: kOAwlwNjjZZiaASHqxYAK6wlZzpeTLbbLIPUcHKgoSo=
 normative: true
 ref: ''
-reviewed: null
+reviewed: 57jpslZNwBf9hkTi4Uv61N6BX66yAmpBEt8jIYJUb4g=
 text: "|**Test procedure ID**  |    TP-12 compare estimations test report |\n|-----------------------|-----------------------------|\n\
   |**Executed by**        |    R. Santos  / itrust|\n|**Date of execution**  |   \
   \ 29.03.2023 ||\n|**Time of execution**  |      |\n|**Test cases covered** |   \

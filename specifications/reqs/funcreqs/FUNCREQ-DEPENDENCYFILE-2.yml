@@ -6,7 +6,7 @@ level: 1.6.18
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: OQJQKgC3xB1_FZL_QHI2m9U6nECpH3FBWg2HbJoIXgQ=
 text: |
   The DRAW application shall be able to save the dependency graph into an excel sheet. The graph shall be represented in excel sheet named Dependency sheet in the saved excel file.
   The saved Dependency sheet must comply to requirement specification REQ001-1 to REQ001-6.

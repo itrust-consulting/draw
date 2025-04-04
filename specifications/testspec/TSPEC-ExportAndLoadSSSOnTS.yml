@@ -4,10 +4,10 @@ header: |
   Export Snapshot to Trick Service and Load Snapshot from Trick Service
 level: 2.1.24
 links:
-- FUNCREQ-TRICKSYNCEXPORTSSS: null
+- FUNCREQ-TRICKSYNCEXPORTSSS: eKldr1_bYj5H61UUQczkP5rO8eu56sK19f_Eaz3c7bk=
 normative: true
 ref: ''
-reviewed: null
+reviewed: VIPDrAEbnnIZqsv4ak9AZBSmSourXMNgmVYKvhR41Rw=
 text: |
   | **Test case Id**        | DRAW_TC_24 |
   |-------------------------|---------------------------------------------|

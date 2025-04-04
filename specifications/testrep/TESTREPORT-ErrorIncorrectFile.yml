@@ -4,11 +4,11 @@ header: |
   Incorrect file format or structure of file
 level: 1.8
 links:
-- TSPEC-NEGATIVE: null
-- TSPEC-NEGATIVE1: null
+- TSPEC-NEGATIVE: pr9yvYi4O8AuhTi3TLlclnM2IviJpHheDbA7Mq3yxhs=
+- TSPEC-NEGATIVE1: jeT4SPDcoLyWuISU_OG2JlfKRHjGZw6gZIMvIATjB6Y=
 normative: true
 ref: ''
-reviewed: null
+reviewed: 5TAyHtmt1SDEIkLjn4Orn6a__Cw_gmTHriQNnJLaZx8=
 text: |
   |**Test procedure ID**  |    TP-8 error for incorrect file or structure report |
   |-----------------------|-----------------------------|

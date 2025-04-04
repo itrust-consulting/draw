@@ -4,10 +4,10 @@ header: |
   Import excel / Open Excel Error handling
 level: 2.1.10
 links:
-- FUNCREQ-DEPMATRIX-6: null
+- FUNCREQ-DEPMATRIX-6: yN3pDoYJP84FZRbU2UY0Ht7a7nGKmxa9gXq3zk1nEDE=
 normative: true
 ref: ''
-reviewed: null
+reviewed: X27UzzhwlElgSKIa4n63cYOTsZuCEbVNhWkcj34FbP0=
 text: |
   |**Test case Id**         | DRAW_TC_10|
   |-------------------------|---------------------------------------------|

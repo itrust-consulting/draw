@@ -4,16 +4,16 @@ header: |
   Load and Export Excel Error handling
 level: 1.7
 links:
-- TSPEC-ImportExportExcelErrorHandling1: null
-- TSPEC-ImportExportExcelErrorHandling2: null
-- TSPEC-ImportExportExcelErrorHandling3: null
-- TSPEC-ImportExportExcelErrorHandling4: null
-- TSPEC-ImportExportExcelErrorHandling5: null
-- TSPEC-ImportExportExcelErrorHandling6: null
-- TSPEC-ImportExportExcelErrorHandling7: null
+- TSPEC-ImportExportExcelErrorHandling1: o2z7EqUtkLt-2VX7AB1fReUtI5Gvpjm8qRfHTAsoGJ8=
+- TSPEC-ImportExportExcelErrorHandling2: rOoqBV0WXDGmcL03CXy1IOl1x8FUYY71uXZZiQN9p2s=
+- TSPEC-ImportExportExcelErrorHandling3: R-RvCReRXcY46yTDiEwhjjPtJOOBBxiIpU0Vps4gnUM=
+- TSPEC-ImportExportExcelErrorHandling4: j7vnyAelOF2RhtTdcMAzIXWgrcHFZ1OcvFFs1PdpOYw=
+- TSPEC-ImportExportExcelErrorHandling5: V3RA6deFxTQjHKpppFWSjekmc9YE5PrzdVO-YWNTtVk=
+- TSPEC-ImportExportExcelErrorHandling6: WfR6idfYJwA2oqpMk3_6sP05K5wzhS_SIp8zKminMk0=
+- TSPEC-ImportExportExcelErrorHandling7: rts9493CUqlCupWgCj162ahL0j0WfLQCtA34LJWxBRc=
 normative: true
 ref: ''
-reviewed: null
+reviewed: qY47hxVJq2UqIXpoG-e0Iprlek9LH0BaW9MQNHVe9Yo=
 text: |
   |**Test procedure ID**  |    TP-7 load/export excel error excel error |
   |-----------------------|-------------------------------------------|

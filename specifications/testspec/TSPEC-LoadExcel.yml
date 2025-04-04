@@ -4,10 +4,10 @@ header: |
   Load Excel with probability between 1 and 0
 level: 2.1.1
 links:
-- FUNCREQ-DEPMATRIX-1: null
+- FUNCREQ-DEPMATRIX-1: 4WC-vtlMUhmNTtnq1o0uinGWFBDkwcMDtrEObVmlQ28=
 normative: true
 ref: ''
-reviewed: null
+reviewed: cPTxqGdwGU5wC2ES7b-egnTzaBtmQLmF7wL5rDBzWF8=
 text: |
   | **Test case Id**       | DRAW_TC_01                                      |
   |--------------------|-------------------------------------------------|

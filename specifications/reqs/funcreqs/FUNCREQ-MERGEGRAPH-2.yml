@@ -6,6 +6,6 @@ level: 1.6.13
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: YM7llzIXjI43uPA4mNit0Ajv-fDiH1v9eDWUJjl4bLM=
 text: |
   The DRAW tool while matching assets shall match the asset name in case sensitive manner.  The asset types shall be matched in case insensitive manner from the list of supported asset types.

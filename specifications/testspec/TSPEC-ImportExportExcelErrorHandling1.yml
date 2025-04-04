@@ -4,10 +4,10 @@ header: |
   Import excel / Open Excel Validate errors
 level: 2.1.5
 links:
-- FUNCREQ-DEPMATRIX-1: null
+- FUNCREQ-DEPMATRIX-1: 4WC-vtlMUhmNTtnq1o0uinGWFBDkwcMDtrEObVmlQ28=
 normative: true
 ref: ''
-reviewed: null
+reviewed: 2qomb2fgW5DggN-_mlOUAJl5-ZEQKmOkHsUrP9v_Gmw=
 text: |
   |**Test case Id**        |  DRAW_TC_05|
   |---------------------|-------------------------------------------------|

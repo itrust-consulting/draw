@@ -4,10 +4,10 @@ header: |
   Reopen Excel
 level: 2.1.4
 links:
-- FUNCREQ-DEPMATRIX: null
+- FUNCREQ-DEPMATRIX: y-OKPPgbadr7Z5dYVyOrBIaXrjYNbMzUoFqaOuAeCSk=
 normative: true
 ref: ''
-reviewed: null
+reviewed: WONMoG_fEvcApcpZmONK_xswNam3Q3cn9DGucX9iO7Q=
 text: |
   |**Test case Id**          |DRAW_TC_04 |
   |--------------------------|--------------------------------------------|

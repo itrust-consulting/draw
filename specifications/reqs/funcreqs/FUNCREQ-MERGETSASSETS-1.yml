@@ -6,7 +6,7 @@ level: 1.6.20
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: SIE8x80w5I53ij1pa-UXWrkwl07A15k5ej7mhXjTSXs=
 text: |
   The DRAW application shall provide a user interface to merge a TrickService asset that is not automatically mapped with another unmapped graph asset.
   The merge process must ensure a one trick asset to one graph asset mapping.

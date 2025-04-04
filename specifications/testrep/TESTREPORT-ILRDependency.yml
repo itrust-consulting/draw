@@ -4,10 +4,10 @@ header: |
   ILR dependency and assets
 level: 1.11
 links:
-- TSPEC-LoadILRGasAndElect: null
+- TSPEC-LoadILRGasAndElect: jTaKQhphkeP70s-ip4nqisZxv6miicwyeAtkvYv5j8g=
 normative: true
 ref: ''
-reviewed: null
+reviewed: 86R4geDH5owZCgPdwKoW54ozJOe_zX6Tc0f6r-q8UVU=
 text: |
   | **Test procedure ID** |      TP-11 import ILR Dependency matrix for gas and electricity assets test report    |
   |-----------------------|-------------------------------------------|

@@ -4,10 +4,10 @@ header: |
   Import Excel without edges
 level: 2.1.12
 links:
-- FUNCREQ-DEPMATRIX-2: null
+- FUNCREQ-DEPMATRIX-2: pqRtr3HmFj92V7IIXgfevefAuA_QSAOcUkMbkMrEYos=
 normative: true
 ref: ''
-reviewed: null
+reviewed: x6DSHElqWU1oDBjjZxSWi-3169hCCATRXGdajANMHww=
 text: |
   |**Test case Id**         | DRAW_TC_12 |
   |-------------------------|---------------------------------------------|

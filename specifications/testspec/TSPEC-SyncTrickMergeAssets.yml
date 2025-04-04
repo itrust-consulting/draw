@@ -4,10 +4,10 @@ header: |
   Synchronize with Trick Service with merge assets
 level: 2.1.20
 links:
-- FUNCREQ-MERGETSASSETS: null
+- FUNCREQ-MERGETSASSETS: pknh9bnqJlgpoo2k6ZO-0g1U7UsyaGKjjQpSvG08-gs=
 normative: true
 ref: ''
-reviewed: null
+reviewed: QxlprvCIr9AK4gKINoyXLq5ZN6CZpI5fEMJZGax9b5Q=
 text: |
   |**Test case Id**         |          DRAW_TC_20 |
   |-------------------------|---------------------------------------------|

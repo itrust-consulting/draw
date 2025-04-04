@@ -6,7 +6,7 @@ level: 1.6.6
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: Jbhf8l3RK7LDIenqlpT8Kg6W-XReWqPWZ4L_cie6Ti4=
 text: |
   The DRAW application shall be able to generate a dependency graph by loading or importing an excel sheet. This excel sheet should be named Dependency sheet.
   The Dependency sheet shall contain Target assets which should be subsets of source assets.

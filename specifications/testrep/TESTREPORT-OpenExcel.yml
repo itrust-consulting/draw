@@ -4,21 +4,21 @@ header: |
   Open Excel
 level: 1.5
 links:
-- TSPEC-ExcelDifferentFormatsUsingTemplates: null
-- TSPEC-ImportExcelAssetsWithSameName: null
-- TSPEC-ImportExcelAssetsWithSameNameDifferentType: null
-- TSPEC-ImportExcelCaseInsensitiveMatch: null
-- TSPEC-ImportExportColorEdges: null
-- TSPEC-ImportExportExcelNoEdges: null
-- TSPEC-ImportExportExhaustiveGraph: null
-- TSPEC-ImportExportWithSaveExcel: null
-- TSPEC-LoadAssetWithTargetNotPresent: null
-- TSPEC-LoadExcel: null
-- TSPEC-OpenExcelAgain: null
-- TSPEC-SyncTrickMergeAssets: null
+- TSPEC-ExcelDifferentFormatsUsingTemplates: 5LXBdRKCfn2xYeZ7SSoX8UGoXfeJRE304rRcOzlhyTQ=
+- TSPEC-ImportExcelAssetsWithSameName: w-EZHC2gwhI5Q6H6rT3_xTlFaKND_s-2BZ88R7enSqY=
+- TSPEC-ImportExcelAssetsWithSameNameDifferentType: bq-CoJYJV_kWbGgcpmeKDvdpO4-5F-sftlPdL44zZ2M=
+- TSPEC-ImportExcelCaseInsensitiveMatch: pgi1zbM1GR_w6cjtNj3eod7LDxFvIpK17gSMghVr1-E=
+- TSPEC-ImportExportColorEdges: i_CQjAzgZPhgMujIE5tGrMfFpACr9XuERFlOC4mK8LI=
+- TSPEC-ImportExportExcelNoEdges: NY1s7nEXEiymgwTptv35p_ubNGSMeKQ--l7I7ypOfh4=
+- TSPEC-ImportExportExhaustiveGraph: vtvUaUCnjw_BsNaQ0e6OEiryMnwcJ1w3pmTjCPWm8lQ=
+- TSPEC-ImportExportWithSaveExcel: c8kn5aSwFE5W4xHpcniFDKC-JfVOzBS-nzoFHDD6scI=
+- TSPEC-LoadAssetWithTargetNotPresent: y2bBDe-9ljKfkqT5b3ftsUnJIZassQPFVnLmml9pfLs=
+- TSPEC-LoadExcel: lSUZeybxmkz8M78fyyCYiq64mB6bsdT2p1elvKzpCmU=
+- TSPEC-OpenExcelAgain: ENgl6irNNVIek9ad7G60riEK5A2_B0tT9NT0FkbleNk=
+- TSPEC-SyncTrickMergeAssets: ipDopCPNV7vTnFKGjk5jn20oyyivXrCIWzJahqMiU8A=
 normative: true
 ref: ''
-reviewed: null
+reviewed: gjiZJXLStqEzLiiH4F5AWVVtiK52q0Pq_wJ5jHvpby8=
 text: |
   |**Test procedure ID**  |   TP-5 open excel test report |
   |----------------------|------------------------|

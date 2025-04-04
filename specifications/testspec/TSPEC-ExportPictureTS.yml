@@ -4,10 +4,10 @@ header: |
   Export image on Trick Service and test it works with Trick Service bookmark
 level: 2.1.23
 links:
-- FUNCREQ-TRICKSYNCEXPORTPNG: null
+- FUNCREQ-TRICKSYNCEXPORTPNG: qWRTisWVWGFE995iIht6nMeeeugd-CK0V9dlpRg15M0=
 normative: true
 ref: ''
-reviewed: null
+reviewed: Ifuw9x6bcs8qn6dto3mmZsgqfxA2alGy43j-3qOI394=
 text: |
   | **Test case Id**        |  DRAW_TC_23 |
   |-------------------------|---------------------------------------------|

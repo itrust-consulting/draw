@@ -4,15 +4,15 @@ header: |
   Create Edit Graph
 level: 1.1
 links:
-- TSPEC-ADDASSET: null
-- TSPEC-CREATEGRAPH: null
-- TSPEC-EDITASSET: null
-- TSPEC-EDITGRAPH: null
-- TSPEC-EDITGRAPH1: null
-- TSPEC-EDITGRAPH2: null
+- TSPEC-ADDASSET: 0f5hn8nGZ9QdlVnv4G-aih8vYndMgaa2mql8XEKbYBE=
+- TSPEC-CREATEGRAPH: YfM_I80UREnGnVZoQ_ai73IZIvbt7mXGnNM86lAf6ik=
+- TSPEC-EDITASSET: m8NB6wDc-YyVvP3e2faw0qMZx2TbrkrQXzSVWmAA4Ho=
+- TSPEC-EDITGRAPH: Um0lU5ObYRHhAaxILw8IrDn7MZrLbY8JwK0XVzcJ2DM=
+- TSPEC-EDITGRAPH1: hbtuVWJwQ7jdC4Enugx-o8VxfOSk_hjXScdd2QhNMvw=
+- TSPEC-EDITGRAPH2: a_vCixMdceIpYV_VRBvAlBhCZ53RMbWwECOO7WfYAMo=
 normative: true
 ref: ''
-reviewed: null
+reviewed: rg3m57sLZG4QHxr7SyqA9t-qcc0yuxkAe2i3DcQr8io=
 text: |
   |**Test procedure ID**  |    TP-1 create/edit graph report  |
   |-----------------------|-----------------------------|

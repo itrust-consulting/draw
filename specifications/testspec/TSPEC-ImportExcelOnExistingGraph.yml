@@ -4,11 +4,11 @@ header: |
   Import an excel on an existing graph
 level: 2.1.3
 links:
-- FUNCREQ-MERGEGRAPH: null
-- FUNCREQ-MERGEGRAPH-1: null
+- FUNCREQ-MERGEGRAPH: 1L9y1052yBxTPS19cMhqzyxO4kExyRV8ko9Q08wHs-s=
+- FUNCREQ-MERGEGRAPH-1: zT6ftE4xqFL2ahYFCa2BW7w7KNg3RbG8R7Zunu1GIa4=
 normative: true
 ref: ''
-reviewed: null
+reviewed: _rb43NHyNZ9ZQY_quw6OHuqJeULLLcWPRUpCpYLgC5w=
 text: |
   |**Test case Id**         | DRAW_TC_03|
   |-------------------------|---------------------------------------------|

@@ -4,10 +4,10 @@ header: |
   Load an excel file with a target asset which is not present in assetList
 level: 2.1.2
 links:
-- FUNCREQ-DEPMATRIX-5: null
+- FUNCREQ-DEPMATRIX-5: Jbhf8l3RK7LDIenqlpT8Kg6W-XReWqPWZ4L_cie6Ti4=
 normative: true
 ref: ''
-reviewed: null
+reviewed: CjtUMBzuT5lZblriF-6HXxulKUFj8FwZ2Zu97x-O9QY=
 text: |
   |**Test case Id**          |DRAW_TC_02 |
   |--------------------------|--------------------------------------------- |

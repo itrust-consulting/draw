@@ -6,7 +6,7 @@ level: 1.6.3
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: h2TWKhn-KYDa4D4DBw-QewExuI-iz41MQupVtVgIjug=
 text: |
   The DRAW application shall be able to generate a dependency graph by loading or importing an excel sheet. This excel sheet should be named Dependency sheet.
   The rows under AssetType column shall represent the corresponding AssetType information of the source asset. AssetType shall match any one of the predefined asset types supported by tool.

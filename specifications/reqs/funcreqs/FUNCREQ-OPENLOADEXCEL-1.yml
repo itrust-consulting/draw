@@ -6,6 +6,6 @@ level: 1.6.10
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: QBiKX6qVn9CEfdMOH9mwxW8KgK4LDWZduqHV7tC6ovU=
 text: |
   The DRAW application shall be able load the Dependency sheet containing multiple assets with same name but different type. The generated dependency graph shall be created using unique asset names where the asset type of the last asset on the source assets is used in case of duplicate asset names.

@@ -34,6 +34,6 @@ text: |
   | **7** | Create a graph as in image  ![Alt text](images/graph_same_name.png "Same Name of Assets Graph")   |  Tool allows to create the graph                   |
   | **8** | Save the graph as JSON and compare with graph_same_name.json         |  This will not match through graphdiff.py and comparison needs to be done visually  |
   | **9** | DropDownRight of Open->Clear Working Area        |  Graph is cleared                  |
-  
+
   |**Test pass-fail criteria** | The saved JSON file matches the expected JSON files in steps 2, 4, 7  |
   |----------------------------|----------------------------------------------------|

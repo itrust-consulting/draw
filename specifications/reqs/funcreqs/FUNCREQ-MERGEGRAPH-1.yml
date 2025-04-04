@@ -6,6 +6,6 @@ level: 1.6.12
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: zT6ftE4xqFL2ahYFCa2BW7w7KNg3RbG8R7Zunu1GIa4=
 text: |
   The DRAW tool while matching assets shall add a new graph node corresponding to source asset from Dependency sheet to existing graph if and only if no asset found which matches asset name and asset type.

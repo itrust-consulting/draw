@@ -4,10 +4,10 @@ header: |
   Load dependency graph from TrickService, and update the same on trick service
 level: 2.1.25
 links:
-- FUNCREQ-TRICKSYNCEXPORTDEPGRAPH: null
+- FUNCREQ-TRICKSYNCEXPORTDEPGRAPH: rKWbkuwd4A-Gqv_R_ANidAidtMP-8XdDSt2ZI4di98k=
 normative: true
 ref: ''
-reviewed: null
+reviewed: LTzO1tsmmvUuGmDADWSMY7Xa3lA1eteM_3_zn1GKA14=
 text: |
   |  **Test case Id**       |   DRAW_TC_25 |
   |-------------------------|---------------------------------------------|

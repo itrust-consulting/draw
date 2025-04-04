@@ -6,6 +6,6 @@ level: 1.6.15
 links: []
 normative: true
 ref: ''
-reviewed: null
+reviewed: T1hd1U3snJ5vCzftPfUCbxrj0qxcksTtci-aBfoXYjw=
 text: |
   The DRAW tool while matching assets from Dependency sheet shall match the last asset name and corresponding asset type in case the Dependency sheet contains multiple assets with same name and different type information.

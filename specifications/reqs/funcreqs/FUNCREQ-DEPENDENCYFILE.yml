@@ -4,10 +4,10 @@ header: |
   Tool shall load/save graph to/from a sheet called Dependency in loaded/saved excel file
 level: 1.6.16
 links:
-- TSPEC-LOADSAVE: null
-- TSPEC-LoadILRGasAndElect: null
+- TSPEC-LOADSAVE: IaEzc7I85dcp_b73p2tYylgDFJ-vR5TzmtX6715RYRI=
+- TSPEC-LoadILRGasAndElect: jTaKQhphkeP70s-ip4nqisZxv6miicwyeAtkvYv5j8g=
 normative: true
 ref: ''
-reviewed: null
+reviewed: gYf8b3I7XsMAX1817yWbInmabNWDDyVIdALELXPtZtM=
 text: |
   The DRAW application shall be able to save the dependency graph into an excel sheet. The graph shall be represented in excel sheet named Dependency sheet in the saved excel file.

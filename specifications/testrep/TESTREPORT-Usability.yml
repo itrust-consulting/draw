@@ -4,11 +4,11 @@ header: |
   Usability test
 level: 1.4
 links:
-- TSPEC-SAVEHISTORY: null
-- TSPEC-USABILITY: null
+- TSPEC-SAVEHISTORY: d9awUwuozJLyDRc3aOMeq49YUV0WlNKZzpaCsWc91Lw=
+- TSPEC-USABILITY: 5EVKxaQvY8GmM8_3VvpjrN1GMTYJGKrqtSdMOeg6g-o=
 normative: true
 ref: ''
-reviewed: null
+reviewed: uWpq6ub4ncCq92_99y5PFgcf02R93bW5eBcEGtFPI2c=
 text: "|**Test procedure ID**  |  TP-4 usability testing report  |\n|-----------------------|-----------------------------|\n\
   |**Executed by**        |    R. Santos  / itrust|\n|**Date of execution**  |   \
   \ 29.03.2023 ||\n|**Time of execution**  |      |\n|**Test cases covered** |   \

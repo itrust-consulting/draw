@@ -4,13 +4,13 @@ header: |
   Load and Save graph
 level: 1.2
 links:
-- TSPEC-LOADSAVE: null
-- TSPEC-LOADSAVE1: null
-- TSPEC-LOADSAVEWITHTRICKID: null
-- TSPEC-OPENOPEN: null
+- TSPEC-LOADSAVE: IaEzc7I85dcp_b73p2tYylgDFJ-vR5TzmtX6715RYRI=
+- TSPEC-LOADSAVE1: kYhcNtJL2oSFE0UUgQXlYF0AiWFlbBT2vs5hizygBzg=
+- TSPEC-LOADSAVEWITHTRICKID: J1zQKZnhCbK7Fu8KVqJ9eEKznaXu4TE-0qu0O8xSSyU=
+- TSPEC-OPENOPEN: xggM1iM7ji9RLYEUPpz6l3bIoW4r3IWq2mOOLK8ShHs=
 normative: true
 ref: ''
-reviewed: null
+reviewed: _lowBx9XwZuoEuIJ1HWqsUJKdRJlRzfIW2GW6FREOjU=
 text: |
   |**Test procedure ID**  |    TP-2 load and save graph report |
   |-----------------------|-----------------------------|
