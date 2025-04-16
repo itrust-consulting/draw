@@ -510,7 +510,7 @@ DependencyGraph.prototype.loadMemory = function () {
     }
 };
 
-DependencyGraph.prototype.addNodeWithPosition = function (id, name, type, comment, disabled, xArg, yArg, trickId) { 
+DependencyGraph.prototype.addNodeWithPosition = function (id, name, type, comment, disabled, xArg = undefined, yArg = undefined, trickId = undefined) { 
  
     let node = {
         group: "nodes",
@@ -545,7 +545,7 @@ DependencyGraph.prototype.addNodeWithPosition = function (id, name, type, commen
  * @param {boolean} disabled - Whether the asset should be marked as inactive/disabled. This is only visual right now.
  * @param {string} [trickId] - (Optional) The database identifier of the analogous asset in the TRICK Service database.
  */
-DependencyGraph.prototype.addNode = function (id, name, type, comment, disabled, trickId) {
+DependencyGraph.prototype.addNode = function (id, name, type, comment, disabled, trickId = undefined) {
     let bbox = this.cy.nodes().boundingBox();
     let node = {
         group: "nodes",
