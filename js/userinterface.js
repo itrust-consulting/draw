@@ -310,12 +310,24 @@ function _readJSONDataToInternalDS(jsonData) {
 							foundAssetIndex = true;
 							assetIndex = i;
 						}
+
+						if (jsonData[i]['D'] == CONST_ASSET_POSITIONX) {
+							foundAssetIndex = true;
+							assetIndex = i;
+						}
+
+						if (jsonData[i]['E'] == CONST_ASSET_POSITIONY) {
+							foundAssetIndex = true;
+							assetIndex = i;
+						}
 						// Add comment for asset
 					} 
 				} else {
 					mapJsonIndexToArrayAssetKey[jsonData[i]['A']] = [];
 					mapJsonIndexToArrayAssetKey[jsonData[i]['A']][CONST_ASSET_TYPE] = jsonData[i]['B'];
 					mapJsonIndexToArrayAssetKey[jsonData[i]['A']][CONST_ASSET_COMMENT] = jsonData[i]['C'];
+					mapJsonIndexToArrayAssetKey[jsonData[i]['A']][CONST_ASSET_POSITIONX] = jsonData[i]['D'];
+					mapJsonIndexToArrayAssetKey[jsonData[i]['A']][CONST_ASSET_POSITIONY] = jsonData[i]['E'];
 				}
 			}
 
@@ -369,7 +381,7 @@ function _sanityProbability(sourceID, mapJsonIndexToArrayAssetKey) {
 	try {	
 		for (let targetID in mapJsonIndexToArrayAssetKey[sourceID]) {
 
-			if (targetID != CONST_ASSET_COMMENT && targetID != CONST_ASSET_TYPE && mapJsonIndexToArrayAssetKey[sourceID][targetID] != 0) {
+			if (targetID != CONST_ASSET_POSITIONY && targetID != CONST_ASSET_POSITIONX && targetID != CONST_ASSET_COMMENT && targetID != CONST_ASSET_TYPE && mapJsonIndexToArrayAssetKey[sourceID][targetID] != 0) {
 				// check if  mapJsonIndexToArrayAssetKey[sourceID][targetID]  is a number should be  0, 1 or between 0 and 1
 				if (mapJsonIndexToArrayAssetKey[sourceID][targetID] != undefined &&
 					typeof (mapJsonIndexToArrayAssetKey[sourceID][targetID]) != "number") {
@@ -446,14 +458,14 @@ function _createGraphNodesFromInternalDS(mapJsonIndexToArrayAssetKey)
 	try {		
 		// add nodes to the dependency_graph with null id (So an ID is created) or pick up an Id already 
 		// existing in the graph with matching name and type
-		for (let key in mapJsonIndexToArrayAssetKey) {let id = window.editor.dependency_graph.addNodeFromImportedFile("", key, mapJsonIndexToArrayAssetKey[key][CONST_ASSET_TYPE], mapJsonIndexToArrayAssetKey[key][CONST_ASSET_COMMENT], false);
+		for (let key in mapJsonIndexToArrayAssetKey) {let id = window.editor.dependency_graph.addNodeFromImportedFile("", key, mapJsonIndexToArrayAssetKey[key][CONST_ASSET_TYPE], mapJsonIndexToArrayAssetKey[key][CONST_ASSET_COMMENT], mapJsonIndexToArrayAssetKey[key][CONST_ASSET_POSITIONX], mapJsonIndexToArrayAssetKey[key][CONST_ASSET_POSITIONY], false);
 			mapOfIDsOfNodes[key] = id;
 		}
 
 		for (let key in mapJsonIndexToArrayAssetKey) {
 			let idOfSource = mapOfIDsOfNodes[key];
 			for (let subkey in mapJsonIndexToArrayAssetKey[key]) {
-				if (subkey != CONST_ASSET_TYPE && subkey != CONST_ASSET_COMMENT) {
+				if (subkey != CONST_ASSET_TYPE && subkey != CONST_ASSET_COMMENT && subkey != CONST_ASSET_POSITIONX && subkey != CONST_ASSET_POSITIONY) {
 					let idOfSink = mapOfIDsOfNodes[subkey];
 					window.editor.dependency_graph.updateEdge(idOfSource, idOfSink, mapJsonIndexToArrayAssetKey[key][subkey]);
 				}

@@ -252,7 +252,7 @@ DependencyGraph.prototype.save = function () {
 function _convertAssetTableUsingUids(assetTable, mapUidsToNodeNames)  {
     for (let i of assetTable) {
         for (let key in i) {
-            if (key != CONST_ASSET_TYPE && key != CONST_ASSET_COMMENT) {
+            if (key != CONST_ASSET_TYPE && key != CONST_ASSET_COMMENT && key != CONST_ASSET_POSITIONX && key != CONST_ASSET_POSITIONY) {
                 if (key == CONST_ASSET_IT) {
                     i[CONST_ASSET_IT] = mapUidsToNodeNames[i[CONST_ASSET_IT]];
 
@@ -308,7 +308,9 @@ DependencyGraph.prototype.saveToExcel = function () {
         rowEntry[ExcelLayout[0]] = key;
         rowEntry[ExcelLayout[1]] = mapOfSupportedAssetsAbbr.get(data.nodes[key].data.type);
         rowEntry[ExcelLayout[2]] = data.nodes[key].data.comment;
-        
+        rowEntry[ExcelLayout[3]] = data.nodes[key].position.x;
+        rowEntry[ExcelLayout[4]] = data.nodes[key].position.y;
+
         for (let subKey of setOfAtleastOneIncomingEdge) {
             rowEntry[subKey] = undefined;
         }
@@ -508,6 +510,33 @@ DependencyGraph.prototype.loadMemory = function () {
     }
 };
 
+DependencyGraph.prototype.addNodeWithPosition = function (id, name, type, comment, disabled, xArg, yArg, trickId) { 
+ 
+    let node = {
+        group: "nodes",
+        data: {
+            id: id || ("U" + Math.random()),
+            name: name || "New asset",
+            comment: comment,
+            type: type,
+            disabled: disabled,
+            trickId: trickId || (id ? this.cy.getElementById(id).data("trickId") : /* determined when sync'ing: */ null),
+        },
+        position: {
+            x: xArg,
+            y: yArg,
+        },
+        classes: disabled ? "disabled" : "",
+    };
+    if (id) {
+        this.cy.getElementById(id).data(node.data).toggleClass("disabled", node.data.disabled);
+    }
+    else {
+        this.cy.add(node);
+        this.cy.fit();
+    }
+    return node.data.id;
+}   
 /**
  * Adds a new asset node to the dependency graph, or updates an existent one.
  * @param {(string|null)} id - A unique identifier for the node in the dependency graph. If NULL, a new ID is generated.
@@ -554,7 +583,8 @@ DependencyGraph.prototype.addNode = function (id, name, type, comment, disabled,
  * @param {*} disabled : If asset is disabled this value is true
  * @returns 
  */
-DependencyGraph.prototype.addNodeFromImportedFile = function (id, nameInput, type, comment, disabled) {
+
+DependencyGraph.prototype.addNodeFromImportedFile = function (id, nameInput, type, comment, x, y, disabled) {
 
     let convertedType = _compatConvertAssetType(type);
 
@@ -568,7 +598,7 @@ DependencyGraph.prototype.addNodeFromImportedFile = function (id, nameInput, typ
             }
         });
     }
-    return this.addNode(id, nameInput, convertedType, comment, disabled);
+    return this.addNodeWithPosition(id, nameInput, convertedType, comment, disabled, x, y);
 }
 
 /**

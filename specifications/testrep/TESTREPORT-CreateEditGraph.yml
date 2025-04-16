@@ -4,24 +4,24 @@ header: |
   Create Edit Graph
 level: 1.1
 links:
-- TSPEC-ADDASSET: null
-- TSPEC-CREATEGRAPH: null
-- TSPEC-EDITASSET: null
-- TSPEC-EDITGRAPH: null
-- TSPEC-EDITGRAPH1: null
-- TSPEC-EDITGRAPH2: null
+- TSPEC-ADDASSET: 0f5hn8nGZ9QdlVnv4G-aih8vYndMgaa2mql8XEKbYBE=
+- TSPEC-CREATEGRAPH: 3flasn8Cizhcbu4xH1mEgMCsjWKBoZkqxCPESjKHudg=
+- TSPEC-EDITASSET: m8NB6wDc-YyVvP3e2faw0qMZx2TbrkrQXzSVWmAA4Ho=
+- TSPEC-EDITGRAPH: Um0lU5ObYRHhAaxILw8IrDn7MZrLbY8JwK0XVzcJ2DM=
+- TSPEC-EDITGRAPH1: hbtuVWJwQ7jdC4Enugx-o8VxfOSk_hjXScdd2QhNMvw=
+- TSPEC-EDITGRAPH2: a_vCixMdceIpYV_VRBvAlBhCZ53RMbWwECOO7WfYAMo=
 normative: true
 ref: ''
-reviewed: null
+reviewed: rg3m57sLZG4QHxr7SyqA9t-qcc0yuxkAe2i3DcQr8io=
 text: |
   |**Test procedure ID**  |    TP-1 create/edit graph report  |
   |-----------------------|-----------------------------|
-  |**Executed by**        |    R. Santos  / itrust|
-  |**Date of execution**  |    29.03.2023 |
+  |**Executed by**        |    M. Dvoinishnikov  / itrust|
+  |**Date of execution**  |    08.04.2025 |
   |**Time of execution**  |      |
   |**Test cases covered** |    DRAW_TC_ID_27, DRAW_TC_ID_26, DRAW_TC_ID_28, DRAW_TC_ID_29, DRAW_TC_ID_30, DRAW_TC_ID_31  |
   |**Requirements covered** |  |
-  |**List of SW versions subject to test** |    2.0.5 |
+  |**List of SW versions subject to test** |    2.0.6 |
   |**Test configuration details**  |    DRAW v2.0.5 on Microsoft Edge     |
   |**Preconditions for the test**  |  Windows 10/11 test |
   |**Expected input and expected output** |     Expected input may be an JSON File/Excel file or a manual creation of Graph. Output is Creation of Graph as per Graph Creation and Updation |
@@ -45,7 +45,7 @@ text: |
   |  **5** | Save Graph and Compare with tests/tests_manual/Graph3.json  | The Saved graph and Graph3.json match  | DRAW_TC_ID_29 <br> Step5 Passes |
   |  **1** | Open tests/tests_manual/graph1.json   | Loaded Graph                     | DRAW_TC_ID_30  <br> Step1 Passes|
   |  **2** | Create another set of edges between all nodes in opposite direction  |  DRAW_TC_ID_30 <br> Step2 Passes |
-  |  **3** | Save snippet of graph | The graph visually matches "Multiple edges" graph |  *DRAW_TC_ID_30 <br> Step3 Passes |
+  |  **3** | Save snippet of graph | The graph visually matches "Multiple edges" graph |  DRAW_TC_ID_30 <br> Step3 Passes |
   |  **4** | Save graph json and compare with tests/tests_manual/graph1_multedges.json  | The json files match   |  DRAW_TC_ID_30 <br> Step4 Passes |
   |  **1** | Open tests/tests_manual/graph1.json   |                     | DRAW_TC_ID_31 <br> Step1 Passes |
   |  **2** | Change the probability between  graph nodes by double clicking the edges as: Node1->Node0: 0.25, Node3->Node4:0.75; Node2->Node1:0.95   | These probability must be changed | DRAW_TC_ID_31 <br> Step2 Passes |

@@ -1,0 +1,48 @@
+active: true
+derived: false
+header: |
+  Asset comments & sorting of matrix
+level: 1.13
+links:
+- TSPEC-SortingOfMatrix: 
+- TSPEC-TestComments: z6a5FNHDgavDSxBwxQXU_X_CMvxL33qHdq7fhR7Oz-0=
+normative: false
+ref: ''
+reviewed: 5hh-Ibido5JLdFBfq4NTowWxpdMHwvvwhK8C0E73Vbw=
+text: "|**Test procedure ID**  |    TP-12 compare estimations test report |\n|-----------------------|-----------------------------|\n\
+  |**Executed by**        |    M. Dvoinishnikov  / itrust|\n|**Date of execution**\
+  \  |    07.04.2025 ||\n|**Time of execution**  |   16:40   |\n|**Test cases covered**\
+  \ |    DRAW_TC_ID_50, DRAW_TC_ID_51 |\n|**Requirements covered** | FUNCREQ-ADDASSETWITHCOMMENTS, FUNCREQ-SORTINGOFMATRIX\
+  \ |\n|**List of SW versions subject to test** |    2.0.6 |\n|**Test configuration\
+  \ details**  |    DRAW v2.0.6 on Microsoft Edge     |\n|**Preconditions for the\
+  \ test**  |  Windows 10/11 test |\n|**Expected input and expected output** | Possible\
+  \ to add comments to assets, that are saved and able to load afterwards & the matrix is able to arrange assets in alphabetical order|\n\n| #\
+  \ Steps  | **Step Action**| **Expected result**  | **Comments**     |\n|----------|----------------|----------------------|------------------|\n\
+  | **1** | Create 6 nodes asset1, asset2, asset3, asset4, asset5, asset6 |  Asset\
+  \ created with appropriate type and name change is applied.  | **DRAW_TC_ID_50 Step1\
+  \ Passes** |\n| **2** | Connected Node asset2 with asset1 and asset3; asset1 with\
+  \ asset5 and asset4; asset3 with asset6 (asset2->asset1; asset2->asset3; asset1->asset5;\
+  \ asset1->asset4;asset3->asset6)| Nodes are connected in appropriate way   | **DRAW_TC_ID_50\
+  \ Step2 Passes** |\n| **3** | Add comments to each asset (“description1” to asset1;\
+  \ “description2” to asset2; “description3” to asset3;  “description4” to asset4;\
+  \ “description5” to asset5; “description6” to asset6;) | Comments are added to each\
+  \ asset\t | **DRAW_TC_ID_50 Step3 Passes** |\n| **4** | Click on Save and download the graph as ../tests/tests_manual/testcomments.json\
+  \   | Graph is saved with appropriate name and extension| **DRAW_TC_ID_50 Step4\
+  \ Passes** |\n| **5** | Open graph ../tests/tests_manual/testcomments.json with\
+  \ Visual Studio    |  Saved comments can be seen in the “comment” section of nodes\
+  \ in the code | **DRAW_TC_ID_50 Step5 Passes** |\n| **6** | In DRAW click on Open->../tests/tests_manual/testcomments.json\
+  \ | Saved comments can be seen in the Comment section of editing asset in the DRAW\
+  \ whiteboard  | **DRAW_TC_ID_50 Step6 Passes**\n  | **7** | Click Sync with TRICK\
+  \ Service->demo.trickservice.com->Customer: Demo NY->Next->Risk analysis: RAT-DPIA2023->\
+  \ Version of risk analysis: 1.0.1->Next->Download graph ← TS->Synchronise |  The\
+  \ graph from TRICK Service is on the whiteboard | **DRAW_TC_ID_51 Step1 Passes**\
+  \ |\n| **8** | Connect all nodes in various ways |  Nodes are connected | **DRAW_TC_ID_51\
+  \ Step2 Passes** |\n| **9** | Click an arrow next to a Save button and Export as\
+  \ Excel ../tests/tests_manual/sortingofmatrix.xlsx |  Graph is saved with appropriate\
+  \ name and extension | **DRAW_TC_ID_51 Step3 Passes** |\n| **10** | Open the ../tests/tests_manual/sortingofmatrix.xlsx\
+  \ file |  Assets names are sorted in alphabetical order vertically and horizontally\
+  \ | **DRAW_TC_ID_51 Step4 Passes** |\n\n|Total\
+  \ Steps |  Steps Passes |  Steps Failed  |     Steps not executed |\n|------------|---------------|----------------|------------------------|\n\
+  |10          |  10           |  0             |     0                  |\n\n|Result\
+  \          |       Passes |\n|----------------|--------------|\n|Annex         \
+  \  |  Refer Annex for evidence of log and commands executed.|\n"

@@ -1,0 +1,11 @@
+active: true
+derived: false
+header: |
+  Adding or updating an asset which has an additional comments field (added in v2.0.6).
+level: 1.1.2
+links: []
+normative: true
+ref: ''
+reviewed: G-hGTiJQJwLpU_3_eIz5JrN4FrJzpeP2xXyYmKNL9Ho=
+text: |
+  The tool shall be able to add or edit an asset which has comments field.

@@ -25,15 +25,15 @@ text: |
 
   |**Step#**  | **Step Action**          | **Expected Results**|
   |-----------|--------------------------|---------------------|
-  |  **1** | Create a graph as in image  ![Alt text](images/Graph1.png "Basic Graph")   |                     |
-  |  **2** | Save the graph as JSON and compare with graph1.json         |  JSON files match                  |
+  |  **1** | Create a graph as in image  ![Alt text](../../images/Graph1.png "Basic Graph")   |                     |
+  |  **2** | Save the graph as JSON and compare with ..\\tests\\tests_manual\\graph1.json         |  JSON files match                  |
   |  **3** | DropDownRight of Open->Clear Working Area        |  Graph is cleared                  |
-  |  **4** | Create a graph as in image  ![Alt text](images/graph_cyclic.png "Cyclic Graph")   |                     |
-  |  **5** | Save the graph as JSON and compare with graph_cyclic.json         |  JSON files match                  |
+  |  **4** | Create a graph as in image  ![Alt text](../../images/graph_cyclic.png "Cyclic Graph")   |                     |
+  |  **5** | Save the graph as JSON and compare with ..\\tests\\tests_manual\\graph_cyclic.json         |  JSON files match                  |
   |  **6** | DropDownRight of Open->Clear Working Area        |  Graph is cleared                  |
-  | **7** | Create a graph as in image  ![Alt text](images/graph_same_name.png "Same Name of Assets Graph")   |  Tool allows to create the graph                   |
-  | **8** | Save the graph as JSON and compare with graph_same_name.json         |  This will not match through graphdiff.py and comparison needs to be done visually  |
+  | **7** | Create a graph as in image  ![Alt text](../../images/graph_same_name.png "Same Name of Assets Graph")   |  Tool allows to create the graph                   |
+  | **8** | Save the graph as JSON and compare with ..\\tests\\tests_manual\\graph_same_name.json         |  This will not match through graphdiff.py and comparison needs to be done visually  |
   | **9** | DropDownRight of Open->Clear Working Area        |  Graph is cleared                  |
-  
+
   |**Test pass-fail criteria** | The saved JSON file matches the expected JSON files in steps 2, 4, 7  |
   |----------------------------|----------------------------------------------------|

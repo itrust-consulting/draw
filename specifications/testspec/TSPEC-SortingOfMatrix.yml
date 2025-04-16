@@ -1,0 +1,30 @@
+active: true
+derived: false
+header: |
+  Export to excel-sheet
+level: 2.2.5
+links:
+- FUNCREQ-SORTINGOFMATRIX: Ge9zyLDWKHGa1Ygc0UsteDE3nMZRkH801RRbtZueFlI=
+normative: true
+ref: ''
+reviewed: 0AuTHd-aRcXAzknlWkVuB1I6T9-n6iSUHMYuGHcycWE=
+text: "|Testcase Id              | DRAW_TC_ID_51                 |\n|-------------------------|\
+  \ ------------------------------|\n|**Testcase description** | Exporting a graph\
+  \ to excel-sheet|\n|**Verification method**  | Test                          |\n\
+  |**Requirements covered** | FUNCREQ-SORTINGOFMATRIX |\n|**Testsetup**    \
+  \        | DRAW v2.0.6 on Microsoft Edge |\n|**Preconditions**        | Windows\
+  \ 10/11                 |\n|**Execution Type**       |  Manual                 \
+  \      |\n\n|**Step**|**Step Action**           \t\t\t\t             |**Expected\
+  \ Results**\t\t\t\t\t      |\n|--------|-----------------------------------------------------------------|----------------------------------------------------------------|\n\
+  |  **1** | Click Sync with TRICK Service->demo.trickservice.com->Customer: | The\
+  \ graph from TRICK Service is on the whiteboard\t      |\n|        | Demo NY->Next->Risk\
+  \ analysis: RAT-DPIA2023-> Version of risk    |\t\t\t\t\t\t\t\t      |\n|      \
+  \  | analysis: 1.0.1->Next->Download graph ← TS->Synchronise\t     |\t\t\t\t\t\t\
+  \t\t      |\n|  **2** | Connect all nodes in various ways   \t\t\t     | Nodes are\
+  \ connected \t\t\t\t\t      |\n|  **3** | Click an arrow next to a Save button and\
+  \ Export as Excel \t     | Graph is saved with appropriate name and extension\t\
+  \      |\n|        | ..\\tests\\tests_manual\\sortingofmatrix.xlsx            \
+  \         | \t\t\t\t\t\t\t              |\n|  **4** | Open the ..\\tests\\tests_manual\\\
+  sortingofmatrix.xlsx file       | Assets names are sorted in alphabetical order\
+  \ vertically and   |\n|        |\t\t\t\t\t\t\t\t     | horizontally\t\t\t\t\t\t\
+  \      |\n\n|**Test pass-fail criteria** | All steps 1,2,3,and 4 pass |\n|----------------------------|----------------------------|\n"
