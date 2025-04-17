@@ -1,0 +1,11 @@
+active: true
+derived: false
+header: |
+  Import and export of XSLS files with nodes' positions (added in v2.0.7).
+level: 1.6.21
+links: []
+normative: true
+ref: ''
+reviewed: 
+text: |
+  Tool shall be able to export graph as an XSLS file and import it while retaining nodes' positions, as well as import an XSLS file with only x or y position or without positions at all.

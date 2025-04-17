@@ -1,0 +1,114 @@
+{
+	"nodes": {
+		"U0.8735159941185311": {
+			"data": {
+				"id": "U0.8735159941185311",
+				"name": "asset1",
+				"comment": "description1",
+				"type": "Info",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": 91.18292942127262,
+				"y": 56.91673301455233
+			}
+		},
+		"U0.6828098215674816": {
+			"data": {
+				"id": "U0.6828098215674816",
+				"name": "asset2",
+				"comment": "description2",
+				"type": "Compl",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": 524.818033382462,
+				"y": -11.898348027129952
+			}
+		},
+		"U0.9166043044100338": {
+			"data": {
+				"id": "U0.9166043044100338",
+				"name": "asset3",
+				"comment": "description3",
+				"type": "Info",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": 92.0341815062141,
+				"y": -76.39288557766528
+			}
+		},
+		"U0.6735665700258455": {
+			"data": {
+				"id": "U0.6735665700258455",
+				"name": "asset4",
+				"comment": "description4",
+				"type": "Fin",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": 77.02844212429514,
+				"y": 249.1523930779157
+			}
+		},
+		"U0.9808826534323216": {
+			"data": {
+				"id": "U0.9808826534323216",
+				"name": "asset5",
+				"comment": "description5",
+				"type": "Site",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -74.58414075881969,
+				"y": 133.27137583654707
+			}
+		},
+		"U0.18254664152231448": {
+			"data": {
+				"id": "U0.18254664152231448",
+				"name": "asset6",
+				"comment": "description6",
+				"type": "SW",
+				"disabled": false,
+				"trickId": null
+			},
+			"position": {
+				"x": -59.953044265929584,
+				"y": -69.88020487245385
+			}
+		}
+	},
+	"edges": [
+		{
+			"source": "U0.6828098215674816",
+			"target": "U0.9166043044100338"
+		},
+		{
+			"source": "U0.6828098215674816",
+			"target": "U0.8735159941185311"
+		},
+		{
+			"source": "U0.8735159941185311",
+			"target": "U0.9808826534323216"
+		},
+		{
+			"source": "U0.8735159941185311",
+			"target": "U0.6735665700258455"
+		},
+		{
+			"source": "U0.9166043044100338",
+			"target": "U0.18254664152231448"
+		},
+		{
+			"source": "U0.8735159941185311",
+			"target": "U0.18254664152231448"
+		}
+	]
+}

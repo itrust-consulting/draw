@@ -298,8 +298,9 @@ function _readJSONDataToInternalDS(jsonData) {
 	try {	
 			let foundAssetIndex = false;
 			let length = jsonData.length;
+			let PositionX = undefined;
+			let PositionY = undefined;
 			for (let i = 0; i < length; i++) {
-				let foundPosition = false;
 				if (!foundAssetIndex) {
 					if (jsonData[i]['A'] == CONST_ASSET_IT) {
 						if (jsonData[i]['B'] == CONST_ASSET_TYPE) {
@@ -315,13 +316,23 @@ function _readJSONDataToInternalDS(jsonData) {
 						if (jsonData[i]['D'] == CONST_ASSET_POSITIONX) {
 							foundAssetIndex = true;
 							assetIndex = i;
-							foundPosition = true;
+							PositionX = 'D';
 						}
-
-						if (jsonData[i]['E'] == CONST_ASSET_POSITIONY) {
+						else if (jsonData[i]['D'] == CONST_ASSET_POSITIONY) {
 							foundAssetIndex = true;
 							assetIndex = i;
-							foundPosition = true;
+							PositionY = 'D';
+						}
+						
+						if (jsonData[i]['E'] == CONST_ASSET_POSITIONX) {
+							foundAssetIndex = true;
+							assetIndex = i;
+							PositionX = 'E';
+						}
+						else if (jsonData[i]['E'] == CONST_ASSET_POSITIONY) {
+							foundAssetIndex = true;
+							assetIndex = i;
+							PositionY = 'E';
 						}
 						// Add comment for asset
 					} 
@@ -329,10 +340,8 @@ function _readJSONDataToInternalDS(jsonData) {
 					mapJsonIndexToArrayAssetKey[jsonData[i]['A']] = [];
 					mapJsonIndexToArrayAssetKey[jsonData[i]['A']][CONST_ASSET_TYPE] = jsonData[i]['B'];
 					mapJsonIndexToArrayAssetKey[jsonData[i]['A']][CONST_ASSET_COMMENT] = jsonData[i]['C'];
-					if (foundPosition){
-						mapJsonIndexToArrayAssetKey[jsonData[i]['A']][CONST_ASSET_POSITIONX] = jsonData[i]['D'];
-						mapJsonIndexToArrayAssetKey[jsonData[i]['A']][CONST_ASSET_POSITIONY] = jsonData[i]['E'];
-					}
+					if (PositionX!=undefined){mapJsonIndexToArrayAssetKey[jsonData[i]['A']][CONST_ASSET_POSITIONX] = jsonData[i][PositionX];}
+					if (PositionY!=undefined){mapJsonIndexToArrayAssetKey[jsonData[i]['A']][CONST_ASSET_POSITIONY] = jsonData[i][PositionY];}
 				}
 			}
 

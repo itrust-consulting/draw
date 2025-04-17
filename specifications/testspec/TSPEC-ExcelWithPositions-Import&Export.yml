@@ -1,0 +1,29 @@
+active: true
+derived: false
+header: |
+  Excel with positions - Import & Export
+level: 2.1.27
+links:
+- FUNCREQ-EXCELWITHPOSITIONS:
+normative: true
+ref: ''
+reviewed: 
+text: |
+  |Testcase Id              | DRAW_TC_ID_52       |
+  |-------------------------| --------------------|
+  |**Testcase description** |Export and Import created graph as XSLS file|
+  |**Verification method**  |Test|
+  |**Requirements covered** ||
+  |**Testsetup**            |DRAW v2.0.6 on Microsoft Edge|
+  |**Preconditions**        |Windows 10/11|
+  |**Execution Type**       |Manual|
+
+  |**Step#**| **Step Action**          | **Expected Results**|
+  |-----------|--------------------------|---------------------|
+  |**1**| Create 3 assets of any type with names asset1, asset2, asset3 | 3 assets with appropriate names are created |
+  |**2**| Move assets from their default positions in any directions by holding LMB | All assets are moved |
+  |**3**| Click on arrow next to the Save button -> Export as excel (XSLS) -> ../tests/test_manual/excelwithpositions(1).xsls| Graph is exported as XSLS file |
+  |**4**| Click on arrow next to the Open button -> Clear working area | Whiteboard is cleared |
+  |**5**| Click on arrow next to the Open button -> Import excel -> ../tests/test_manual/excelwithpositions(1).xsls| Graph is imported and all assets retained their initial positions |
+  |**Test pass-fail criteria** |**All steps 1, 2, 3, 4 and 5 pass**|
+
