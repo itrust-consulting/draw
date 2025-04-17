@@ -9,7 +9,7 @@ links:
 normative: false
 ref: ''
 reviewed: 5hh-Ibido5JLdFBfq4NTowWxpdMHwvvwhK8C0E73Vbw=
-text: "|**Test procedure ID**  |    TP-12 compare estimations test report |\n|-----------------------|-----------------------------|\n\
+text: "|**Test procedure ID**  |    TP-13 asset comments and sorting of matrix test report |\n|-----------------------|-----------------------------|\n\
   |**Executed by**        |    M. Dvoinishnikov  / itrust|\n|**Date of execution**\
   \  |    07.04.2025 ||\n|**Time of execution**  |   16:40   |\n|**Test cases covered**\
   \ |    DRAW_TC_ID_50, DRAW_TC_ID_51 |\n|**Requirements covered** | FUNCREQ-ADDASSETWITHCOMMENTS, FUNCREQ-SORTINGOFMATRIX\

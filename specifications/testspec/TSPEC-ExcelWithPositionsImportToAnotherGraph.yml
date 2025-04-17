@@ -14,7 +14,7 @@ text: |
   |**Testcase description** |Import graph with positions to another graph|
   |**Verification method**  |Test|
   |**Requirements covered** ||
-  |**Testsetup**            |DRAW v2.0.6 on Microsoft Edge|
+  |**Testsetup**            |DRAW v2.0.7 on Microsoft Edge|
   |**Preconditions**        |Windows 10/11|
   |**Execution Type**       |Manual|
 
