@@ -10,6 +10,8 @@ links:
 - TSPEC-ExcelWithPositionsComments&OnlyPositionX:
 - TSPEC-ExcelWithPositions-Comments&OnlyPositionY:
 - TSPEC-ExcelWithPositionsImportToAnotherGraph:
+- TSPEC-ExcelWithPositions-AssetListNotFirst:
+- TSPEC-ExcelWithPositions-NoAssetType:
 normative: false
 ref: ''
 reviewed:
@@ -17,9 +19,9 @@ text: |
   | Test procedure ID         | TP-14 Import and export XSLS files with positions|
   |---------------------------| --------------------|
   |**Executed by**            |M. Dvoinishnikov / itrust|
-  |**Date of execution**      |16/04/2025|
-  |**Time of execution**      |16:00|
-  |**Test cases covered**     |DRAW_TC_ID_52, DRAW_TC_ID_53, 	DRAW_TC_ID_54, 	DRAW_TC_ID_55, 	DRAW_TC_ID_56, 	DRAW_TC_ID_57|
+  |**Date of execution**      |18/04/2025|
+  |**Time of execution**      |12:00|
+  |**Test cases covered**     |DRAW_TC_ID_52, DRAW_TC_ID_53, 	DRAW_TC_ID_54, 	DRAW_TC_ID_55, 	DRAW_TC_ID_56, 	DRAW_TC_ID_57, DRAW_TC_ID_58, DRAW_TC_ID_59|
   |**Requirements covered**   |FUNCREQ-EXCELWITHPOSITIONS| 
   |**List of version tested** |2.0.7|
   |**Test configuration details** |DRAW v2.0.7 on Microsoft Edge |
@@ -55,7 +57,9 @@ text: |
   |**5**| Click on arrow next to the Open button -> Import excel -> ../tests/test_manual/excelwithpositions(5).xsls| Graph is imported with nodes retaining their vertical position (y-axis) and their comments|**DRAW_TC_ID_56 Step 5 Passes**|
   |**1**| Click on Open -> ../tests/test_manual/excelwithpositions(1).xsls |Graph is displayed on the whiteboard|**DRAW_TC_ID_57 Step 1 Passes**|
   |**2**| Click on arrow next to the Open button -> Import Excel -> ../tests/test_manual/excelwithpositions(6).xsls |Second graph is imported with its assets retaining initial positions|**DRAW_TC_ID_57 Step 2 Passes**|
+  |**1,2**| Excel sheet with AssetList not in the first column is loaded | Appropriate error message is shown |**DRAW_TC_ID_58 Steps 1 and 2 Pass**|
+  |**1,2**| Excel sheet with no AssetType column is loaded | Appropriate error message is shown |**DRAW_TC_ID_59 Steps 1 and 2 Pass**|
   | **Total steps** | **Steps Passed** | **Steps Failed** | **Steps not executed** |
-  | 27 | 27 | 0 | 0 |
+  | 31 | 31 | 0 | 0 |
   | **Result** | **PASSED** |
   | **Annex** |Refer Annex for evidence of log and commands executed.|
