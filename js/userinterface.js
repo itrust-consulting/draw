@@ -291,97 +291,102 @@ function _checkHasValidAssetTypes(inputAssetType) {
  * 
  */
 function _readJSONDataToInternalDS(jsonData) {
-	
-	let mapJsonIndexToArrayAssetKey = new Object();
+	const mapJsonIndexToArrayAssetKey = {};
 	let assetIndex = -1;
 	let errorStatus = false;
-	try {	
-			let foundAssetIndex = false;
-			let length = jsonData.length;
-			let PositionX = undefined;
-			let PositionY = undefined;
-			for (let i = 0; i < length; i++) {
-				if (!foundAssetIndex) {
-					if (jsonData[i]['A'] == CONST_ASSET_IT) {
-						if (jsonData[i]['B'] == CONST_ASSET_TYPE) {
-							foundAssetIndex = true;
-							assetIndex = i;
-						}
 
-						if (jsonData[i]['C'] == CONST_ASSET_COMMENT) {
-							foundAssetIndex = true;
-							assetIndex = i;
-						}
+	// Map will store which column maps to which field (e.g., { B: 'AssetType', D: 'AssetComment' })
+	const columnMap = {};
 
-						if (jsonData[i]['D'] == CONST_ASSET_POSITIONX) {
-							foundAssetIndex = true;
-							assetIndex = i;
-							PositionX = 'D';
-						}
-						else if (jsonData[i]['D'] == CONST_ASSET_POSITIONY) {
-							foundAssetIndex = true;
-							assetIndex = i;
-							PositionY = 'D';
-						}
-						
-						if (jsonData[i]['E'] == CONST_ASSET_POSITIONX) {
-							foundAssetIndex = true;
-							assetIndex = i;
-							PositionX = 'E';
-						}
-						else if (jsonData[i]['E'] == CONST_ASSET_POSITIONY) {
-							foundAssetIndex = true;
-							assetIndex = i;
-							PositionY = 'E';
-						}
-						// Add comment for asset
-					} 
-				} else {
-					mapJsonIndexToArrayAssetKey[jsonData[i]['A']] = [];
-					mapJsonIndexToArrayAssetKey[jsonData[i]['A']][CONST_ASSET_TYPE] = jsonData[i]['B'];
-					mapJsonIndexToArrayAssetKey[jsonData[i]['A']][CONST_ASSET_COMMENT] = jsonData[i]['C'];
-					if (PositionX!=undefined){mapJsonIndexToArrayAssetKey[jsonData[i]['A']][CONST_ASSET_POSITIONX] = jsonData[i][PositionX];}
-					if (PositionY!=undefined){mapJsonIndexToArrayAssetKey[jsonData[i]['A']][CONST_ASSET_POSITIONY] = jsonData[i][PositionY];}
-				}
-			}
+	try {
+		const length = jsonData.length;
+		let headersIdentified = false;
 
-			if (!foundAssetIndex) {
-				let msg = 'The imported excel file with worksheet \"Dependency\" does not have ' + CONST_ASSET_IT + ' in first Column or ' + CONST_ASSET_TYPE + ' in second column or ' + CONST_ASSET_TYPE + ' in the third column';
-				throw new Error(msg);
-			}
+	 // Step 1: Find the header row and identify column mapping
+		for (let i = 0; i < length; i++) {
+			const row = jsonData[i];
 
-			// Created Map of Maps:
-			for (let key in mapJsonIndexToArrayAssetKey) {
-				for (let subkey in mapJsonIndexToArrayAssetKey) {
-					mapJsonIndexToArrayAssetKey[key][subkey] = 0;
+			// Mandatory check: 'A' must be CONST_ASSET_IT
+			if (row['A'] === CONST_ASSET_IT) {
+				assetIndex = i;
 
-					// Move from column C to column D
-				}
-			}
-
-			// Example:
-			//jsonData[i]['A'] -> Key of mapJsonIndexToArrayAssetKey 
-			//jsonData[i]['C'] -> Value 
-			//jsonData[assetIndex]['C'] -> Column header of 2nd entry in the map
-
-			for (let i = assetIndex + 1; i < length; i++) {
-				for (let keys in jsonData[i]) {
-					if (keys != 'A' && keys != 'B' && keys != 'C') {						
-						if (jsonData[i][keys] != undefined) {
-							mapJsonIndexToArrayAssetKey[jsonData[i]['A']][jsonData[assetIndex][keys]] = jsonData[i][keys];
-						} else {
-							mapJsonIndexToArrayAssetKey[jsonData[i]['A']][jsonData[assetIndex][keys]] = 0;
-						}
+				// Map columns to roles
+				for (const col in row) {
+					const val = row[col];
+					if (val === CONST_ASSET_TYPE) {
+						columnMap['AssetType'] = col;
+					} else if (val === CONST_ASSET_COMMENT) {
+						columnMap['AssetComment'] = col;
+					} else if (val === CONST_ASSET_POSITIONX) {
+						columnMap['AssetPositionX'] = col;
+					} else if (val === CONST_ASSET_POSITIONY) {
+						columnMap['AssetPositionY'] = col;
 					}
 				}
+
+				headersIdentified = true;
+				break;
 			}
+		}
+
+		// Error handling if mandatory headers are missing
+		if (!headersIdentified || !columnMap['AssetType']) {
+			throw new Error(
+				`The imported Excel file does not contain mandatory columns: '${CONST_ASSET_IT}' as the first column or '${CONST_ASSET_TYPE}' in any column.`
+			);
+		}
+
+		// Step 2: Parse asset rows
+		for (let i = assetIndex + 1; i < length; i++) {
+			const row = jsonData[i];
+			const assetKey = row['A'];
+			if (!assetKey) continue;
+
+			const assetEntry = {};
+
+			// Mandatory field
+			assetEntry[CONST_ASSET_TYPE] = row[columnMap['AssetType']] || '';
+
+			// Optional fields
+			if (columnMap['AssetComment']) {
+				assetEntry[CONST_ASSET_COMMENT] = row[columnMap['AssetComment']] || '';
+			}
+			if (columnMap['AssetPositionX']) {
+				assetEntry[CONST_ASSET_POSITIONX] = row[columnMap['AssetPositionX']] || 0;
+			}
+			if (columnMap['AssetPositionY']) {
+				assetEntry[CONST_ASSET_POSITIONY] = row[columnMap['AssetPositionY']] || 0;
+			}
+
+			mapJsonIndexToArrayAssetKey[assetKey] = assetEntry;
+		}
+
+		// Step 3: Add dynamic (other) columns based on the header row
+		for (let i = assetIndex + 1; i < length; i++) {
+			const row = jsonData[i];
+			const assetKey = row['A'];
+			if (!assetKey) continue;
+
+			for (const col in row) {
+				// Skip known fixed fields
+				if (['A', columnMap['AssetType'], columnMap['AssetComment'], columnMap['AssetPositionX'], columnMap['AssetPositionY']].includes(col)) {
+					continue;
+				}
+
+				const dynamicKey = jsonData[assetIndex][col];
+				if (dynamicKey) {
+					mapJsonIndexToArrayAssetKey[assetKey][dynamicKey] = row[col] || 0;
+				}
+			}
+		}
 	} catch (error) {
 		errorStatus = true;
 		_addImportExcelErrorMsg(error);
 	}
 
-	return {errorStatus, mapJsonIndexToArrayAssetKey};
+	return { errorStatus, mapJsonIndexToArrayAssetKey };
 }
+
 
 /**
  * This function does a sanity of Probability values of Source and Target assets in the excel sheet
