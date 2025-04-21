@@ -1,0 +1,48 @@
+active: true
+derived: false
+header: |
+  Edit asset
+level: 2.2.6
+links:
+- FUNCREQ-ADDASSETWITHCOMMENTS: G-hGTiJQJwLpU_3_eIz5JrN4FrJzpeP2xXyYmKNL9Ho=
+normative: true
+ref: ''
+reviewed: QWNkBVVVfj16jGaHHeSPdVCw1MyrSfv1gha7PKNNOkg=
+text: "|Testcase Id              | DRAW_TC_ID_50                 |\n|-------------------------|\
+  \ ------------------------------|\n|**Testcase description** | Edit asset      \
+  \              |\n|**Verification method**  | Test                          |\n\
+  |**Requirements covered** | FUNCREQ-ADDASSETWITHCOMMENTS |\n|**Testsetup**    \
+  \        | DRAW v2.0.6 on Microsoft Edge |\n|**Preconditions**        | Windows\
+  \ 10/11                 |\n|**Execution Type**       |  Manual                 \
+  \      |\n\n|**Step**|**Step Action**           \t\t\t\t             |**Expected\
+  \ Results**\t\t\t\t\t      |\n|--------|-----------------------------------------------------------------|----------------------------------------------------------------|\n\
+  |  **1** | Create 6 nodes asset1, asset2, asset3, asset4, asset5,       | Asset\
+  \ created with appropriate type and name change is applied |\n|        | asset6\
+  \                                                       |                      \
+  \                                          |\n|  **2** | Connected Node asset2 with\
+  \ asset1 and asset3; asset1         | Nodes are connected in appropriate way\t\t\
+  \            \t       |\n|        | with asset5 and asset4; asset3 with asset6 (asset2->\
+  \         |\t\t\t\t\t\t\t\t                                                 |\n\
+  |        | asset1; asset2->asset3; asset1->asset5; asset1->asset4;      |      \
+  \                                                          |\n|        | asset3->asset6)\
+  \                                              | \t\t\t\t\t                    \
+  \                    \t\t\t       |\n|  **3** | Add comments to each asset (“description1”\
+  \ to asset1; \t      | Comments are added to each asset\t                \t\t\t\
+  \       |\n|        | “description2” to asset2; “description3” to asset3; \t   \
+  \     |\t\t                                          \t\t\t\t\t\t       |\n|   \
+  \     | “description4” to asset4; “description5” to asset5; \t        |\t\t\t  \
+  \                                         \t\t\t\t\t       |\n|        | “description6”\
+  \ to asset6;)                                   | \t\t\t\t\t\t\t               \
+  \                                  |\n|  **4** | Click on Save and download the graph                \
+  \                               | Graph is saved with appropriate name and extension\
+  \             |\n|        | as ..\\tests\\tests_manual\\testcomments.json      \
+  \             |  \t                                                            \
+  \ |\n|  **5** | Open graph ..\\tests\\tests_manual\\testcomments.json          \
+  \ | Saved comments can be seen in the “comment” section of nodes   |\n|        |\
+  \ with Visual Studio\t\t\t\t\t\t\t                              | in the code  \
+  \                                                  |\n|  **6** | In DRAW click on Open->..\\tests\\\
+  tests_manual\\testcomments.json                 | Saved comments can be seen in\
+  \ the Comment section of editing   |\n|\t       | \t\t\t\t\t\t\t\t             \
+  \                                 | asset in the DRAW whiteboard               \
+  \                    |\n\n|**Test pass-fail criteria** | All steps 1,2,3,4,5 and\
+  \ 6 pass |\n|----------------------------|--------------------------------|\n"

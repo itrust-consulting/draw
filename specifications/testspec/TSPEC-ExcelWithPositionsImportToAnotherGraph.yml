@@ -1,0 +1,26 @@
+active: true
+derived: false
+header: |
+  Excel with positions - import to another graph
+level: 2.1.32
+links: 
+- FUNCREQ-EXCELWITHPOSITIONS:
+normative: true
+ref: ''
+reviewed: 
+text: |
+  |Testcase Id              | DRAW_TC_ID_57       |
+  |-------------------------| --------------------|
+  |**Testcase description** |Import graph with positions to another graph|
+  |**Verification method**  |Test|
+  |**Requirements covered** ||
+  |**Testsetup**            |DRAW v2.0.7 on Microsoft Edge|
+  |**Preconditions**        |Windows 10/11|
+  |**Execution Type**       |Manual|
+
+  |**Step#**| **Step Action**          | **Expected Results**|
+  |-----------|--------------------------|---------------------|
+  |**1**| Click on Open -> ../tests/test_manual/excelwithpositions(1).xsls |Graph is displayed on the whiteboard|
+  |**2**| Click on arrow next to the Open button -> Import Excel -> ../tests/test_manual/excelwithpositions(6).xsls |Second graph is imported with its assets retaining initial positions|
+  |**Test pass-fail criteria**|**All steps 1 and 2 pass**|
+

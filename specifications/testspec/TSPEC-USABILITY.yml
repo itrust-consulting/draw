@@ -2,7 +2,7 @@ active: true
 derived: false
 header: |
   Usability test zoom/alignment/distribution
-level: 2.2.20
+level: 2.2.23
 links:
 - FUNCREQ-INTERFACEMOVE: ce8NLr_lxox-pXd8qhm4VPO1u_CEw-LIBPikNtNVYsA=
 - FUNCREQ-USABILITYAlignBMT: bOTo10A1A0HAp61xOPb9JgcdP3d5RVQelzC8ARDnhsk=
@@ -14,7 +14,7 @@ normative: true
 ref: ''
 reviewed: o2Ufkui6axG1eHvi_HoQciVxj3rWpa2yfEmXISOuAt8=
 text: |
-  |Testcase Id              | DRAW_TC_ID_48       |
+  |Testcase Id              | DRAW_TC_ID_48      |
   |-------------------------| --------------------|
   |**Testcase description** |  Usability Testing |
   |**Verification method**  |  Test                   |
@@ -30,7 +30,7 @@ text: |
   | **3** | Select Node0, Node3, Node4 and align them to bottom |  The three asssets must be aligned in bottom |
   | **4** | Select Node0, Node1, align to left |  The two assets must be aligned to left |
   | **4** | Select Node2, Node3, align to right |  The two assets must be aligned to right |
-  | **5** | Select Node0, Node4, Node3, evenly distribute the assets horizontally |  The three assets must be spaced equally as ![Aligned assets](images/graph1_aligned.png "Aligned Graph")  |
+  | **5** | Select Node0, Node4, Node3, evenly distribute the assets horizontally |  The three assets must be spaced equally as ![Aligned assets](../../images/graph1_aligned.png "Aligned Graph")  |
 
   |**Test pass-fail criteria** | The steps 1-6 must have the Expected Results  |
   |----------------------------|------------------------------------------------------------------------|

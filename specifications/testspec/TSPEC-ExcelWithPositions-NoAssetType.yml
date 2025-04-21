@@ -1,0 +1,25 @@
+active: true
+derived: false
+header: |
+  Excel with positions - no AssetType
+level: 2.1.34
+links:
+- FUNCREQ-EXCELWITHPOSITIONS:
+normative: true
+ref: ''
+reviewed: 
+text: |
+  |Testcase Id              | DRAW_TC_ID_59       |
+  |-------------------------| --------------------|
+  |**Testcase description** |Import created graph as XSLS file without AssetType column|
+  |**Verification method**  |Test|
+  |**Requirements covered** ||
+  |**Testsetup**            |DRAW v2.0.7 on Microsoft Edge|
+  |**Preconditions**        |Windows 10/11|
+  |**Execution Type**       |Manual|
+
+  |**Step#**| **Step Action**          | **Expected Results**|
+  |-----------|--------------------------|---------------------|
+  |**1**| Click on arrow next to the Open button -> Clear working area | Whiteboard is cleared |
+  |**2**| Click on arrow next to the Open button -> Import excel -> ../tests/test_manual/AssetDsinExcelWithoutType.xsls| Appropriate error message is shown |
+

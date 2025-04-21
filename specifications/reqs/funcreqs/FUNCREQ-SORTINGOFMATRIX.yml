@@ -1,0 +1,11 @@
+active: true
+derived: false
+header: |
+  Sorting of assets in alphabetical order in the matrix of a graph exported to excel-sheet.
+level: 1.1.3
+links: []
+normative: true
+ref: ''
+reviewed: Ge9zyLDWKHGa1Ygc0UsteDE3nMZRkH801RRbtZueFlI=
+text: |
+  The matrix shall be able to arrange assets in alphabetical order vertically and horizontally.
