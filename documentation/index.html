@@ -483,17 +483,29 @@
 
 	<h1 id="whats_new">What's new?</h1>
 
-	<h2>Release 2.0.6</h2>
-	<ul>
-		<li>Added comment fields in assets (see <a href="#_add_comment">[Figure]</a>)</li>
-		<li>Added alphabetical sorting of asset names in excel sheets of graphs exported as excel files</li>
-	</ul>
-
 	<h2>Release 2.0.7</h2>
 	<ul>
-		<li>Added position columns in excel sheets of graphs exported as excel files, that allow to retain coordinates of nodes after importing them back (only for excel files created on version 2.0.7 or higher) (see <a href="#_dependency_example">[Figure]</a>)</li>
-		<li>Added ability to arrange all columns except AssetList (needs to be first) in excel sheets in any order</li>
+		<li><strong>Added position columns in excel sheets of graphs exported as excel file</strong><br>
+			Added two columns <strong>AssetPositionX</strong> and <strong>AssetPositionY</strong> in the excel sheet of the graph exported as excel file.	
+			These columns represent the position of the asset node in the DRAW whiteboard. The position of the asset node is represented by two columns <strong>AssetPositionX</strong> and <strong>AssetPositionY</strong> in the excel sheet.
+			These columns are optional and can be absent. If these columns are absent then the asset nodes are placed at default position on the whiteboard.	
+			Note that this feature is only available for excel files created on version 2.0.7 or higher. 
+			(see <a href="#_dependency_example">[Figure]</a>)</li>
+		<li><strong>Added ability to arrange all columns except AssetList in excel sheets in any order</strong><br>
+			The order of the columns in the excel sheet is not important. The AssetList column is mandatory to be placed in first column
+			, the other mandatory column is <strong>AssetType</strong> which can be in any column position<strong>AssetList</strong>. 
+			All other columns can be present in any order. The order of the columns in the excel sheet does not affect the import process.
+			Note that this feature is only available on DRAW version 2.0.7 or higher. 
+		</li>
 	</ul>
+
+	<h2>Release 2.0.6</h2>
+	<ul>
+		<li>Added comment fields in assets (see <a href="#_add_comment">[Figure]</a>).</li>
+		<li>Added alphabetical sorting of asset names in excel sheets of graphs exported as excel files.</li>
+	</ul>
+
+
 </main>
 
 </div>
