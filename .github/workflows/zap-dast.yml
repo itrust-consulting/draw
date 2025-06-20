@@ -1,0 +1,14 @@
+name: ZAP DAST Scan
+
+on:
+  workflow_dispatch: # or use `push` or `schedule` to run automatically
+
+jobs:
+  zap_scan:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: ZAP Baseline Scan
+      uses: zaproxy/action-baseline@v0.12.0
+      with:
+        target: 'https://draw.trickservice.com'  
