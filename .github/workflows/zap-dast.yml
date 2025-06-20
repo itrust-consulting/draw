@@ -1,14 +1,27 @@
 name: ZAP DAST Scan
 
 on:
-  workflow_dispatch: # or use `push` or `schedule` to run automatically
+  workflow_dispatch:
+    inputs:
+      target_url:
+        description: 'Target URL to scan with ZAP'
+        required: true
+        default: 'https://draw.trickservice.com'
 
 jobs:
   zap_scan:
     runs-on: ubuntu-latest
 
     steps:
-    - name: ZAP Baseline Scan
-      uses: zaproxy/action-baseline@v0.12.0
-      with:
-        target: 'https://draw.trickservice.com'  
+      - name: ZAP Baseline Scan
+        uses: zaproxy/action-baseline@v0.18.0  # Updated version
+        with:
+          target: ${{ github.event.inputs.target_url }}
+          format: html
+          report_filename: zap-report.html
+
+      - name: Upload ZAP Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: zap-report
+          path: zap-report.html
