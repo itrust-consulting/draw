@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: ZAP Baseline Scan
-        uses: zaproxy/action-baseline@v0.14.0  # Updated version
+        uses: zaproxy/action-full-scan@v0.12.0  # Updated version
         with:
           target: ${{ github.event.inputs.target_url }}
-          cmd_options: '-f html -r zap-report.html'
+          cmd_options: '-a'
           fail_action: false
 
       - name: Upload ZAP Report
