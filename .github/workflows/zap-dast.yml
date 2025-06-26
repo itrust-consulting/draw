@@ -17,8 +17,7 @@ jobs:
         uses: zaproxy/action-baseline@v0.14.0  # Updated version
         with:
           target: ${{ github.event.inputs.target_url }}
-          format: html
-          report_filename: zap-report.html
+          cmd_options: '-f html -r zap-report.html'
 
       - name: Upload ZAP Report
         uses: actions/upload-artifact@v4
