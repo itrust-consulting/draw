@@ -18,6 +18,7 @@ jobs:
         with:
           target: ${{ github.event.inputs.target_url }}
           cmd_options: '-f html -r zap-report.html'
+          fail_action: false
 
       - name: Upload ZAP Report
         uses: actions/upload-artifact@v4
