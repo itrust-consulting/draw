@@ -1,5 +1,3 @@
-name: ZAP DAST Scan
-
 on:
   workflow_dispatch:
     inputs:
@@ -14,11 +12,11 @@ jobs:
 
     steps:
       - name: ZAP Baseline Scan
-        uses: zaproxy/action-full-scan@v0.12.0  # Updated version
+        uses: zaproxy/action-baseline@v0.14.0  # Updated version
         with:
           target: ${{ github.event.inputs.target_url }}
-          cmd_options: '-a'
-          fail_action: false
+          format: html
+          report_filename: zap-report.html
 
       - name: Upload ZAP Report
         uses: actions/upload-artifact@v4
