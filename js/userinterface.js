@@ -689,3 +689,9 @@ UserInterface.prototype.saveEdge = function (form_selector) {
 		this.dependency_graph.setEdgeData(id, isNaN(p) ? undefined : Math.min(1, Math.max(0, p)));
 	}
 };
+
+UserInterface.prototype.searchNodeByName = function (name) {
+	this.dependency_graph.searchNodeByName(name);	
+}
+
+

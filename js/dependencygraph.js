@@ -131,7 +131,26 @@ DependencyGraph.prototype.init = function (ready_callback) {
             { selector: "node[type='Net']", css: { "background-image": DependencyGraphIcons.Net } },
             { selector: "node[type='Serv']", css: { "background-image": DependencyGraphIcons.Serv } },
             { selector: "node[type='Staff']", css: { "background-image": DependencyGraphIcons.Staff } },         
-            { selector: "node[type='Sys']", css: { "background-image": DependencyGraphIcons.Sys } }
+            { selector: "node[type='Sys']", css: { "background-image": DependencyGraphIcons.Sys } },
+            { selector: '.highlighted',
+                  css: {
+                    'background-color': 'rgb(112, 219, 255)',  // soft blue fill
+                    'border-width': 3,                          // border thickness
+                    'border-color': 'rgb(0, 183, 245)',        // teal-blue border
+                    'line-color': 'rgb(0, 183, 245)',          // edges
+                    'target-arrow-color': 'rgb(0, 183, 245)',  // arrows
+                    'transition-property': 'background-color, line-color, border-color, target-arrow-color',
+                    'transition-duration': '0.3s'
+                }
+            },
+            { selector: '.faded',
+                css: {
+                    'opacity': 0.2,
+                    'text-opacity': 1,
+                    'line-opacity': 0.2,
+                    'target-arrow-opacity': 0.2
+                }
+            }
         ],
         elements: { nodes: [], edges: [] },
     });
@@ -724,6 +743,44 @@ DependencyGraph.prototype.colorEdges = function () {
     this.cy.filter('edge[p >0.25][p <= 0.50]').addClass('green');
     this.cy.filter('edge[p >0.50][p <= 0.75]').addClass('blue');
 }
+
+DependencyGraph.prototype.searchNodeByName = function(name) {
+    // Reset previous highlights
+    this.cy.nodes().removeClass('highlighted');
+    this.cy.edges().removeClass('highlighted');
+    this.cy.elements().removeClass('faded');
+
+    // Convert wildcard * to regex
+    // Escape special regex chars, then replace * with .*
+    const regexString = name
+        .replace(/[-\/\\^$+?.()|[\]{}]/g, '\\$&') // escape regex special chars
+        .replace(/\*/g, '.*');                     // replace * with .*
+
+    const regex = new RegExp(`^${regexString}$`, 'i'); // case-insensitive, full match
+
+    // Find matching nodes
+    const matches = this.cy.nodes().filter(node =>
+        regex.test(node.data('name') || '')
+    );
+
+    if(matches.length === 0){
+        alert('No matching node found');
+        return;
+    }
+
+    // Get connected edges + nodes
+    const connectedEdges = matches.connectedEdges();
+    const connectedNodes = connectedEdges.connectedNodes().union(matches);
+
+    // Fade everything else
+    this.cy.elements().not(connectedNodes.union(connectedEdges)).addClass('faded');
+
+    // Highlight matched nodes + edges
+    connectedNodes.addClass('highlighted');
+    connectedEdges.addClass('highlighted');
+
+    // No pan/fit to keep positions unchanged
+};
 
 /**
  * Helper function.
